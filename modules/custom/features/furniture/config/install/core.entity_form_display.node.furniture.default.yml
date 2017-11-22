@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.field.node.furniture.body
     - field.field.node.furniture.field_categories
-    - field.field.node.furniture.field_description
+    - field.field.node.furniture.field_desc
     - field.field.node.furniture.field_furniture_image
     - field.field.node.furniture.field_price
     - field.field.node.furniture.field_related_products
@@ -47,13 +47,13 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_description:
-    weight: 126
+  field_desc:
+    weight: 129
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: string_textarea
     region: content
   field_furniture_image:
     weight: 122
