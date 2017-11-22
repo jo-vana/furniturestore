@@ -1,0 +1,17 @@
+name: Furniture
+type: module
+core: 8.x
+dependencies:
+  - blog
+  - comment
+  - field
+  - file
+  - image
+  - link
+  - menu_ui
+  - node
+  - path
+  - taxonomy
+  - text
+  - user
+version: 8.x-1.0
