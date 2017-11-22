@@ -1,0 +1,30 @@
+// ========================================
+//
+// @file _landing.scss
+// 404 page specific styling
+//
+// ========================================
+
+.error-page {
+  text-align: center;
+  padding: 60px 0 100px 0;
+  h1 {
+    span {
+      font-size: 300px;
+      font-weight: 100;
+      color: #e6ae48;
+    }
+  }
+  #block-furniture-content {
+    p {
+      font-size: 28px;
+    }
+  }
+  #block-furniture-search {
+    #search-block-form {
+      input {
+
+      }
+    }
+  }
+}
