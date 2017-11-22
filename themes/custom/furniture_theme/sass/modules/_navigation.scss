@@ -1,0 +1,30 @@
+// ========================================
+//
+// @file _navigation.scss
+// All the navigation elements on the page
+//
+// ========================================
+
+.navigation {
+
+}
+#block-furniture-main-menu {
+  @extend .col-lg-9;
+  float: right;
+  clear: right;
+  ul.menu {
+    display: flex;
+    margin-top: 27px;
+    float: right;
+    clear: right;
+    li {
+      display: inline-flex;
+      padding: 10px 15px;
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+      }
+    }
+  }
+}

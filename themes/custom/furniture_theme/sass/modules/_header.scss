@@ -1,0 +1,31 @@
+// ========================================
+//
+// @file _header.scss
+// Header element on the page
+//
+// ========================================
+
+.header {
+
+}
+.region-header {
+  #block-furniture-account-menu {
+    @extend .col-lg-3;
+    display: block;
+    position: relative;
+    float: right;
+    ul.menu {
+      display: flex;
+      margin: 0;
+      li {
+        display: inline-flex;
+        padding: 9px;
+        a {
+          color: $color-gray;
+          font-weight: 100;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+# Theme information
+name: Furniture theme
+type: theme
+base theme: classy
+description: Drupal theme files to quickly kickstart a new theme development.
+core: 8.x
+version: 1.x
+
+# Include libraries
+libraries:
+  - furniture_theme/global-css
+  - furniture_theme/global-js
+
+# Regions
+regions:
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  footer: 'Footer'
+  bottom: 'Bottom'

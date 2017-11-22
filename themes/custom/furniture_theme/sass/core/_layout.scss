@@ -1,0 +1,56 @@
+// ========================================
+//
+// @file _layout.scss
+// Basic page layouts, widths, margins, paddings
+//
+// ========================================
+
+.layout-container {
+  width: 100%;
+  header {
+    width: 100%;
+    min-height: 36px;
+    background-color: black;
+    .region-header {
+      @extend .col-lg-11;
+      float: none;margin: 0 auto;
+    }
+  }
+  .region-primary-menu{
+    @extend .col-lg-11;
+    float: none;
+    margin: 0 auto;
+    display: flex;
+    #block-furniture-branding {
+      display: inline-flex;
+      @extend .col-lg-3;
+      padding-top: 30px;
+      a {
+        color: $color-black;
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: bold;
+      }
+    }
+  }
+  .layout-content {
+    @extend .col-lg-8;
+    margin: 0 auto;
+    float: none;
+  }
+}
+.region-bottom {
+  width: 100%;
+  min-height: 68px;
+  background-color: $color-black;
+  #block-copyright {
+    display: block;
+    max-width: 355px;
+    margin: 0 auto;
+    padding-top: 10px;
+    p {
+      color: $color-gray;
+      text-align: center;
+    }
+  }
+}
