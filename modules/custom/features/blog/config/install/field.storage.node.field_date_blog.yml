@@ -4,12 +4,12 @@ dependencies:
   module:
     - datetime
     - node
-id: node.field_project_date
-field_name: field_project_date
+id: node.field_date_blog
+field_name: field_date_blog
 entity_type: node
 type: datetime
 settings:
-  datetime_type: datetime
+  datetime_type: date
 module: datetime
 locked: false
 cardinality: 1

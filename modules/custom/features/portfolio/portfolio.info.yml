@@ -9,6 +9,7 @@ dependencies:
   - file
   - image
   - link
+  - linkicon
   - menu_ui
   - node
   - path

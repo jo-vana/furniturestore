@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.portfolio.field_more
     - field.field.node.portfolio.field_p_categories
     - field.field.node.portfolio.field_po
-    - field.field.node.portfolio.field_project_date
     - field.field.node.portfolio.field_share_it_links
     - node.type.portfolio
   module:
@@ -35,5 +34,4 @@ hidden:
   field_more: true
   field_p_categories: true
   field_po: true
-  field_project_date: true
   field_share_it_links: true

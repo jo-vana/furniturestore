@@ -8,7 +8,7 @@ id: node.furniture.field_desc
 field_name: field_desc
 entity_type: node
 bundle: furniture
-label: Desc
+label: Description
 description: ''
 required: false
 translatable: false

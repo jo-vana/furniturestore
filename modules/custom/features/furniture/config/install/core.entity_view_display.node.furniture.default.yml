@@ -15,7 +15,7 @@ dependencies:
   module:
     - comment
     - image
-    - link
+    - linkicon
     - text
     - user
 id: node.furniture.default
@@ -32,7 +32,7 @@ content:
     region: content
   field_categories:
     weight: 108
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -47,7 +47,7 @@ content:
     region: content
   field_furniture_image:
     weight: 102
-    label: above
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -84,17 +84,33 @@ content:
     region: content
   field_share_it_links:
     weight: 104
-    label: above
+    label: inline
     settings:
-      trim_length: 80
+      linkicon_prefix: fa
+      linkicon_wrapper_class: ''
+      linkicon_style: ''
+      linkicon_color: ''
+      linkicon_maxlength: 60
+      linkicon_global_title: ''
+      linkicon_position: ''
+      linkicon_size: ''
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
+      rel: '0'
+      target: '0'
+      linkicon_link: false
+      linkicon_load: false
+      linkicon_vertical: false
+      linkicon_tooltip: false
+      linkicon_no_text: false
+      linkicon_bundle: ''
+      trim_length: 80
     third_party_settings: {  }
-    type: link
+    type: linkicon
     region: content
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }
