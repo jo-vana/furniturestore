@@ -13,3 +13,4 @@ function furniture_theme_theme_suggestions_page_alter(array &$suggestions, array
      }
   }
 }
+
