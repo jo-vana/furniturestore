@@ -930,20 +930,20 @@ h6 a {
   color: inherit; }
 
 h1 {
-  font-size: 36px;
-  font-size: 2.25rem; }
+  font-size: 26px;
+  font-size: 1.625rem; }
 
 h2 {
-  font-size: 30px;
-  font-size: 1.875rem; }
+  font-size: 22px;
+  font-size: 1.375rem; }
 
 h3 {
-  font-size: 24px;
-  font-size: 1.5rem; }
-
-h4 {
   font-size: 20px;
   font-size: 1.25rem; }
+
+h4 {
+  font-size: 18px;
+  font-size: 1.125rem; }
 
 h5 {
   font-size: 18px;
@@ -959,8 +959,13 @@ ul:last-child {
 ol:last-child {
   margin-bottom: 0; }
 
+h1 {
+  font-family: "Karla", sans-serif;
+  font-weight: 300; }
+
 .layout-container {
-  width: 100%; }
+  width: 100%;
+  margin: 0 auto; }
   .layout-container header {
     width: 100%;
     min-height: 36px;
