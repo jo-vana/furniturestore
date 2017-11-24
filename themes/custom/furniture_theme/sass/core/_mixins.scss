@@ -97,3 +97,30 @@
     color: $color-orange;
   }
 }
+
+// - - style for social font icons
+@mixin social {
+  ul {
+    display: block;
+    width: 220px;
+    margin-top: 20px;
+    &::before {
+      content: 'Share It:';
+      display: inline-block;
+      font-size: 15px;
+      color: $color-black;
+    }
+    li {
+      display: inline-block;
+      a {
+        span.linkicon__icon {
+          color: $font-color;
+          font-size: 15px;
+        }
+        span.linkicon__text {
+          display: none;
+        }
+      }
+    }
+  }
+}

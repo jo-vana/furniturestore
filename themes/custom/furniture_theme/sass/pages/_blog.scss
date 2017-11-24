@@ -68,29 +68,7 @@
     }
   }
   .item-list--linkicon {
-    ul#linkicon-node-blog-field-share-it-links-5 {
-      display: block;
-      width: 200px;
-      margin-top: 20px;
-      &::before {
-        content: 'Share It:';
-        display: inline-block;
-        font-size: 15px;
-        color: $color-black;
-      }
-      li {
-        display: inline-block;
-        a {
-          span.linkicon__icon {
-            color: $font-color;
-            font-size: 15px;
-          }
-          span.linkicon__text {
-            display: none;
-          }
-        }
-      }
-    }
+    @include social;
   }
 
 }

@@ -1,0 +1,101 @@
+// ========================================
+//
+// @file portfolio.scss
+// Portfolio node pages specific styling
+//
+// ========================================
+.portfolio-wrapper {
+  width: 100%;
+  display: flex;
+  .block-left {
+    @extend .col-lg-8;
+    clear: left;
+    display: inline-flex;
+    flex-direction: column;
+    .field--name-body {
+      p {
+        color: $font-color;
+      }
+    }
+  }
+  .block-right {
+    @extend .col-lg-4;
+    float: right;
+    clear: right;
+    display: inline-flex;
+    flex-direction: column;
+    h3 {
+      margin-top: 0;
+      font-weight: normal;
+      color: $color-black;
+    }
+    .field--name-field-author {
+      padding: 9px 0;
+      position: relative;
+      border-bottom: 1px solid #e6e6e6;
+      overflow: hidden;
+      .field__label {
+        font-size: 14px;
+        color: #888888;
+        font-weight: 300;
+      }
+      .field__item {
+        a {
+          float: right;
+          @include link-style;
+          color: $color-black;
+        }
+      }
+    }
+    .field--name-field-date-project {
+      padding: 9px 0;
+      position: relative;
+      border-bottom: 1px solid #e6e6e6;
+      overflow: hidden;
+      .field__label {
+        font-size: 14px;
+        color: #888888;
+        font-weight: 300;
+      }
+      .field__item {
+        .datetime {
+          float: right;
+          font-family: $font-karla;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: normal;
+          font-style: normal;
+          color: #888888;
+        }
+      }
+    }
+    .field--name-field-p-categories {
+      padding: 9px 0;
+      position: relative;
+      border-bottom: 1px solid #e6e6e6;
+      overflow: hidden;
+      .field__label {
+        font-size: 14px;
+        color: #888888;
+        font-weight: 300;
+      }
+      .field__item {
+        a {
+          float: right;
+          @include link-style;
+          color: $color-black;
+          &::before {
+            content: 'in';
+            display: inline-block;
+            font-size: 14px;
+            color: #888888;
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+.item-list--linkicon {
+  @include social;
+}
