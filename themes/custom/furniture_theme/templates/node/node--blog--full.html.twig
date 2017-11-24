@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display a node-blog(furniture_theme).
+ * Theme override to display a node-blog full(furniture_theme).
  *
  * Available variables:
  * - node: The node entity with limited access to object properties and methods.
@@ -115,15 +115,12 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
             </div>
             {{ content.body }}
 
-            {{ content.field_share_it_links }}
-
-            {{ content.field_more_posts }}
-
-            {{ content.field_comments }}
-
-
-
         </div>
+        {{ content.field_share_it_links }}
+
+        {{ content.field_more_posts }}
+
+        {{ content.field_comments }}
     </div>
 
 </article>
