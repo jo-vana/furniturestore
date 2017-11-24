@@ -1109,13 +1109,15 @@ h1 {
     .blog-wrapper .info-sec .field--name-field-blog-author {
       display: inline-block; }
       .blog-wrapper .info-sec .field--name-field-blog-author a {
+        font-family: "Karla", sans-serif;
         font-size: 15px;
         line-height: 22px;
         font-weight: normal;
         font-style: normal;
         text-transform: none;
         text-decoration: none;
-        color: #9b9b9b; }
+        color: #9b9b9b;
+        transition: color 0.3s ease-in-out; }
         .blog-wrapper .info-sec .field--name-field-blog-author a:hover {
           color: #e6ae48; }
     .blog-wrapper .info-sec .field--name-field-categories {
@@ -1123,13 +1125,15 @@ h1 {
       .blog-wrapper .info-sec .field--name-field-categories .field__item {
         display: inline-block; }
         .blog-wrapper .info-sec .field--name-field-categories .field__item a {
+          font-family: "Karla", sans-serif;
           font-size: 15px;
           line-height: 22px;
           font-weight: normal;
           font-style: normal;
           text-transform: none;
           text-decoration: none;
-          color: #9b9b9b; }
+          color: #9b9b9b;
+          transition: color 0.3s ease-in-out; }
           .blog-wrapper .info-sec .field--name-field-categories .field__item a:hover {
             color: #e6ae48; }
       .blog-wrapper .info-sec .field--name-field-categories::before {
@@ -1197,6 +1201,7 @@ h1 {
         font-weight: 300; }
       .portfolio-wrapper .block-right .field--name-field-author .field__item a {
         float: right;
+        font-family: "Karla", sans-serif;
         font-size: 15px;
         line-height: 22px;
         font-weight: normal;
@@ -1204,6 +1209,7 @@ h1 {
         text-transform: none;
         text-decoration: none;
         color: #9b9b9b;
+        transition: color 0.3s ease-in-out;
         color: #212121; }
         .portfolio-wrapper .block-right .field--name-field-author .field__item a:hover {
           color: #e6ae48; }
@@ -1235,6 +1241,7 @@ h1 {
         font-weight: 300; }
       .portfolio-wrapper .block-right .field--name-field-p-categories .field__item a {
         float: right;
+        font-family: "Karla", sans-serif;
         font-size: 15px;
         line-height: 22px;
         font-weight: normal;
@@ -1242,6 +1249,7 @@ h1 {
         text-transform: none;
         text-decoration: none;
         color: #9b9b9b;
+        transition: color 0.3s ease-in-out;
         color: #212121; }
         .portfolio-wrapper .block-right .field--name-field-p-categories .field__item a:hover {
           color: #e6ae48; }
@@ -1268,5 +1276,79 @@ h1 {
       font-size: 15px; }
     .item-list--linkicon ul li a span.linkicon__text {
       display: none; }
+
+.field--name-field-more {
+  display: block;
+  width: 100%;
+  border-top: 1px solid #888888; }
+  .field--name-field-more .field__label {
+    font-family: "Karla", sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: normal;
+    font-style: normal;
+    color: #212121;
+    margin: 20px 0; }
+  .field--name-field-more .field__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .field--name-field-more .field__items .field__item {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      width: 90%;
+      -ms-flex-item-align: start;
+          align-self: flex-start; }
+      .field--name-field-more .field__items .field__item .node--view-mode-teaser {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse; }
+        .field--name-field-more .field__items .field__item .node--view-mode-teaser h2 {
+          display: block;
+          width: 90%; }
+          .field--name-field-more .field__items .field__item .node--view-mode-teaser h2 a {
+            font-family: "Karla", sans-serif;
+            font-size: 15px;
+            line-height: 22px;
+            font-weight: normal;
+            font-style: normal;
+            text-transform: none;
+            text-decoration: none;
+            color: #9b9b9b;
+            transition: color 0.3s ease-in-out;
+            color: #212121;
+            font-size: 18px;
+            line-height: 24px;
+            text-decoration: none; }
+            .field--name-field-more .field__items .field__item .node--view-mode-teaser h2 a:hover {
+              color: #e6ae48; }
+        .field--name-field-more .field__items .field__item .node--view-mode-teaser .field--name-field-date-project .datetime {
+          font-family: "Karla", sans-serif;
+          font-size: 17px;
+          line-height: 20px;
+          font-weight: normal;
+          font-style: normal;
+          color: #888888;
+          margin-top: 6px; }
+          .field--name-field-more .field__items .field__item .node--view-mode-teaser .field--name-field-date-project .datetime::before {
+            content: '';
+            display: inline-block;
+            height: 1px;
+            width: 25px;
+            background-color: #e6ae48;
+            margin: 0 20px 4px 0; }
 
 /*# sourceMappingURL=../stylesheets/application.css.map */

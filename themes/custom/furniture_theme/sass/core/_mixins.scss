@@ -86,6 +86,7 @@
 }
 // - - a link style and hover effect
 @mixin link-style {
+  font-family: $font-karla;
   font-size: 15px;
   line-height: 22px;
   font-weight: normal;
@@ -93,6 +94,7 @@
   text-transform: none;
   text-decoration: none;
   color: $more-light-gray;
+  transition: color 0.3s ease-in-out;
   &:hover {
     color: $color-orange;
   }
