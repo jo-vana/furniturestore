@@ -1,6 +1,6 @@
 // ========================================
 //
-// @file _landing.scss
+// @file 404_page.scss
 // 404 page specific styling
 //
 // ========================================
@@ -22,8 +22,8 @@
   }
   #block-furniture-search {
     #search-block-form {
-      input {
-
+      a{
+        display: none;
       }
     }
   }
