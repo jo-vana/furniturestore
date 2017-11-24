@@ -1,0 +1,52 @@
+// ========================================
+//
+// @file blog.scss
+// 404 page specific styling
+//
+// ========================================
+
+.blog-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  .field--name-field-blog-image {
+    img {
+      margin: 0 auto;
+    }
+  }
+  .info-first {
+    min-height: 50px;
+    .field--name-field-date-blog {
+      display: inline-block;
+      max-width: 200px;
+      margin-top: 16px;
+      .datetime {
+        font-family: $font-karla;
+        font-size: 17px;
+        line-height: 20px;
+        font-weight: normal;
+        font-style: normal;
+        color: $color-black;
+        &::before {
+          content: '';
+          display: inline-block;
+          height: 1px;
+          width: 25px;
+          background-color: $color-orange;
+          margin: 0 20px 4px 0;
+        }
+      }
+    }
+  }
+  .info-sec {
+    min-height: 50px;
+    display: block;
+    .field--name-field-blog-author {
+      display: inline-block;
+    }
+    .field--name-field-categories {
+      display: inline-block;
+    }
+  }
+
+}

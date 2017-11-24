@@ -914,7 +914,7 @@ img {
   transition: 0.4s; }
 
 p {
-  font-family: "Karla", sans-serif; }
+  font-family: 'Karla', sans-serif; }
   p:last-child {
     margin-bottom: 0; }
 
@@ -1067,5 +1067,44 @@ h1 {
     font-size: 28px; }
   .error-page #block-furniture-search #search-block-form a {
     display: none; }
+
+.blog-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .blog-wrapper .field--name-field-blog-image img {
+    margin: 0 auto; }
+  .blog-wrapper .info-first {
+    min-height: 50px; }
+    .blog-wrapper .info-first .field--name-field-date-blog {
+      display: inline-block;
+      max-width: 200px;
+      margin-top: 16px; }
+      .blog-wrapper .info-first .field--name-field-date-blog .datetime {
+        font-family: "Karla", sans-serif;
+        font-size: 17px;
+        line-height: 20px;
+        font-weight: normal;
+        font-style: normal;
+        color: #212121; }
+        .blog-wrapper .info-first .field--name-field-date-blog .datetime::before {
+          content: '';
+          display: inline-block;
+          height: 1px;
+          width: 25px;
+          background-color: #e6ae48;
+          margin: 0 20px 4px 0; }
+  .blog-wrapper .info-sec {
+    min-height: 50px;
+    display: block; }
+    .blog-wrapper .info-sec .field--name-field-blog-author {
+      display: inline-block; }
+    .blog-wrapper .info-sec .field--name-field-categories {
+      display: inline-block; }
 
 /*# sourceMappingURL=../stylesheets/application.css.map */

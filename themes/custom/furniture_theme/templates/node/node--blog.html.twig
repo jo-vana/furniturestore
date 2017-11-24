@@ -104,14 +104,24 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
     <div{{ content_attributes.addClass('node__content') }}>
         {#{{ content }}#}
         <div class="blog-wrapper">
-            <div class="blog-img">{{ content.field_blog_image }}</div>
+            {{ content.field_blog_image }}
             <div class="info-first">
-                <div class="date">{{ content.field_date_blog }}</div>
+                {{ content.field_date_blog }}
             </div>
             <div class="info-sec">
                 {{ content.field_blog_author }}
+                {{ content.field_categories }}
 
             </div>
+            {{ content.body }}
+
+            {{ content.field_share_it_links }}
+
+            {{ content.field_more_posts }}
+
+            {{ content.field_comments }}
+
+
 
         </div>
     </div>
