@@ -99,3 +99,62 @@
 .item-list--linkicon {
   @include social;
 }
+.field--name-field-more {
+  display: block;
+  width: 100%;
+  border-top: 1px solid $font-color;
+  .field__label {
+    font-family: $font-karla;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: normal;
+    font-style: normal;
+    color: $color-black;
+    margin: 20px 0;
+  }
+  .field__items {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    .field__item {
+      display: inline-flex;
+      width: 90%;
+      align-self: flex-start;
+      .node--view-mode-teaser {
+        display: flex;
+        flex-direction: column-reverse;
+        h2 {
+          display: block;
+          width: 90%;
+          a {
+            @include link-style;
+            color: $color-black;
+            font-size: 18px;
+            line-height: 24px;
+            text-decoration: none;
+          }
+        }
+        .field--name-field-date-project {
+          .datetime {
+            font-family: $font-karla;
+            font-size: 17px;
+            line-height: 20px;
+            font-weight: normal;
+            font-style: normal;
+            color: $font-color;
+            margin-top: 6px;
+            &::before {
+              content: '';
+              display: inline-block;
+              height: 1px;
+              width: 25px;
+              background-color: $color-orange;
+              margin: 0 20px 4px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
