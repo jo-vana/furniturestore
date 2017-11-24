@@ -84,3 +84,16 @@
 		opacity: $opacity;
 	}
 }
+// - - a link style and hover effect
+@mixin link-style {
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: none;
+  text-decoration: none;
+  color: $more-light-gray;
+  &:hover {
+    color: $color-orange;
+  }
+}

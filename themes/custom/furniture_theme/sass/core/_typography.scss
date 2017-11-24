@@ -6,6 +6,10 @@
 // ========================================
 @import url('https://fonts.googleapis.com/css?family=Karla');
 p {
+  font-size: $base-font-size;
+  line-height: 22px;
+  font-weight: normal;
+  font-style: normal;
   font-family: 'Karla', sans-serif;
 	&:last-child {
 	  margin-bottom: 0;

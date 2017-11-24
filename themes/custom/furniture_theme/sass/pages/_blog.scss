@@ -39,13 +39,57 @@
     }
   }
   .info-sec {
-    min-height: 50px;
     display: block;
     .field--name-field-blog-author {
       display: inline-block;
+      a {
+        @include link-style;
+      }
     }
     .field--name-field-categories {
       display: inline-block;
+      .field__item {
+        display: inline-block;
+        a {
+          @include link-style;
+        }
+      }
+      &::before {
+        content: '/';
+        color: $more-light-gray;
+        position: relative;
+        margin: 0 6px;
+      }
+    }
+  }
+  .field--name-body {
+    p {
+      color: $font-color;
+    }
+  }
+  .item-list--linkicon {
+    ul#linkicon-node-blog-field-share-it-links-5 {
+      display: block;
+      width: 200px;
+      margin-top: 20px;
+      &::before {
+        content: 'Share It:';
+        display: inline-block;
+        font-size: 15px;
+        color: $color-black;
+      }
+      li {
+        display: inline-block;
+        a {
+          span.linkicon__icon {
+            color: $font-color;
+            font-size: 15px;
+          }
+          span.linkicon__text {
+            display: none;
+          }
+        }
+      }
     }
   }
 
