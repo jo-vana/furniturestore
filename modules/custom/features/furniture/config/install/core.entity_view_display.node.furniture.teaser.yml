@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.furniture.body
     - field.field.node.furniture.field_categories
+    - field.field.node.furniture.field_desc
     - field.field.node.furniture.field_furniture_image
     - field.field.node.furniture.field_price
     - field.field.node.furniture.field_related_products
@@ -32,6 +33,7 @@ content:
     region: content
 hidden:
   field_categories: true
+  field_desc: true
   field_furniture_image: true
   field_price: true
   field_related_products: true
