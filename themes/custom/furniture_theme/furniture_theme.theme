@@ -1,6 +1,6 @@
 <?php
 
-function furniture_theme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+function furniture_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   $http_error_suggestions = [
      'system.401' => 'page__401',
      'system.403' => 'page__403',
@@ -14,6 +14,7 @@ function furniture_theme_theme_suggestions_page_alter(array &$suggestions, array
   }
 }
 
+<<<<<<< HEAD
 function furniturestore_theme_kick_preprocess_html(&$variables)
 {
     // Add information about the number of sidebars.
@@ -27,3 +28,32 @@ function furniturestore_theme_kick_preprocess_html(&$variables)
         $variables['attributes']['class'][] = 'sidebar-none';
     }
 }
+=======
+// Register Form and Login Form
+function furniture_theme_form_alter(&$form, &$form_state, $form_id)
+{
+
+    // Register Form
+    if ($form_id === 'user_register_form') {
+        $form['user_picture']['#access'] = FALSE;
+        $form['contact']['#access'] = FALSE;
+        $form['timezone']['#access'] = FALSE;
+        $form['account']['name']['#description'] = FALSE;
+        $form['account']['mail']['#description'] = FALSE;
+        $form['actions']['submit']['#value'] = t('Register');
+    }
+    // Login Form
+    if ($form_id === 'user_login_form') {
+        $form['name']['#title'] = t('Username or email address');
+        $form['actions']['submit']['#value'] = t('Login');
+        $form['remember'] = array(
+            '#type' => 'checkbox',
+            '#title' => t('Remember me'),
+            '#value' => 0,
+        );
+    }
+
+}
+
+
+>>>>>>> cfaf6b3eb614037654933773d21ec7c8455f9e31
