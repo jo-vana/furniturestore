@@ -7,6 +7,7 @@
 .portfolio-wrapper {
   width: 100%;
   display: flex;
+  padding-bottom: 50px;
   .block-left {
     @extend .col-lg-8;
     clear: left;
@@ -103,6 +104,8 @@
   display: block;
   width: 100%;
   border-top: 1px solid #e6e6e6;
+  margin: 25px 0;
+  padding: 15px 0 40px 0;
   .field__label {
     font-family: $font-karla;
     font-size: 30px;

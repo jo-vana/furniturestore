@@ -403,7 +403,7 @@ th {
   .row:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .layout-container .region-primary-menu #block-furniture-theme-branding, .region-header #block-furniture-theme-account-menu, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .portfolio-wrapper .block-right, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .layout-container .region-breadcrumb .block-page-title-block, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .layout-container .layout-content, .portfolio-wrapper .block-left, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, #block-furniture-theme-main-menu, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .layout-container header .region-header, .layout-container .region-primary-menu, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .layout-container .region-primary-menu #block-furniture-theme-branding, .region-header #block-furniture-theme-account-menu, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .portfolio-wrapper .block-right, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .layout-container .region-breadcrumb .block-page-title-block, .node--type-furniture .furniture-wrapp .furniture-main-block .top .left-block, .node--type-furniture .furniture-wrapp .furniture-main-block .top .right-block, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .layout-container .layout-content, .portfolio-wrapper .block-left, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, #block-furniture-theme-main-menu, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .layout-container header .region-header, .layout-container .region-primary-menu, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 1rem;
@@ -778,7 +778,7 @@ th {
     margin-left: 100%; } }
 
 @media (min-width: 80rem) {
-  .col-lg-1, .col-lg-2, .col-lg-3, .layout-container .region-primary-menu #block-furniture-theme-branding, .region-header #block-furniture-theme-account-menu, .col-lg-4, .portfolio-wrapper .block-right, .col-lg-5, .col-lg-6, .layout-container .region-breadcrumb .block-page-title-block, .col-lg-7, .col-lg-8, .layout-container .layout-content, .portfolio-wrapper .block-left, .col-lg-9, #block-furniture-theme-main-menu, .col-lg-10, .col-lg-11, .layout-container header .region-header, .layout-container .region-primary-menu, .col-lg-12 {
+  .col-lg-1, .col-lg-2, .col-lg-3, .layout-container .region-primary-menu #block-furniture-theme-branding, .region-header #block-furniture-theme-account-menu, .col-lg-4, .portfolio-wrapper .block-right, .col-lg-5, .col-lg-6, .layout-container .region-breadcrumb .block-page-title-block, .node--type-furniture .furniture-wrapp .furniture-main-block .top .left-block, .node--type-furniture .furniture-wrapp .furniture-main-block .top .right-block, .col-lg-7, .col-lg-8, .layout-container .layout-content, .portfolio-wrapper .block-left, .col-lg-9, #block-furniture-theme-main-menu, .col-lg-10, .col-lg-11, .layout-container header .region-header, .layout-container .region-primary-menu, .col-lg-12 {
     float: left; }
   .col-lg-1 {
     width: 8.33333%; }
@@ -790,7 +790,7 @@ th {
     width: 33.33333%; }
   .col-lg-5 {
     width: 41.66667%; }
-  .col-lg-6, .layout-container .region-breadcrumb .block-page-title-block {
+  .col-lg-6, .layout-container .region-breadcrumb .block-page-title-block, .node--type-furniture .furniture-wrapp .furniture-main-block .top .left-block, .node--type-furniture .furniture-wrapp .furniture-main-block .top .right-block {
     width: 50%; }
   .col-lg-7 {
     width: 58.33333%; }
@@ -1158,6 +1158,8 @@ h1 {
     .item-list--linkicon ul li a span.linkicon__icon {
       color: #888888;
       font-size: 15px; }
+      .item-list--linkicon ul li a span.linkicon__icon:hover {
+        color: #e6ae48; }
     .item-list--linkicon ul li a span.linkicon__text {
       display: none; }
 
@@ -1242,7 +1244,8 @@ h1 {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  padding-bottom: 50px; }
   .portfolio-wrapper .block-left {
     clear: left;
     display: -webkit-inline-box;
@@ -1352,13 +1355,17 @@ h1 {
     .item-list--linkicon ul li a span.linkicon__icon {
       color: #888888;
       font-size: 15px; }
+      .item-list--linkicon ul li a span.linkicon__icon:hover {
+        color: #e6ae48; }
     .item-list--linkicon ul li a span.linkicon__text {
       display: none; }
 
 .field--name-field-more {
   display: block;
   width: 100%;
-  border-top: 1px solid #e6e6e6; }
+  border-top: 1px solid #e6e6e6;
+  margin: 25px 0;
+  padding: 15px 0 40px 0; }
   .field--name-field-more .field__label {
     font-family: "Karla", sans-serif;
     font-size: 30px;
@@ -1428,5 +1435,22 @@ h1 {
             width: 25px;
             background-color: #e6ae48;
             margin: 0 20px 4px 0; }
+
+.node--type-furniture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75%; }
+  .node--type-furniture .furniture-wrapp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .node--type-furniture .furniture-wrapp .furniture-main-block {
+      width: 100%; }
+
+.sidebar-block .layout-sidebar {
+  width: 25%;
+  height: 200px;
+  background-color: #9b9b9b; }
 
 /*# sourceMappingURL=../stylesheets/application.css.map */
