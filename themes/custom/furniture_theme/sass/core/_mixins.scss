@@ -118,6 +118,9 @@
         span.linkicon__icon {
           color: $font-color;
           font-size: 15px;
+          &:hover {
+            color: $color-orange;
+          }
         }
         span.linkicon__text {
           display: none;
