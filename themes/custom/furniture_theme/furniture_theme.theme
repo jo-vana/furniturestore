@@ -37,7 +37,19 @@ function furniture_theme_form_alter(&$form, &$form_state, $form_id)
             '#value' => 0,
         );
     }
-
+    // Contact Form
+    if ($form_id == 'contact_message_feedback_form') {
+        $request = \Drupal::request();
+        $route_match = \Drupal::routeMatch();
+        $title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+        $form['title'] = array(
+            '#theme' => 'page_title',
+            '#title' => $title,
+            '#weight' => -1000,
+        );
+        $form['title']['#title'] = t('Let\'s Talk');
+    }
 }
+
 
 
