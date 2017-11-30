@@ -1,18 +1,18 @@
 <?php
 
 
-namespace Drupal\prev_next_member\Plugin\Block;
+namespace Drupal\prev_next_our_team\Plugin\Block;
 
 use Drupal\node\Entity\Node;
 use Drupal\Core\Block\BlockBase;
 
 
 /**
- * Provides a 'Next Previous Member' block.
+ * Provides a 'Next Previous our_team' block.
  *
  * @Block(
- *   id = "prev_next_member",
- *   admin_label = @Translation("Next Previous Member Block"),
+ *   id = "prev_next_our_team",
+ *   admin_label = @Translation("Next Previous Our Team Block"),
  *   category = @Translation("Blocks")
  * )
  */
