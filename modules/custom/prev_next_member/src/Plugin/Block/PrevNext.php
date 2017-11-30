@@ -11,7 +11,7 @@ use Drupal\Core\Block\BlockBase;
  * Provides a 'Next Previous Member' block.
  *
  * @Block(
- *   id = "prev_next_memeber",
+ *   id = "prev_next_member",
  *   admin_label = @Translation("Next Previous Member Block"),
  *   category = @Translation("Blocks")
  * )
