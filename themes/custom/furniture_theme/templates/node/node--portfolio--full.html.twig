@@ -116,6 +116,13 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
             </div>
         </div>
         {{ content.field_share_it_links }}
+
+        {% if node.getType not in ['text', 'misc' ]  %}
+            <div class="prev_next_portfolio">
+                {{ prev_next_portfolio }}
+            </div>
+        {% endif %}
+
         {{ content.field_more }}
     </div>
 
