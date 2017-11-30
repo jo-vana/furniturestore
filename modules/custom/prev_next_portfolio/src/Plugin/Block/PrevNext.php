@@ -24,38 +24,44 @@ class PrevNext extends BlockBase {
     {
         $current_node = \Drupal::routeMatch()->getParameter('node')->Id();
         # Next
-        $query = \Drupal::database()->select('node', 'n');
+        $query = \Drupal::database()->select('node_field_data', 'n');
         $query->addField('n', 'nid');
+        $query->addField('n', 'title');
         $query->condition('n.nid', $current_node, '>');
         $query->condition('n.type', 'portfolio', '=');
         $query->range(0, 1);
-        $previous = $query->execute()->fetchField();
+        $previous = $query->execute()->fetchAssoc();
 
         # Previous
-        $query = \Drupal::database()->select('node', 'n');
+        $query = \Drupal::database()->select('node_field_data', 'n');
         $query->addField('n', 'nid');
+        $query->addField('n', 'title');
         $query->condition('n.nid', $current_node, '<');
         $query->condition('n.type', 'portfolio', '=');
         $query->orderBy('nid', 'DESC');
         $query->range(0, 1);
-        $next = $query->execute()->fetchField();
+        $next = $query->execute()->fetchAssoc();
+
 
         # Markup
         $markup = '<div>';
-        if( isset($previous) && is_numeric($previous)) {
-            $node = Node::load($previous);
-            $markup .= '<a class="prev" href="/node/'.$previous.'">Prev <span class="title">' . $node->getTitle() . '</span></a> ';
+        if( isset($previous) && is_numeric($previous['nid'])) {
+//            $node = Node::load($previous);
+            $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$previous['nid']);
+            $markup .= '<a class="prev" href="'.$alias.'">Prev <span class="title">' . $previous['title'] . '</span></a> ';
         }
-        if( isset($next)&& is_numeric($next)) {
-            $node = Node::load($next);
-            $markup .= '<a class="next" href="/node/'.$next.'">Next <span class="title">' . $node->getTitle() . '</span></a>';
+        if( isset($next)&& is_numeric($next['nid'])) {
+//            $node = Node::load($next);
+            $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$next['nid']);
+            $markup .= '<a class="next" href="'.$alias.'">Next <span class="title">' . $next['title'] . '</span></a>';
         }
         $markup .= '</div>';
 
         # Cache
         return [
             '#markup' =>$markup,
-            '#cache'   => ['max-age' => 0]
+            '#cache'   => ['max-age' => 0],
+
         ];
 
     }
