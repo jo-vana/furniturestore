@@ -8,7 +8,7 @@ use Drupal\Core\Block\BlockBase;
 
 
 /**
- * Provides a 'Next Previous our_team' block.
+ * Provides a 'Next Previous Our Team' block.
  *
  * @Block(
  *   id = "prev_next_our_team",
