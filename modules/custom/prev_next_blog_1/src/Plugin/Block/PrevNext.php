@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Drupal\prev_next_blog\Plugin\Block;
+namespace Drupal\prev_next_blog_1\Plugin\Block;
 
 use Drupal\node\Entity\Node;
 use Drupal\Core\Block\BlockBase;
@@ -11,7 +11,7 @@ use Drupal\Core\Block\BlockBase;
  * Provides a 'Next Previous Blog' block.
  *
  * @Block(
- *   id = "prev_next_blog",
+ *   id = "prev_next_blog_1",
  *   admin_label = @Translation("Next Previous Blog Block"),
  *   category = @Translation("Blocks")
  * )
