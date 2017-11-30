@@ -51,5 +51,23 @@ function furniture_theme_form_alter(&$form, &$form_state, $form_id)
     }
 }
 
+function furniture_theme_preprocess_node(&$variables) {
 
+    $a2a_block = \Drupal\block\Entity\Block::load('nextpreviousblogblock');
+    $a2a_block_view = \Drupal::entityTypeManager()
+        ->getViewBuilder('block')
+        ->view($a2a_block);
+    if ($a2a_block_view) {
+        $variables['prev_next_blog_1'] = $a2a_block_view;
+    }
+
+    $a2a_block = \Drupal\block\Entity\Block::load('nextpreviousportfolioblock');
+    $a2a_block_view = \Drupal::entityTypeManager()
+        ->getViewBuilder('block')
+        ->view($a2a_block);
+    if ($a2a_block_view) {
+        $variables['prev_next_portfolio'] = $a2a_block_view;
+    }
+
+}
 
