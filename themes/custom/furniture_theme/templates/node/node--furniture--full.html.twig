@@ -104,11 +104,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
             </div>
             <div class="right-block">
                 {{ title_prefix }}
-                {% if not page %}
-                    <h2{{ title_attributes }}>
-                        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-                    </h2>
-                {% endif %}
+                    <h2{{ title_attributes }}>{{ label }}</h2>
                 {{ title_suffix }}
 
                 <div class="price-rating">
@@ -119,19 +115,30 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
                 {{ content.field_share_it_links }}
             </div>
             </div>
-                {{ content.field_desc }}
-                {{ content.field_reviews }}
+            {#<div class="bottom container">#}
+                {#<ul class="tabs">#}
+                    {#<li class="tab-link current" data-tab="tab-1">Description</li>#}
+                    {#<li class="tab-link" data-tab="tab-2">Additional information</li>#}
+                    {#<li class="tab-link" data-tab="tab-3">Reviews</li>#}
+                {#</ul>#}
+                {#<div id="tab-1" class="tab-content current">#}
+                    {#{{ content.field_desc }}#}
+                {#</div>#}
+                {#<div id="tab-2" class="tab-content">#}
+                    {#{{ content.field_materials }}#}
+                    {#{{ content.field_color }}#}
+                {#</div>#}
+                {#<div id="tab-3" class="tab-content">#}
+                    {#{{ content.field_reviews }}#}
+                {#</div>#}
+                {#</div>#}
                 {{ content.field_related_products }}
+            </div>
 
 
 
         </div>
 
-    </div>
-    <div class="sidebar-block">
-        <aside class="layout-sidebar" role="complementary">
-            {{ page.side_content }}
-        </aside>
     </div>
 
 

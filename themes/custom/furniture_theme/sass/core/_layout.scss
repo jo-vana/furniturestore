@@ -4,10 +4,14 @@
 // Basic page layouts, widths, margins, paddings
 //
 // ========================================
-
 .layout-container {
-  width: 100%;
+  @extend .col-lg-12;
   margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
   header {
     width: 100%;
     min-height: 36px;
@@ -45,8 +49,13 @@
 
     }
   }
-  .layout-content {
+  main {
     @extend .col-lg-8;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
     margin: 0 auto;
     float: none;
     margin-top: 70px;
@@ -66,4 +75,23 @@
       text-align: center;
     }
   }
+}
+.sidebar-none .layout-content {
+  @extend .col-lg-12;
+  margin: 0 auto;
+  float: none;
+  margin-top: 70px;
+}
+.sidebar-first .layout-content {
+  @extend .col-lg-8;
+  float: left;
+  clear: left;
+  margin-top: 70px;
+}
+.layout-sidebar-first {
+  @extend .col-lg-4;
+  align-items: center;
+  float: right;
+  clear: right;
+  margin-top: 70px;
 }
