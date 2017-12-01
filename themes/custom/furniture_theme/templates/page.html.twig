@@ -51,7 +51,7 @@
   {{ page.primary_menu }}
   {{ page.secondary_menu }}
 
-  {{ page.breadcrumb }}
+  <div class="background-bredcrumb">{{ page.breadcrumb }}</div>
 
   {{ page.highlighted }}
 
@@ -67,13 +67,7 @@
     {#sidebar-first#}
     {% if page.sidebar_first %}
       <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
+        <div class="test">{{ page.sidebar_first }}</div>
       </aside>
     {% endif %}
 

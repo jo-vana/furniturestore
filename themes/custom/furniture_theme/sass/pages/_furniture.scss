@@ -6,11 +6,10 @@
 // ========================================
 .node--type-furniture {
   display: flex;
-  width: 75%;
   .furniture-wrapp {
     display: flex;
     .furniture-main-block {
-      width: 100%;
+      width: 80%;
       .top {
         .left-block {
           @extend .col-lg-6;
@@ -18,18 +17,17 @@
         }
         .right-block {
           @extend .col-lg-6;
+          h2 {
+            margin-top: 0;
+
+          }
         }
+      }
+      .bottom {
+
       }
 
     }
 
   }
-}
-.sidebar-block {
-  .layout-sidebar {
-    width: 25%;
-    height: 200px;
-    background-color: $more-light-gray;
-  }
-
 }

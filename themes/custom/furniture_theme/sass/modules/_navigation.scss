@@ -9,21 +9,27 @@
 
 }
 #block-furniture-theme-main-menu {
-  @extend .col-lg-9;
+  display: inline-block;
   float: right;
   clear: right;
   ul.menu {
-    display: flex;
+    display: block;
     margin-top: 27px;
     float: right;
     clear: right;
     li {
-      display: inline-flex;
+      display: inline-block;
       padding: 10px 15px;
       a {
         text-decoration: none;
-        color: black;
-        font-size: 18px;
+        color: #252324;
+        font-size: 17px;
+        line-height: 22px;
+        font-weight: normal;
+        font-style: normal;
+        &:hover {
+          color: #9d9d9d;
+        }
       }
     }
   }

@@ -10,20 +10,26 @@
 }
 .region-header {
   #block-furniture-theme-account-menu {
-    @extend .col-lg-3;
     display: block;
     position: relative;
     float: right;
     ul.menu {
-      display: flex;
+      display: block;
       margin: 0;
       li {
-        display: inline-flex;
+        display: inline-block;
         padding: 9px;
         a {
-          color: $color-gray;
-          font-weight: 100;
+          color: #707070;
+          font-size: 14px;
+          line-height: 18px;
+          font-style: normal;
+          text-transform: none;
+          font-weight: normal;
           text-decoration: none;
+          &:hover {
+            color: $color-gray;
+          }
         }
       }
     }
