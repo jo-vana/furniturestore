@@ -1,10 +1,12 @@
 {% for entry in content %}
-    {#<a href ="{{ entry.nid }}"><img src="{{ entry.image }}"/></a>#}
     <div class="block-title">
-        <a href ="{{ entry.alias }}">{{ entry.title }}
-            <img src=" {{ entry.image }} "/>
-        </a>
+        <a href ="{{ entry.alias }}">{{ entry.title }}</a>
     </div>
+
+    <div class="block-img">
+            <img src=" {{ entry.image }} "/>
+    </div>
+
     <div class="block-term">
     <p>{{ entry.name }}</p>
     </div>
