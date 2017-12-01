@@ -51,13 +51,12 @@
   }
   main {
     @extend .col-lg-8;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    //display: flex;
+    //flex-direction: row;
+    //flex-wrap: wrap;
+    //justify-content: space-between;
+    //align-items: flex-start;
     margin: 0 auto;
-    float: none;
     margin-top: 70px;
   }
 }

@@ -1,18 +1,18 @@
 <?php
 
 
-namespace Drupal\prev_next_blog\Plugin\Block;
+namespace Drupal\prev_next_our_team\Plugin\Block;
 
 use Drupal\node\Entity\Node;
 use Drupal\Core\Block\BlockBase;
 
 
 /**
- * Provides a 'Next Previous Blog' block.
+ * Provides a 'Next Previous Our Team' block.
  *
  * @Block(
- *   id = "prev_next_blog",
- *   admin_label = @Translation("Next Previous Blog Block"),
+ *   id = "prev_next_our_team",
+ *   admin_label = @Translation("Next Previous Our Team Block"),
  *   category = @Translation("Blocks")
  * )
  */
@@ -27,7 +27,7 @@ class PrevNext extends BlockBase {
         $query = \Drupal::database()->select('node', 'n');
         $query->addField('n', 'nid');
         $query->condition('n.nid', $current_node, '>');
-        $query->condition('n.type', 'blog', '=');
+        $query->condition('n.type', 'our_team', '=');
         $query->range(0, 1);
         $previous = $query->execute()->fetchField();
 
@@ -35,7 +35,7 @@ class PrevNext extends BlockBase {
         $query = \Drupal::database()->select('node', 'n');
         $query->addField('n', 'nid');
         $query->condition('n.nid', $current_node, '<');
-        $query->condition('n.type', 'blog', '=');
+        $query->condition('n.type', 'our_team', '=');
         $query->orderBy('nid', 'DESC');
         $query->range(0, 1);
         $next = $query->execute()->fetchField();

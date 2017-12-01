@@ -129,3 +129,57 @@
     }
   }
 }
+
+// - - Style for footer menu blocks
+@mixin footer-menu {
+  nav {
+    width: 24%;
+    display: inline-block;
+    padding: 0 20px;
+    @media screen and (max-width: $screen-lg-min) {
+      width: 49%;
+    }
+    @media screen and (max-width: $screen-sm-min) {
+      width: 98%;
+    }
+    h2 {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: normal;
+      font-style: normal;
+      color: white;
+    }
+    ul.menu {
+      margin: 0;
+      li {
+        border-bottom: 1px solid #333333;
+        display: block;
+        position: relative;
+        &::before {
+          content: '';
+          border-radius: 50%;
+          width: 5px;
+          height: 5px;
+          margin: auto !important;
+          position: absolute;
+          left: auto;
+          right: 0;
+          top: 10px;
+          background-color: #333333;
+        }
+        a {
+          color: #707070;
+          transition: color 0.3s ease-in-out;
+          font-size: 15px;
+          line-height: 22px;
+          font-weight: normal;
+          font-style: normal;
+          text-decoration: none;
+          &:hover {
+            color: $color-orange;
+          }
+        }
+      }
+    }
+  }
+}
