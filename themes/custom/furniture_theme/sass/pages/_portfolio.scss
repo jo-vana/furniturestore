@@ -113,6 +113,11 @@
   a.next {
     @include next;
   }
+  @media screen and (max-width: $screen-xs-min){
+    margin-top: 75px;
+    margin-bottom: 60px;
+    height: 180px;
+  }
 }
 .field--name-field-more {
   display: block;
@@ -130,20 +135,27 @@
     margin: 20px 0;
   }
   .field__items {
-    display: flex;
-    flex-direction: row;
+    display: block;
     width: 100%;
-    justify-content: space-between;
     .field__item {
-      display: inline-flex;
-      width: 90%;
-      align-self: flex-start;
+      display: inline-block;
+      width: 23%;
+      margin: 0 6px;
       .node--view-mode-teaser {
-        display: flex;
-        flex-direction: column-reverse;
+        display: block;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        box-orient: vertical;
         h2 {
           display: block;
-          width: 90%;
+          -webkit-box-ordinal-group: 3;
+          -moz-box-ordinal-group: 3;
+          box-ordinal-group: 3;
+          width: 100%;
           a {
             @include link-style;
             color: $color-black;
@@ -152,25 +164,42 @@
             text-decoration: none;
           }
         }
-        .field--name-field-date-project {
-          .datetime {
-            font-family: $font-karla;
-            font-size: 17px;
-            line-height: 20px;
-            font-weight: normal;
-            font-style: normal;
-            color: $font-color;
-            margin-top: 6px;
-            &::before {
-              content: '';
-              display: inline-block;
-              height: 1px;
-              width: 25px;
-              background-color: $color-orange;
-              margin: 0 20px 4px 0;
+        .node__content {
+          -webkit-box-ordinal-group: 2;
+          -moz-box-ordinal-group: 2;
+          box-ordinal-group: 2;
+          .field--name-field-po {
+            display: block;
+            width: auto;
+          }
+          .field--name-field-date-project {
+            display: block;
+            width: 100%;
+            .datetime {
+              font-family: $font-karla;
+              font-size: 17px;
+              line-height: 20px;
+              font-weight: normal;
+              font-style: normal;
+              color: $font-color;
+              margin-top: 6px;
+              &::before {
+                content: '';
+                display: inline-block;
+                height: 1px;
+                width: 25px;
+                background-color: $color-orange;
+                margin: 0 20px 4px 0;
+              }
             }
           }
         }
+      }
+      @media screen and (max-width: $screen-sm-min) {
+        width: 47%;
+      }
+      @media screen and (max-width: $screen-xs-min) {
+        width: 100%;
       }
     }
   }

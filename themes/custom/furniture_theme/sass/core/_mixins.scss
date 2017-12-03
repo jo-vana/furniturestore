@@ -205,6 +205,10 @@
     padding: 10px 14px;
     border: 1px solid $more-light-gray;
     margin: 3px;
+    @media screen and (max-width: $screen-xs-min){
+      top: -50px;
+      left: 44%;
+    }
   }
   &:hover::before {
     color: $color-orange;
@@ -223,6 +227,13 @@
     &:hover {
       color: $color-orange;
     }
+  }
+  @media screen and (max-width: $screen-sm-min) {
+    width: 100%;
+  }
+  @media screen and (max-width: $screen-xs-min){
+    text-align: center;
+    padding-left: 0;
   }
 }
 @mixin next {
@@ -246,6 +257,10 @@
   padding: 12px 16px;
   border: 1px solid $more-light-gray;
   margin: 3px;
+    @media screen and (max-width: $screen-xs-min){
+      top: 60px;
+      left: 44%;
+    }
 }
   &:hover::before {
     color: $color-orange;
@@ -264,5 +279,13 @@
     &:hover {
       color: $color-orange;
     }
+  }
+  @media screen and (max-width: $screen-sm-min) {
+    width: 100%;
+  }
+  @media screen and (max-width: $screen-xs-min){
+    text-align: center;
+    padding-right: 0;
+    padding-top: 70px;
   }
 }
