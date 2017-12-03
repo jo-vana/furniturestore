@@ -1,0 +1,15 @@
+{% for entry in content %}
+    <div class="block-title">
+        <a href ="{{ entry.alias }}">{{ entry.title }}</a>
+    </div>
+
+    <div class="block-img">
+            <img src=" {{ entry.image }} "/>
+    </div>
+
+    <div class="block-term">
+    <p>{{ entry.name }}</p>
+    </div>
+
+
+{% endfor %}

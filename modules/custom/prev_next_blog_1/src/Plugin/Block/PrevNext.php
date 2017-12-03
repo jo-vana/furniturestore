@@ -48,12 +48,12 @@ class PrevNext extends BlockBase {
         if( isset($previous) && is_numeric($previous['nid'])) {
 //            $node = Node::load($previous);
             $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$previous['nid']);
-            $markup .= '<a class="prev" href="'.$alias.'">Prev <span class="title">' . $previous['title'] . '</span></a> ';
+            $markup .= '<a class="prev" href="'.$alias.'">previous <span class="title">' . $previous['title'] . '</span></a> ';
         }
         if( isset($next)&& is_numeric($next['nid'])) {
 //            $node = Node::load($next);
             $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$next['nid']);
-             $markup .= '<a class="next" href="'.$alias.'">Next <span class="title">' . $next['title'] . '</span></a>';
+             $markup .= '<a class="next" href="'.$alias.'">next <span class="title">' . $next['title'] . '</span></a>';
         }
         $markup .= '</div>';
 
