@@ -1880,12 +1880,12 @@ footer {
         position: relative;
         overflow: hidden;
         text-align: center; }
-        .node--type-furniture .third-block .field--name-field-related-products .field__items .field__item .node--view-mode-teaser .field--name-field-categories .field__items .field__item a {
+        .node--type-furniture .third-block .field--name-field-related-products .field__items .field__item .node--view-mode-teaser .field--name-field-categories .field__item a {
           color: #888888;
           text-decoration: none;
           font-size: 15px;
           line-height: 22px; }
-          .node--type-furniture .third-block .field--name-field-related-products .field__items .field__item .node--view-mode-teaser .field--name-field-categories .field__items .field__item a:hover {
+          .node--type-furniture .third-block .field--name-field-related-products .field__items .field__item .node--view-mode-teaser .field--name-field-categories .field__item a:hover {
             color: #e6ae48; }
       .node--type-furniture .third-block .field--name-field-related-products .field__items .field__item .node--view-mode-teaser h2 {
         font-size: 18px;

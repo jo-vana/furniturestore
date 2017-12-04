@@ -177,16 +177,14 @@
               position: relative;
               overflow: hidden;
               text-align: center;
-              .field__items {
-                .field__item {
-                  a {
-                    color: #888888;
-                    text-decoration: none;
-                    font-size: 15px;
-                    line-height: 22px;
-                    &:hover {
-                      color: #e6ae48;
-                    }
+              .field__item {
+                a {
+                  color: #888888;
+                  text-decoration: none;
+                  font-size: 15px;
+                  line-height: 22px;
+                  &:hover {
+                    color: #e6ae48;
                   }
                 }
               }
