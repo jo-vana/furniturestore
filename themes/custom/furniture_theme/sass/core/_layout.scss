@@ -88,12 +88,13 @@
 }
 .sidebar-first .layout-content {
   @extend .col-lg-8;
-  float: left;
-  clear: left;
+  float: none;
+  display: inline-block;
   margin-top: 70px;
 }
 .layout-sidebar-first {
   @extend .col-lg-4;
+  display: inline-block;
   align-items: center;
   float: right;
   clear: right;

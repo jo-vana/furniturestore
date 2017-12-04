@@ -5,29 +5,214 @@
 //
 // ========================================
 .node--type-furniture {
-  display: flex;
-  .furniture-wrapp {
-    display: flex;
-    .furniture-main-block {
-      width: 80%;
-      .top {
-        .left-block {
-          @extend .col-lg-6;
-
+  .first-block {
+    display: block;
+    width: 100%;
+    .first-left-block {
+      display: inline-block;
+      width: 46%;
+    }
+    .first-right-block {
+      display: inline-block;
+      width: 47%;
+      margin-left: 5%;
+      h2 {
+        margin-top: 0;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #e6e6e6;
+        a {
+          text-decoration: none;
+          font-size: 32px;
+          line-height: 38px;
+          color: $color-black;
         }
-        .right-block {
-          @extend .col-lg-6;
-          h2 {
-            margin-top: 0;
-
+      }
+      .field--name-field-price {
+        font-size: 22px;
+        line-height: 28px;
+        color: $color-black;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e6e6e6;
+      }
+      .field--name-body {
+        color: #888888;
+        font-size: 15px;
+        line-height: 22px;
+        padding-bottom: 20px;
+      }
+      .field--name-field-categories {
+        padding-bottom: 40px;
+        border-bottom: 1px solid #e6e6e6;
+        .field__label {
+          color: $color-black;
+          font-size: 15px;
+          line-height: 22px;
+          font-weight: normal;
+        }
+        .field__items {
+          .field__item {
+            a {
+              color: #9b9b9b;
+              font-size: 15px;
+              line-height: 22px;
+              text-decoration: none;
+            }
           }
         }
       }
-      .bottom {
-
+      .item-list--linkicon {
+        padding-bottom: 25px;
       }
-
     }
-
   }
+  .second-block {
+    width: 100%;
+    ul.tabs {
+      margin: 0px;
+      padding: 0px;
+      list-style: none;
+      display: block;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #e6e6e6;
+      li {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: normal;
+        background: none;
+        color: $color-black;
+        display: inline-block;
+        padding: 10px 15px;
+        cursor: pointer;
+        &.current {
+          border-bottom: 1px solid #e6ae48;
+        }
+      }
+    }
+    .tab-content {
+      display: none;
+      padding: 15px;
+      &.current {
+        display: inherit;
+      }
+      .field--name-field-desc {
+        color: #888888;
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: normal;
+        .field__label {
+          display: none;
+        }
+      }
+      .field--name-field-materials {
+        padding-bottom: 14px;
+        padding-top: 30px;
+        border-bottom: 1px solid #e6e6e6;
+        .field__label {
+          color: $color-black;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 24px;
+          padding-right: 50px;
+        }
+        .field__item {
+          color: #888888;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+      .field--name-field-color {
+        padding-bottom: 14px;
+        padding-top: 14px;
+        border-bottom: 1px solid #e6e6e6;
+        .field__label {
+          color: $color-black;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 24px;
+          padding-right: 50px;
+        }
+        .field__item {
+          color: #888888;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  .third-block {
+    width: 100%;
+    .field--name-field-related-products {
+      .field__label {
+        margin: 0;
+        padding: 0 0 45px;
+        text-align: center;
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: normal;
+        color: $color-black;
+      }
+      .field__items {
+        display: block;
+        width: 100%;
+        .field__item {
+          display: inline-block;
+          width: 30%;
+          margin-right: 2%;
+          vertical-align: top;
+          .node--view-mode-teaser {
+            .field--name-field-furniture-image {
+              display: block;
+              width: 100%;
+            }
+            .field--name-field-categories {
+              padding-top: 10px;
+              position: relative;
+              overflow: hidden;
+              text-align: center;
+              .field__item {
+                a {
+                  color: #888888;
+                  text-decoration: none;
+                  font-size: 15px;
+                  line-height: 22px;
+                  &:hover {
+                    color: #e6ae48;
+                  }
+                }
+              }
+            }
+            h2 {
+              font-size: 18px;
+              line-height: 24px;
+              font-weight: normal;
+              color: $color-black;
+              text-align: center;
+              a {
+                transition: border-color .3s ease-in-out;
+                text-decoration: none;
+                border-bottom: 1px solid transparent;
+                &:hover {
+                  border-bottom: 1px solid #e6ae48;
+                }
+              }
+            }
+            .field--name-field-price {
+              font-size: 18px;
+              line-height: 24px;
+              display: block;
+              position: relative;
+              text-align: center;
+              margin: 0 auto;
+              color: #888888;
+              padding: 20px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
