@@ -4,7 +4,7 @@
  *
 */
 
-function deploy_update_8421()
+function deploy_update_8422()
 {
     \Drupal::service('module_installer')->install(['favourite_products']);
 }
