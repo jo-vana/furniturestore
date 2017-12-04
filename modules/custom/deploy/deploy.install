@@ -1,0 +1,10 @@
+<?php
+/**
+ * Deploy module
+ *
+*/
+
+function deploy_update_8422()
+{
+    \Drupal::service('module_installer')->install(['favourite_products']);
+}
