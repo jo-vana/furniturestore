@@ -995,7 +995,7 @@ h1, h2, h3, h4, h5, h6 {
   .layout-container .region-breadcrumb {
     display: block;
     width: 100%;
-    height: 63px;
+    min-height: 63px;
     background-color: #f9f9f9; }
     .layout-container .region-breadcrumb .block-page-title-block {
       display: inline-block;
@@ -1006,6 +1006,11 @@ h1, h2, h3, h4, h5, h6 {
           width: 100%; } }
     .layout-container .region-breadcrumb #block-furniture-theme-breadcrumbs {
       display: inline-block; }
+  .layout-container .region-team-title {
+    display: block;
+    width: 100%;
+    height: 170px;
+    background-color: #e6ae48; }
   .layout-container main {
     display: block;
     margin: 0 auto;
@@ -1908,5 +1913,196 @@ footer {
         margin: 0 auto;
         color: #888888;
         padding: 20px 0; }
+
+.our-team-wrapper {
+  display: block;
+  width: 100%; }
+  .our-team-wrapper .block-left {
+    display: inline-block;
+    width: 65%; }
+    .our-team-wrapper .block-left .field--name-body {
+      padding-bottom: 30px; }
+      .our-team-wrapper .block-left .field--name-body p {
+        color: #888888; }
+    @media screen and (max-width: 66.13333rem) {
+      .our-team-wrapper .block-left {
+        width: 100%;
+        float: none; } }
+  .our-team-wrapper .block-right {
+    display: inline-block;
+    width: 30%;
+    float: right;
+    clear: right;
+    padding: 30px 25px;
+    border: 2px solid #e6ae48; }
+    .our-team-wrapper .block-right h3 {
+      margin-top: 0px;
+      font-size: 22px;
+      line-height: 28px;
+      font-weight: normal;
+      color: #212121; }
+    .our-team-wrapper .block-right .field--name-field-address {
+      font-size: 14px;
+      word-wrap: break-word;
+      text-align: right;
+      overflow: hidden;
+      color: #212121;
+      padding: 10px 0px;
+      border-bottom: 1px solid #e6e6e6; }
+      .our-team-wrapper .block-right .field--name-field-address .field__label {
+        color: #888888;
+        font-weight: normal; }
+    .our-team-wrapper .block-right .field--name-field-phone {
+      font-size: 14px;
+      word-wrap: break-word;
+      text-align: right;
+      overflow: hidden;
+      color: #212121;
+      padding: 10px 0px;
+      border-bottom: 1px solid #e6e6e6; }
+      .our-team-wrapper .block-right .field--name-field-phone .field__label {
+        color: #888888;
+        font-weight: normal; }
+    .our-team-wrapper .block-right .field--name-field-email {
+      font-size: 14px;
+      word-wrap: break-word;
+      text-align: right;
+      overflow: hidden;
+      padding: 10px 0px;
+      border-bottom: 1px solid #e6e6e6; }
+      .our-team-wrapper .block-right .field--name-field-email .field__label {
+        color: #888888;
+        font-weight: normal; }
+      .our-team-wrapper .block-right .field--name-field-email .field__item a {
+        text-decoration: none;
+        color: #212121;
+        font-weight: normal;
+        cursor: default; }
+    .our-team-wrapper .block-right .field--name-field-profile-categories {
+      font-size: 14px;
+      word-wrap: break-word;
+      text-align: right;
+      overflow: hidden;
+      padding: 10px 0px; }
+      .our-team-wrapper .block-right .field--name-field-profile-categories .field__label {
+        color: #888888;
+        font-weight: normal; }
+      .our-team-wrapper .block-right .field--name-field-profile-categories .field__item a {
+        text-decoration: none;
+        color: #212121;
+        font-weight: normal; }
+        .our-team-wrapper .block-right .field--name-field-profile-categories .field__item a:hover {
+          color: #888888; }
+    @media screen and (max-width: 66.13333rem) {
+      .our-team-wrapper .block-right {
+        display: block;
+        width: 100%;
+        float: none; } }
+
+#block-nextpreviousourteamblock {
+  display: block;
+  width: 100%;
+  min-height: 55px;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 40px; }
+  #block-nextpreviousourteamblock a.prev {
+    display: inline-block;
+    position: relative;
+    float: left;
+    clear: left;
+    padding-left: 70px;
+    color: #888888;
+    font-size: 15px;
+    text-decoration: none; }
+    #block-nextpreviousourteamblock a.prev::before {
+      content: '<';
+      color: #888888;
+      font-weight: bold;
+      display: inline-block;
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      left: 0;
+      padding: 10px 14px;
+      border: 1px solid #9b9b9b;
+      margin: 3px; }
+      @media screen and (max-width: 28rem) {
+        #block-nextpreviousourteamblock a.prev::before {
+          top: -50px;
+          left: 44%; } }
+    #block-nextpreviousourteamblock a.prev:hover::before {
+      color: #e6ae48; }
+    #block-nextpreviousourteamblock a.prev span {
+      display: block;
+      color: #212121;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: normal;
+      font-style: normal;
+      text-transform: none;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out; }
+      #block-nextpreviousourteamblock a.prev span:hover {
+        color: #e6ae48; }
+    @media screen and (max-width: 51.2rem) {
+      #block-nextpreviousourteamblock a.prev {
+        width: 100%; } }
+    @media screen and (max-width: 28rem) {
+      #block-nextpreviousourteamblock a.prev {
+        text-align: center;
+        padding-left: 0; } }
+  #block-nextpreviousourteamblock a.next {
+    display: inline-block;
+    float: right;
+    clear: right;
+    text-align: right;
+    padding-right: 70px;
+    color: #888888;
+    font-size: 15px;
+    text-decoration: none; }
+    #block-nextpreviousourteamblock a.next::before {
+      content: '>';
+      color: #888888;
+      font-weight: bold;
+      display: inline-block;
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      right: 0;
+      padding: 12px 16px;
+      border: 1px solid #9b9b9b;
+      margin: 3px; }
+      @media screen and (max-width: 28rem) {
+        #block-nextpreviousourteamblock a.next::before {
+          top: 60px;
+          left: 44%; } }
+    #block-nextpreviousourteamblock a.next:hover::before {
+      color: #e6ae48; }
+    #block-nextpreviousourteamblock a.next span {
+      display: block;
+      color: #212121;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: normal;
+      font-style: normal;
+      text-transform: none;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out; }
+      #block-nextpreviousourteamblock a.next span:hover {
+        color: #e6ae48; }
+    @media screen and (max-width: 51.2rem) {
+      #block-nextpreviousourteamblock a.next {
+        width: 100%; } }
+    @media screen and (max-width: 28rem) {
+      #block-nextpreviousourteamblock a.next {
+        text-align: center;
+        padding-right: 0;
+        padding-top: 70px; } }
+  @media screen and (max-width: 28rem) {
+    #block-nextpreviousourteamblock {
+      margin-top: 75px;
+      margin-bottom: 60px;
+      height: 180px; } }
 
 /*# sourceMappingURL=../stylesheets/application.css.map */

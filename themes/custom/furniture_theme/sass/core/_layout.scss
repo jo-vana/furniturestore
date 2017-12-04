@@ -38,7 +38,7 @@
   .region-breadcrumb {
     display: block;
     width: 100%;
-    height: 63px;
+    min-height: 63px;
     background-color: $gray-light;
     .block-page-title-block {
       display: inline-block;
@@ -50,6 +50,15 @@
     }
     #block-furniture-theme-breadcrumbs {
       display: inline-block;
+    }
+  }
+  .region-team-title {
+    display: block;
+    width: 100%;
+    height: 170px;
+    background-color: #e6ae48;
+    #block-pagetitle {
+
     }
   }
   main {
