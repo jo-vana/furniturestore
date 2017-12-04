@@ -1,46 +1,41 @@
 <?php
 
 
-namespace Drupal\our_team_block\Plugin\Block;
+namespace Drupal\favourite_products\Plugin\Block;
 
 use Drupal\Core\Block\BlockPluginInterface;
 use Drupal\file\Entity\File;
-use Drupal\taxonomy\Entity\Term;
 use Drupal\Core\Block\BlockBase;
 
 
 /**
- * Provides a 'Our Team' block.
+ * Provides a 'Favourite Products' block.
  *
  * @Block(
- *   id = "our_team_block",
- *   admin_label = @Translation("Our Team Block"),
+ *   id = "favourite_products",
+ *   admin_label = @Translation("Favourite Products Block"),
  *   category = @Translation("Blocks")
  * )
  */
-class OurTeamBlock extends BlockBase implements BlockPluginInterface{
+class FavouriteProducts extends BlockBase implements BlockPluginInterface{
         /**
          * {@inheritdoc}
          */
     function buildContent()
     {
         $query = \Drupal::database()->select('node_field_data', 'n');
-        $query->condition('n.type', 'our_team', '=');
+        $query->condition('n.type', 'furniture', '=');
 
-        $query->innerJoin('node__field_profile_image', 'pi', 'pi.entity_id = n.nid');
+        $query->innerJoin('node__field_furniture_image', 'fi', 'fi.entity_id = n.nid');
 
-        $query->innerJoin('node__field_profile_categories', 'fpc', 'fpc.entity_id = n.nid' );
-
-        $query->innerJoin('taxonomy_term_field_data', 't', 'fpc.field_profile_categories_target_id = t.tid' );
+        $query->innerJoin('node__field_price', 'fp', 'fp.entity_id = n.nid' );
 
         $query->addField('n', 'nid');
         $query->addField('n', 'title');
 
-        $query->addField('pi', 'field_profile_image_target_id', 'image');
+        $query->addField('fi', 'field_furniture_image_target_id', 'image');
 
-        $query->addField('t', 'name');
-
-        $query->range(0, 3);
+        $query->addField('fp', 'field_price_value');
 
         $data = [];
 
@@ -48,12 +43,12 @@ class OurTeamBlock extends BlockBase implements BlockPluginInterface{
 
         foreach ( $results as $result ) {
             $file = File::load($result->image);
-            $url = \Drupal\image\Entity\ImageStyle::load('large')->buildUrl($file->getFileUri());
+            $url = \Drupal\image\Entity\ImageStyle::load('furniture_default_img')->buildUrl($file->getFileUri());
             $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$result->nid);
             $data[] = [
                 'alias' => $alias,
                 'title' => $result->title,
-                'name' => $result->name,
+                'field_price_value' => $result->field_price_value,
                 'image' => $url,
             ];
         }
@@ -67,7 +62,7 @@ class OurTeamBlock extends BlockBase implements BlockPluginInterface{
     public function build () {
 
         return array(
-            '#theme'    => 'our_team_block',
+            '#theme'    => 'favourite_products',
             '#content'  => $this->buildContent(),
             '#cache'    => [
                 'max-age' => 0,

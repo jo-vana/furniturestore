@@ -1,5 +1,5 @@
-name: Custom Block for Our Team Members
-description: Block for Team Members to appear in about us page
+name: Custom Block for Favourite Products
+description: Block for Favourite Products to appear in about us page
 package: Custom
 
 type: module
