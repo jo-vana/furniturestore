@@ -6,25 +6,28 @@
 // ========================================
 .portfolio-wrapper {
   width: 100%;
-  display: flex;
+  display: block;
   padding-bottom: 50px;
   .block-left {
-    @extend .col-lg-8;
+    width: 60%;
     clear: left;
-    display: inline-flex;
-    flex-direction: column;
+    display: inline-block;
     .field--name-body {
+      padding-bottom: 30px;
       p {
         color: $font-color;
       }
     }
+    @media screen and (max-width: $screen-md-min) {
+      width: 100%;
+      float: none;
+    }
   }
   .block-right {
-    @extend .col-lg-4;
+    width: 35%;
     float: right;
     clear: right;
-    display: inline-flex;
-    flex-direction: column;
+    display: inline-block;
     h3 {
       margin-top: 0;
       font-weight: normal;
@@ -73,7 +76,6 @@
     .field--name-field-p-categories {
       padding: 9px 0;
       position: relative;
-      border-bottom: 1px solid #e6e6e6;
       overflow: hidden;
       .field__label {
         font-size: 14px;
@@ -94,6 +96,10 @@
           }
         }
       }
+    }
+    @media screen and (max-width: $screen-md-min) {
+      width: 100%;
+      float: none;
     }
   }
 }
