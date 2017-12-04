@@ -51,11 +51,16 @@
         }
         .field__items {
           .field__item {
+            display: inline-block;
+            padding-right: 5px;
             a {
               color: #9b9b9b;
               font-size: 15px;
               line-height: 22px;
               text-decoration: none;
+              &:hover {
+                color: #e6ae48;
+              }
             }
           }
         }
