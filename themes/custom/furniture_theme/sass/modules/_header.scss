@@ -9,8 +9,61 @@
 
 }
 .region-header {
+  #block-infoblockphone {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    top: -6px;
+    .field--name-body {
+      p {
+        font-family: $font-karla;
+        font-size: 14px;
+        line-height: 18px;
+        font-style: normal;
+        color: $color-gray;
+        &::before {
+          content: '\f10b';
+          font-family: $font-awesome;
+          color: $color-gray;
+          font-size: 24px;
+          top: 4px;
+          position: relative;
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+  #block-infoblockmail {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    top: -7px;
+    .field--name-body {
+      p {
+        a {
+          text-decoration: none;
+          font-size: 14px;
+          line-height: 18px;
+          font-style: normal;
+          color: $color-gray;
+          &::before {
+            content: '\f0e0';
+            font-family: $font-awesome;
+            color: $color-gray;
+            font-size: 22px;
+            top: 3px;
+            position: relative;
+            padding-right: 15px;
+          }
+          &:hover {
+            color: $color-orange;
+          }
+        }
+      }
+    }
+  }
   #block-furniture-theme-account-menu {
-    display: block;
+    display: inline-block;
     position: relative;
     float: right;
     ul.menu {

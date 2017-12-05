@@ -194,7 +194,9 @@
   font-size: 15px;
   text-decoration: none;
   &::before {
-    content: '<';
+    content: '\f104';
+    font-family: $font-awesome;
+    font-size: 20px;
     color: #888888;
     font-weight: bold;
     display: inline-block;
@@ -246,8 +248,10 @@
   font-size: 15px;
   text-decoration: none;
   &::before {
-  content: '>';
+  content: '\f105';
   color: #888888;
+    font-family: $font-awesome;
+    font-size: 20px;
   font-weight: bold;
   display: inline-block;
   position: absolute;
