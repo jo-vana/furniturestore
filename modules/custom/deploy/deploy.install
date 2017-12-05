@@ -4,7 +4,21 @@
  *
 */
 
+/**
+ * Favourite Products Block
+ */
 function deploy_update_8422()
 {
     \Drupal::service('module_installer')->install(['favourite_products']);
 }
+
+/**
+ * Breadcrumb Member Profile Block
+ */
+function deploy_update_8423()
+{
+    \Drupal::service('module_installer')->install(['breadcrumb_member_profile']);
+}
+
+
+
