@@ -20,5 +20,13 @@ function deploy_update_8423()
     \Drupal::service('module_installer')->install(['breadcrumb_member_profile']);
 }
 
+/**
+ * Our Collections Block
+ */
+function deploy_update_8424()
+{
+    \Drupal::service('module_installer')->install(['our_collections']);
+}
+
 
 
