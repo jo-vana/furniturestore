@@ -1,0 +1,23 @@
+{% for entry in content %}
+
+    <div class="block-fur-img">
+        <a href ="{{ entry.alias }}"><img src=" {{ entry.image }} "/></a>
+    </div>
+
+    <div class="block-fur-term">
+        <p>{{ entry.name }}</p>
+    </div>
+
+    <div class="block-fur-title">
+        <a href ="{{ entry.alias }}">{{ entry.title }}</a>
+    </div>
+
+    <div class="block-fur-price">
+        <p>${{ entry.field_price_value }}</p>
+    </div>
+
+{% endfor %}
+
+<div class="visit-store">
+    <a href="/shop">Visit store</a>
+</div>
