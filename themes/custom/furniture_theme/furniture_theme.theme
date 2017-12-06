@@ -78,7 +78,8 @@ function furniture_theme_form_alter(&$form, &$form_state, $form_id)
             '#weight' => -1000,
         );
         $form['title']['#title'] = t('Leave a Reply');
-        var_dump($form);
+        $form['actions']['submit']['#value'] = t('Add Comment');
+        $form['actions']['preview'] = FALSE;
     }
     // Reviews on Furniture page
     if ($form_id == 'comment_comments_with_fields_form') {
@@ -91,6 +92,8 @@ function furniture_theme_form_alter(&$form, &$form_state, $form_id)
             '#weight' => -1000,
         );
         $form['title']['#title'] = t('Reviews');
+        $form['actions']['submit']['#value'] = t('Submit');
+        $form['actions']['preview'] = FALSE;
     }
 }
 
