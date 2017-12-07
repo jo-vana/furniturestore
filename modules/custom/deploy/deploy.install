@@ -49,6 +49,6 @@ function deploy_update_8426()
  */
 function deploy_update_8427()
 {
-    \Drupal::service('module_installer')->install(['portfolio_list_page']);
+    \Drupal::service('module_installer')->install(['portfolio_list_page_1']);
 }
 
