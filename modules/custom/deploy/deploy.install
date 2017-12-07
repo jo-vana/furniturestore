@@ -44,3 +44,11 @@ function deploy_update_8426()
     \Drupal::service('module_installer')->install(['votingapi']);
 }
 
+/**
+ * Portfolio List Page
+ */
+function deploy_update_8427()
+{
+    \Drupal::service('module_installer')->install(['portfolio_list_page']);
+}
+
