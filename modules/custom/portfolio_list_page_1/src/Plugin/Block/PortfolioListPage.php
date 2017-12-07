@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Drupal\portfolio_list_page\Plugin\Block;
+namespace Drupal\portfolio_list_page_1\Plugin\Block;
 
 use Drupal\Core\Block\BlockPluginInterface;
 use Drupal\file\Entity\File;
@@ -12,7 +12,7 @@ use Drupal\Core\Block\BlockBase;
  * Provides a 'Portfolio List Page' block.
  *
  * @Block(
- *   id = "portfolio_list_page",
+ *   id = "portfolio_list_page_1",
  *   admin_label = @Translation("Portfolio List Page Block"),
  *   category = @Translation("Blocks")
  * )
@@ -74,7 +74,7 @@ class PortfolioListPage extends BlockBase implements BlockPluginInterface{
     public function build () {
 
         return array(
-            '#theme'    => 'portfolio_list_page',
+            '#theme'    => 'portfolio_list_page_1',
             '#content'  => $this->buildContent(),
             '#cache'    => [
                 'max-age' => 0,
