@@ -52,3 +52,11 @@ function deploy_update_8427()
     \Drupal::service('module_installer')->install(['portfolio_list_page_1']);
 }
 
+/**
+ * Top Rated Products Sidebar Block
+ */
+function deploy_update_8428()
+{
+    \Drupal::service('module_installer')->install(['top_rated_products']);
+}
+
