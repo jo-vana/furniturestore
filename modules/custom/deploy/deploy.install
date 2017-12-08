@@ -60,3 +60,11 @@ function deploy_update_8428()
     \Drupal::service('module_installer')->install(['top_rated_products']);
 }
 
+/**
+ * Blog List Page
+ */
+function deploy_update_8429()
+{
+    \Drupal::service('module_installer')->install(['blog_list_page']);
+}
+
