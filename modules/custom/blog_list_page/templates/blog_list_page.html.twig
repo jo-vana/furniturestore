@@ -1,7 +1,7 @@
 {% for entry in content %}
 
     <div class="block-blog-img">
-        <a href ="{{ entry.alias }}"><img src="{{ entry.image }}"/></a>
+        <a href ="{{ entry.nid }}"><img src="{{ entry.image }}"/></a>
     </div>
 
     <div class="block-blog-date">
@@ -9,23 +9,26 @@
     </div>
 
     <div class="block-fur-title">
-        <a href ="{{ entry.alias }}">{{ entry.title }}</a>
+        <a href ="{{ entry.nid }}">{{ entry.title }}</a>
     </div>
 
     <div class="block-blog-user">
-        <a href="{{ entry.alias3 }}"><p>{{ entry.username }}</p></a>
+        <a href="{{ entry.uid }}"><p>{{ entry.username }}</p></a>
     </div>
 
+{% for en in entry.taxonomy_name %}
+
     <div class="block-blog-term">
-        <a href ="{{ entry.alias2 }}"><p>{{ entry.taxonomy_name.name }}</p></a>
+        <a href ="{{ en.url }}"><p>{{ en.name }}</p></a>
     </div>
+{% endfor %}
 
     <div class="block-blog-body">
         <p>{{ entry.body }}</p>
     </div>
 
     <div class="block-blog-readmore">
-        <a href="{{ entry.alias }}">Read More</a>
+        <a href="{{ entry.nid }}">Read More</a>
     </div>
 
 {% endfor %}
