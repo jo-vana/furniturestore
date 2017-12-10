@@ -34,8 +34,6 @@
     Drupal.behaviors.mobileMenu = {
       attach:function(context, settings) {
 
-          var link = $('#block-mainnavigationmobile ul.navbar-nav li').find('a');
-
                   // If a link has a dropdown, add sub menu toggle.
                   $('#block-mainnavigationmobile ul.navbar-nav li a').click(function(e) {
                       // e.preventDefault();
