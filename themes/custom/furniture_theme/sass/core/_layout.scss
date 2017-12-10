@@ -20,12 +20,14 @@
     }
   }
   .region-primary-menu{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     display: block;
+    min-height: 85px;
     #block-furniture-theme-branding {
       display: inline-block;
       width: 30%;
+      margin-left: 5%;
       padding-top: 30px;
       a {
         color: $color-black;
