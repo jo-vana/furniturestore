@@ -1,8 +1,0 @@
-
-search_page.search_form:
-  path: '/search-page'
-  defaults:
-    _form: '\Drupal\search_page\Form\SearchForm'
-    _title: 'SearchForm'
-  requirements:
-    _access: 'TRUE'
