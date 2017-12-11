@@ -3412,6 +3412,38 @@ h1, h2, h3, h4, h5, h6 {
   clear: right;
   margin-top: 70px; }
 
+#block-backtotop {
+  display: block;
+  width: 100px;
+  height: 100px; }
+  #block-backtotop a.show {
+    display: block;
+    background-color: #e6ae48;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    margin: 30px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s ease-in-out;
+    z-index: 1000;
+    color: transparent; }
+    #block-backtotop a.show::before {
+      content: '\f106';
+      font-family: "FontAwesome";
+      font-size: 26px;
+      line-height: 50px;
+      position: relative;
+      top: -1px;
+      color: #f9f9f9;
+      left: 11px; }
+    #block-backtotop a.show:hover {
+      cursor: pointer;
+      background-color: #9b9b9b; }
+
 .region-header #block-infoblockphone {
   display: inline-block;
   position: relative;
@@ -4956,6 +4988,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
   .region-member-get-more #block-furniturestorefamily,
   .region-member-get-more #block-furniturestorebusiness {
     display: inline-block;
+    position: relative;
     width: 48%;
     padding-left: 2rem;
     padding-right: 2rem;

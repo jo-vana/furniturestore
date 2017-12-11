@@ -54,6 +54,29 @@
 
     };
 
+    // Function for 'back to top' button
+
+    Drupal.behaviors.backToTop = {
+        attach:function(context) {
+            var btn = $('#block-backtotop a');
+
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 100) {
+                    btn.addClass('show');
+                } else {
+                    btn.removeClass('show');
+                }
+            });
+
+            btn.on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({scrollTop:0}, '100');
+            });
+
+        }
+
+    };
+
 })(jQuery);
 
 
