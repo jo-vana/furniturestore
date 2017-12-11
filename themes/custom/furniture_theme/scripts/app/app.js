@@ -35,9 +35,7 @@
       attach:function(context, settings) {
 
                   // If a link has a dropdown, add sub menu toggle.
-                  $('#block-mainnavigationmobile ul.navbar-nav li a').click(function(e) {
-                      // e.preventDefault();
-
+                  $('#block-mainnavigationmobile ul li a:not(:only-child)').click(function(e) {
                       $(this).siblings('.dropdown-menu').toggle();
                       // Close one dropdown when selecting another
                       $('.dropdown-menu').not($(this).siblings()).hide();
@@ -49,7 +47,7 @@
                   });
                   // Toggle open and close nav styles on click
                   $('#nav-toggle').click(function() {
-                      $('#block-mainnavigationmobile ul').toggle();
+                      $('#block-mainnavigationmobile ul').slideToggle();
                   });
 
       }

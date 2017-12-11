@@ -251,6 +251,10 @@
         position: absolute;
         display: block;
         content: "";
+        input:checked ~ ul
+        {
+          transform: none;
+        }
       }
       span:before {
         top: -6px;
@@ -271,6 +275,13 @@
           transform: rotate(-45deg);
         }
       }
+    }
+  }
+}
+body .user-logged-in {
+  #block-mainnavigationmobile {
+    #nav-toggle {
+      top: 80px;
     }
   }
 }
