@@ -1,0 +1,87 @@
+// ========================================
+//
+// @file front.scss
+// Front page specific styling
+//
+// ========================================
+#block-ourcollectionsblock {
+  @include container-fixed;
+  h2 {
+    display: block;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 36px;
+    line-height: 52px;
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 40px;
+  }
+  .block-fur-wrap {
+    @include container-fixed;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: inline-block;
+    width: 33%;
+    position: relative;
+    margin: 0 auto;
+    .block-fur-term {
+      text-align: center;
+      p {
+        color: #888888;
+        transition: color 0.3s ease-in-out;
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: normal;
+        font-style: normal;
+        cursor: pointer;
+        &:hover {
+          color: #e6ae48;
+        }
+      }
+    }
+    .block-fur-title {
+      text-align: center;
+      a {
+        font-size: 18px;
+        line-height: 24px;
+        text-decoration: none;
+        color: $color-black;
+        transition: border-color .3s ease-in-out;
+        border-color: transparent;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        &:hover {
+          border-color: #e6ae48;
+        }
+      }
+    }
+    .block-fur-price {
+      text-align: center;
+      p {
+        font-size: 18px;
+        line-height: 24px;
+        color: #888888;
+      }
+    }
+  }
+  .visit-store {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    margin-top: 60px;
+    a {
+      text-decoration: none;
+      font-weight: normal;
+      font-style: normal;
+      color: #e6ae48;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+
+}

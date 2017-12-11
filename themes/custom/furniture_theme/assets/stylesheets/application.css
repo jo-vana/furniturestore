@@ -4734,4 +4734,93 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
       margin-bottom: 60px;
       height: 180px; } }
 
+#block-ourcollectionsblock {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  zoom: 1; }
+  #block-ourcollectionsblock:before, #block-ourcollectionsblock:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  #block-ourcollectionsblock:after {
+    clear: both; }
+  #block-ourcollectionsblock h2 {
+    display: block;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 36px;
+    line-height: 52px;
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 40px; }
+  #block-ourcollectionsblock .block-fur-wrap {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    zoom: 1;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: inline-block;
+    width: 33%;
+    position: relative;
+    margin: 0 auto; }
+    #block-ourcollectionsblock .block-fur-wrap:before, #block-ourcollectionsblock .block-fur-wrap:after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      overflow: hidden; }
+    #block-ourcollectionsblock .block-fur-wrap:after {
+      clear: both; }
+    #block-ourcollectionsblock .block-fur-wrap .block-fur-term {
+      text-align: center; }
+      #block-ourcollectionsblock .block-fur-wrap .block-fur-term p {
+        color: #888888;
+        transition: color 0.3s ease-in-out;
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: normal;
+        font-style: normal;
+        cursor: pointer; }
+        #block-ourcollectionsblock .block-fur-wrap .block-fur-term p:hover {
+          color: #e6ae48; }
+    #block-ourcollectionsblock .block-fur-wrap .block-fur-title {
+      text-align: center; }
+      #block-ourcollectionsblock .block-fur-wrap .block-fur-title a {
+        font-size: 18px;
+        line-height: 24px;
+        text-decoration: none;
+        color: #212121;
+        transition: border-color .3s ease-in-out;
+        border-color: transparent;
+        border-bottom-width: 1px;
+        border-bottom-style: solid; }
+        #block-ourcollectionsblock .block-fur-wrap .block-fur-title a:hover {
+          border-color: #e6ae48; }
+    #block-ourcollectionsblock .block-fur-wrap .block-fur-price {
+      text-align: center; }
+      #block-ourcollectionsblock .block-fur-wrap .block-fur-price p {
+        font-size: 18px;
+        line-height: 24px;
+        color: #888888; }
+  #block-ourcollectionsblock .visit-store {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    margin-top: 60px; }
+    #block-ourcollectionsblock .visit-store a {
+      text-decoration: none;
+      font-weight: normal;
+      font-style: normal;
+      color: #e6ae48;
+      font-size: 18px;
+      line-height: 24px; }
+
 /*# sourceMappingURL=../stylesheets/application.css.map */
