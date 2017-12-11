@@ -30,6 +30,7 @@
         text-decoration: none;
         color: #252324;
         font-size: 17px;
+        font-family: $font-karla;
         line-height: 22px;
         font-weight: normal;
         font-style: normal;
@@ -173,7 +174,7 @@
     padding: 30px 0 15px;
     ul.navbar-nav {
       display: none;
-      height: 0;
+      //height: 0;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -222,7 +223,7 @@
         }
         ul.dropdown-menu {
           position: static;
-          display: none;
+          //display: none;
           z-index: 1;
         }
         ul.dropdown-menu>li {

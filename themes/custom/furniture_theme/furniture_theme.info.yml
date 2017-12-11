@@ -17,6 +17,7 @@ regions:
   primary_menu: 'Primary menu'
   breadcrumb: 'Breadcrumb'
   team_title: 'Team title region'
+  contact_map: 'Contact map region'
   content: 'Content'
   sidebar_first: 'Sidebar-first'
   come_visit: 'Come Visit Us Today'

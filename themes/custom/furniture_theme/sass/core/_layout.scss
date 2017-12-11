@@ -54,6 +54,14 @@
       display: inline-block;
     }
   }
+  .region-contact-map {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: center;
+  }
   .region-team-title {
     display: block;
     width: 100%;
@@ -63,7 +71,7 @@
       display: block;
       max-width: 250px;
       margin: 0 auto;
-      top: 35px;
+      top: 55px;
       .member-name {
         text-align: center;
         h2 {
@@ -156,7 +164,7 @@
     margin: 30px;
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: 3px;
     transition: background-color .3s ease-in-out;
     z-index: 1000;
     color: transparent;
