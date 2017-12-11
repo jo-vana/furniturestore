@@ -65,6 +65,8 @@ function furniture_theme_form_alter(&$form, &$form_state, $form_id)
             '#weight' => -1000,
         );
         $form['title']['#title'] = t('Let\'s Talk');
+        $form['actions']['submit']['#value'] = t('Send message');
+        $form['actions']['preview'] = FALSE;
     }
 
     // Leave a Reply Comments on Blog page
@@ -80,9 +82,14 @@ function furniture_theme_form_alter(&$form, &$form_state, $form_id)
         $form['title']['#title'] = t('Leave a Reply');
         $form['actions']['submit']['#value'] = t('Add Comment');
         $form['actions']['preview'] = FALSE;
+        $form['field_comment']['widget'][0]['value']['#title'] = t('Your email address will not be published.');
+        $form['field_b_name']['widget'][0]['value']['#title'] = FALSE;
+        $form['field_b_email']['widget'][0]['value']['#title'] = FALSE;
     }
     // Reviews on Furniture page
     if ($form_id == 'comment_comments_with_fields_form') {
+
+//        var_dump($form['author']);
         $request = \Drupal::request();
         $route_match = \Drupal::routeMatch();
         $title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
@@ -94,6 +101,9 @@ function furniture_theme_form_alter(&$form, &$form_state, $form_id)
         $form['title']['#title'] = t('Reviews');
         $form['actions']['submit']['#value'] = t('Submit');
         $form['actions']['preview'] = FALSE;
+        $form['field_comment']['widget'][0]['value']['#title'] = FALSE;
+        $form['field_comment_name']['widget'][0]['value']['#title'] = FALSE;
+        $form['field_email']['widget'][0]['value']['#title'] = FALSE;
     }
 }
 
