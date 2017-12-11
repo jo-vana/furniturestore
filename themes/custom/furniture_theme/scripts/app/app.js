@@ -72,9 +72,7 @@
                 e.preventDefault();
                 $('html, body').animate({scrollTop:0}, '100');
             });
-
         }
-
     };
 
 })(jQuery);
