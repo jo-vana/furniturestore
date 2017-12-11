@@ -68,3 +68,11 @@ function deploy_update_8429()
     \Drupal::service('module_installer')->install(['blog_list_page']);
 }
 
+/**
+ * From The Blog
+ */
+function deploy_update_8430()
+{
+    \Drupal::service('module_installer')->install(['from_the_blog']);
+}
+
