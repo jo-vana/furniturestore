@@ -82,6 +82,30 @@
       line-height: 24px;
     }
   }
-
-
+}
+.region-come-visit {
+  h2 {
+    display: block;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 36px;
+    line-height: 52px;
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 40px;
+  }
+  #block-furnituremobileapp,
+  #block-pickingwithdelivery,
+  #block-customservices,
+  #block-2017storecatalogue {
+    display: inline-block;
+    width: 23%;
+    h2 {
+      font-size: 25px;
+      font-weight: normal;
+      font-style: normal;
+    }
+  }
 }

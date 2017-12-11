@@ -92,6 +92,20 @@
     margin-top: 70px;
   }
 }
+.region-come-visit {
+  @extend .col-lg-8;
+  display: block;
+  margin: 0 auto;
+  float: none;
+  margin-top: 70px;
+}
+.region-member-get-more {
+  @extend .col-lg-8;
+  display: block;
+  margin: 0 auto;
+  float: none;
+  margin-top: 70px;
+}
 .region-bottom {
   width: 100%;
   min-height: 68px;

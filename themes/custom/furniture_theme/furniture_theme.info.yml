@@ -19,5 +19,7 @@ regions:
   team_title: 'Team title region'
   content: 'Content'
   sidebar_first: 'Sidebar-first'
+  come_visit: 'Come Visit Us Today'
+  member_get_more: 'Member Get More'
   footer: 'Footer'
   bottom: 'Bottom'
