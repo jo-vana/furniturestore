@@ -23,7 +23,7 @@
 
     Drupal.behaviors.newClassForMenu = {
         attach:function(context) {
-            $('li.nav-list-1', context).has('ul').parent('ul').removeClass('nav-list-1').addClass('has-children');
+            $('#block-furniture-theme-main-menu li.nav-list-1', context).has('ul').parent('ul').addClass('has-children');
 
         }
 
@@ -51,6 +51,29 @@
                   });
 
       }
+
+    };
+
+    // Function for 'back to top' button
+
+    Drupal.behaviors.backToTop = {
+        attach:function(context) {
+            var btn = $('#block-backtotop a');
+
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 100) {
+                    btn.addClass('show');
+                } else {
+                    btn.removeClass('show');
+                }
+            });
+
+            btn.on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({scrollTop:0}, '100');
+            });
+
+        }
 
     };
 

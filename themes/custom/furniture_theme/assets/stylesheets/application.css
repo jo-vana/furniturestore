@@ -3412,6 +3412,38 @@ h1, h2, h3, h4, h5, h6 {
   clear: right;
   margin-top: 70px; }
 
+#block-backtotop {
+  display: block;
+  width: 100px;
+  height: 100px; }
+  #block-backtotop a.show {
+    display: block;
+    background-color: #e6ae48;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    margin: 30px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s ease-in-out;
+    z-index: 1000;
+    color: transparent; }
+    #block-backtotop a.show::before {
+      content: '\f106';
+      font-family: "FontAwesome";
+      font-size: 26px;
+      line-height: 50px;
+      position: relative;
+      top: -1px;
+      color: #f9f9f9;
+      left: 11px; }
+    #block-backtotop a.show:hover {
+      cursor: pointer;
+      background-color: #9b9b9b; }
+
 .region-header #block-infoblockphone {
   display: inline-block;
   position: relative;
@@ -4778,6 +4810,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
     zoom: 1;
     padding-left: 2rem;
     padding-right: 2rem;
+    padding-bottom: 2rem;
     display: inline-block;
     width: 33%;
     position: relative;
@@ -4852,13 +4885,164 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
 .region-come-visit #block-customservices,
 .region-come-visit #block-2017storecatalogue {
   display: inline-block;
-  width: 23%; }
+  vertical-align: top;
+  width: 24%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 95px; }
   .region-come-visit #block-furnituremobileapp h2,
   .region-come-visit #block-pickingwithdelivery h2,
   .region-come-visit #block-customservices h2,
   .region-come-visit #block-2017storecatalogue h2 {
     font-size: 25px;
     font-weight: normal;
-    font-style: normal; }
+    font-style: normal;
+    line-height: 30px; }
+  .region-come-visit #block-furnituremobileapp .field--name-body,
+  .region-come-visit #block-pickingwithdelivery .field--name-body,
+  .region-come-visit #block-customservices .field--name-body,
+  .region-come-visit #block-2017storecatalogue .field--name-body {
+    text-align: center; }
+    .region-come-visit #block-furnituremobileapp .field--name-body p,
+    .region-come-visit #block-pickingwithdelivery .field--name-body p,
+    .region-come-visit #block-customservices .field--name-body p,
+    .region-come-visit #block-2017storecatalogue .field--name-body p {
+      font-size: 15px;
+      line-height: 22px;
+      font-weight: normal;
+      color: #888888; }
+  .region-come-visit #block-furnituremobileapp .field--name-field-block-link,
+  .region-come-visit #block-pickingwithdelivery .field--name-field-block-link,
+  .region-come-visit #block-customservices .field--name-field-block-link,
+  .region-come-visit #block-2017storecatalogue .field--name-field-block-link {
+    text-align: center;
+    margin-top: 20px; }
+    .region-come-visit #block-furnituremobileapp .field--name-field-block-link a,
+    .region-come-visit #block-pickingwithdelivery .field--name-field-block-link a,
+    .region-come-visit #block-customservices .field--name-field-block-link a,
+    .region-come-visit #block-2017storecatalogue .field--name-field-block-link a {
+      font-family: "Karla", sans-serif;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: normal;
+      font-style: normal;
+      color: #0f7fb7;
+      transition: all .3s ease-in-out; }
+      .region-come-visit #block-furnituremobileapp .field--name-field-block-link a:hover,
+      .region-come-visit #block-pickingwithdelivery .field--name-field-block-link a:hover,
+      .region-come-visit #block-customservices .field--name-field-block-link a:hover,
+      .region-come-visit #block-2017storecatalogue .field--name-field-block-link a:hover {
+        color: rgba(15, 127, 183, 0.55); }
+
+.region-come-visit #block-furnituremobileapp h2::before {
+  content: '\f10b';
+  font-family: "FontAwesome";
+  position: absolute;
+  top: -70px;
+  left: 46%;
+  font-size: 64px;
+  color: #e6ae48; }
+
+.region-come-visit #block-pickingwithdelivery h2::before {
+  content: '\f06b';
+  font-family: "FontAwesome";
+  position: absolute;
+  top: -70px;
+  left: 41%;
+  font-size: 64px;
+  color: #e6ae48; }
+
+.region-come-visit #block-customservices h2::before {
+  content: '\f2c0';
+  font-family: "FontAwesome";
+  position: absolute;
+  top: -70px;
+  left: 39%;
+  font-size: 55px;
+  color: #e6ae48; }
+
+.region-come-visit #block-2017storecatalogue h2::before {
+  content: '\f1ea';
+  font-family: "FontAwesome";
+  position: absolute;
+  top: -70px;
+  left: 36%;
+  font-size: 55px;
+  color: #e6ae48; }
+
+.region-member-get-more {
+  margin-top: 90px;
+  margin-bottom: 100px; }
+  .region-member-get-more h2 {
+    display: block;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 36px;
+    line-height: 52px;
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 40px; }
+  .region-member-get-more #block-furniturestorefamily,
+  .region-member-get-more #block-furniturestorebusiness {
+    display: inline-block;
+    position: relative;
+    width: 48%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    vertical-align: top; }
+    .region-member-get-more #block-furniturestorefamily h2,
+    .region-member-get-more #block-furniturestorebusiness h2 {
+      display: inline-block;
+      width: 48%;
+      text-align: left;
+      margin: 0;
+      float: left;
+      font-size: 30px;
+      line-height: 36px;
+      font-weight: normal;
+      font-style: normal; }
+    .region-member-get-more #block-furniturestorefamily .field--name-body,
+    .region-member-get-more #block-furniturestorebusiness .field--name-body {
+      display: block;
+      width: 48%; }
+      .region-member-get-more #block-furniturestorefamily .field--name-body p,
+      .region-member-get-more #block-furniturestorebusiness .field--name-body p {
+        padding: 0 0 20px;
+        margin: 0;
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: normal;
+        color: #888888; }
+    .region-member-get-more #block-furniturestorefamily .field--name-field-block-link,
+    .region-member-get-more #block-furniturestorebusiness .field--name-field-block-link {
+      display: inline-block;
+      width: 40%; }
+      .region-member-get-more #block-furniturestorefamily .field--name-field-block-link a,
+      .region-member-get-more #block-furniturestorebusiness .field--name-field-block-link a {
+        font-family: "Karla", sans-serif;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: normal;
+        font-style: normal;
+        text-decoration: none;
+        color: #212121; }
+        .region-member-get-more #block-furniturestorefamily .field--name-field-block-link a:hover,
+        .region-member-get-more #block-furniturestorebusiness .field--name-field-block-link a:hover {
+          color: #e6ae48; }
+    .region-member-get-more #block-furniturestorefamily .field--name-field-img,
+    .region-member-get-more #block-furniturestorebusiness .field--name-field-img {
+      display: inline-block;
+      width: 55%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-left: 50px; }
+  .region-member-get-more #block-furniturestorefamily h2 {
+    color: #dc9814; }
+  .region-member-get-more #block-furniturestorebusiness h2 {
+    color: #0f7faf; }
 
 /*# sourceMappingURL=../stylesheets/application.css.map */
