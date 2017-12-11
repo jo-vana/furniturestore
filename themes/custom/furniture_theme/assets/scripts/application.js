@@ -32,23 +32,30 @@
     // Function for mobile version for main navigation
 
     Drupal.behaviors.mobileMenu = {
-      attach:function(context, settings) {
+      attach:function(context) {
 
                   // If a link has a dropdown, add sub menu toggle.
                   $('#block-mainnavigationmobile ul li a:not(:only-child)').click(function(e) {
-                      $(this).siblings('.dropdown-menu').toggle();
+                      $(this).siblings('.dropdown-menu').style('display: block');
                       // Close one dropdown when selecting another
                       $('.dropdown-menu').not($(this).siblings()).hide();
                       e.stopPropagation();
                   });
-                  // Clicking away from dropdown will remove the dropdown class
-                  $('html').click(function() {
+
+                  //Clicking away from dropdown will remove the dropdown class
+                  $('html').not('nav.menu--main-navigation-mobile').click(function() {
                       $('.dropdown-menu').hide();
                   });
+
                   // Toggle open and close nav styles on click
-                  $('#nav-toggle').click(function() {
+                  $('#nav-toggle', context).on('click', function() {
                       $('#block-mainnavigationmobile ul').slideToggle();
                   });
+
+          // Toggle open and close nav styles on click
+          $('li.expanded.dropdown', context).on('click', function() {
+              $('ul.dropdown-menu').slideToggle().show();
+          });
 
       }
 
@@ -72,9 +79,7 @@
                 e.preventDefault();
                 $('html, body').animate({scrollTop:0}, '100');
             });
-
         }
-
     };
 
 })(jQuery);

@@ -3339,6 +3339,13 @@ h1, h2, h3, h4, h5, h6 {
           width: 100%; } }
     .layout-container .region-breadcrumb #block-furniture-theme-breadcrumbs {
       display: inline-block; }
+  .layout-container .region-contact-map {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: center; }
   .layout-container .region-team-title {
     display: block;
     width: 100%;
@@ -3348,7 +3355,7 @@ h1, h2, h3, h4, h5, h6 {
       display: block;
       max-width: 250px;
       margin: 0 auto;
-      top: 35px; }
+      top: 55px; }
       .layout-container .region-team-title #block-breadcrumbmemberprofileblock .member-name {
         text-align: center; }
         .layout-container .region-team-title #block-breadcrumbmemberprofileblock .member-name h2 {
@@ -3427,7 +3434,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 30px;
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: 3px;
     transition: background-color .3s ease-in-out;
     z-index: 1000;
     color: transparent; }
@@ -3587,6 +3594,7 @@ footer {
         text-decoration: none;
         color: #252324;
         font-size: 17px;
+        font-family: "Karla", sans-serif;
         line-height: 22px;
         font-weight: normal;
         font-style: normal; }
@@ -3713,7 +3721,6 @@ footer {
       padding: 30px 0 15px; }
       #block-mainnavigationmobile ul.navbar-nav {
         display: none;
-        height: 0;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -3761,7 +3768,6 @@ footer {
               right: 0; }
           #block-mainnavigationmobile ul.navbar-nav li ul.dropdown-menu {
             position: static;
-            display: none;
             z-index: 1; }
           #block-mainnavigationmobile ul.navbar-nav li ul.dropdown-menu > li {
             min-width: 190px; }
@@ -3908,7 +3914,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
   .item-list--linkicon ul li {
     display: inline-block; }
     .item-list--linkicon ul li a span.linkicon__icon {
-      color: #888888;
+      color: #9b9b9b;
       font-size: 15px; }
       .item-list--linkicon ul li a span.linkicon__icon:hover {
         color: #e6ae48; }
@@ -4216,7 +4222,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
   .item-list--linkicon ul li {
     display: inline-block; }
     .item-list--linkicon ul li a span.linkicon__icon {
-      color: #888888;
+      color: #9b9b9b;
       font-size: 15px; }
       .item-list--linkicon ul li a span.linkicon__icon:hover {
         color: #e6ae48; }
@@ -4605,12 +4611,14 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
     padding: 30px 25px;
     border: 2px solid #e6ae48; }
     .our-team-wrapper .block-right h3 {
+      font-family: "Karla", sans-serif;
       margin-top: 0px;
       font-size: 22px;
       line-height: 28px;
       font-weight: normal;
       color: #212121; }
     .our-team-wrapper .block-right .field--name-field-address {
+      font-family: "Karla", sans-serif;
       font-size: 14px;
       word-wrap: break-word;
       text-align: right;
@@ -4622,6 +4630,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
         color: #888888;
         font-weight: normal; }
     .our-team-wrapper .block-right .field--name-field-phone {
+      font-family: "Karla", sans-serif;
       font-size: 14px;
       word-wrap: break-word;
       text-align: right;
@@ -4633,6 +4642,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
         color: #888888;
         font-weight: normal; }
     .our-team-wrapper .block-right .field--name-field-email {
+      font-family: "Karla", sans-serif;
       font-size: 14px;
       word-wrap: break-word;
       text-align: right;
@@ -4643,12 +4653,14 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
         color: #888888;
         font-weight: normal; }
       .our-team-wrapper .block-right .field--name-field-email .field__item a {
+        font-family: "Karla", sans-serif;
         text-decoration: none;
         color: #212121;
         font-weight: normal;
         cursor: default; }
     .our-team-wrapper .block-right .field--name-field-profile-categories {
       font-size: 14px;
+      font-family: "Karla", sans-serif;
       word-wrap: break-word;
       text-align: right;
       overflow: hidden;
@@ -4907,6 +4919,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
     .region-come-visit #block-pickingwithdelivery .field--name-body p,
     .region-come-visit #block-customservices .field--name-body p,
     .region-come-visit #block-2017storecatalogue .field--name-body p {
+      font-family: "arialregular";
       font-size: 15px;
       line-height: 22px;
       font-weight: normal;
@@ -5044,5 +5057,66 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
     color: #dc9814; }
   .region-member-get-more #block-furniturestorebusiness h2 {
     color: #0f7faf; }
+
+#block-getintouch,
+#block-visitus,
+#block-ouremail {
+  display: inline-block;
+  position: relative;
+  width: 23%;
+  text-align: left;
+  margin-left: 60px; }
+  #block-getintouch h2,
+  #block-visitus h2,
+  #block-ouremail h2 {
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: normal;
+    font-style: normal;
+    font-family: "Karla", sans-serif;
+    color: #212121; }
+  #block-getintouch .field--name-body p,
+  #block-getintouch .field--name-body a,
+  #block-visitus .field--name-body p,
+  #block-visitus .field--name-body a,
+  #block-ouremail .field--name-body p,
+  #block-ouremail .field--name-body a {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-style: normal;
+    color: #9d9d9d;
+    text-decoration: none;
+    margin: 0; }
+
+#block-getintouch h2::before {
+  content: '\f1d9';
+  font-family: "FontAwesome";
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  color: #e6ae48;
+  left: -43px;
+  position: absolute; }
+
+#block-visitus h2::before {
+  content: '\f041';
+  font-family: "FontAwesome";
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  color: #e6ae48;
+  left: -34px;
+  position: absolute; }
+
+#block-ouremail h2::before {
+  content: '\f003';
+  font-family: "FontAwesome";
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  color: #e6ae48;
+  left: -45px;
+  position: absolute; }
 
 /*# sourceMappingURL=../stylesheets/application.css.map */

@@ -29,6 +29,7 @@
     padding: 30px 25px;
     border: 2px solid #e6ae48;
     h3 {
+      font-family: $font-karla;
       margin-top: 0px;
       font-size: 22px;
       line-height: 28px;
@@ -36,6 +37,7 @@
       color: $color-black;
     }
     .field--name-field-address {
+      font-family: $font-karla;
       font-size: 14px;
       word-wrap: break-word;
       text-align: right;
@@ -49,6 +51,7 @@
       }
     }
     .field--name-field-phone {
+      font-family: $font-karla;
       font-size: 14px;
       word-wrap: break-word;
       text-align: right;
@@ -62,6 +65,7 @@
       }
     }
     .field--name-field-email {
+      font-family: $font-karla;
       font-size: 14px;
       word-wrap: break-word;
       text-align: right;
@@ -74,6 +78,7 @@
       }
       .field__item {
         a {
+          font-family: $font-karla;
           text-decoration: none;
           color: $color-black;
           font-weight: normal;
@@ -83,6 +88,7 @@
     }
     .field--name-field-profile-categories {
       font-size: 14px;
+      font-family: $font-karla;
       word-wrap: break-word;
       text-align: right;
       overflow: hidden;
