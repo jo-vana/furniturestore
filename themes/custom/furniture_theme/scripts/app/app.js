@@ -23,7 +23,7 @@
 
     Drupal.behaviors.newClassForMenu = {
         attach:function(context) {
-            $('li.nav-list-1', context).has('ul').parent('ul').removeClass('nav-list-1').addClass('has-children');
+            $('#block-furniture-theme-main-menu li.nav-list-1', context).has('ul').parent('ul').addClass('has-children');
 
         }
 

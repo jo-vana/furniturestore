@@ -22,6 +22,7 @@
     @include container-fixed;
     padding-left: 2rem;
     padding-right: 2rem;
+    padding-bottom: 2rem;
     display: inline-block;
     width: 33%;
     position: relative;
@@ -101,11 +102,175 @@
   #block-customservices,
   #block-2017storecatalogue {
     display: inline-block;
-    width: 23%;
+    vertical-align: top;
+    width: 24%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 95px;
     h2 {
       font-size: 25px;
       font-weight: normal;
       font-style: normal;
+      line-height: 30px;
+    }
+    .field--name-body {
+      text-align: center;
+      p {
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: normal;
+        color: #888888;
+      }
+    }
+    .field--name-field-block-link {
+      text-align: center;
+      margin-top: 20px;
+      a {
+        font-family: $font-karla;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: normal;
+        font-style: normal;
+        color: #0f7fb7;
+        transition: all .3s ease-in-out;
+        &:hover {
+          color: rgba(15,127,183,0.55);
+        }
+      }
+    }
+  }
+  #block-furnituremobileapp {
+    h2 {
+      &::before {
+        content: '\f10b';
+        font-family: $font-awesome;
+        position: absolute;
+        top: -70px;
+        left: 46%;
+        font-size: 64px;
+        color: #e6ae48;
+      }
+    }
+  }
+  #block-pickingwithdelivery {
+    h2 {
+      &::before {
+        content: '\f06b';
+        font-family: $font-awesome;
+        position: absolute;
+        top: -70px;
+        left: 41%;
+        font-size: 64px;
+        color: #e6ae48;
+      }
+    }
+  }
+  #block-customservices {
+    h2 {
+      &::before {
+        content: '\f2c0';
+        font-family: $font-awesome;
+        position: absolute;
+        top: -70px;
+        left: 39%;
+        font-size: 55px;
+        color: #e6ae48;
+      }
+    }
+  }
+  #block-2017storecatalogue {
+    h2 {
+      &::before {
+        content: '\f1ea';
+        font-family: $font-awesome;
+        position: absolute;
+        top: -70px;
+        left: 36%;
+        font-size: 55px;
+        color: #e6ae48;
+      }
+    }
+  }
+}
+.region-member-get-more {
+  margin-top: 90px;
+  margin-bottom: 100px;
+  h2 {
+    display: block;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 36px;
+    line-height: 52px;
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 40px;
+  }
+  #block-furniturestorefamily,
+  #block-furniturestorebusiness {
+    display: inline-block;
+    width: 48%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    vertical-align: top;
+    h2 {
+      display: inline-block;
+      width: 48%;
+      text-align: left;
+      margin: 0;
+      float: left;
+      font-size: 30px;
+      line-height: 36px;
+      font-weight: normal;
+      font-style: normal;
+    }
+    .field--name-body {
+      display: block;
+      width: 48%;
+      p {
+        padding: 0 0 20px;
+        margin: 0;
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: normal;
+        color: #888888;
+      }
+    }
+    .field--name-field-block-link {
+      display: inline-block;
+      width: 40%;
+      a {
+        font-family: $font-karla;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: normal;
+        font-style: normal;
+        text-decoration: none;
+        color: $color-black;
+        &:hover {
+          color: #e6ae48;
+        }
+      }
+    }
+    .field--name-field-img {
+      display: inline-block;
+      width: 55%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-left: 50px;
+    }
+  }
+  #block-furniturestorefamily {
+    h2 {
+      color: #dc9814;
+    }
+  }
+  #block-furniturestorebusiness {
+    h2 {
+      color: #0f7faf;
     }
   }
 }
