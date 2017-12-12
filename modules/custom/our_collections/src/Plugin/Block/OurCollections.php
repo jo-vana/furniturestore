@@ -41,8 +41,6 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
         $query->addField('t', 'name', 'taxonomy_name');
         $query->addField('fp', 'field_price_value');
 
-        $query->range(0, 7);
-
         $data = [];
 
         $results = $query->execute()->fetchAll(\PDO::FETCH_GROUP);
@@ -68,6 +66,13 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
                 $entry['image'] = $url;
             }
             $data[] = $entry;
+
+            if (count($data) > 6){
+                if( !empty($data[7])) {
+                    unset($data[7]);
+                }
+                return $data;
+            }
         }
         return $data;
     }
