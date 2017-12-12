@@ -5065,7 +5065,8 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
   position: relative;
   width: 23%;
   text-align: left;
-  margin-left: 60px; }
+  margin-left: 60px;
+  vertical-align: top; }
   #block-getintouch h2,
   #block-visitus h2,
   #block-ouremail h2 {
