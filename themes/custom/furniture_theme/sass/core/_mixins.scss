@@ -196,7 +196,7 @@
   &::before {
     content: '\f104';
     font-family: $font-awesome;
-    font-size: 20px;
+    font-size: 18px;
     color: #888888;
     font-weight: bold;
     display: inline-block;
@@ -204,8 +204,8 @@
     width: 45px;
     height: 45px;
     left: 0;
-    padding: 10px 14px;
-    border: 1px solid $more-light-gray;
+    padding: 14px 17px;
+    border: 1px solid #e6e6e6;
     margin: 3px;
     @media screen and (max-width: $screen-xs-min){
       top: -50px;
@@ -218,7 +218,8 @@
   }
   span {
     display: block;
-    color: #212121;
+    color: $color-black;
+    font-family: $font-karla;
     font-size: 18px;
     line-height: 24px;
     font-weight: normal;
@@ -251,7 +252,7 @@
   content: '\f105';
   color: #888888;
     font-family: $font-awesome;
-    font-size: 20px;
+    font-size: 18px;
   font-weight: bold;
   display: inline-block;
   position: absolute;
@@ -259,7 +260,7 @@
   height: 45px;
   right: 0;
   padding: 12px 16px;
-  border: 1px solid $more-light-gray;
+  border: 1px solid #e6e6e6;
   margin: 3px;
     @media screen and (max-width: $screen-xs-min){
       top: 60px;
@@ -272,7 +273,8 @@
   }
   span {
     display: block;
-    color: #212121;
+    color: $color-black;
+    font-family: $font-karla;
     font-size: 18px;
     line-height: 24px;
     font-weight: normal;
