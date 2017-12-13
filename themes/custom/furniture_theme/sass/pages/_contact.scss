@@ -81,7 +81,7 @@
   }
 }
 #block-furniture-theme-content {
-  form {
+  form.contact-message-feedback-form {
     display: block;
     max-width: 460px;
     margin: 0 auto;
@@ -180,23 +180,7 @@
       }
     }
     #edit-actions {
-      input {
-        display: block;
-        width: 180px;
-        height: 48px;
-        background-color: $color-black;
-        transition: all .3s ease-in-out;
-        border: none;
-        color: white;
-        font-size: 15px;
-        line-height: 46px;
-        font-weight: normal;
-        font-style: normal;
-        font-family: $font-karla;
-        &:hover {
-          background-color: #e6ae48;
-        }
-      }
+      @include submit_button;
     }
   }
 }

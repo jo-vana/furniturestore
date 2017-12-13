@@ -4128,6 +4128,65 @@ body.user-logged-in #block-mainnavigationmobile #nav-toggle {
         .field--name-field-more-posts .field__items .field__item {
           width: 100%; } }
 
+section.field--name-field-leave-a-reply {
+  margin: 45px 0; }
+  section.field--name-field-leave-a-reply h2 {
+    display: none; }
+  section.field--name-field-leave-a-reply form.comment-blog-comments-form h1 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+    font-family: "Karla", sans-serif;
+    color: #212121; }
+  section.field--name-field-leave-a-reply form.comment-blog-comments-form .field--name-field-comment .form-type-textarea label {
+    padding-bottom: 20px;
+    display: block;
+    color: #888888;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-family: "arialregular", sans-serif; }
+  section.field--name-field-leave-a-reply form.comment-blog-comments-form .field--name-field-comment .form-type-textarea textarea {
+    max-width: 570px;
+    min-height: 160px;
+    border-color: #e6e6e6;
+    font-size: 15px;
+    padding: 10px 0 0 10px; }
+    section.field--name-field-leave-a-reply form.comment-blog-comments-form .field--name-field-comment .form-type-textarea textarea:focus {
+      outline: 1px solid #e6ae48; }
+  section.field--name-field-leave-a-reply form.comment-blog-comments-form .field--name-field-b-name input,
+  section.field--name-field-leave-a-reply form.comment-blog-comments-form .field--name-field-b-email input {
+    max-width: 310px;
+    height: 40px;
+    border: 1px solid #e6e6e6;
+    font-size: 15px;
+    padding-left: 10px; }
+    section.field--name-field-leave-a-reply form.comment-blog-comments-form .field--name-field-b-name input:focus,
+    section.field--name-field-leave-a-reply form.comment-blog-comments-form .field--name-field-b-email input:focus {
+      outline: 1px solid #e6ae48; }
+    @media screen and (max-width: 28rem) {
+      section.field--name-field-leave-a-reply form.comment-blog-comments-form .field--name-field-b-name input,
+      section.field--name-field-leave-a-reply form.comment-blog-comments-form .field--name-field-b-email input {
+        width: 100%; } }
+  section.field--name-field-leave-a-reply form.comment-blog-comments-form #edit-actions input {
+    display: block;
+    width: 180px;
+    height: 48px;
+    background-color: #212121;
+    transition: all .3s ease-in-out;
+    border: none;
+    color: white;
+    font-size: 15px;
+    line-height: 46px;
+    font-weight: normal;
+    font-style: normal;
+    font-family: "Karla", sans-serif; }
+    section.field--name-field-leave-a-reply form.comment-blog-comments-form #edit-actions input:hover {
+      background-color: #e6ae48; }
+
 .portfolio-wrapper {
   width: 100%;
   display: block;
@@ -4940,7 +4999,8 @@ body.user-logged-in #block-mainnavigationmobile #nav-toggle {
     font-size: 25px;
     font-weight: normal;
     font-style: normal;
-    line-height: 30px; }
+    line-height: 30px;
+    margin-bottom: 5px; }
   .region-come-visit #block-furnituremobileapp .field--name-body,
   .region-come-visit #block-pickingwithdelivery .field--name-body,
   .region-come-visit #block-customservices .field--name-body,
@@ -5159,16 +5219,16 @@ body.user-logged-in #block-mainnavigationmobile #nav-toggle {
   left: -55px;
   position: absolute; }
 
-#block-furniture-theme-content form {
+#block-furniture-theme-content form.contact-message-feedback-form {
   display: block;
   max-width: 460px;
   margin: 0 auto; }
-  #block-furniture-theme-content form h1 {
+  #block-furniture-theme-content form.contact-message-feedback-form h1 {
     font-size: 38px;
     font-weight: 400;
     font-style: normal;
     text-align: center; }
-    #block-furniture-theme-content form h1::after {
+    #block-furniture-theme-content form.contact-message-feedback-form h1::after {
       content: 'New Collections';
       display: block;
       font-size: 16px;
@@ -5177,67 +5237,67 @@ body.user-logged-in #block-mainnavigationmobile #nav-toggle {
       font-style: normal;
       color: #9d9d9d;
       font-family: "Karla", sans-serif; }
-  #block-furniture-theme-content form #edit-field-name-wrapper label {
+  #block-furniture-theme-content form.contact-message-feedback-form #edit-field-name-wrapper label {
     font-family: "Karla", sans-serif;
     color: #9b9b9b;
     font-size: 17px;
     line-height: 22px;
     font-weight: normal;
     font-style: normal; }
-    #block-furniture-theme-content form #edit-field-name-wrapper label::after {
+    #block-furniture-theme-content form.contact-message-feedback-form #edit-field-name-wrapper label::after {
       content: '*';
       color: #e6ae48;
       background: none;
       position: absolute;
       font-size: 17px; }
-  #block-furniture-theme-content form #edit-field-name-wrapper input {
+  #block-furniture-theme-content form.contact-message-feedback-form #edit-field-name-wrapper input {
     max-width: 460px;
     display: block;
     height: 42px;
     border: 1px solid #e6e6e6; }
-    #block-furniture-theme-content form #edit-field-name-wrapper input:focus {
+    #block-furniture-theme-content form.contact-message-feedback-form #edit-field-name-wrapper input:focus {
       outline: 1px solid #e6ae48; }
-  #block-furniture-theme-content form #edit-field-email-wrapper label {
+  #block-furniture-theme-content form.contact-message-feedback-form #edit-field-email-wrapper label {
     font-family: "Karla", sans-serif;
     color: #9b9b9b;
     font-size: 17px;
     line-height: 22px;
     font-weight: normal;
     font-style: normal; }
-    #block-furniture-theme-content form #edit-field-email-wrapper label::after {
+    #block-furniture-theme-content form.contact-message-feedback-form #edit-field-email-wrapper label::after {
       content: '*';
       color: #e6ae48;
       background: none;
       position: absolute;
       font-size: 17px; }
-  #block-furniture-theme-content form #edit-field-email-wrapper input {
+  #block-furniture-theme-content form.contact-message-feedback-form #edit-field-email-wrapper input {
     max-width: 460px;
     display: block;
     height: 42px;
     border: 1px solid #e6e6e6; }
-    #block-furniture-theme-content form #edit-field-email-wrapper input:focus {
+    #block-furniture-theme-content form.contact-message-feedback-form #edit-field-email-wrapper input:focus {
       outline: 1px solid #e6ae48; }
-  #block-furniture-theme-content form #edit-message-wrapper label {
+  #block-furniture-theme-content form.contact-message-feedback-form #edit-message-wrapper label {
     font-family: "Karla", sans-serif;
     color: #9b9b9b;
     font-size: 17px;
     line-height: 22px;
     font-weight: normal;
     font-style: normal; }
-    #block-furniture-theme-content form #edit-message-wrapper label::after {
+    #block-furniture-theme-content form.contact-message-feedback-form #edit-message-wrapper label::after {
       content: '*';
       color: #e6ae48;
       background: none;
       position: absolute;
       font-size: 17px; }
-  #block-furniture-theme-content form #edit-message-wrapper textarea {
+  #block-furniture-theme-content form.contact-message-feedback-form #edit-message-wrapper textarea {
     max-width: 460px;
     display: block;
     min-height: 222px;
     border: 1px solid #e6e6e6; }
-    #block-furniture-theme-content form #edit-message-wrapper textarea:focus {
+    #block-furniture-theme-content form.contact-message-feedback-form #edit-message-wrapper textarea:focus {
       outline: 1px solid #e6ae48; }
-  #block-furniture-theme-content form #edit-actions input {
+  #block-furniture-theme-content form.contact-message-feedback-form #edit-actions input {
     display: block;
     width: 180px;
     height: 48px;
@@ -5250,7 +5310,7 @@ body.user-logged-in #block-mainnavigationmobile #nav-toggle {
     font-weight: normal;
     font-style: normal;
     font-family: "Karla", sans-serif; }
-    #block-furniture-theme-content form #edit-actions input:hover {
+    #block-furniture-theme-content form.contact-message-feedback-form #edit-actions input:hover {
       background-color: #e6ae48; }
 
 /*# sourceMappingURL=../stylesheets/application.css.map */

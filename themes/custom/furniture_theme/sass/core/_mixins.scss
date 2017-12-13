@@ -295,3 +295,23 @@
     padding-top: 70px;
   }
 }
+// - - Style for submit button on comment forms
+@mixin  submit_button {
+  input {
+    display: block;
+    width: 180px;
+    height: 48px;
+    background-color: $color-black;
+    transition: all .3s ease-in-out;
+    border: none;
+    color: white;
+    font-size: 15px;
+    line-height: 46px;
+    font-weight: normal;
+    font-style: normal;
+    font-family: $font-karla;
+    &:hover {
+      background-color: #e6ae48;
+    }
+  }
+}
