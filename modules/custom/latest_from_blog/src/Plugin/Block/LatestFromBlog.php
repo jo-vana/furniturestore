@@ -66,8 +66,6 @@ class BlogListPage extends BlockBase implements BlockPluginInterface
 
                 $alias_tax = str_replace(' ', '-', $alias2);
 
-                $date = date('F d, Y',strtotime($node->field_date_blog_value));
-
                 $entry['nid'] = $alias;
                 $entry['tid'] = $alias_tax;
                 $entry['uid'] = $alias3;
@@ -78,7 +76,7 @@ class BlogListPage extends BlockBase implements BlockPluginInterface
                     'url'   => $alias_tax
                 ];
                 $entry['image'] = $url;
-                $entry['field_date_blog_value'] = $date;
+                $entry['field_date_blog_value'] = date('F d, Y', $node->field_date_blog_value);
                 $entry['username'] = $node->username;
             }
             $output[] = $entry;
