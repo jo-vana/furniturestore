@@ -4936,8 +4936,12 @@ section.field--name-field-leave-a-reply {
         cursor: pointer; }
         #block-ourcollectionsblock .block-fur-wrap .block-fur-term p:hover {
           color: #e6ae48; }
-    #block-ourcollectionsblock .block-fur-wrap .block-fur-term {
-      display: inline-block; }
+    #block-ourcollectionsblock .block-fur-wrap .tax-wrapper {
+      text-align: center; }
+      #block-ourcollectionsblock .block-fur-wrap .tax-wrapper .block-fur-term {
+        display: inline-block; }
+        #block-ourcollectionsblock .block-fur-wrap .tax-wrapper .block-fur-term a {
+          text-decoration: none; }
     #block-ourcollectionsblock .block-fur-wrap .block-fur-title {
       text-align: center; }
       #block-ourcollectionsblock .block-fur-wrap .block-fur-title a {

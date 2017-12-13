@@ -42,8 +42,14 @@
         }
       }
     }
-    .block-fur-term {
-      display: inline-block;
+    .tax-wrapper {
+      text-align: center;
+      .block-fur-term {
+        display: inline-block;
+        a {
+          text-decoration: none;
+        }
+      }
     }
     .block-fur-title {
       text-align: center;
