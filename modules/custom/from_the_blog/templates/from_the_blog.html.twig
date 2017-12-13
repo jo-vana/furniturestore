@@ -1,4 +1,5 @@
 {% for entry in content %}
+    <li class="blog-slide">
     <div class="block-blog-wrap">
         <div class="block-blog-img">
             <a href ="{{ entry.alias }}"><img src="{{ entry.image }}"/></a>
@@ -13,5 +14,6 @@
         </div>
 
     </div>
+    </li>
 
 {% endfor %}

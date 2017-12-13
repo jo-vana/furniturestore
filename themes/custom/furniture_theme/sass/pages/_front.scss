@@ -42,6 +42,9 @@
         }
       }
     }
+    .block-fur-term {
+      display: inline-block;
+    }
     .block-fur-title {
       text-align: center;
       a {
@@ -276,6 +279,58 @@
   #block-furniturestorebusiness {
     h2 {
       color: #0f7faf;
+    }
+  }
+}
+#block-fromtheblogblock {
+  h2 {
+    font-size: 36px;
+    line-height: 52px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    color: $color-black;
+    font-family: $font-karla;
+  }
+  .flexslider {
+    ul.flex-direction-nav {
+      display: none;
+    }
+    .block-blog-wrap {
+      display: block;
+      max-width: 452px;
+      .block-blog-img {
+        //max-height: 291px;
+        //overflow: hidden;
+      }
+      .block-blog-date {
+        p {
+          font-family: $font-karla;
+          font-size: 17px;
+          line-height: 20px;
+          font-weight: normal;
+          font-style: normal;
+          color: $font-color;
+          margin-top: 6px;
+          &::before {
+            content: '';
+            display: inline-block;
+            height: 1px;
+            width: 25px;
+            background-color: $color-orange;
+            margin: 0 20px 4px 0;
+          }
+        }
+      }
+      .block-fur-title {
+        a {
+          @include link-style;
+          color: $color-black;
+          font-size: 22px;
+          line-height: 28px;
+          text-decoration: none;
+        }
+      }
     }
   }
 }

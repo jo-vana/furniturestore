@@ -4936,6 +4936,8 @@ section.field--name-field-leave-a-reply {
         cursor: pointer; }
         #block-ourcollectionsblock .block-fur-wrap .block-fur-term p:hover {
           color: #e6ae48; }
+    #block-ourcollectionsblock .block-fur-wrap .block-fur-term {
+      display: inline-block; }
     #block-ourcollectionsblock .block-fur-wrap .block-fur-title {
       text-align: center; }
       #block-ourcollectionsblock .block-fur-wrap .block-fur-title a {
@@ -5150,6 +5152,53 @@ section.field--name-field-leave-a-reply {
     color: #dc9814; }
   .region-member-get-more #block-furniturestorebusiness h2 {
     color: #0f7faf; }
+
+#block-fromtheblogblock h2 {
+  font-size: 36px;
+  line-height: 52px;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  color: #212121;
+  font-family: "Karla", sans-serif; }
+
+#block-fromtheblogblock .flexslider ul.flex-direction-nav {
+  display: none; }
+
+#block-fromtheblogblock .flexslider .block-blog-wrap {
+  display: block;
+  max-width: 452px; }
+  #block-fromtheblogblock .flexslider .block-blog-wrap .block-blog-date p {
+    font-family: "Karla", sans-serif;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: normal;
+    font-style: normal;
+    color: #888888;
+    margin-top: 6px; }
+    #block-fromtheblogblock .flexslider .block-blog-wrap .block-blog-date p::before {
+      content: '';
+      display: inline-block;
+      height: 1px;
+      width: 25px;
+      background-color: #e6ae48;
+      margin: 0 20px 4px 0; }
+  #block-fromtheblogblock .flexslider .block-blog-wrap .block-fur-title a {
+    font-family: "Karla", sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+    text-decoration: none;
+    color: #9b9b9b;
+    transition: color 0.3s ease-in-out;
+    color: #212121;
+    font-size: 22px;
+    line-height: 28px;
+    text-decoration: none; }
+    #block-fromtheblogblock .flexslider .block-blog-wrap .block-fur-title a:hover {
+      color: #e6ae48; }
 
 #block-getintouch,
 #block-visitus,
