@@ -3780,6 +3780,7 @@ footer {
               right: 0; }
           #block-mainnavigationmobile ul.navbar-nav li ul.dropdown-menu {
             position: static;
+            display: block;
             z-index: 1; }
           #block-mainnavigationmobile ul.navbar-nav li ul.dropdown-menu > li {
             min-width: 190px; }
@@ -3789,7 +3790,7 @@ footer {
       #block-mainnavigationmobile #nav-toggle {
         position: absolute;
         right: 30px;
-        top: -28px;
+        top: 80px;
         cursor: pointer;
         padding: 10px 35px 16px 0px; }
         #block-mainnavigationmobile #nav-toggle span,
@@ -3826,8 +3827,8 @@ footer {
                 -ms-transform: rotate(-45deg);
                     transform: rotate(-45deg); } }
 
-body .user-logged-in #block-mainnavigationmobile #nav-toggle {
-  top: 80px; }
+body.user-logged-in #block-mainnavigationmobile #nav-toggle {
+  top: -28px; }
 
 .error-page {
   margin: 0 auto;
@@ -5046,7 +5047,8 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
       font-size: 30px;
       line-height: 36px;
       font-weight: normal;
-      font-style: normal; }
+      font-style: normal;
+      margin-bottom: 20px; }
     .region-member-get-more #block-furniturestorefamily .field--name-body,
     .region-member-get-more #block-furniturestorebusiness .field--name-body {
       display: block;

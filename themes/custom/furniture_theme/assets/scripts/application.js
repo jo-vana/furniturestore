@@ -36,14 +36,19 @@
 
                   // If a link has a dropdown, add sub menu toggle.
                   $('#block-mainnavigationmobile ul li a:not(:only-child)').click(function(e) {
-                      $(this).siblings('.dropdown-menu').style('display: block');
+                      e.preventDefault();
+                      $(this).siblings('.dropdown-menu').css('display',null);
+
+                      // If there is third level show on click li.exanded...
+
+
                       // Close one dropdown when selecting another
                       $('.dropdown-menu').not($(this).siblings()).hide();
                       e.stopPropagation();
                   });
 
-                  //Clicking away from dropdown will remove the dropdown class
-                  $('html').not('nav.menu--main-navigation-mobile').click(function() {
+                  // //Clicking away from dropdown will remove the dropdown class
+                  $('html').not('nav.menu--main-navigation-mobile li a').click(function() {
                       $('.dropdown-menu').hide();
                   });
 
@@ -52,8 +57,9 @@
                       $('#block-mainnavigationmobile ul').slideToggle();
                   });
 
+
           // Toggle open and close nav styles on click
-          $('li.expanded.dropdown', context).on('click', function() {
+          $('li.expanded.dropdown a', context).on('click', function() {
               $('ul.dropdown-menu').slideToggle().show();
           });
 
