@@ -82,6 +82,20 @@
         }
     };
 
+    Drupal.behaviors.sliderFront = {
+      attach:function() {
+              $('.flexslider').flexslider({
+                  animation: "slide",
+                  animationLoop: true,
+                  itemWidth: 420,
+                  itemMargin: 10,
+                  minItems: 1,
+                  maxItems: 2
+              });
+
+      }
+    };
+
 })(jQuery);
 
 

@@ -5,6 +5,8 @@ global-css:
     theme:
       assets/stylesheets/application.css:
         minified: false
+      assets/stylesheets/vendor/flexslider.css:
+              minified: false
 
 # Global JS files
 global-js:
@@ -12,6 +14,8 @@ global-js:
   js:
     assets/scripts/application.js:
       minified: false
+    assets/scripts/vendor/jquery.flexslider.js:
+          minified: false
   dependencies:
     - core/jquery
     - core/drupal
