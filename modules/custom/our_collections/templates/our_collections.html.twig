@@ -3,14 +3,13 @@
     <div class="block-fur-img">
         <a href ="{{ entry.nid }}"><img src="{{ entry.image }}"/></a>
     </div>
-
+    <div class="tax-wrapper">
         {% for en in entry.taxonomy_name %}
-
             <div class="block-fur-term">
                 <a href ="{{ en.url }}"><p>{{ en.name }}</p></a>
             </div>
-
         {% endfor %}
+    </div>
 
     <div class="block-fur-title">
         <a href ="{{ entry.nid }}">{{ entry.title }}</a>
