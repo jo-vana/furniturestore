@@ -125,6 +125,9 @@
         &:focus {
           outline: 1px solid #e6ae48;
         }
+        @media screen and(max-width: $screen-xs-min) {
+          width: 100%;
+        }
       }
     }
     #edit-field-email-wrapper {
@@ -150,6 +153,9 @@
         border: 1px solid #e6e6e6;
         &:focus {
           outline: 1px solid #e6ae48;
+        }
+        @media screen and(max-width: $screen-xs-min) {
+          width: 100%;
         }
       }
     }

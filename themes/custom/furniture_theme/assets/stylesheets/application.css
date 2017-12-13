@@ -5257,6 +5257,9 @@ section.field--name-field-leave-a-reply {
     border: 1px solid #e6e6e6; }
     #block-furniture-theme-content form.contact-message-feedback-form #edit-field-name-wrapper input:focus {
       outline: 1px solid #e6ae48; }
+    @media screen and (max-width: 28rem) {
+      #block-furniture-theme-content form.contact-message-feedback-form #edit-field-name-wrapper input {
+        width: 100%; } }
   #block-furniture-theme-content form.contact-message-feedback-form #edit-field-email-wrapper label {
     font-family: "Karla", sans-serif;
     color: #9b9b9b;
@@ -5277,6 +5280,9 @@ section.field--name-field-leave-a-reply {
     border: 1px solid #e6e6e6; }
     #block-furniture-theme-content form.contact-message-feedback-form #edit-field-email-wrapper input:focus {
       outline: 1px solid #e6ae48; }
+    @media screen and (max-width: 28rem) {
+      #block-furniture-theme-content form.contact-message-feedback-form #edit-field-email-wrapper input {
+        width: 100%; } }
   #block-furniture-theme-content form.contact-message-feedback-form #edit-message-wrapper label {
     font-family: "Karla", sans-serif;
     color: #9b9b9b;
