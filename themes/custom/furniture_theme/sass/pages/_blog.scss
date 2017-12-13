@@ -64,6 +64,7 @@
   }
   .field--name-body {
     p {
+      font-family: $font-arial;
       color: $font-color;
     }
   }
@@ -173,6 +174,66 @@
       @media screen and (max-width: $screen-xs-min) {
         width: 100%;
       }
+    }
+  }
+}
+section.field--name-field-leave-a-reply {
+  margin: 45px 0;
+  h2 {
+    display: none;
+  }
+  form.comment-blog-comments-form {
+    h1 {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: normal;
+      font-style: normal;
+      text-transform: none;
+      font-family: $font-karla;
+      color: $color-black;
+    }
+    .field--name-field-comment {
+      .form-type-textarea {
+        label {
+          padding-bottom: 20px;
+          display: block;
+          color: #888888;
+          font-size: 15px;
+          line-height: 22px;
+          font-weight: normal;
+          font-style: normal;
+          font-family: $font-arial;
+        }
+        textarea {
+          max-width: 570px;
+          min-height: 160px;
+          border-color: #e6e6e6;
+          font-size: 15px;
+          padding: 10px 0 0 10px;
+          &:focus {
+            outline: 1px solid #e6ae48;
+          }
+        }
+      }
+    }
+    .field--name-field-b-name,
+    .field--name-field-b-email {
+      input {
+        max-width: 310px;
+        height: 40px;
+        border: 1px solid #e6e6e6;
+        font-size: 15px;
+        padding-left: 10px;
+        &:focus {
+          outline: 1px solid #e6ae48;
+        }
+        @media screen and(max-width: $screen-xs-min) {
+          width: 100%;
+        }
+      }
+    }
+    #edit-actions {
+      @include submit_button;
     }
   }
 }

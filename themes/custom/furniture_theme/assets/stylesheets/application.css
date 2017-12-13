@@ -3244,6 +3244,18 @@ img {
   max-width: 100%;
   transition: 0.4s; }
 
+@font-face {
+  font-family: 'nimbus_sans_lregular';
+  src: url("../../assets/stylesheets/fonts/nimbus-sans-l.regular-webfont.woff2") format("woff2"), url("../../assets/stylesheets/fonts/nimbus-sans-l.regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'arialregular';
+  src: url("../../assets/stylesheets/fonts/arial-webfont.woff2") format("woff2"), url("../../assets/stylesheets/fonts/arial-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 p {
   font-size: 15px;
   line-height: 22px;
@@ -3421,8 +3433,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #block-backtotop {
   display: block;
-  width: 100px;
-  height: 100px; }
+  width: 0px;
+  height: 0px; }
   #block-backtotop a.show {
     display: block;
     background-color: #e6ae48;
@@ -3434,7 +3446,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 30px;
     position: fixed;
     bottom: 30px;
-    right: 3px;
+    right: 0;
     transition: background-color .3s ease-in-out;
     z-index: 1000;
     color: transparent; }
@@ -3768,6 +3780,7 @@ footer {
               right: 0; }
           #block-mainnavigationmobile ul.navbar-nav li ul.dropdown-menu {
             position: static;
+            display: block;
             z-index: 1; }
           #block-mainnavigationmobile ul.navbar-nav li ul.dropdown-menu > li {
             min-width: 190px; }
@@ -3777,7 +3790,7 @@ footer {
       #block-mainnavigationmobile #nav-toggle {
         position: absolute;
         right: 30px;
-        top: -28px;
+        top: 80px;
         cursor: pointer;
         padding: 10px 35px 16px 0px; }
         #block-mainnavigationmobile #nav-toggle span,
@@ -3814,8 +3827,8 @@ footer {
                 -ms-transform: rotate(-45deg);
                     transform: rotate(-45deg); } }
 
-body .user-logged-in #block-mainnavigationmobile #nav-toggle {
-  top: 80px; }
+body.user-logged-in #block-mainnavigationmobile #nav-toggle {
+  top: -28px; }
 
 .error-page {
   margin: 0 auto;
@@ -3900,6 +3913,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
         position: relative;
         margin: 0 6px; }
   .blog-wrapper .field--name-body p {
+    font-family: "arialregular", sans-serif;
     color: #888888; }
 
 .item-list--linkicon ul {
@@ -3940,7 +3954,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
     #block-nextpreviousblogblock a.prev::before {
       content: '\f104';
       font-family: "FontAwesome";
-      font-size: 20px;
+      font-size: 18px;
       color: #888888;
       font-weight: bold;
       display: inline-block;
@@ -3948,8 +3962,8 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
       width: 45px;
       height: 45px;
       left: 0;
-      padding: 10px 14px;
-      border: 1px solid #9b9b9b;
+      padding: 14px 17px;
+      border: 1px solid #e6e6e6;
       margin: 3px; }
       @media screen and (max-width: 28rem) {
         #block-nextpreviousblogblock a.prev::before {
@@ -3960,6 +3974,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
     #block-nextpreviousblogblock a.prev span {
       display: block;
       color: #212121;
+      font-family: "Karla", sans-serif;
       font-size: 18px;
       line-height: 24px;
       font-weight: normal;
@@ -3989,7 +4004,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
       content: '\f105';
       color: #888888;
       font-family: "FontAwesome";
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
       display: inline-block;
       position: absolute;
@@ -3997,7 +4012,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
       height: 45px;
       right: 0;
       padding: 12px 16px;
-      border: 1px solid #9b9b9b;
+      border: 1px solid #e6e6e6;
       margin: 3px; }
       @media screen and (max-width: 28rem) {
         #block-nextpreviousblogblock a.next::before {
@@ -4008,6 +4023,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
     #block-nextpreviousblogblock a.next span {
       display: block;
       color: #212121;
+      font-family: "Karla", sans-serif;
       font-size: 18px;
       line-height: 24px;
       font-weight: normal;
@@ -4112,6 +4128,65 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
         .field--name-field-more-posts .field__items .field__item {
           width: 100%; } }
 
+section.field--name-field-leave-a-reply {
+  margin: 45px 0; }
+  section.field--name-field-leave-a-reply h2 {
+    display: none; }
+  section.field--name-field-leave-a-reply form.comment-blog-comments-form h1 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+    font-family: "Karla", sans-serif;
+    color: #212121; }
+  section.field--name-field-leave-a-reply form.comment-blog-comments-form .field--name-field-comment .form-type-textarea label {
+    padding-bottom: 20px;
+    display: block;
+    color: #888888;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-family: "arialregular", sans-serif; }
+  section.field--name-field-leave-a-reply form.comment-blog-comments-form .field--name-field-comment .form-type-textarea textarea {
+    max-width: 570px;
+    min-height: 160px;
+    border-color: #e6e6e6;
+    font-size: 15px;
+    padding: 10px 0 0 10px; }
+    section.field--name-field-leave-a-reply form.comment-blog-comments-form .field--name-field-comment .form-type-textarea textarea:focus {
+      outline: 1px solid #e6ae48; }
+  section.field--name-field-leave-a-reply form.comment-blog-comments-form .field--name-field-b-name input,
+  section.field--name-field-leave-a-reply form.comment-blog-comments-form .field--name-field-b-email input {
+    max-width: 310px;
+    height: 40px;
+    border: 1px solid #e6e6e6;
+    font-size: 15px;
+    padding-left: 10px; }
+    section.field--name-field-leave-a-reply form.comment-blog-comments-form .field--name-field-b-name input:focus,
+    section.field--name-field-leave-a-reply form.comment-blog-comments-form .field--name-field-b-email input:focus {
+      outline: 1px solid #e6ae48; }
+    @media screen and (max-width: 28rem) {
+      section.field--name-field-leave-a-reply form.comment-blog-comments-form .field--name-field-b-name input,
+      section.field--name-field-leave-a-reply form.comment-blog-comments-form .field--name-field-b-email input {
+        width: 100%; } }
+  section.field--name-field-leave-a-reply form.comment-blog-comments-form #edit-actions input {
+    display: block;
+    width: 180px;
+    height: 48px;
+    background-color: #212121;
+    transition: all .3s ease-in-out;
+    border: none;
+    color: white;
+    font-size: 15px;
+    line-height: 46px;
+    font-weight: normal;
+    font-style: normal;
+    font-family: "Karla", sans-serif; }
+    section.field--name-field-leave-a-reply form.comment-blog-comments-form #edit-actions input:hover {
+      background-color: #e6ae48; }
+
 .portfolio-wrapper {
   width: 100%;
   display: block;
@@ -4123,11 +4198,14 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
     .portfolio-wrapper .block-left .field--name-body {
       padding-bottom: 30px; }
       .portfolio-wrapper .block-left .field--name-body p {
+        font-family: "arialregular", sans-serif;
         color: #888888; }
     @media screen and (max-width: 66.13333rem) {
       .portfolio-wrapper .block-left {
         width: 100%;
-        float: none; } }
+        float: none; }
+        .portfolio-wrapper .block-left .field--name-field-po img {
+          margin: 0 auto; } }
   .portfolio-wrapper .block-right {
     width: 35%;
     float: right;
@@ -4143,10 +4221,12 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
       border-bottom: 1px solid #e6e6e6;
       overflow: hidden; }
       .portfolio-wrapper .block-right .field--name-field-author .field__label {
+        font-family: "arialregular", sans-serif;
         font-size: 14px;
         color: #888888;
         font-weight: 300; }
       .portfolio-wrapper .block-right .field--name-field-author .field__item a {
+        font-family: "arialregular", sans-serif;
         float: right;
         font-family: "Karla", sans-serif;
         font-size: 15px;
@@ -4166,12 +4246,13 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
       border-bottom: 1px solid #e6e6e6;
       overflow: hidden; }
       .portfolio-wrapper .block-right .field--name-field-date-project .field__label {
+        font-family: "arialregular", sans-serif;
         font-size: 14px;
         color: #888888;
         font-weight: 300; }
       .portfolio-wrapper .block-right .field--name-field-date-project .field__item .datetime {
         float: right;
-        font-family: "Karla", sans-serif;
+        font-family: "arialregular", sans-serif;
         font-size: 14px;
         line-height: 20px;
         font-weight: normal;
@@ -4182,10 +4263,12 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
       position: relative;
       overflow: hidden; }
       .portfolio-wrapper .block-right .field--name-field-p-categories .field__label {
+        font-family: "arialregular", sans-serif;
         font-size: 14px;
         color: #888888;
         font-weight: 300; }
       .portfolio-wrapper .block-right .field--name-field-p-categories .field__item a {
+        font-family: "arialregular", sans-serif;
         float: right;
         font-family: "Karla", sans-serif;
         font-size: 15px;
@@ -4248,7 +4331,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
     #block-nextpreviousportfolioblock a.prev::before {
       content: '\f104';
       font-family: "FontAwesome";
-      font-size: 20px;
+      font-size: 18px;
       color: #888888;
       font-weight: bold;
       display: inline-block;
@@ -4256,8 +4339,8 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
       width: 45px;
       height: 45px;
       left: 0;
-      padding: 10px 14px;
-      border: 1px solid #9b9b9b;
+      padding: 14px 17px;
+      border: 1px solid #e6e6e6;
       margin: 3px; }
       @media screen and (max-width: 28rem) {
         #block-nextpreviousportfolioblock a.prev::before {
@@ -4268,6 +4351,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
     #block-nextpreviousportfolioblock a.prev span {
       display: block;
       color: #212121;
+      font-family: "Karla", sans-serif;
       font-size: 18px;
       line-height: 24px;
       font-weight: normal;
@@ -4297,7 +4381,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
       content: '\f105';
       color: #888888;
       font-family: "FontAwesome";
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
       display: inline-block;
       position: absolute;
@@ -4305,7 +4389,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
       height: 45px;
       right: 0;
       padding: 12px 16px;
-      border: 1px solid #9b9b9b;
+      border: 1px solid #e6e6e6;
       margin: 3px; }
       @media screen and (max-width: 28rem) {
         #block-nextpreviousportfolioblock a.next::before {
@@ -4316,6 +4400,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
     #block-nextpreviousportfolioblock a.next span {
       display: block;
       color: #212121;
+      font-family: "Karla", sans-serif;
       font-size: 18px;
       line-height: 24px;
       font-weight: normal;
@@ -4596,13 +4681,16 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
     display: inline-block;
     width: 65%; }
     .our-team-wrapper .block-left .field--name-body {
-      padding-bottom: 30px; }
+      padding-bottom: 55px; }
       .our-team-wrapper .block-left .field--name-body p {
-        color: #888888; }
+        color: #888888;
+        font-family: "arialregular", sans-serif; }
     @media screen and (max-width: 66.13333rem) {
       .our-team-wrapper .block-left {
         width: 100%;
-        float: none; } }
+        float: none; }
+        .our-team-wrapper .block-left .field--name-field-profile-image img {
+          margin: 0 auto; } }
   .our-team-wrapper .block-right {
     display: inline-block;
     width: 30%;
@@ -4699,7 +4787,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
     #block-nextpreviousourteamblock a.prev::before {
       content: '\f104';
       font-family: "FontAwesome";
-      font-size: 20px;
+      font-size: 18px;
       color: #888888;
       font-weight: bold;
       display: inline-block;
@@ -4707,8 +4795,8 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
       width: 45px;
       height: 45px;
       left: 0;
-      padding: 10px 14px;
-      border: 1px solid #9b9b9b;
+      padding: 14px 17px;
+      border: 1px solid #e6e6e6;
       margin: 3px; }
       @media screen and (max-width: 28rem) {
         #block-nextpreviousourteamblock a.prev::before {
@@ -4719,6 +4807,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
     #block-nextpreviousourteamblock a.prev span {
       display: block;
       color: #212121;
+      font-family: "Karla", sans-serif;
       font-size: 18px;
       line-height: 24px;
       font-weight: normal;
@@ -4748,7 +4837,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
       content: '\f105';
       color: #888888;
       font-family: "FontAwesome";
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
       display: inline-block;
       position: absolute;
@@ -4756,7 +4845,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
       height: 45px;
       right: 0;
       padding: 12px 16px;
-      border: 1px solid #9b9b9b;
+      border: 1px solid #e6e6e6;
       margin: 3px; }
       @media screen and (max-width: 28rem) {
         #block-nextpreviousourteamblock a.next::before {
@@ -4767,6 +4856,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
     #block-nextpreviousourteamblock a.next span {
       display: block;
       color: #212121;
+      font-family: "Karla", sans-serif;
       font-size: 18px;
       line-height: 24px;
       font-weight: normal;
@@ -4909,7 +4999,8 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
     font-size: 25px;
     font-weight: normal;
     font-style: normal;
-    line-height: 30px; }
+    line-height: 30px;
+    margin-bottom: 5px; }
   .region-come-visit #block-furnituremobileapp .field--name-body,
   .region-come-visit #block-pickingwithdelivery .field--name-body,
   .region-come-visit #block-customservices .field--name-body,
@@ -4919,7 +5010,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
     .region-come-visit #block-pickingwithdelivery .field--name-body p,
     .region-come-visit #block-customservices .field--name-body p,
     .region-come-visit #block-2017storecatalogue .field--name-body p {
-      font-family: "arialregular";
+      font-family: "arialregular", sans-serif;
       font-size: 15px;
       line-height: 22px;
       font-weight: normal;
@@ -5016,13 +5107,15 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
       font-size: 30px;
       line-height: 36px;
       font-weight: normal;
-      font-style: normal; }
+      font-style: normal;
+      margin-bottom: 20px; }
     .region-member-get-more #block-furniturestorefamily .field--name-body,
     .region-member-get-more #block-furniturestorebusiness .field--name-body {
       display: block;
       width: 48%; }
       .region-member-get-more #block-furniturestorefamily .field--name-body p,
       .region-member-get-more #block-furniturestorebusiness .field--name-body p {
+        font-family: "arialregular", sans-serif;
         padding: 0 0 20px;
         margin: 0;
         font-size: 15px;
@@ -5089,6 +5182,12 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
     color: #9d9d9d;
     text-decoration: none;
     margin: 0; }
+  @media screen and (max-width: 51.2rem) {
+    #block-getintouch,
+    #block-visitus,
+    #block-ouremail {
+      display: block;
+      width: 80%; } }
 
 #block-getintouch h2::before {
   content: '\f1d9';
@@ -5097,7 +5196,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
   width: 50px;
   height: 50px;
   color: #e6ae48;
-  left: -43px;
+  left: -60px;
   position: absolute; }
 
 #block-visitus h2::before {
@@ -5107,7 +5206,7 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
   width: 50px;
   height: 50px;
   color: #e6ae48;
-  left: -34px;
+  left: -50px;
   position: absolute; }
 
 #block-ouremail h2::before {
@@ -5117,7 +5216,107 @@ body .user-logged-in #block-mainnavigationmobile #nav-toggle {
   width: 50px;
   height: 50px;
   color: #e6ae48;
-  left: -45px;
+  left: -55px;
   position: absolute; }
+
+#block-furniture-theme-content form.contact-message-feedback-form {
+  display: block;
+  max-width: 460px;
+  margin: 0 auto; }
+  #block-furniture-theme-content form.contact-message-feedback-form h1 {
+    font-size: 38px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center; }
+    #block-furniture-theme-content form.contact-message-feedback-form h1::after {
+      content: 'New Collections';
+      display: block;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      font-style: normal;
+      color: #9d9d9d;
+      font-family: "Karla", sans-serif; }
+  #block-furniture-theme-content form.contact-message-feedback-form #edit-field-name-wrapper label {
+    font-family: "Karla", sans-serif;
+    color: #9b9b9b;
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: normal;
+    font-style: normal; }
+    #block-furniture-theme-content form.contact-message-feedback-form #edit-field-name-wrapper label::after {
+      content: '*';
+      color: #e6ae48;
+      background: none;
+      position: absolute;
+      font-size: 17px; }
+  #block-furniture-theme-content form.contact-message-feedback-form #edit-field-name-wrapper input {
+    max-width: 460px;
+    display: block;
+    height: 42px;
+    border: 1px solid #e6e6e6; }
+    #block-furniture-theme-content form.contact-message-feedback-form #edit-field-name-wrapper input:focus {
+      outline: 1px solid #e6ae48; }
+    @media screen and (max-width: 28rem) {
+      #block-furniture-theme-content form.contact-message-feedback-form #edit-field-name-wrapper input {
+        width: 100%; } }
+  #block-furniture-theme-content form.contact-message-feedback-form #edit-field-email-wrapper label {
+    font-family: "Karla", sans-serif;
+    color: #9b9b9b;
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: normal;
+    font-style: normal; }
+    #block-furniture-theme-content form.contact-message-feedback-form #edit-field-email-wrapper label::after {
+      content: '*';
+      color: #e6ae48;
+      background: none;
+      position: absolute;
+      font-size: 17px; }
+  #block-furniture-theme-content form.contact-message-feedback-form #edit-field-email-wrapper input {
+    max-width: 460px;
+    display: block;
+    height: 42px;
+    border: 1px solid #e6e6e6; }
+    #block-furniture-theme-content form.contact-message-feedback-form #edit-field-email-wrapper input:focus {
+      outline: 1px solid #e6ae48; }
+    @media screen and (max-width: 28rem) {
+      #block-furniture-theme-content form.contact-message-feedback-form #edit-field-email-wrapper input {
+        width: 100%; } }
+  #block-furniture-theme-content form.contact-message-feedback-form #edit-message-wrapper label {
+    font-family: "Karla", sans-serif;
+    color: #9b9b9b;
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: normal;
+    font-style: normal; }
+    #block-furniture-theme-content form.contact-message-feedback-form #edit-message-wrapper label::after {
+      content: '*';
+      color: #e6ae48;
+      background: none;
+      position: absolute;
+      font-size: 17px; }
+  #block-furniture-theme-content form.contact-message-feedback-form #edit-message-wrapper textarea {
+    max-width: 460px;
+    display: block;
+    min-height: 222px;
+    border: 1px solid #e6e6e6; }
+    #block-furniture-theme-content form.contact-message-feedback-form #edit-message-wrapper textarea:focus {
+      outline: 1px solid #e6ae48; }
+  #block-furniture-theme-content form.contact-message-feedback-form #edit-actions input {
+    display: block;
+    width: 180px;
+    height: 48px;
+    background-color: #212121;
+    transition: all .3s ease-in-out;
+    border: none;
+    color: white;
+    font-size: 15px;
+    line-height: 46px;
+    font-weight: normal;
+    font-style: normal;
+    font-family: "Karla", sans-serif; }
+    #block-furniture-theme-content form.contact-message-feedback-form #edit-actions input:hover {
+      background-color: #e6ae48; }
 
 /*# sourceMappingURL=../stylesheets/application.css.map */
