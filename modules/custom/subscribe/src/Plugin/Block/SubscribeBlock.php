@@ -7,9 +7,9 @@
  */
 /**
  * @file
- * Contains \Drupal\newsletter\Plugin\Block\NewsletterBlock.
+ * Contains \Drupal\subscribe\Plugin\Block\SubscribeBlock.
  */
-namespace Drupal\newsletter\Plugin\Block;
+namespace Drupal\subscribe\Plugin\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormInterface;
 
@@ -19,17 +19,17 @@ use Drupal\Core\Form\FormInterface;
  * Provides a custom block
  *
  * @Block(
- *   id = "custom_block",
- *   admin_label = @Translation("Newsletter"),
+ *   id = "subscribe_block",
+ *   admin_label = @Translation("Subscribe Block"),
  *   category = @Translation("Subscribe"),
  * )
  */
-class NewsletterBlock extends BlockBase
+class SubscribeBlock extends BlockBase
 {
     public function build()
     {
         // TODO: Implement build() method.
-        $form = \Drupal::formBuilder()->getForm('Drupal\newsletter\Form\NewsletterForm');
+        $form = \Drupal::formBuilder()->getForm('Drupal\subscribe\Form\SubscribeForm');
         return $form;
     }
 }

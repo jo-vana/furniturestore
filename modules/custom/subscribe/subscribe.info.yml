@@ -1,4 +1,4 @@
-name: Newsletter
+name: Subscribe
 type: module
-description: Defines a custom block.
+description: Defines a Subscribe custom block.
 core: 8.x
