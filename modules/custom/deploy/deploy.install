@@ -76,3 +76,20 @@ function deploy_update_8430()
     \Drupal::service('module_installer')->install(['from_the_blog']);
 }
 
+/**
+ * Paragraphs
+ */
+function deploy_update_8431()
+{
+    \Drupal::service('module_installer')->install(['paragraphs']);
+}
+
+/**
+ * Entity Reference Revisions
+ */
+function deploy_update_8432()
+{
+    \Drupal::service('module_installer')->install(['entity_reference_revisions']);
+}
+
+
