@@ -22,9 +22,9 @@ function uploadForm_install() {
  *
  * @ingroup lotus
  */
-function newsletter_schema() {
+function subscribe_schema() {
 
-    $schema['newsletter'] = array(
+    $schema['subscribe'] = array(
         'description' => 'Email address book.',
         'fields' => array(
             'pid' => array(
@@ -45,14 +45,14 @@ function newsletter_schema() {
                 'length' => 255,
                 'not null' => TRUE,
                 'default' => '',
-                'description' => 'Name of the person.',
+                'description' => 'Email of the person.',
             ),
             'date' => array(
                 'type' => 'varchar',
                 'length' => 255,
                 'not null' => TRUE,
                 'default' => '',
-                'description' => 'Name of the person.',
+                'description' => 'Date when subscribed.',
             ),
 
         ),

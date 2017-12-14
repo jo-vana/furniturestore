@@ -6,17 +6,17 @@
  * Time: 9:54 AM
  */
 
-namespace Drupal\newsletter\Form;
+namespace Drupal\subscribe\Form;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\ReplaceCommand;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
-class NewsletterForm extends FormBase
+class SubscribeForm extends FormBase
 {
     public function getFormId()
     {
-        return 'newsletter_form_block';
+        return 'subscribe_form_block';
 
     }
 
@@ -26,10 +26,10 @@ class NewsletterForm extends FormBase
     public function buildForm(array $form, FormStateInterface $form_state)
     {
         $form['details'] = [
-            '#markup' => '<h3>Get Updates</h3>',
+            '#markup' => '<h3>Subscribe for More Updates</h3>',
         ];
         $form['subtitle'] = [
-            '#markup' => '<p class="subtittle">Subscribe our newsletter to get the best stories into your inbox!</p>',
+            '#markup' => '<p class="subtittle">Get instant updates about our new products and special promos!</p>',
         ];
         $form['email'] = array(
             '#type' => 'email',
@@ -55,13 +55,10 @@ class NewsletterForm extends FormBase
         $form[ 'message' ] = [
             '#type'       => 'container',
             '#attributes' => [
-                'id' => 'newsletter-message',
+                'id' => 'subscribe-message',
             ],
         ];
 
-        $form['description'] = array(
-            '#markup' => '<p class="spam">Dont\'t worry we hate spams</p>',
-        );
 
         return $form;
     }
@@ -89,13 +86,13 @@ class NewsletterForm extends FormBase
     {
         $values = $form_state->getValue('email');
 
-        $email = \Drupal::database()->select('newsletter', 'n');
-        $email->condition('n.email', $values, '=');
-        $email->addField('n', 'email');
+        $email = \Drupal::database()->select('subscribe', 's');
+        $email->condition('s.email', $values, '=');
+        $email->addField('s', 'email');
         $emails = $email->execute()->fetchAll();
 
         if (empty($emails)) {
-            $insert = \Drupal::database()->insert('newsletter');
+            $insert = \Drupal::database()->insert('subscribe');
             $insert->fields([
                 'email',
                 'date',
@@ -110,26 +107,26 @@ class NewsletterForm extends FormBase
             $item = [
                 '#type'       => 'container',
                 '#attributes' => [
-                    'id'    => 'newsletter-message',
+                    'id'    => 'subscribe-message',
                     'class' => 'success',
                 ],
-                '#markup'     => "Thank You!",
+                '#markup'     => "Check your inbox or spam folder now to confirm your subscription.",
             ];
 
         } else {
             $item = [
                 '#type'       => 'container',
                 '#attributes' => [
-                    'id'    => 'newsletter-message',
+                    'id'    => 'subscribe-message',
                     'class' => 'fail',
                 ],
-                '#markup'     => "Email already exists in our database",
+                '#markup'     => "Email already exists",
             ];
         }
         $renderer = \Drupal::service( 'renderer' );
         $response = new AjaxResponse();
         $item = $renderer->render( $item );
-        $response->addCommand( new ReplaceCommand( '#newsletter-message', $item ) );
+        $response->addCommand( new ReplaceCommand( '#subscribe-message', $item ) );
 
         return $response;
     }

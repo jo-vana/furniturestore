@@ -56,7 +56,7 @@
       } else {
         $this_star = $this.closest('.star');
       }
-      $this_star.prevAll('.star').andSelf().addClass('on');
+      $this_star.prevAll('.star').addBack().addClass('on');
       $this_star.nextAll('.star').removeClass('on');
       if (value === 0) {
         $this_star.removeClass('on');
