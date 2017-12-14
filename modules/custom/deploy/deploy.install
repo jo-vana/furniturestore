@@ -92,4 +92,11 @@ function deploy_update_8432()
     \Drupal::service('module_installer')->install(['entity_reference_revisions']);
 }
 
+/**
+ * Subscribe
+ */
+function deploy_update_8433()
+{
+    \Drupal::service('module_installer')->install(['subscribe']);
+}
 
