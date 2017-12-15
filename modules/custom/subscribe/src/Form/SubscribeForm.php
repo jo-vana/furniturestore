@@ -26,10 +26,8 @@ class SubscribeForm extends FormBase
     public function buildForm(array $form, FormStateInterface $form_state)
     {
         $form['details'] = [
-            '#markup' => '<h3>Subscribe for More Updates</h3>',
-        ];
-        $form['subtitle'] = [
-            '#markup' => '<p class="subtittle">Get instant updates about our new products and special promos!</p>',
+            '#markup' => '<div class="sub-info"><h3>Subscribe for More Updates</h3><p class="subtittle">Get instant updates about our new products and special promos!</p></div>',
+
         ];
         $form['email'] = array(
             '#type' => 'email',

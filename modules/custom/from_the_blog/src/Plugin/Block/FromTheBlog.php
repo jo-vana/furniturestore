@@ -41,7 +41,7 @@ class FromTheBlog extends BlockBase implements BlockPluginInterface{
 
         foreach ( $results as $result ) {
             $file = File::load($result->image);
-            $url = \Drupal\image\Entity\ImageStyle::load('blog_teaser_img')->buildUrl($file->getFileUri());
+            $url = \Drupal\image\Entity\ImageStyle::load('blog_slider_img')->buildUrl($file->getFileUri());
             $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$result->nid);
 
             $date = date('F d, Y',strtotime($result->date));
