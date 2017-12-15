@@ -5568,4 +5568,78 @@ section.field--name-field-leave-a-reply {
     #block-furniture-theme-content form.contact-message-feedback-form #edit-actions input:hover {
       background-color: #e6ae48; }
 
+#block-aboutusbanner-2 {
+  display: block;
+  width: 95%;
+  margin: 0 auto; }
+
+#block-whatwedo,
+#block-ourhistory,
+#block-aboutbrand {
+  display: block;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 52px;
+  padding-top: 50px; }
+  #block-whatwedo h2,
+  #block-ourhistory h2,
+  #block-aboutbrand h2 {
+    display: inline-block;
+    margin-top: 36px;
+    margin-bottom: 0;
+    font-size: 38px;
+    line-height: 46px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Karla", sans-serif;
+    color: #212121; }
+  #block-whatwedo .field--name-field-about-us-img,
+  #block-ourhistory .field--name-field-about-us-img,
+  #block-aboutbrand .field--name-field-about-us-img {
+    display: inline-block;
+    float: left;
+    clear: left;
+    margin-right: 65px;
+    max-height: 240px;
+    overflow: hidden; }
+  #block-whatwedo .field--name-body h2,
+  #block-ourhistory .field--name-body h2,
+  #block-aboutbrand .field--name-body h2 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-style: normal;
+    color: #9d9d9d;
+    font-family: "Karla", sans-serif;
+    margin: 0; }
+  #block-whatwedo .field--name-body p,
+  #block-ourhistory .field--name-body p,
+  #block-aboutbrand .field--name-body p {
+    margin-top: 15px; }
+
+#block-whatwedo {
+  border: none; }
+
+#block-ourteamblock h2 {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  font-size: 38px;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  font-family: "Karla", sans-serif;
+  color: #212121;
+  position: relative; }
+  #block-ourteamblock h2::after {
+    content: 'Furniture Store team';
+    position: absolute;
+    display: block;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    font-style: normal;
+    color: #9d9d9d;
+    font-family: "Karla", sans-serif;
+    left: 12px; }
+
 /*# sourceMappingURL=../stylesheets/application.css.map */
