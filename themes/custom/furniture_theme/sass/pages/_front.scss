@@ -389,16 +389,28 @@
     font-family: $font-karla;
   }
   .flexslider {
+    .flex-viewport {
+      margin-bottom: 20px;
+    }
     ul.flex-direction-nav {
       display: none;
     }
+    ol.flex-control-nav {
+      li {
+        a {
+          width: 7px;
+          height: 7px;
+          background-color: #e6e6e6;
+          border: none;
+        }
+        a.flex-active {
+          background-color: #9b9b9b;
+        }
+      }
+    }
     .block-blog-wrap {
       display: block;
-      max-width: 452px;
-      .block-blog-img {
-        //max-height: 291px;
-        //overflow: hidden;
-      }
+      max-width: 555px;
       .block-blog-date {
         p {
           font-family: $font-karla;
@@ -419,6 +431,7 @@
         }
       }
       .block-fur-title {
+        margin-top: 10px;
         a {
           @include link-style;
           color: $color-black;
