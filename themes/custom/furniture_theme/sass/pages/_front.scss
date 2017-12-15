@@ -6,10 +6,89 @@
 // ========================================
 // - - Mozaik blocks
 .region-mozaik-front {
-  @extend .col-xs-11;
-
-
-
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  .mosaic-wrap {
+    display: inline-block;
+    width: 100%;
+    .left-block-mosaic {
+      width: 21.6%;
+      margin: 0 1.7%;
+      position: relative;
+      float: left;
+      clear: left;
+      vertical-align: top;
+      .field__item {
+        position: relative;
+        max-height: 392px;
+        overflow: hidden;
+        margin-top: 40px;
+        margin-bottom: 0px;
+        .field--name-field-mosaic-button {
+          @include mosaic_button;
+        }
+        &:first-child {
+          margin-top: 0;
+          margin-bottom: 40px;
+        }
+        &:last-child {
+          .field--name-field-mosaic-button {
+            left: 22%;
+          }
+        }
+      }
+    }
+    .middle-large-mosaic {
+      display: inline-block;
+      width: 46.6%;
+      margin: 0 1.7%;
+      position: relative;
+      float: none;
+      min-height: 1px;
+      max-height: 825px;
+      overflow: hidden;
+      .field__item {
+        position: relative;
+        img {
+          margin: 0 auto;
+        }
+        .field--name-field-mosaic-button {
+          @include mosaic_button;
+          top: 46%;
+          left: 35%;
+        }
+      }
+    }
+    .right-block-mosaic {
+      display: inline-block;
+      width: 21.6%;
+      margin: 0 1.7%;
+      position: relative;
+      float: right;
+      clear: right;
+      vertical-align: top;
+      .field__item {
+        position: relative;
+        max-height: 392px;
+        overflow: hidden;
+        margin-top: 40px;
+        margin-bottom: 0px;
+        .field--name-field-mosaic-button {
+          @include mosaic_button;
+        }
+        &:first-child {
+          margin-top: 0;
+          margin-bottom: 40px;
+        }
+        &:last-child {
+          .field--name-field-mosaic-button {
+            left: 33%;
+          }
+        }
+      }
+    }
+  }
 }
 // - - Our collections block
 #block-ourcollectionsblock {

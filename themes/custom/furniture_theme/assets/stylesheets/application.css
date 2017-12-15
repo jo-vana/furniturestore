@@ -2734,13 +2734,13 @@ th {
   .row:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .layout-sidebar-first, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .layout-container main, .region-come-visit, .region-member-get-more, .sidebar-first .layout-content, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .region-mozaik-front, .col-sm-11, .col-md-11, .col-lg-11, .layout-container header .region-header, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .sidebar-none .layout-content {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .layout-sidebar-first, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .layout-container main, .region-come-visit, .region-member-get-more, .sidebar-first .layout-content, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .layout-container header .region-header, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .sidebar-none .layout-content {
   position: relative;
   min-height: 1px;
   padding-left: 1rem;
   padding-right: 1rem; }
 
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .region-mozaik-front, .col-xs-12 {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left; }
 
 .col-xs-1 {
@@ -2773,7 +2773,7 @@ th {
 .col-xs-10 {
   width: 83.33333%; }
 
-.col-xs-11, .region-mozaik-front {
+.col-xs-11 {
   width: 91.66667%; }
 
 .col-xs-12 {
@@ -4881,56 +4881,121 @@ section.field--name-field-leave-a-reply {
       height: 180px; } }
 
 .region-mozaik-front {
-  float: none;
+  width: 90%;
   margin: 0 auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: [first] 25% [second] auto [second-right] 25% [last];
-      grid-template-columns: [first] 25% [second] auto [second-right] 25% [last];
-  -ms-grid-rows: [top] 50% [middle] 50% [bottom];
-      grid-template-rows: [top] 50% [middle] 50% [bottom];
-  -ms-grid-column-align: center;
-      justify-items: center; }
-  .region-mozaik-front #block-accessories {
-    -ms-grid-column: first;
-        grid-column-start: first;
-    grid-column-end: second;
-    justify-self: center;
-    -ms-grid-row: top;
-        grid-row-start: top;
-    grid-row-end: middle; }
-  .region-mozaik-front #block-indoorfurniture {
-    -ms-grid-column: second;
-        grid-column-start: second;
-    grid-column-end: second-right;
-    justify-self: center;
-    -ms-grid-row: top;
-        grid-row-start: top;
-    grid-row-end: bottom; }
-  .region-mozaik-front #block-outdoorfurniture {
-    -ms-grid-column: first;
-        grid-column-start: first;
-    grid-column-end: second;
-    justify-self: center;
-    -ms-grid-row: middle;
-        grid-row-start: middle;
-    grid-row-end: bottom; }
-  .region-mozaik-front #block-designideas {
-    -ms-grid-column: second-right;
-        grid-column-start: second-right;
-    grid-column-end: last;
-    justify-self: center;
-    -ms-grid-row: top;
-        grid-row-start: top;
-    grid-row-end: middle; }
-  .region-mozaik-front #block-lighting {
-    -ms-grid-column: second-right;
-        grid-column-start: second-right;
-    grid-column-end: last;
-    justify-self: center;
-    -ms-grid-row: middle;
-        grid-row-start: middle;
-    grid-row-end: bottom; }
+  display: block; }
+  .region-mozaik-front .mosaic-wrap {
+    display: inline-block;
+    width: 100%; }
+    .region-mozaik-front .mosaic-wrap .left-block-mosaic {
+      width: 21.6%;
+      margin: 0 1.7%;
+      position: relative;
+      float: left;
+      clear: left;
+      vertical-align: top; }
+      .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__item {
+        position: relative;
+        max-height: 392px;
+        overflow: hidden;
+        margin-top: 40px;
+        margin-bottom: 0px; }
+        .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__item .field--name-field-mosaic-button {
+          display: block;
+          position: absolute;
+          top: 34%;
+          left: 30%; }
+          .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__item .field--name-field-mosaic-button a {
+            font-family: "Karla", sans-serif;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: normal;
+            font-style: normal;
+            color: #252324;
+            padding: 22px 33px;
+            background-color: white;
+            line-height: 60px;
+            transition: all .3s ease-in-out; }
+            .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__item .field--name-field-mosaic-button a:hover {
+              background-color: #e6ae48;
+              color: white; }
+        .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__item:first-child {
+          margin-top: 0;
+          margin-bottom: 40px; }
+        .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__item:last-child .field--name-field-mosaic-button {
+          left: 22%; }
+    .region-mozaik-front .mosaic-wrap .middle-large-mosaic {
+      display: inline-block;
+      width: 46.6%;
+      margin: 0 1.7%;
+      position: relative;
+      float: none;
+      min-height: 1px;
+      max-height: 825px;
+      overflow: hidden; }
+      .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item {
+        position: relative; }
+        .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item img {
+          margin: 0 auto; }
+        .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item .field--name-field-mosaic-button {
+          display: block;
+          position: absolute;
+          top: 34%;
+          left: 30%;
+          top: 46%;
+          left: 35%; }
+          .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item .field--name-field-mosaic-button a {
+            font-family: "Karla", sans-serif;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: normal;
+            font-style: normal;
+            color: #252324;
+            padding: 22px 33px;
+            background-color: white;
+            line-height: 60px;
+            transition: all .3s ease-in-out; }
+            .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item .field--name-field-mosaic-button a:hover {
+              background-color: #e6ae48;
+              color: white; }
+    .region-mozaik-front .mosaic-wrap .right-block-mosaic {
+      display: inline-block;
+      width: 21.6%;
+      margin: 0 1.7%;
+      position: relative;
+      float: right;
+      clear: right;
+      vertical-align: top; }
+      .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__item {
+        position: relative;
+        max-height: 392px;
+        overflow: hidden;
+        margin-top: 40px;
+        margin-bottom: 0px; }
+        .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__item .field--name-field-mosaic-button {
+          display: block;
+          position: absolute;
+          top: 34%;
+          left: 30%; }
+          .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__item .field--name-field-mosaic-button a {
+            font-family: "Karla", sans-serif;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: normal;
+            font-style: normal;
+            color: #252324;
+            padding: 22px 33px;
+            background-color: white;
+            line-height: 60px;
+            transition: all .3s ease-in-out; }
+            .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__item .field--name-field-mosaic-button a:hover {
+              background-color: #e6ae48;
+              color: white; }
+        .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__item:first-child {
+          margin-top: 0;
+          margin-bottom: 40px; }
+        .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__item:last-child .field--name-field-mosaic-button {
+          left: 33%; }
 
 #block-ourcollectionsblock {
   margin-right: auto;
