@@ -377,6 +377,141 @@
     }
   }
 }
+// - - Design ideas block
+#block-designideas {
+  display: block;
+  margin-top: 50px;
+  .bg-img {
+    display: inline-block;
+    vertical-align: top;
+    width: 49.2%;
+    background-image: url('/../../../../../sites/default/files/2017-12/bg-3-1.jpg');
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+  }
+  .text-wrapp {
+    display: inline-block;
+    width: 49.2%;
+    padding: 79px 0 79px 79px;
+    h2 {
+      font-family: $font-karla;
+      font-size: 15px;
+      line-height: 22px;
+      font-weight: normal;
+      font-style: normal;
+      color: #aaaaaa;
+    }
+    .field--name-body {
+      margin-bottom: 35px;
+      h2 {
+        font-family: $font-karla;
+        font-size: 38px;
+        line-height: 44px;
+        font-weight: normal;
+        font-style: normal;
+        color: #252324;
+      }
+      h3 {
+        font-family: $font-karla;
+        font-size: 24px;
+        font-weight: normal;
+        font-style: normal;
+        color: #e6ae48;
+        margin-top: 10px;
+      }
+    }
+    .field--name-field-shop-now {
+      a {
+        font-family: $font-karla;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        text-decoration: none;
+        border-style: solid;
+        background-color: #252324;
+        color: #ffffff;
+        transition: all .3s ease-in-out;
+        padding: 10px 35px;
+        &:hover {
+          background-color: $color-orange;
+        }
+      }
+    }
+  }
+}
+// - - Shopper guide block
+#block-shopperguide {
+  display: block;
+  margin-bottom: 50px;
+  .bg-img {
+    display: inline-block;
+    vertical-align: top;
+    width: 49.2%;
+    background-image: url('/../../../../../sites/default/files/2017-12/bg-6-1-2.jpg');
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+  }
+  .text-wrapp {
+    display: inline-block;
+    width: 49.2%;
+    padding: 79px 0 79px 79px;
+    h2 {
+      font-family: $font-karla;
+      font-size: 15px;
+      line-height: 22px;
+      font-weight: normal;
+      font-style: normal;
+      color: #aaaaaa;
+    }
+    .field--name-body {
+      margin-bottom: 35px;
+      h2 {
+        font-family: $font-karla;
+        font-size: 38px;
+        line-height: 44px;
+        font-weight: normal;
+        font-style: normal;
+        color: #252324;
+      }
+      h3 {
+        font-family: $font-karla;
+        font-size: 24px;
+        font-weight: normal;
+        font-style: normal;
+        color: #0f7fb7;
+        margin-top: 10px;
+      }
+    }
+    .item-list--linkicon {
+      ul {
+        width: 100%;
+        &::before {
+          display: none;
+        }
+      }
+      li {
+        a {
+          transition: opacity .3s ease-in-out;
+          span {
+            font-size: 24px;
+            color: $color-orange;
+          }
+          &:hover {
+            span {
+              color: #9b9b9b;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 // - - From the blog slide-block
 #block-fromtheblogblock {
   h2 {

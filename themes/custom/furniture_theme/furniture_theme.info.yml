@@ -21,6 +21,8 @@ regions:
   contact_map: 'Contact map region'
   content: 'Content'
   sidebar_first: 'Sidebar-first'
+  parallax_reg: 'Parallax region'
+  slider_front: 'Slider on front page'
   come_visit: 'Come Visit Us Today'
   member_get_more: 'Member Get More'
   favorite_furniture: 'Favorite furniture'
