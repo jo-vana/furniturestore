@@ -2734,7 +2734,7 @@ th {
   .row:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .layout-sidebar-first, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .layout-container main, .region-come-visit, .region-member-get-more, .sidebar-first .layout-content, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .layout-container header .region-header, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .sidebar-none .layout-content {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .layout-sidebar-first, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .layout-container main, .region-come-visit, .region-member-get-more, .region-in-the-press, .sidebar-first .layout-content, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .layout-container header .region-header, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .sidebar-none .layout-content {
   position: relative;
   min-height: 1px;
   padding-left: 1rem;
@@ -3109,7 +3109,7 @@ th {
     margin-left: 100%; } }
 
 @media (min-width: 80rem) {
-  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .layout-sidebar-first, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .layout-container main, .region-come-visit, .region-member-get-more, .sidebar-first .layout-content, .col-lg-9, .col-lg-10, .col-lg-11, .layout-container header .region-header, .col-lg-12, .sidebar-none .layout-content {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .layout-sidebar-first, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .layout-container main, .region-come-visit, .region-member-get-more, .region-in-the-press, .sidebar-first .layout-content, .col-lg-9, .col-lg-10, .col-lg-11, .layout-container header .region-header, .col-lg-12, .sidebar-none .layout-content {
     float: left; }
   .col-lg-1 {
     width: 8.33333%; }
@@ -3125,7 +3125,7 @@ th {
     width: 50%; }
   .col-lg-7 {
     width: 58.33333%; }
-  .col-lg-8, .layout-container main, .region-come-visit, .region-member-get-more, .sidebar-first .layout-content {
+  .col-lg-8, .layout-container main, .region-come-visit, .region-member-get-more, .region-in-the-press, .sidebar-first .layout-content {
     width: 66.66667%; }
   .col-lg-9 {
     width: 75%; }
@@ -3398,6 +3398,16 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   float: none;
   margin-top: 70px; }
+
+.region-favorite-furniture {
+  display: block;
+  width: 90%;
+  margin: 0 auto; }
+
+.region-in-the-press {
+  display: block;
+  margin: 0 auto;
+  float: none; }
 
 .region-subscribe-region {
   background-color: #2c2c2c;
@@ -5682,5 +5692,59 @@ section.field--name-field-leave-a-reply {
       text-decoration: none; }
   #block-ourteamblock .team-wrap .block-term p {
     font-size: 14px; }
+
+#block-favouriteproductsblock h2 {
+  display: block;
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 38px;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  font-family: "Karla", sans-serif;
+  color: #212121;
+  position: relative; }
+
+#block-favouriteproductsblock p {
+  display: block;
+  width: 285px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  font-style: normal;
+  color: #9d9d9d;
+  font-family: "Karla", sans-serif; }
+
+#block-favouriteproductsblock .fav-prod-wrapp {
+  display: inline-block;
+  position: relative;
+  margin: 19px;
+  vertical-align: top; }
+  #block-favouriteproductsblock .fav-prod-wrapp .hover-block {
+    display: none;
+    position: absolute;
+    background-color: rgba(33, 33, 33, 0.85);
+    transition: opacity .3s ease-in-out;
+    border: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    #block-favouriteproductsblock .fav-prod-wrapp .hover-block .block-fur-title {
+      display: block;
+      text-align: center;
+      padding-top: 30%; }
+      #block-favouriteproductsblock .fav-prod-wrapp .hover-block .block-fur-title a {
+        text-decoration: none;
+        font-family: "Karla", sans-serif;
+        font-size: 28px;
+        line-height: 36px;
+        color: white; }
+        #block-favouriteproductsblock .fav-prod-wrapp .hover-block .block-fur-title a:hover {
+          border-bottom: 1px solid #e6ae48; }
+  #block-favouriteproductsblock .fav-prod-wrapp:hover .hover-block {
+    display: block; }
 
 /*# sourceMappingURL=../stylesheets/application.css.map */

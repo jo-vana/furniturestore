@@ -114,6 +114,17 @@
   float: none;
   margin-top: 70px;
 }
+.region-favorite-furniture {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}
+.region-in-the-press {
+  @extend .col-lg-8;
+  display: block;
+  margin: 0 auto;
+  float: none;
+}
 .region-subscribe-region {
   background-color: #2c2c2c;
   min-height: 130px;
