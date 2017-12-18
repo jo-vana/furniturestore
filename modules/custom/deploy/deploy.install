@@ -100,3 +100,26 @@ function deploy_update_8433()
     \Drupal::service('module_installer')->install(['subscribe']);
 }
 
+/**
+ * Top Rated Products
+ */
+function deploy_update_8434()
+{
+    \Drupal::service('module_installer')->install(['top_rated_products']);
+}
+
+/**
+ * Search Page
+ */
+function deploy_update_8435()
+{
+    \Drupal::service('module_installer')->install(['search_page']);
+}
+
+/**
+ * Furniture List Page
+ */
+function deploy_update_8436()
+{
+    \Drupal::service('module_installer')->install(['furniture_list_page']);
+}
