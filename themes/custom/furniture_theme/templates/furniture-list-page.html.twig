@@ -1,6 +1,7 @@
 <div>
     {{ form.filters.sort }}
 </div>
+
 {{ form.form_build_id }}
 {{ form.form_token }}
 {{ form.form_id }}
@@ -14,8 +15,9 @@
     </div>
     <div class="col-md-6">
         {{ form.filters.actions.submit }}
-        <h2>Showing 1-10 of {{ form.content.data.counters }} results</h2>
+        <h2>Showing all {{ form.content.data.counters }} results</h2>
     </div>
+
 </div>
 
 <div class="row">
@@ -23,13 +25,14 @@
         {% if key matches '/^\\d+$/' %}
             <div class="col-md-4">
                 <a href ="{{ entry.nid }}"><img src="{{ entry.image }}"/></a>
-                {% for en_key,en in entry.taxonomy_name %}
-                {% if en_key matches '/^\\d+$/' %}
 
-                    <div class="block-fur-term">
-                        <a href ="{{ en.url }}"><p>{{ en.name }}</p></a>
-                    </div>
-                {% endif %}
+                {% for en_key,en in entry.taxonomy_name %}
+                    {% if en_key matches '/^\\d+$/' %}
+
+                        <div class="block-fur-term">
+                            <a href ="{{ en.url }}"><p>{{ en.name }}</p></a>
+                        </div>
+                    {% endif %}
 
                 {% endfor %}
 

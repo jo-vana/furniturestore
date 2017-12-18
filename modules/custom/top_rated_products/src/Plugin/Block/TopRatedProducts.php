@@ -32,20 +32,19 @@ class TopRatedProducts extends BlockBase implements BlockPluginInterface{
 
         $query->innerJoin('node__field_reviews', 'fr', 'fr.entity_id = n.nid');
 
+        $query->innerJoin('comment_entity_statistics', 'ces', 'fr.entity_id = ces.entity_id');
+
+        $query->innerJoin('comment_field_data', 'cfd', 'ces.entity_id = cfd.entity_id');
+
+        $query->innerJoin('comment__field_your_rating', 'cff', 'cfd.cid = cff.entity_id');
+
         $query->addField('n', 'nid');
         $query->addField('n', 'title');
         $query->addField('fi', 'field_furniture_image_target_id', 'image');
         $query->addField('fp', 'field_price_value');
+        $query->addField('cff', 'field_your_rating_rating');
 
-
-//        $query->addField('cff', 'field_fivestar_rating');
-
-//        $query->orderBy('field_fivestar_rating', 'DESC');
-//      $query->innerJoin('comment_entity_statistics', 'ces', 'fr.entity_id = ces.entity_id');
-//
-//		$query->innerJoin('comment_field_data', 'cfd', 'ces.entity_id = cfd.entity_id');
-//
-//		$query->innerJoin('comment__field_fivestar', 'cff', 'cfd.cid = cff.entity_id');
+        $query->orderBy('field_your_rating_rating', 'DESC');
 
         $data = [];
 
@@ -60,9 +59,18 @@ class TopRatedProducts extends BlockBase implements BlockPluginInterface{
                 'title' => $result->title,
                 'image' => $url,
                 'field_price_value' => $result->field_price_value,
-                'field_fivestar_rating' => $result->field_fivestar_rating,
+                'field_your_rating_rating' => $result->field_your_rating_rating,
             ];
+
+            if (count($data) > 2){
+                if( !empty($data[3])) {
+                    unset($data[3]);
+                }
+                return $data;
+            }
+
         }
+
 
         return $data;
     }

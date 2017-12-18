@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains furniture_list_page.module.
+ * Contains search_page.module.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -10,10 +10,10 @@ use Drupal\Core\Routing\RouteMatchInterface;
 /**
  * Implements hook_help().
  */
-function furniture_list_page_help($route_name, RouteMatchInterface $route_match) {
+function search_page_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
     // Main module help for the search_page module.
-    case 'help.page.furniture_list_page':
+    case 'help.page.search_page':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
       $output .= '<p>' . t('Custom Search Page') . '</p>';
@@ -26,9 +26,9 @@ function furniture_list_page_help($route_name, RouteMatchInterface $route_match)
 /**
  * Implements hook_theme().
  */
-function furniture_list_page_theme() {
+function search_page_theme() {
   return [
-      'furniture_list_page' => [
+      'search_page' => [
           'render element' => 'children',
       ],
   ];

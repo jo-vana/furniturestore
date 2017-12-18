@@ -1,12 +1,12 @@
 <?php
 
-namespace Drupal\furniture_list_page\Form;
+namespace Drupal\search_page\Form;
 
 use Drupal\Core\Database\Database;
 use Drupal\file\Entity\File;
-use Drupal\Core\Entity\Query;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use PDO;
 
 /**
  * Class SearchForm.
@@ -62,7 +62,7 @@ class SearchForm extends FormBase {
 
 		$form[ 'content' ][ 'data' ] = $data;
 
-		$form[ '#theme' ] = 'furniture_list_page';
+		$form[ '#theme' ] = 'search_page';
 
 		$form[ 'pager' ] = array(
 			'#type' => 'pager',
@@ -97,6 +97,8 @@ class SearchForm extends FormBase {
 		$query->addField('t', 'name', 'taxonomy_name');
 		$query->addField('fi', 'field_furniture_image_target_id', 'image');
 		$query->addField('fp', 'field_price_value', 'price');
+
+		$query = $query->extend('Drupal\Core\Database\Query\PagerSelectExtender')->limit(9);
 
 		$sort = 0;
 		if ( isset( $_GET[ 'sort' ] ) ) {
@@ -144,7 +146,7 @@ class SearchForm extends FormBase {
 					'url'   => $alias_tax
 				];
 				$entry['image'] = $url;
- 			}
+			}
 			$data[] = $entry;
 		}
 
