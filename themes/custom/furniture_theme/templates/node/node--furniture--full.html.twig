@@ -108,6 +108,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 
                 {{ title_suffix }}
                 {{ content.field_price }}
+                {{ content.field_prod }}
                 {{ content.body }}
                 {{ content.field_categories }}
                 {{ content.field_share_it_links }}
@@ -117,7 +118,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
             <ul class="tabs">
                 <li class="tab-link current" data-tab="tab-1">Description</li>
                 <li class="tab-link" data-tab="tab-2">Additional information</li>
-                <li class="tab-link" data-tab="tab-3">Reviews (0)</li>
+                <li class="tab-link" data-tab="tab-3">Reviews ({{ content.field_reviews['#items'].comment_count }})</li>
             </ul>
             <div id="tab-1" class="tab-content current">{{ content.field_desc }}</div>
             <div id="tab-2" class="tab-content">
