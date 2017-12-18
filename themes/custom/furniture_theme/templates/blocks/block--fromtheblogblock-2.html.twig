@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme furniture_store override to display a block from the blog for front page.
+ * Theme furniture_store override to display a block In the press on About us page.
  *
  * Available variables:
  * - plugin_id: The ID of the block implementation.
@@ -36,17 +36,16 @@ set classes = [
     {{ title_prefix }}
     {% if label %}
         <h2{{ title_attributes }}>{{ label }}</h2>
+        <p>Latest from the Journal</p>
     {% endif %}
     {{ title_suffix }}
     {% block content %}
-        <div class="from-the-blog">
-
-    <div class="flexslider">
-        <ul class="slides">
-            {{ content }}
-        </ul>
-    </div>
-
+        <div class="about_us">
+            <div class="flexslider">
+                <ul class="slides">
+                    {{ content }}
+                </ul>
+            </div>
         </div>
 
     {% endblock %}

@@ -1,18 +1,21 @@
 <p>Get the things you need for Home</p>
 {% for entry in content %}
-    <div class="block-fur-title">
-        <a href ="{{ entry.alias }}">{{ entry.title }}</a>
-    </div>
+    <div class="fav-prod-wrapp">
+        <div class="hover-block">
+            <div class="block-fur-title">
+                <a href ="{{ entry.alias }}">{{ entry.title }}</a>
+            </div>
 
 
-    <div class="block-price">
-        <p>${{ entry.field_price_value }}</p>
-    </div>
+            <div class="block-price">
+                <p>${{ entry.field_price_value }}</p>
+            </div>
+        </div>
 
     <div class="block-fur-img">
             <img src=" {{ entry.image }} "/>
     </div>
-
+    </div>
 
 
 {% endfor %}

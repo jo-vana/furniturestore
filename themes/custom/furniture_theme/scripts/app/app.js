@@ -82,9 +82,9 @@
         }
     };
 
-    Drupal.behaviors.sliderFront = {
+    Drupal.behaviors.sliderBlog = {
       attach:function() {
-              $('.flexslider').flexslider({
+              $('.from-the-blog .flexslider').flexslider({
                   animation: "slide",
                   animationLoop: true,
                   itemWidth: 420,
@@ -93,8 +93,18 @@
                   maxItems: 2
               });
 
+          $('.about_us .flexslider').flexslider({
+              animation: "slide",
+              animationLoop: true,
+              itemWidth: 220,
+              itemMargin: 10,
+              minItems: 1,
+              maxItems: 3
+          });
+
       }
     };
+
 
 })(jQuery);
 
