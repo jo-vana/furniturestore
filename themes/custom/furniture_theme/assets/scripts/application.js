@@ -96,7 +96,7 @@
           $('.about_us .flexslider').flexslider({
               animation: "slide",
               animationLoop: true,
-              itemWidth: 220,
+              itemWidth: 200,
               itemMargin: 10,
               minItems: 1,
               maxItems: 3

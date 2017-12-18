@@ -127,6 +127,7 @@
   }
 }
 #block-favouriteproductsblock {
+  margin: 50px 0;
   h2 {
     display: block;
     max-width: 400px;
@@ -185,6 +186,95 @@
     &:hover {
       .hover-block {
         display: block;
+      }
+    }
+  }
+}
+#block-fromtheblogblock-2 {
+  h2 {
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 38px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    font-family: $font-karla;
+    color: $color-black;
+    position: relative;
+    margin-top: 50px;
+  }
+  p {
+    display: block;
+    width: 285px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    font-style: normal;
+    color: #9d9d9d;
+    font-family: $font-karla;
+    margin-bottom: 30px;
+  }
+  .flexslider {
+    .flex-viewport {
+      margin-bottom: 20px;
+    }
+    ul.flex-direction-nav {
+      display: none;
+    }
+    ol.flex-control-nav {
+      li {
+        a {
+          width: 7px;
+          height: 7px;
+          background-color: #e6e6e6;
+          border: none;
+        }
+        a.flex-active {
+          background-color: #9b9b9b;
+        }
+      }
+    }
+    .block-blog-wrap {
+      display: block;
+      max-width: 555px;
+      .block-blog-date {
+        p {
+          font-family: $font-karla;
+          text-align: left;
+          font-size: 17px;
+          line-height: 20px;
+          font-weight: normal;
+          font-style: normal;
+          color: $font-color;
+          margin: 0;
+          margin-top: 6px;
+          &::before {
+            content: '';
+            display: inline-block;
+            height: 1px;
+            width: 25px;
+            background-color: $color-orange;
+            margin: 0 20px 4px 0;
+          }
+        }
+      }
+      .block-fur-title {
+        margin-top: 10px;
+        a {
+          @include link-style;
+          color: $color-black;
+          font-size: 22px;
+          line-height: 28px;
+          text-decoration: none;
+        }
+      }
+      .block-blog-img {
+        img {
+          max-width: 360px;
+        }
       }
     }
   }
