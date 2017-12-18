@@ -42,8 +42,6 @@ class PortfolioListPage extends BlockBase implements BlockPluginInterface{
 
         $results = $query->execute()->fetchAll();
 
-        // \PDO::FETCH_GROUP
-
         foreach ( $results as $result ) {
             $file = File::load($result->image);
             $url = \Drupal\image\Entity\ImageStyle::load('portfolio_list_page_img')->buildUrl($file->getFileUri());
@@ -62,7 +60,6 @@ class PortfolioListPage extends BlockBase implements BlockPluginInterface{
                 ],
                 'image' => $url,
             ];
-
         }
 
         return $data;
