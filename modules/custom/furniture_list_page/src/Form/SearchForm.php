@@ -4,6 +4,7 @@ namespace Drupal\furniture_list_page\Form;
 
 use Drupal\Core\Database\Database;
 use Drupal\file\Entity\File;
+use Drupal\Core\Entity\Query;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -36,13 +37,6 @@ class SearchForm extends FormBase {
 			'#attributes'  => array( 'class' => array( 'inline' ) ),
 		];
 
-		$form[ 'filters' ][ 'title' ] = [
-			'#type'          => 'textfield',
-			'#title'         => t( 'Record title' ),
-			'#size'          => 32,
-			'#default_value' => isset( $_GET[ 'title' ] ) ? $_GET[ 'title' ] : '',
-		];
-
 		$options = [
 			0 => 'Default sorting',
 			1 => 'Sort by popularity',
@@ -68,7 +62,7 @@ class SearchForm extends FormBase {
 
 		$form[ 'content' ][ 'data' ] = $data;
 
-		$form[ '#theme' ] = 'search_page';
+		$form[ '#theme' ] = 'furniture_list_page';
 
 		$form[ 'pager' ] = array(
 			'#type' => 'pager',
@@ -92,16 +86,6 @@ class SearchForm extends FormBase {
 
 		$query->innerJoin('node_counter', 'nc', 'nc.nid = n.nid');
 
-//		$query->innerJoin('node__field_reviews', 'fr', 'fr.entity_id = n.nid');
-//
-//		$query->innerJoin('comment_field_data', 'cfd', 'fr.entity_id = cfd.cid');
-//
-//		$query->innerJoin('comment__field_your_rating', 'cfr', 'cfr.entity_id = cfd.cid');
-
-
-
-
-
 		if ( !empty( $_GET[ 'title' ] ) ) {
 			$query->condition( 'title', $_GET[ 'title' ], 'LIKE' );
 		}
@@ -114,8 +98,6 @@ class SearchForm extends FormBase {
 		$query->addField('fi', 'field_furniture_image_target_id', 'image');
 		$query->addField('fp', 'field_price_value', 'price');
 
-		$query = $query->extend('Drupal\Core\Database\Query\PagerSelectExtender')->limit(9);
-
 		$sort = 0;
 		if ( isset( $_GET[ 'sort' ] ) ) {
 			$sort = $_GET[ 'sort' ];
@@ -126,7 +108,11 @@ class SearchForm extends FormBase {
 		} else if ( $sort == 1 ) {
 			$query->orderBy( 'totalcount', 'DESC' );
 		} else if ( $sort == 2 ) {
-			$query->orderBy( 'nid', 'DESC' );
+			$query->innerJoin('node__field_reviews', 'fr', 'fr.entity_id = n.nid');
+			$query->innerJoin('comment_entity_statistics', 'ces', 'fr.entity_id = ces.entity_id');
+			$query->innerJoin('comment_field_data', 'cfd', 'ces.entity_id = cfd.entity_id');
+			$query->innerJoin('comment__field_your_rating', 'cff', 'cfd.cid = cff.entity_id');
+			$query->orderBy( 'field_your_rating_rating', 'DESC' );
 		} else if ( $sort == 3 ) {
 			$query->orderBy( 'nid', 'DESC' );
 		} else if ( $sort == 4 ) {
@@ -136,6 +122,8 @@ class SearchForm extends FormBase {
 		}
 
 		$data = [];
+		$data['counters'] = $query->countQuery()->execute()->fetchField();
+
 
 		$results = $query->execute()->fetchAll(\PDO::FETCH_GROUP);
 
@@ -158,7 +146,7 @@ class SearchForm extends FormBase {
 					'url'   => $alias_tax
 				];
 				$entry['image'] = $url;
-			}
+ 			}
 			$data[] = $entry;
 		}
 

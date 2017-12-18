@@ -1,5 +1,5 @@
-name: Search Page
+name: Furniture List Page
 type: module
-description: Custom Search Page
+description: Custom Furniture List Page
 core: 8.x
 package: Custom

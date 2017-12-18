@@ -1,8 +1,8 @@
 
-search_page.search_form:
-  path: '/shop'
+furniture_list_page.search_form:
+  path: '/furniture'
   defaults:
-    _form: '\Drupal\search_page\Form\SearchForm'
+    _form: '\Drupal\furniture_list_page\Form\SearchForm'
     _title: 'SearchForm'
   requirements:
     _access: 'TRUE'
