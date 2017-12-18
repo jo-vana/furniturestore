@@ -1,5 +1,16 @@
 <?php
 
+function furniture_theme_theme ( $existing, $type, $theme, $path ) {
+    return [
+        'search_page' => [
+            'render element' => 'form',
+        ],
+        'furniture_list_page' => [
+            'render element' => 'form',
+        ],
+    ];
+}
+
 function furniture_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   $http_error_suggestions = [
      'system.401' => 'page__401',
