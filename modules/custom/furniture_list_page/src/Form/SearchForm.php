@@ -122,8 +122,6 @@ class SearchForm extends FormBase {
 		}
 
 		$data = [];
-		$data['counters'] = $query->countQuery()->execute()->fetchField();
-
 
 		$results = $query->execute()->fetchAll(\PDO::FETCH_GROUP);
 
@@ -149,6 +147,8 @@ class SearchForm extends FormBase {
  			}
 			$data[] = $entry;
 		}
+
+		$data['counters'] = count($data);
 
 		return $data;
 	}
