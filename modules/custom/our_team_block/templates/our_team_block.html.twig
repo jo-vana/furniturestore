@@ -1,12 +1,13 @@
 <p>Furniture Store team</p>
 {% for entry in content %}
-    <div clsas="team-wrap">
-        <div class="block-title">
-            <a href ="{{ entry.alias }}">{{ entry.title }}</a>
-        </div>
+    <div class="team-wrap">
 
         <div class="block-img">
                 <img src=" {{ entry.image }} "/>
+        </div>
+
+        <div class="block-title">
+            <a href ="{{ entry.alias }}">{{ entry.title }}</a>
         </div>
 
         <div class="block-term">

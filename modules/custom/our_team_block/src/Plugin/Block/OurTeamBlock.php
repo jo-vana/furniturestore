@@ -48,7 +48,7 @@ class OurTeamBlock extends BlockBase implements BlockPluginInterface{
 
         foreach ( $results as $result ) {
             $file = File::load($result->image);
-            $url = \Drupal\image\Entity\ImageStyle::load('large')->buildUrl($file->getFileUri());
+            $url = \Drupal\image\Entity\ImageStyle::load('our_team')->buildUrl($file->getFileUri());
             $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$result->nid);
             $data[] = [
                 'alias' => $alias,
