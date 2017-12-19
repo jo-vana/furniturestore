@@ -1,7 +1,7 @@
 // ========================================
 //
 // @file portfolio.scss
-// Portfolio node pages specific styling
+// Portfolio single node pages specific styling
 //
 // ========================================
 .portfolio-wrapper {
@@ -217,6 +217,60 @@
       }
       @media screen and (max-width: $screen-xs-min) {
         width: 100%;
+      }
+    }
+  }
+}
+// ========================================
+//
+// Portfolio basic list page specific styling
+//
+// ========================================
+#block-furniture-theme-content {
+  display: none;
+}
+#block-portfoliolistpageblock {
+  display: block;
+  width: 100%;
+  .wrap-portfolio-page {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin: 0 1%;
+    .block-portfolio-title {
+      padding-top: 22px;
+      a {
+        font-family: $font-karla;
+        color: $color-black;
+        transition: color 0.3s ease-in-out;
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: normal;
+        font-style: normal;
+        text-transform: none;
+        text-decoration: none;
+        &:hover {
+          color: $color-orange;
+        }
+      }
+    }
+    .block-portfolio-term {
+      padding-bottom: 30px;
+      p {
+        font-family: $font-arial;
+        font-size: 12px;
+        line-height: 22px;
+        font-weight: normal;
+        a {
+          font-family: $font-arial;
+          font-size: 12px;
+          color: $color-black;
+          text-decoration: none;
+          transition: color 0.3s ease-in-out;
+          &:hover {
+            color: $color-orange;
+          }
+        }
       }
     }
   }
