@@ -123,3 +123,11 @@ function deploy_update_8436()
 {
     \Drupal::service('module_installer')->install(['furniture_list_page']);
 }
+
+/**
+ * Easy Breadcrumbs
+ */
+function deploy_update_8437()
+{
+    \Drupal::service('module_installer')->install(['easy_breadcrumb']);
+}
