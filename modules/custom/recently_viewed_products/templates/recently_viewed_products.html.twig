@@ -1,0 +1,27 @@
+{% for entry in content %}
+    <div class="block-fur-wrap">
+    <div class="block-fur-img">
+        <a href ="{{ entry.nid }}"><img src="{{ entry.image }}"/></a>
+    </div>
+    <div class="tax-wrapper">
+        {% for en in entry.taxonomy_name %}
+            <div class="block-fur-term">
+                <a href ="{{ en.url }}"><p>{{ en.name }}</p></a>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="block-fur-title">
+        <a href ="{{ entry.nid }}">{{ entry.title }}</a>
+    </div>
+
+    <div class="block-fur-price">
+        <p>${{ entry.field_price_value }}</p>
+    </div>
+    </div>
+
+{% endfor %}
+
+<div class="visit-store">
+    <a href="/shop">Visit store</a>
+</div>
