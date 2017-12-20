@@ -1,87 +1,171 @@
 <?php
 
 
-namespace Drupal\blog_list_page\Plugin\Block;
+namespace Drupal\latest_from_blog\Plugin\Block;
 
-use Drupal\Core\Block\BlockPluginInterface;
 use Drupal\file\Entity\File;
 use Drupal\Core\Block\BlockBase;
 
 
 /**
- * Provides a 'Blog List Page' block.
+ * Provides a 'Latest From Blog' block.
  *
  * @Block(
- *   id = "blog_list_page",
- *   admin_label = @Translation("Blog List Block"),
+ *   id = "latest_from_blog",
+ *   admin_label = @Translation("Latest From Blog Block"),
  *   category = @Translation("Blocks")
  * )
  */
-class BlogListPage extends BlockBase implements BlockPluginInterface
+class LatestFromBlog extends BlockBase
 {
     /**
      * {@inheritdoc}
      */
     function buildContent()
     {
+        $latest = $this->buildLatest();
+        $popular = $this->buildPopular();
+        $comments = $this->buildComments();
+
+        $data = [
+            'latest' => $latest,
+            'popular' => $popular,
+            'comments' => $comments,
+        ];
+        return $data;
+
+    }
+
+    public function buildLatest()
+    {
         $query = \Drupal::database()->select('node_field_data', 'n');
         $query->condition('n.type', 'blog', '=');
 
         $query->innerJoin('node__field_blog_image', 'bi', 'bi.entity_id = n.nid');
 
-        $query->innerJoin('node__field_categories', 'fc', 'fc.entity_id = n.nid');
+        $query->innerJoin('node__field_date_blog', 'fdb', 'fdb.entity_id = n.nid');
 
-        $query->innerJoin('taxonomy_term_field_data', 't', 'fc.field_categories_target_id = t.tid');
+        $query->addField('n', 'nid');
+        $query->addField('n', 'title');
+        $query->addField('bi', 'field_blog_image_target_id', 'image');
+        $query->addField('fdb', 'field_date_blog_value', 'date');
+
+        $query->orderBy('date', 'DESC');
+
+        $results = $query->execute()->fetchAll();
+
+        $data = [];
+
+        foreach ($results as $result) {
+            $file = File::load($result->image);
+            $url = \Drupal\image\Entity\ImageStyle::load('thumbnail')->buildUrl($file->getFileUri());
+            $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $result->nid);
+
+            $date = date('F d, Y', strtotime($result->date));
+            $data[] = [
+                'alias' => $alias,
+                'title' => $result->title,
+                'image' => $url,
+                'date' => $date,
+            ];
+            if (count($data) > 2) {
+                if (!empty($data[3])) {
+                    unset($data[3]);
+                }
+                return $data;
+            }
+        }
+
+        return $data;
+
+    }
+
+    public function buildPopular()
+    {
+        $query = \Drupal::database()->select('node_field_data', 'n');
+        $query->condition('n.type', 'blog', '=');
+
+        $query->innerJoin('node__field_blog_image', 'bi', 'bi.entity_id = n.nid');
 
         $query->innerJoin('node__field_date_blog', 'fdb', 'fdb.entity_id = n.nid');
 
-        $query->innerJoin('node__body', 'b', 'b.entity_id = n.nid');
-
-        $query->innerJoin('node__field_blog_author', 'ba', 'ba.entity_id = n.nid');
-
-        $query->innerJoin('users_field_data', 'u', 'ba.field_blog_author_target_id = u.uid');
+        $query->innerJoin('node_counter', 'nc', 'nc.nid = n.nid');
 
         $query->addField('n', 'nid');
-        $query->addField('t', 'tid');
-        $query->addField('u', 'uid');
         $query->addField('n', 'title');
-        $query->addField('b', 'body_value');
-        $query->addField('t', 'name', 'taxonomy_name');
         $query->addField('bi', 'field_blog_image_target_id', 'image');
-        $query->addField('fdb', 'field_date_blog_value');
-        $query->addField('u', 'name', 'username');
+        $query->addField('fdb', 'field_date_blog_value', 'date');
 
-        $results = $query->execute()->fetchAll(\PDO::FETCH_GROUP);
+        $query->orderBy('totalcount', 'DESC');
 
-        $output = [];
+        $results = $query->execute()->fetchAll();
 
-        foreach($results as $key => $result ) {
-            $entry = [];
-            foreach( $result as $node ) {
-                $file = File::load($node->image);
-                $url = \Drupal\image\Entity\ImageStyle::load('blog_default_img')->buildUrl($file->getFileUri());
-                $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $key);
-                $alias2 = \Drupal::service('path.alias_manager')->getAliasByPath('/' . $node->taxonomy_name);
-                $alias3 = \Drupal::service('path.alias_manager')->getAliasByPath('/user/' . $node->uid);
+        $data = [];
 
-                $alias_tax = str_replace(' ', '-', $alias2);
+        foreach ($results as $result) {
+            $file = File::load($result->image);
+            $url = \Drupal\image\Entity\ImageStyle::load('thumbnail')->buildUrl($file->getFileUri());
+            $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $result->nid);
 
-                $entry['nid'] = $alias;
-                $entry['tid'] = $alias_tax;
-                $entry['uid'] = $alias3;
-                $entry['title'] = $node->title;
-                $entry['body'] = substr(strip_tags(str_replace(array("\r", "\n"), '', $node->body_value)), 0, 110);
-                $entry['taxonomy_name'][] =[
-                    'name'  => strip_tags($node->taxonomy_name),
-                    'url'   => $alias_tax
-                ];
-                $entry['image'] = $url;
-                $entry['field_date_blog_value'] = date('F d, Y', $node->field_date_blog_value);
-                $entry['username'] = $node->username;
+            $date = date('F d, Y', strtotime($result->date));
+            $data[] = [
+                'alias' => $alias,
+                'title' => $result->title,
+                'image' => $url,
+                'date' => $date,
+            ];
+            if (count($data) > 2) {
+                if (!empty($data[3])) {
+                    unset($data[3]);
+                }
+                return $data;
             }
-            $output[] = $entry;
         }
-        return $output;
+
+        return $data;
+    }
+
+    public function buildComments()
+    {
+        $query = \Drupal::database()->select('node_field_data', 'n');
+        $query->condition('n.type', 'blog', '=');
+
+        $query->innerJoin('node__field_leave_a_reply', 'lr', 'lr.entity_id = n.nid');
+
+        $query->innerJoin('comment_entity_statistics', 'ces', 'lr.entity_id = ces.entity_id');
+
+        $query->innerJoin('comment_field_data', 'cfd', 'ces.entity_id = cfd.entity_id');
+
+        $query->innerJoin('comment__field_comment', 'fc', 'fc.entity_id = cfd.cid');
+
+        $query->innerJoin('comment__field_b_name', 'bn', 'bn.entity_id = cfd.cid');
+
+        $query->addField('n', 'nid');
+        $query->addField('n', 'title');
+        $query->addField('fc', 'field_comment_value', 'comment');
+        $query->addField('bn', 'field_b_name_value', 'name');
+
+        $results = $query->execute()->fetchAll();
+
+        $data = [];
+
+        foreach ($results as $result) {
+            $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $result->nid);
+            $data [] = [
+                'alias' => $alias,
+                'title' => $result->title,
+                'comment' => $result->comment,
+                'name' => $result->name,
+            ];
+            if (count($data) > 2) {
+                if (!empty($data[3])) {
+                    unset($data[3]);
+                }
+                return $data;
+            }
+        }
+
+        return $data;
     }
 
     /**
@@ -91,7 +175,7 @@ class BlogListPage extends BlockBase implements BlockPluginInterface
     {
 
         return array(
-            '#theme' => 'blog_list_page',
+            '#theme' => 'latest_from_blog',
             '#content' => $this->buildContent(),
             '#cache' => [
                 'max-age' => 0,
