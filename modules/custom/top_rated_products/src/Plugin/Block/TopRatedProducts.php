@@ -40,7 +40,7 @@ class TopRatedProducts extends BlockBase implements BlockPluginInterface{
 
         $query->addField('n', 'nid');
         $query->addField('n', 'title');
-        $query->addField('fi', 'field_furniture_image_target_id', 'image');
+        $query->addField('fi', 'field_fur_image_target_id', 'image');
         $query->addField('fp', 'field_price_value');
 
         $query->orderBy('field_your_rating_rating', 'DESC');
