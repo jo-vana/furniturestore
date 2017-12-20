@@ -26,7 +26,7 @@ class TopRatedProducts extends BlockBase implements BlockPluginInterface{
         $query = \Drupal::database()->select('node_field_data', 'n');
         $query->condition('n.type', 'furniture', '=');
 
-        $query->innerJoin('node__field_furniture_image', 'fi', 'fi.entity_id = n.nid');
+        $query->innerJoin('node__field_fur_image', 'fi', 'fi.entity_id = n.nid');
 
         $query->innerJoin('node__field_price', 'fp', 'fp.entity_id = n.nid' );
 
