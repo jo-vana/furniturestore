@@ -1,36 +1,62 @@
-{% for entry in content %}
+<div class="second-block">
+    <ul class="tabs">
+        <li class="tab-link current" data-tab="tab-1">Latest</li>
+        <li class="tab-link" data-tab="tab-2">Popular</li>
+        <li class="tab-link" data-tab="tab-3">Comments</li>
+    </ul>
+    <div id="tab-1" class="tab-content current">
 
-    <div class="block-blog-img">
-        <a href ="{{ entry.nid }}"><img src="{{ entry.image }}"/></a>
+        {% for entry in content['latest'] %}
+            <div class="wrap-blog-latest">
+
+                <div class="block-blog-img">
+                    <a href ="{{ entry.alias }}"><img src="{{ entry.image }}"/></a>
+                </div>
+
+                <div class="block-blog-title">
+                    <a href ="{{ entry.alias }}">{{ entry.title }}</a>
+                </div>
+
+                <div class="block-blog-date">
+                    <p>{{ entry.date }}</p>
+                </div>
+
+            </div>
+        {% endfor %}
     </div>
+    <div id="tab-2" class="tab-content">
+        {% for entry in content['popular'] %}
+            <div class="wrap-blog-latest">
 
-    <div class="block-blog-date">
-        <p>{{ entry.field_date_blog_value }}</p>
+                <div class="block-blog-img">
+                    <a href ="{{ entry.alias }}"><img src="{{ entry.image }}"/></a>
+                </div>
+
+                <div class="block-blog-title">
+                    <a href ="{{ entry.alias }}">{{ entry.title }}</a>
+                </div>
+
+                <div class="block-blog-date">
+                    <p>{{ entry.date }}</p>
+                </div>
+
+            </div>
+        {% endfor %}
     </div>
+    <div id="tab-3" class="tab-content">
+        {% for entry in content['comments'] %}
+            <div class="block-blog-c-name">
+                <p>{{ entry.name }}</p>
+            </div>
 
-    <div class="block-fur-title">
-        <a href ="{{ entry.nid }}">{{ entry.title }}</a>
+            <div class="block-blog-title">
+                <a href ="{{ entry.alias }}">{{ entry.title }}</a>
+            </div>
+
+            <div class="block-blog-commment">
+                <p>{{ entry.comment }}</p>
+            </div>
+        {% endfor %}
     </div>
-
-    <div class="block-blog-user">
-        <a href="{{ entry.uid }}"><p>{{ entry.username }}</p></a>
-    </div>
-
-{% for en in entry.taxonomy_name %}
-
-    <div class="block-blog-term">
-        <a href ="{{ en.url }}"><p>{{ en.name }}</p></a>
-    </div>
-{% endfor %}
-
-    <div class="block-blog-body">
-        <p>{{ entry.body }}</p>
-    </div>
-
-    <div class="block-blog-readmore">
-        <a href="{{ entry.nid }}">Read More</a>
-    </div>
-
-{% endfor %}
-
+</div>
 

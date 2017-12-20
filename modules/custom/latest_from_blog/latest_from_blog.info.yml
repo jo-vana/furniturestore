@@ -1,5 +1,5 @@
-name: Custom Block for Blog List Page
-description: Block for Blog List Page that appears in Blog
+name: Custom Block for Latest From Blog
+description: Block for Latest From Blog that appears in sidebar
 package: Custom
 
 type: module
