@@ -26,10 +26,10 @@ class TopRatedProducts extends BlockBase implements BlockPluginInterface{
         $query = \Drupal::database()->select('node_field_data', 'n');
         $query->condition('n.type', 'furniture', '=');
 
-//        $query->innerJoin('node__field_fur_image', 'fi', 'fi.entity_id = n.nid');
-
         $query->innerJoin('node__field_price', 'fp', 'fp.entity_id = n.nid' );
 
+        $query->innerJoin('node__field_fur_image', 'fi', 'fi.entity_id = n.nid');
+        $query->condition('fi.delta', 0, '=');
         $query->innerJoin('node__field_reviews', 'fr', 'fr.entity_id = n.nid');
 
         $query->innerJoin('comment_entity_statistics', 'ces', 'fr.entity_id = ces.entity_id');
@@ -40,7 +40,7 @@ class TopRatedProducts extends BlockBase implements BlockPluginInterface{
 
         $query->addField('n', 'nid');
         $query->addField('n', 'title');
-//        $query->addField('fi', 'field_fur_image_target_id', 'image');
+        $query->addField('fi', 'field_fur_image_target_id', 'image');
         $query->addField('fp', 'field_price_value');
 
         $query->orderBy('field_your_rating_rating', 'DESC');
@@ -51,12 +51,12 @@ class TopRatedProducts extends BlockBase implements BlockPluginInterface{
 
         foreach ( $results as $result ) {
 
-            $query = \Drupal::database()->select('node__field_fur_image', 'f');
-            $query->condition('f.entity_id', $result->nid,'=');
-            $query->addField('f', 'field_fur_image_target_id', 'image');
-            $img = $query->execute()->fetchField();
+//            $query = \Drupal::database()->select('node__field_fur_image', 'f');
+//            $query->condition('f.entity_id', $result->nid,'=');
+//            $query->addField('f', 'field_fur_image_target_id', 'image');
+//            $img = $query->execute()->fetchField();
 
-            $file = File::load($img);
+            $file = File::load($result->image);
             $url = \Drupal\image\Entity\ImageStyle::load('sidebar_img')->buildUrl($file->getFileUri());
             $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$result->nid);
             $data[] = [
