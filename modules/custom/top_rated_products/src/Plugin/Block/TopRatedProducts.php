@@ -52,7 +52,7 @@ class TopRatedProducts extends BlockBase implements BlockPluginInterface{
 
         foreach ( $results as $result ) {
             $file = File::load($result->image);
-            $url = \Drupal\image\Entity\ImageStyle::load('thumbnail')->buildUrl($file->getFileUri());
+            $url = \Drupal\image\Entity\ImageStyle::load('sidebar_img')->buildUrl($file->getFileUri());
             $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$result->nid);
             $data[] = [
                 'alias' => $alias,
