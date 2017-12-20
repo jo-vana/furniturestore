@@ -28,6 +28,8 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
 
         $query->innerJoin('node__field_fur_image', 'fi', 'fi.entity_id = n.nid');
 
+        $query->condition('fi.delta', 0, '=');
+
         $query->innerJoin('node__field_categories', 'fc', 'fc.entity_id = n.nid' );
 
         $query->innerJoin('taxonomy_term_field_data', 't', 'fc.field_categories_target_id = t.tid' );
