@@ -131,3 +131,11 @@ function deploy_update_8437()
 {
     \Drupal::service('module_installer')->install(['easy_breadcrumb']);
 }
+
+/**
+ * Latest From Blog
+ */
+function deploy_update_8438()
+{
+    \Drupal::service('module_installer')->install(['latest_from_blog']);
+}
