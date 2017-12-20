@@ -28,6 +28,8 @@ class FavouriteProducts extends BlockBase implements BlockPluginInterface{
 
         $query->innerJoin('node__field_fur_image', 'fi', 'fi.entity_id = n.nid');
 
+        $query->condition('fi.delta', 0, '=');
+
         $query->innerJoin('node__field_price', 'fp', 'fp.entity_id = n.nid' );
 
         $query->addField('n', 'nid');
