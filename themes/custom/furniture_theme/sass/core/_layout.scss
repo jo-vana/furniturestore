@@ -38,7 +38,7 @@
     }
   }
   .region-breadcrumb {
-    display: block;
+    display: inline-block;
     width: 100%;
     min-height: 63px;
     background-color: $gray-light;
@@ -48,10 +48,51 @@
       margin-left: 5%;
       @media screen and (max-width: $screen-lg-min) {
         width: 100%;
+        margin-left: 3%;
       }
     }
     #block-furniture-theme-breadcrumbs {
       display: inline-block;
+      position: relative;
+      float: right;
+      margin: 20px 5% 20px 0;
+      ol {
+        li {
+          font-family: $font-karla;
+          font-size: 15px;
+          line-height: 20px;
+          font-weight: normal;
+          font-style: normal;
+          text-transform: none;
+          text-decoration: none;
+          color: #9b9b9b;
+          a {
+            font-family: $font-karla;
+            font-size: 15px;
+            line-height: 20px;
+            font-weight: normal;
+            font-style: normal;
+            text-transform: none;
+            text-decoration: none;
+            color: $color-orange;
+            &:hover {
+              color: #9b9b9b;
+            }
+          }
+        }
+        li:not(:first-child)::before {
+          content: '/';
+          font-size: 15px;
+          line-height: 20px;
+          font-weight: normal;
+          font-style: normal;
+          font-family: $font-karla;
+          color: #9b9b9b;
+        }
+      }
+      @media screen and (max-width: $screen-lg-min) {
+        margin-left: 3%;
+      }
     }
   }
   .region-contact-map {
@@ -234,13 +275,13 @@
   margin-top: 70px;
 }
 .sidebar-first .layout-content {
-  @extend .col-lg-8;
+  @extend .col-lg-9;
   float: none;
   display: inline-block;
   margin-top: 70px;
 }
 .layout-sidebar-first {
-  @extend .col-lg-4;
+  @extend .col-lg-3;
   display: inline-block;
   align-items: center;
   float: right;

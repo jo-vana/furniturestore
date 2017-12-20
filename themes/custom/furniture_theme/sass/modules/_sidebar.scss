@@ -43,3 +43,119 @@
     }
   }
 }
+#block-latestfromblogblock {
+  margin-bottom: 30px;
+  h2 {
+    font-family: $font-karla;
+    color: $color-black;
+    margin: 0 0 25px 0;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: normal;
+    font-style: normal;
+  }
+  ul.tabs {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    li {
+      font-family: $font-karla;
+      font-size: 13px;
+      font-weight: normal;
+      font-style: normal;
+      background: none;
+      color: $color-black;
+      display: inline-block;
+      padding: 10px 15px;
+      cursor: pointer;
+      &.current {
+        border-bottom: 1px solid #e6ae48;
+      }
+      &:hover {
+        color: $color-orange;
+      }
+    }
+  }
+  .tab-content {
+    display: none;
+    padding: 15px;
+    &.current {
+      display: inherit;
+    }
+    .wrap-blog-latest {
+      display: block;
+      min-height: 50px;
+      margin: 0 1px 20px;
+      overflow: hidden;
+      .block-blog-img {
+        display: inline-block;
+        width: 27%;
+        height: 85px;
+        float: left;
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+      }
+      .block-blog-title {
+        a {
+          font-family: $font-karla;
+          color: $color-black;
+          font-size: 15px;
+          line-height: 20px;
+          font-style: normal;
+          text-decoration: none;
+          &:hover {
+            color: $color-orange;
+          }
+        }
+      }
+      .block-blog-date {
+        p {
+          font-family: $font-arial;
+          color: #888888;
+          margin-top: 5px;
+          display: block;
+          font-size: 13px;
+          line-height: 13px;
+        }
+      }
+    }
+    .wrap-comments {
+      display: block;
+      .block-blog-c-name {
+        p {
+          color: $color-orange;
+          font-weight: bold;
+          text-transform: lowercase;
+          font-size: 13px;
+          font-family: $font-arial;
+        }
+      }
+      .block-blog-title {
+        a {
+          font-size: 15px;
+          line-height: 20px;
+          text-decoration: none;
+          font-family: $font-karla;
+          color: $color-black;
+          &:hover {
+            color: $color-orange;
+          }
+        }
+      }
+      .block-blog-commment {
+        text-overflow: ellipsis;
+        p {
+          font-family: $font-arial;
+          color: #888888;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
