@@ -16,6 +16,16 @@
                 $("#"+tab_id).addClass('current');
             });
 
+            $('body #block-latestfromblogblock ul.tabs li').click(function(){
+                var tab_id = $(this).attr('data-tab');
+
+                $('body #block-latestfromblogblock ul.tabs li').removeClass('current');
+                $('body #block-latestfromblogblock .tab-content').removeClass('current');
+
+                $(this).addClass('current');
+                $("#"+tab_id).addClass('current');
+            });
+
         }
     };
 

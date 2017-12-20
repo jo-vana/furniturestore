@@ -157,7 +157,7 @@
   .fav-prod-wrapp {
     display: inline-block;
     position: relative;
-    margin: 19px;
+    margin: 17px;
     vertical-align: top;
     .hover-block {
       display: none;
@@ -276,51 +276,72 @@
       }
       .block-blog-img {
         overflow: hidden;
-        a {
-          max-width: 360px;
-          display: block;
+        img {
+          //max-width: 360px;
           position: relative;
           transition: opacity .3s ease-in-out;
-          &:hover {
-            &::before,
-            &::after {
-              display: block;
-              position: absolute;
-              content: '';
-            }
-
-            &::after {
-              cursor: auto;
-              z-index: 50;
-              width: 100%;
-              height: 100%;
-              top: 0;
-              left: 0;
-              background-color: rgba(230, 174, 72, .95);
-            }
-
-            &::before {
-              width: 75px;
-              height: 66px;
-              top: 35%;
-              left: 40%;
-              cursor: pointer;
-              z-index: 500;
-              background-color: white;
-              border-radius: 50%;
-              transition: opacity .3s ease-in-out;
-            }
-          }
-
-          &::before {
-           &:hover {
-             background-color: rebeccapurple;
-           }
+        }
+        a {
+          span.hover-button {
+            display: none;
           }
         }
-        img {
-          max-width: 360px;
+        a:hover {
+          display: block;
           position: relative;
+          background-color: $color-orange;
+          cursor: auto;
+          img {
+            filter: opacity(10%);
+          }
+          span.hover-button {
+            display: block;
+            color: white;
+            font-size: 50px;
+            font-weight: 100;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 39%;
+            left: 43%;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.49);
+            transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+            z-index: 500;
+            span.plus {
+              display: block;
+              position: relative;
+              width: 100%;
+              height: 100%;
+              span.vertical {
+                display: block;
+                position: absolute;
+                width: 1px;
+                height: 22px;
+                background-color: white;
+                top: 31%;
+                left: 50%;
+              }
+              span.horizontal {
+                display: block;
+                position: absolute;
+                width: 22px;
+                height: 1px;background-color: white;
+                top: 50%;
+                left: 30%;
+              }
+            }
+            &:hover {
+              background-color: white;
+              cursor: pointer;
+              span.plus {
+                span.vertical,
+                span.horizontal {
+                  background-color: $color-black;
+                }
+              }
+            }
+          }
         }
       }
     }
