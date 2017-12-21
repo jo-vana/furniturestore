@@ -132,9 +132,9 @@ class LatestFromBlog extends BlockBase
 
         $query->innerJoin('node__field_leave_a_reply', 'lr', 'lr.entity_id = n.nid');
 
-        $query->innerJoin('comment_entity_statistics', 'ces', 'lr.entity_id = ces.entity_id');
+        $query->innerJoin('comment_entity_statistics', 'ces', 'ces.entity_id = lr.entity_id');
 
-        $query->innerJoin('comment_field_data', 'cfd', 'ces.entity_id = cfd.entity_id');
+        $query->innerJoin('comment_field_data', 'cfd', 'cfd.entity_id = lr.entity_id');
 
         $query->innerJoin('comment__field_comment', 'fc', 'fc.entity_id = cfd.cid');
 
@@ -142,6 +142,7 @@ class LatestFromBlog extends BlockBase
 
         $query->addField('n', 'nid');
         $query->addField('n', 'title');
+        $query->addField('cfd', 'created');
         $query->addField('fc', 'field_comment_value', 'comment');
         $query->addField('bn', 'field_b_name_value', 'name');
 
@@ -156,6 +157,7 @@ class LatestFromBlog extends BlockBase
                 'title' => $result->title,
                 'comment' => $result->comment,
                 'name' => $result->name,
+                'created' => \Drupal::service('date.formatter')->formatInterval(time() - $result->created)
             ];
             if (count($data) > 2) {
                 if (!empty($data[3])) {
