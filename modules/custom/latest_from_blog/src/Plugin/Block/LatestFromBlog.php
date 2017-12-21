@@ -152,8 +152,8 @@ class LatestFromBlog extends BlockBase
 
         $data = [];
 
-        foreach ($results as $result) {
-            $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $result->nid);
+        foreach ($results as $key => $result) {
+            $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $key);
             $data [] = [
                 'alias' => $alias,
                 'title' => $result->title,
@@ -161,6 +161,7 @@ class LatestFromBlog extends BlockBase
                 'name' => $result->name,
                 'created' => \Drupal::service('date.formatter')->formatInterval(time() - $result->created),
             ];
+
             if (count($data) > 2) {
                 if (!empty($data[3])) {
                     unset($data[3]);
