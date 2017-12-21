@@ -130,7 +130,7 @@ class LatestFromBlog extends BlockBase
         $query = \Drupal::database()->select('node_field_data', 'n');
         $query->condition('n.type', 'blog', '=');
 
-        $query->innerJoin('node__field_leave_a_reply', 'lr', 'lr.entity_id = n.nid');
+        $query->innerJoin('node__field_reply', 'lr', 'lr.entity_id = n.nid');
 
         $query->innerJoin('comment_entity_statistics', 'ces', 'ces.entity_id = lr.entity_id');
 
@@ -148,7 +148,7 @@ class LatestFromBlog extends BlockBase
 
         $query->orderBy('created', 'DESC');
 
-        $results = $query->execute()->fetchAll();
+        $results = $query->execute()->fetchAll(\PDO::FETCH_UNIQUE);
 
         $data = [];
 
@@ -159,7 +159,7 @@ class LatestFromBlog extends BlockBase
                 'title' => $result->title,
                 'comment' => $result->comment,
                 'name' => $result->name,
-                'created' => \Drupal::service('date.formatter')->formatInterval(time() - $result->created)
+                'created' => \Drupal::service('date.formatter')->formatInterval(time() - $result->created),
             ];
             if (count($data) > 2) {
                 if (!empty($data[3])) {
