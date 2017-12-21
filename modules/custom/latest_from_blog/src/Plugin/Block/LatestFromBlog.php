@@ -146,6 +146,8 @@ class LatestFromBlog extends BlockBase
         $query->addField('fc', 'field_comment_value', 'comment');
         $query->addField('bn', 'field_b_name_value', 'name');
 
+        $query->orderBy('created', 'DESC');
+
         $results = $query->execute()->fetchAll();
 
         $data = [];
