@@ -8,6 +8,9 @@
         <div class="block-blog-date">
             <p>{{ entry.field_date_blog_value }}</p>
         </div>
+        <div class="block-blog-comments">
+            <a href ="{{ entry.nid }}">{{ entry.comment_count }}</a>
+        </div>
 
         <div class="block-fur-title">
             <a href ="{{ entry.nid }}">{{ entry.title }}</a>
@@ -31,7 +34,6 @@
             <a href="{{ entry.nid }}">Read More</a>
         </div>
     </div>
-
 
 {% endfor %}
 

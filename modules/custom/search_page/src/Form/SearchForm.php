@@ -78,7 +78,9 @@ class SearchForm extends FormBase {
 
 		$query->innerJoin('node__field_price', 'fp', 'fp.entity_id = n.nid' );
 
-		$query->innerJoin('node__field_furniture_image', 'fi', 'fi.entity_id = n.nid');
+		$query->innerJoin('node__field_fur_image', 'fi', 'fi.entity_id = n.nid');
+
+		$query->condition('fi.delta', 0, '=');
 
 		$query->innerJoin('node__field_categories', 'fc', 'fc.entity_id = n.nid' );
 
@@ -95,10 +97,10 @@ class SearchForm extends FormBase {
 		$query->addField('n', 'title');
 		$query->addField('t', 'tid');
 		$query->addField('t', 'name', 'taxonomy_name');
-		$query->addField('fi', 'field_furniture_image_target_id', 'image');
+		$query->addField('fi', 'field_fur_image_target_id', 'image');
 		$query->addField('fp', 'field_price_value', 'price');
 
-		$query = $query->extend('Drupal\Core\Database\Query\PagerSelectExtender')->limit(9);
+		$query = $query->extend('Drupal\Core\Database\Query\PagerSelectExtender')->limit(11);
 
 		$sort = 0;
 		if ( isset( $_GET[ 'sort' ] ) ) {

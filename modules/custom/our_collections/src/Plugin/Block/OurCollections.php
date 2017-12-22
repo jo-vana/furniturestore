@@ -26,7 +26,9 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
         $query = \Drupal::database()->select('node_field_data', 'n');
         $query->condition('n.type', 'furniture', '=');
 
-        $query->innerJoin('node__field_furniture_image', 'fi', 'fi.entity_id = n.nid');
+        $query->innerJoin('node__field_fur_image', 'fi', 'fi.entity_id = n.nid');
+
+        $query->condition('fi.delta', 0, '=');
 
         $query->innerJoin('node__field_categories', 'fc', 'fc.entity_id = n.nid' );
 
@@ -37,7 +39,7 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
         $query->addField('n', 'nid');
         $query->addField('t', 'tid');
         $query->addField('n', 'title');
-        $query->addField('fi', 'field_furniture_image_target_id', 'image');
+        $query->addField('fi', 'field_fur_image_target_id', 'image');
         $query->addField('t', 'name', 'taxonomy_name');
         $query->addField('fp', 'field_price_value');
 

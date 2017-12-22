@@ -80,6 +80,7 @@ not node.isPublished() ? 'node--unpublished',
 view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ]
 %}
+
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
@@ -107,6 +108,12 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
             {{ content.field_blog_image }}
             <div class="info-first">
                 {{ content.field_date_blog }}
+            </div>
+            <div class="like-counter">
+                {{ content.field_like_heart }}
+            </div>
+            <div class="comment-counter">
+              {{ content.field_leave_a_reply['#items'].comment_count }}
             </div>
             <div class="info-sec">
                 {{ content.field_blog_author }}
