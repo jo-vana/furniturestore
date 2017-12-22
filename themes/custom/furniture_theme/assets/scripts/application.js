@@ -39,37 +39,47 @@
 
     };
 
-    // Function for mobile version for main navigation
+    Drupal.behaviors.newClassMobMenu = {
+        attach:function(context) {
+            $('li.menu-item-2', context).has('ul').addClass('got-pseudo');
+            $('li.menu-item-1', context).has('ul').addClass('got-pseudo');
 
-    Drupal.behaviors.mobileMenu = {
-      attach:function(context) {
-
-                  // If a link has a dropdown, add sub menu toggle.
-                  $('#block-mainnavigationmobile ul li a:not(:only-child)').click(function(e) {
-                      $(this).siblings('.dropdown-menu').style('display: block');
-                      // Close one dropdown when selecting another
-                      $('.dropdown-menu').not($(this).siblings()).hide();
-                      e.stopPropagation();
-                  });
-
-                  //Clicking away from dropdown will remove the dropdown class
-                  $('html').not('nav.menu--main-navigation-mobile').click(function() {
-                      $('.dropdown-menu').hide();
-                  });
-
-                  // Toggle open and close nav styles on click
-                  $('#nav-toggle', context).on('click', function() {
-                      $('#block-mainnavigationmobile ul').slideToggle();
-                  });
-
-          // Toggle open and close nav styles on click
-          $('li.expanded.dropdown', context).on('click', function() {
-              $('ul.dropdown-menu').slideToggle().show();
-          });
-
-      }
+        }
 
     };
+
+    Drupal.behaviors.mobileMenue = {
+        attach: function (context) {
+
+            // Function for mobile version for main navigation
+
+            $('.menu--main-navigation-mobile > .menu-toggle', context).on('click', function () {
+                // console.log('test');
+                $('.menu--main-navigation-mobile').toggleClass('first-lev-show');
+                $('.menu-item-1').removeClass('show');
+            });
+
+            $('.menu-level-1 > .menu-item-1>a', context).on('click', function (e) {
+                if ($(this).siblings('ul').length > 0) {
+                    e.preventDefault();
+                    $(this).parent().toggleClass('show');
+                }
+
+            });
+
+            $('li.menu-item-2>a', context).on('click', function (e) {
+                console.log($(this).siblings('ul').length);
+                if ($(this).siblings('ul').length > 0) {
+                    e.preventDefault();
+                    // $(this).addClass('got-pseudo');
+                    $(this).parent().toggleClass('show');
+                }
+
+            });
+
+        }
+    };
+
 
     // Function for 'back to top' button
 
