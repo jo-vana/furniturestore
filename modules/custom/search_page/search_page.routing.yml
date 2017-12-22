@@ -1,4 +1,3 @@
-
 search_page.search_form:
   path: '/shop'
   defaults:
