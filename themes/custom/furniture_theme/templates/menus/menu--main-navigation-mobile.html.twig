@@ -22,34 +22,48 @@
   @see http://twig.sensiolabs.org/doc/tags/macro.html
 #}
 {{ menus.menu_links(items, attributes, 0) }}
-
 {% macro menu_links(items, attributes, menu_level) %}
     {% import _self as menus %}
     {% if items %}
+        {# 1 menu level#}
         {% if menu_level == 0 %}
-            {#<div class="nav-mobile"><a id="nav-toggle" href="#"><span></span></a></div>#}
-            <div id="nav-toggle"><span></span></div>
-            <ul{{ attributes.addClass('menu', 'nav', 'navbar-nav') }}>
+            <div class="menu-toggle"><span class="fa fa-bars"></span></div>
+            <ul{{ attributes.addClass('menu-level-1') }}>
         {% else %}
-            <ul{{ attributes.addClass('dropdown-menu') }}>
+
+            {# 2 menu level #}
+            {% if menu_level == 1 %}
+                <ul{{ attributes.addClass('menu-level-2').removeClass('menu-level-1') }}>
+            {% endif %}
+
+            {# 3 menu level #}
+            {% if menu_level == 2 %}
+                <ul{{ attributes.addClass('menu-level-3').removeClass('menu-level-1', 'menu-level-2') }}>
+            {% endif %}
+
         {% endif %}
         {% for item in items %}
-            {%
-            set item_classes = [
-            item.is_expanded? 'expanded',
-            item.is_expanded and menu_level == 0 ? 'dropdown',
-            item.in_active_trail ? 'active',
-            ]
-            %}
-            {% if menu_level == 0 and item.is_expanded %}
-            <li{{ item.attributes.addClass(item_classes) }}>
-                <a href="{{ item.url }}" class="dropdown-toggle" data-toggle="dropdown">{{ item.title }} <span class="caret"></span></a>
-            {% else %}
-                <li{{ item.attributes.addClass(item_classes) }}>
-                {{ link(item.title, item.url) }}
+            {# 1 menu level item #}
+            {% if menu_level == 0 %}
+                <li{{ item.attributes.addClass('menu-item-1') }}>
+                {{ link(item.title, item.url, { 'class':['menu-link-1']}) }}
             {% endif %}
+
+            {# 2 menu level item #}
+            {% if menu_level == 1 %}
+                <li{{ item.attributes.addClass('menu-item-2') }}>
+                {{ link(item.title, item.url, { 'class':['menu-link-2']}) }}
+            {% endif %}
+
+            {# 3 level menu level item #}
+            {% if menu_level == 2 %}
+                <li{{ item.attributes.addClass('menu-item-3') }}>
+                {{ link(item.title, item.url, {'class':['menu-link-3']}) }}
+            {% endif %}
+
+            {# menu li/a depth #}
             {% if item.below %}
-                {{ menus.menu_links(item.below, attributes.removeClass('nav', 'navbar-nav'), menu_level + 1) }}
+                {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
             {% endif %}
             </li>
         {% endfor %}
