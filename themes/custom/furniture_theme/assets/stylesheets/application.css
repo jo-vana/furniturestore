@@ -3845,6 +3845,7 @@ body.user-logged-in #block-mainnavigationmobile .menu-toggle {
   top: -28px; }
 
 .menu--main-navigation-mobile {
+  display: none;
   width: 100%;
   margin: 0 auto; }
   .menu--main-navigation-mobile .menu-toggle {
@@ -3863,6 +3864,9 @@ body.user-logged-in #block-mainnavigationmobile .menu-toggle {
       top: 0; }
   .menu--main-navigation-mobile ul.menu-level-1 {
     display: none; }
+  @media screen and (max-width: 66.13333rem) {
+    .menu--main-navigation-mobile {
+      display: block; } }
 
 .first-lev-show ul.menu-level-1 {
   display: block;

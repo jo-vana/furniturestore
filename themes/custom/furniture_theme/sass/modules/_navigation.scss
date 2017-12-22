@@ -172,6 +172,7 @@ body.user-logged-in {
   }
 }
 .menu--main-navigation-mobile {
+  display: none;
   width: 100%;
   margin: 0 auto;
   .menu-toggle {
@@ -192,6 +193,9 @@ body.user-logged-in {
   }
   ul.menu-level-1 {
     display: none;
+  }
+  @media screen and (max-width: $screen-md-min) {
+    display: block;
   }
 }
 .first-lev-show {
