@@ -3555,7 +3555,10 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 0px;
   height: 0px; }
+  #block-backtotop a {
+    visibility: hidden; }
   #block-backtotop a.show {
+    visibility: visible;
     display: block;
     background-color: #e6ae48;
     width: 50px;
@@ -3718,11 +3721,11 @@ footer {
     clear: right; }
     #block-furniture-theme-main-menu ul.nav-0 li {
       display: inline-block;
-      padding: 10px 15px 15px 15px; }
+      padding: 10px 15px 0px 15px; }
       #block-furniture-theme-main-menu ul.nav-0 li a {
         display: block;
         position: relative;
-        height: 47px;
+        height: 49px;
         text-decoration: none;
         color: #252324;
         font-size: 17px;
@@ -3753,17 +3756,25 @@ footer {
             transition: width 1s;
             transition-timing-function: linear; }
       #block-furniture-theme-main-menu ul.nav-0 li:hover ul.nav-1 {
-        display: block; }
+        visibility: visible;
+        margin-top: -43px;
+        top: 130px;
+        opacity: 1; }
       #block-furniture-theme-main-menu ul.nav-0 li:hover ul.nav-1.has-children {
-        display: block; }
+        visibility: visible;
+        margin-top: -43px;
+        top: 130px;
+        opacity: 1; }
     #block-furniture-theme-main-menu ul.nav-0 li > ul.nav-1 {
-      display: none;
+      visibility: hidden;
       margin: 0;
       position: absolute;
       z-index: 9999;
       padding: 7px 90px 20px 20px;
       background-color: white;
-      margin-top: 4px; }
+      margin-top: 20px;
+      opacity: 0;
+      transition: opacity .3s ease-in-out .1s, margin-top .3s ease-in-out .1s; }
       #block-furniture-theme-main-menu ul.nav-0 li > ul.nav-1 li {
         display: block;
         width: 100%;
@@ -3771,11 +3782,11 @@ footer {
         float: left;
         padding: 0; }
         #block-furniture-theme-main-menu ul.nav-0 li > ul.nav-1 li a {
+          display: initial;
           font-size: 14px;
-          display: block;
           height: 30px; }
     #block-furniture-theme-main-menu ul.nav-0 li > ul.nav-1.has-children {
-      display: none;
+      visibility: hidden;
       width: 60%;
       margin: 0;
       position: absolute;
@@ -3783,18 +3794,21 @@ footer {
       z-index: 9999;
       padding: 7px 20px 20px 20px;
       background-color: white;
-      margin-top: 4px; }
+      margin-top: 20px;
+      opacity: 0;
+      transition: opacity .3s ease-in-out .1s, margin-top .3s ease-in-out .1s; }
       #block-furniture-theme-main-menu ul.nav-0 li > ul.nav-1.has-children li {
         display: inline-block;
         width: 25%;
         position: relative;
         float: left;
-        padding: 0; }
+        padding: 0;
+        padding-right: 5%; }
         #block-furniture-theme-main-menu ul.nav-0 li > ul.nav-1.has-children li a:first-child {
           pointer-events: none;
           color: #9d9d9d;
           font-size: 14px;
-          display: block;
+          display: initial;
           height: 30px; }
       #block-furniture-theme-main-menu ul.nav-0 li > ul.nav-1.has-children li > ul.nav-2 {
         display: block;
@@ -3804,6 +3818,7 @@ footer {
           display: block;
           width: 100%; }
           #block-furniture-theme-main-menu ul.nav-0 li > ul.nav-1.has-children li > ul.nav-2 li a {
+            display: initial;
             pointer-events: initial;
             text-decoration: none;
             color: #252324;
@@ -6107,6 +6122,8 @@ section.field--name-field-leave-a-reply {
   display: block;
   width: 95%;
   margin: 0 auto; }
+  #block-aboutusbanner-2 p {
+    margin-top: 0; }
 
 #block-whatwedo,
 #block-ourhistory,
@@ -6407,5 +6424,53 @@ section.field--name-field-leave-a-reply {
           #block-fromtheblogblock-2 .flexslider .block-blog-wrap .block-blog-img a:hover span.hover-button:hover span.plus span.vertical,
           #block-fromtheblogblock-2 .flexslider .block-blog-wrap .block-blog-img a:hover span.hover-button:hover span.plus span.horizontal {
             background-color: #212121; }
+
+body.path-user .region-content {
+  min-height: 900px; }
+
+body.path-user .block-user-login-block {
+  display: inline-block;
+  vertical-align: top;
+  width: 48%; }
+  body.path-user .block-user-login-block h2 {
+    font-family: "Karla", sans-serif;
+    color: #212121;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+    margin-top: 0; }
+  body.path-user .block-user-login-block form .form-item-name {
+    display: block; }
+    body.path-user .block-user-login-block form .form-item-name label {
+      display: block;
+      padding-bottom: 5px;
+      font-family: "arialregular", sans-serif;
+      color: #888888;
+      font-size: 15px;
+      line-height: 22px;
+      font-weight: normal;
+      font-style: normal; }
+      body.path-user .block-user-login-block form .form-item-name label::after {
+        content: '*';
+        font-size: 20px;
+        color: #e6ae48;
+        background-image: none;
+        position: absolute; }
+    body.path-user .block-user-login-block form .form-item-name input {
+      display: block;
+      transition: all .2s ease-in-out;
+      height: 42px;
+      padding: 11px 10px 9px 10px;
+      width: 100%;
+      border: 1px solid #e6e6e6;
+      color: white !important;
+      background-color: white !important; }
+
+body.path-user #block-furniture-theme-content {
+  display: inline-block;
+  vertical-align: top;
+  width: 48%; }
 
 /*# sourceMappingURL=../stylesheets/application.css.map */
