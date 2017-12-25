@@ -11,6 +11,19 @@
     .first-left-block {
       display: inline-block;
       width: 46%;
+      #slider {
+        margin-bottom: 0;
+        .flex-direction-nav {
+          display: none;
+        }
+      }
+      #carousel {
+        ul {
+          li {
+            margin-left: 5%;
+          }
+        }
+      }
     }
     .first-right-block {
       display: inline-block;

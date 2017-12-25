@@ -240,6 +240,7 @@
     margin: 0 1%;
     .block-portfolio-img {
       img {
+        display: none;
         transition: opacity .3s ease-in-out;
       }
       a {

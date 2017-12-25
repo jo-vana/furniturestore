@@ -4893,6 +4893,7 @@ section.field--name-field-leave-a-reply {
     width: 30%;
     margin: 0 1%; }
     #block-portfoliolistpageblock .wrap-portfolio-page .block-portfolio-img img {
+      display: none;
       transition: opacity .3s ease-in-out; }
     #block-portfoliolistpageblock .wrap-portfolio-page .block-portfolio-img a span.hover-button {
       display: none; }
@@ -4981,6 +4982,12 @@ section.field--name-field-leave-a-reply {
   .node--type-furniture .first-block .first-left-block {
     display: inline-block;
     width: 46%; }
+    .node--type-furniture .first-block .first-left-block #slider {
+      margin-bottom: 0; }
+      .node--type-furniture .first-block .first-left-block #slider .flex-direction-nav {
+        display: none; }
+    .node--type-furniture .first-block .first-left-block #carousel ul li {
+      margin-left: 5%; }
   .node--type-furniture .first-block .first-right-block {
     display: inline-block;
     width: 47%;
