@@ -292,7 +292,11 @@
   display: block;
   width: 0px;
   height: 0px;
+  a {
+    visibility: hidden;
+  }
   a.show {
+    visibility: visible;
     display: block;
     background-color: #e6ae48;
     width: 50px;

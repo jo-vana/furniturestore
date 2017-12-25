@@ -22,11 +22,11 @@
     clear: right;
     li {
       display: inline-block;
-      padding: 10px 15px 15px 15px;
+      padding: 10px 15px 0px 15px;
       a {
         display: block;
         position: relative;
-        height: 47px;
+        height: 49px;
         text-decoration: none;
         color: #252324;
         font-size: 17px;
@@ -60,21 +60,29 @@
       }
       &:hover {
         ul.nav-1 {
-          display: block;
+          visibility: visible;
+          margin-top: -42px;
+          top: 130px;
+          opacity: 1;
         }
         ul.nav-1.has-children {
-          display: block;
+          visibility: visible;
+          margin-top: -42px;
+          top: 130px;
+          opacity: 1;
         }
       }
     }
     li>ul.nav-1 {
-      display: none;
+      visibility: hidden;
       margin: 0;
       position: absolute;
       z-index: 9999;
       padding: 7px 90px 20px 20px;
       background-color: white;
-      margin-top: 4px;
+      margin-top: 20px;
+      opacity: 0;
+      transition: opacity .3s ease-in-out .1s, margin-top .3s ease-in-out .1s;
 
       li {
         display: block;
@@ -83,14 +91,14 @@
         float: left;
         padding: 0;
         a {
+          display: initial;
           font-size: 14px;
-          display: block;
           height: 30px;
         }
       }
     }
     li>ul.nav-1.has-children {
-      display: none;
+      visibility: hidden;
       width: 60%;
       margin: 0;
       position: absolute;
@@ -98,18 +106,21 @@
       z-index: 9999;
       padding: 7px 20px 20px 20px;
       background-color: white;
-      margin-top: 4px;
+      margin-top: 20px;
+      opacity: 0;
+      transition: opacity .3s ease-in-out .1s, margin-top .3s ease-in-out .1s;
       li {
         display: inline-block;
         width: 25%;
         position: relative;
         float: left;
         padding: 0;
+        padding-right: 5%;
         a:first-child {
           pointer-events: none;
           color: #9d9d9d;
           font-size: 14px;
-          display: block;
+          display: initial;
           height: 30px;
         }
       }
@@ -121,6 +132,7 @@
           display: block;
           width: 100%;
           a {
+            display: initial;
             pointer-events: initial;
             text-decoration: none;
             color: #252324;
