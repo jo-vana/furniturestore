@@ -70,8 +70,8 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
             $data[] = $entry;
 
             if (count($data) > 6){
-                if( !empty($data[7])) {
-                    unset($data[7]);
+                if( !empty($data[6])) {
+                    unset($data[6]);
                 }
                 return $data;
             }
