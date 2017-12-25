@@ -3757,12 +3757,12 @@ footer {
             transition-timing-function: linear; }
       #block-furniture-theme-main-menu ul.nav-0 li:hover ul.nav-1 {
         visibility: visible;
-        margin-top: -42px;
+        margin-top: -43px;
         top: 130px;
         opacity: 1; }
       #block-furniture-theme-main-menu ul.nav-0 li:hover ul.nav-1.has-children {
         visibility: visible;
-        margin-top: -42px;
+        margin-top: -43px;
         top: 130px;
         opacity: 1; }
     #block-furniture-theme-main-menu ul.nav-0 li > ul.nav-1 {
@@ -6122,6 +6122,8 @@ section.field--name-field-leave-a-reply {
   display: block;
   width: 95%;
   margin: 0 auto; }
+  #block-aboutusbanner-2 p {
+    margin-top: 0; }
 
 #block-whatwedo,
 #block-ourhistory,
