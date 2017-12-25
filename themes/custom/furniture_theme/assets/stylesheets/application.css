@@ -6446,7 +6446,8 @@ body.path-user .region-content {
 body.path-user .block-user-login-block {
   display: inline-block;
   vertical-align: top;
-  width: 48%; }
+  width: 48%;
+  padding: 0 10px; }
   body.path-user .block-user-login-block h2 {
     font-family: "Karla", sans-serif;
     color: #212121;
@@ -6456,8 +6457,10 @@ body.path-user .block-user-login-block {
     font-style: normal;
     text-transform: none;
     margin-top: 0; }
+  body.path-user .block-user-login-block form .form-item-pass,
   body.path-user .block-user-login-block form .form-item-name {
     display: block; }
+    body.path-user .block-user-login-block form .form-item-pass label,
     body.path-user .block-user-login-block form .form-item-name label {
       display: block;
       padding-bottom: 5px;
@@ -6467,12 +6470,14 @@ body.path-user .block-user-login-block {
       line-height: 22px;
       font-weight: normal;
       font-style: normal; }
+      body.path-user .block-user-login-block form .form-item-pass label::after,
       body.path-user .block-user-login-block form .form-item-name label::after {
         content: '*';
         font-size: 20px;
         color: #e6ae48;
         background-image: none;
         position: absolute; }
+    body.path-user .block-user-login-block form .form-item-pass input,
     body.path-user .block-user-login-block form .form-item-name input {
       display: block;
       transition: all .2s ease-in-out;
@@ -6480,12 +6485,147 @@ body.path-user .block-user-login-block {
       padding: 11px 10px 9px 10px;
       width: 100%;
       border: 1px solid #e6e6e6;
-      color: white !important;
       background-color: white !important; }
+    body.path-user .block-user-login-block form .form-item-pass input:focus,
+    body.path-user .block-user-login-block form .form-item-name input:focus {
+      outline: none;
+      border: 2px solid #e6ae48; }
+    body.path-user .block-user-login-block form .form-item-pass input:-webkit-autofill,
+    body.path-user .block-user-login-block form .form-item-pass input:-webkit-autofill:hover,
+    body.path-user .block-user-login-block form .form-item-pass input:-webkit-autofill:focus,
+    body.path-user .block-user-login-block form .form-item-name input:-webkit-autofill,
+    body.path-user .block-user-login-block form .form-item-name input:-webkit-autofill:hover,
+    body.path-user .block-user-login-block form .form-item-name input:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0 30px white inset;
+      -webkit-text-fill-color: #888888;
+      font-family: "arialregular", sans-serif;
+      font-size: 14px; }
+  body.path-user .block-user-login-block form .form-item-remember {
+    display: inline-block;
+    width: 30%;
+    padding-top: 15px;
+    padding-bottom: 15px; }
+    body.path-user .block-user-login-block form .form-item-remember label {
+      font-family: "arialregular", sans-serif;
+      font-size: 15px;
+      line-height: 22px;
+      font-weight: normal;
+      font-style: normal;
+      color: #888888; }
+  body.path-user .block-user-login-block form #edit-actions--2 {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 30%; }
+    body.path-user .block-user-login-block form #edit-actions--2 input {
+      transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+      color: white;
+      background-color: #212121;
+      padding: 15px 31px;
+      border: none;
+      font-family: "Karla", sans-serif;
+      font-size: 15px; }
+      body.path-user .block-user-login-block form #edit-actions--2 input:hover {
+        background-color: #e6ae48; }
+      body.path-user .block-user-login-block form #edit-actions--2 input:focus {
+        outline: none; }
+  body.path-user .block-user-login-block .item-list ul {
+    list-style: none; }
+    body.path-user .block-user-login-block .item-list ul li:first-child {
+      display: none; }
+    body.path-user .block-user-login-block .item-list ul li {
+      display: inline-block;
+      margin: 0; }
+      body.path-user .block-user-login-block .item-list ul li a {
+        color: white;
+        display: block;
+        position: relative; }
+        body.path-user .block-user-login-block .item-list ul li a::after {
+          content: 'Lost your password?';
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-family: "arialregular", sans-serif;
+          font-size: 15px;
+          line-height: 22px;
+          font-weight: normal;
+          color: #e6ae48; }
+        body.path-user .block-user-login-block .item-list ul li a:hover::after {
+          color: #9b9b9b; }
 
 body.path-user #block-furniture-theme-content {
   display: inline-block;
+  position: relative;
   vertical-align: top;
-  width: 48%; }
+  width: 48%;
+  padding: 0 10px; }
+  body.path-user #block-furniture-theme-content form #edit-account .form-item-name,
+  body.path-user #block-furniture-theme-content form #edit-account .form-item-mail {
+    display: block; }
+    body.path-user #block-furniture-theme-content form #edit-account .form-item-name label,
+    body.path-user #block-furniture-theme-content form #edit-account .form-item-mail label {
+      display: block;
+      padding-bottom: 5px;
+      font-family: "arialregular", sans-serif;
+      color: #888888;
+      font-size: 15px;
+      line-height: 22px;
+      font-weight: normal;
+      font-style: normal; }
+      body.path-user #block-furniture-theme-content form #edit-account .form-item-name label::after,
+      body.path-user #block-furniture-theme-content form #edit-account .form-item-mail label::after {
+        content: '*';
+        font-size: 20px;
+        color: #e6ae48;
+        background-image: none;
+        position: absolute; }
+    body.path-user #block-furniture-theme-content form #edit-account .form-item-name input,
+    body.path-user #block-furniture-theme-content form #edit-account .form-item-mail input {
+      display: block;
+      transition: all .2s ease-in-out;
+      height: 42px;
+      padding: 11px 10px 9px 10px;
+      width: 100%;
+      border: 1px solid #e6e6e6;
+      background-color: white !important; }
+    body.path-user #block-furniture-theme-content form #edit-account .form-item-name input[type='text'],
+    body.path-user #block-furniture-theme-content form #edit-account .form-item-name input[type='email'],
+    body.path-user #block-furniture-theme-content form #edit-account .form-item-mail input[type='text'],
+    body.path-user #block-furniture-theme-content form #edit-account .form-item-mail input[type='email'] {
+      font-family: "arialregular", sans-serif;
+      font-size: 14px;
+      color: #888888; }
+    body.path-user #block-furniture-theme-content form #edit-account .form-item-name input:focus,
+    body.path-user #block-furniture-theme-content form #edit-account .form-item-mail input:focus {
+      outline: none;
+      border: 2px solid #e6ae48; }
+  body.path-user #block-furniture-theme-content form #edit-actions {
+    display: block;
+    padding-top: 15px; }
+    body.path-user #block-furniture-theme-content form #edit-actions input {
+      transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
+      color: white;
+      background-color: #212121;
+      padding: 15px 31px;
+      border: none;
+      font-family: "Karla", sans-serif;
+      font-size: 15px; }
+      body.path-user #block-furniture-theme-content form #edit-actions input:hover {
+        background-color: #e6ae48; }
+      body.path-user #block-furniture-theme-content form #edit-actions input:focus {
+        outline: none; }
+  body.path-user #block-furniture-theme-content::before {
+    content: 'Register';
+    display: block;
+    width: 100%;
+    font-family: "Karla", sans-serif;
+    color: #212121;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+    margin-top: 0;
+    padding-bottom: 9px; }
 
 /*# sourceMappingURL=../stylesheets/application.css.map */
