@@ -20,7 +20,7 @@
     overflow: hidden;
     .block-fur-img {
       display: inline-block;
-      width: 23%;
+      padding-right: 2%;
       float: left;
       img {
         width: 50px;
@@ -69,7 +69,10 @@
       background: none;
       color: $color-black;
       display: inline-block;
-      padding: 10px 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 2%;
+      width: 30%;
       cursor: pointer;
       &.current {
         border-bottom: 1px solid #e6ae48;
@@ -77,11 +80,14 @@
       &:hover {
         color: $color-orange;
       }
+      @media screen and (max-width: $screen-md) {
+        padding-right: 0;
+      }
     }
   }
   .tab-content {
     display: none;
-    padding: 15px;
+    padding: 15px 0;
     &.current {
       display: inherit;
     }
@@ -92,7 +98,7 @@
       overflow: hidden;
       .block-blog-img {
         display: inline-block;
-        width: 27%;
+        padding-right: 2%;
         height: 85px;
         float: left;
         img {
@@ -156,6 +162,9 @@
           font-size: 13px;
         }
       }
+    }
+    @media screen and (max-width: $screen-md) {
+      padding-top: 30px;
     }
   }
 }
