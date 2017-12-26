@@ -122,7 +122,58 @@
               maxItems: 3
           });
 
+          // $('.first-left-block .flexslider').flexslider({
+          //     animation: "slide",
+          //     controlNav: "thumbnails"
+          // });
+
+          $('.first-left-block #carousel').flexslider({
+              animation: "slide",
+              controlNav: false,
+              animationLoop: false,
+              slideshow: false,
+              itemWidth: 60,
+              itemMargin: 4,
+              asNavFor: '#slider'
+          });
+
+          $('.first-left-block #slider').flexslider({
+              animation: "slide",
+              controlNav: false,
+              animationLoop: false,
+              slideshow: false,
+              sync: "#carousel"
+          });
+
       }
+    };
+
+    Drupal.behaviors.imgPortfolio = {
+        attach:function() {
+            $('#block-portfoliolistpageblock .block-portfolio-img img').one("load", function () {
+
+                $(this).show(1000, function () { // Show the image when loaded
+
+                    $(this).parents('#block-portfoliolistpageblock .block-portfolio-img').masonry({ // After that, trigger the .masonry()
+
+                        itemSelector: "div.post",
+
+                        isAnimated: true
+
+                    });
+
+                });
+
+            }).each(function () {
+
+                if (this.complete) {
+
+                    $(this).load();
+
+                }
+
+            });
+        }
     };
 
 
