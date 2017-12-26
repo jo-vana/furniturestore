@@ -139,3 +139,11 @@ function deploy_update_8438()
 {
     \Drupal::service('module_installer')->install(['latest_from_blog']);
 }
+
+/**
+ * Like Dislike
+ */
+function deploy_update_8439()
+{
+    \Drupal::service('module_installer')->install(['like_dislike']);
+}

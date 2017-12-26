@@ -27,23 +27,29 @@ class BlogListPage extends BlockBase implements BlockPluginInterface
         $query = \Drupal::database()->select('node_field_data', 'n');
         $query->condition('n.type', 'blog', '=');
 
-        $query->innerJoin('node__field_blog_image', 'bi', 'bi.entity_id = n.nid');
+        $query->leftJoin('node__field_blog_image', 'bi', 'bi.entity_id = n.nid');
 
-        $query->innerJoin('node__field_categories', 'fc', 'fc.entity_id = n.nid');
+        $query->leftJoin('node__field_categories', 'fc', 'fc.entity_id = n.nid');
 
-        $query->innerJoin('taxonomy_term_field_data', 't', 'fc.field_categories_target_id = t.tid');
+        $query->leftJoin('taxonomy_term_field_data', 't', 'fc.field_categories_target_id = t.tid');
 
-        $query->innerJoin('node__field_date_blog', 'fdb', 'fdb.entity_id = n.nid');
+        $query->leftJoin('node__field_date_blog', 'fdb', 'fdb.entity_id = n.nid');
 
-        $query->innerJoin('node__body', 'b', 'b.entity_id = n.nid');
+        $query->leftJoin('node__body', 'b', 'b.entity_id = n.nid');
 
-        $query->innerJoin('node__field_blog_author', 'ba', 'ba.entity_id = n.nid');
+        $query->leftJoin('node__field_blog_author', 'ba', 'ba.entity_id = n.nid');
 
-        $query->innerJoin('users_field_data', 'u', 'ba.field_blog_author_target_id = u.uid');
+        $query->leftJoin('users_field_data', 'u', 'ba.field_blog_author_target_id = u.uid');
 
-        $query->innerJoin('node__field_reply', 'lr', 'lr.entity_id = n.nid');
+        $query->leftJoin('node__field_like', 'fl', 'fl.entity_id = n.nid');
 
-        $query->innerJoin('comment_entity_statistics', 'ces', 'lr.entity_id = ces.entity_id');
+        $query->leftJoin('comment_entity_statistics', 'ces', 'ces.entity_id = n.nid');
+
+
+//        $group = $query->orConditionGroup()
+        $query->condition('ces.field_name', 'field_reply', '!=');
+//        $query->condition('fl.field_like_likes');
+//        $query->condition($group);
 
         $query->addField('n', 'nid');
         $query->addField('t', 'tid');
@@ -55,6 +61,7 @@ class BlogListPage extends BlockBase implements BlockPluginInterface
         $query->addField('fdb', 'field_date_blog_value');
         $query->addField('u', 'name', 'username');
         $query->addField('ces', 'comment_count');
+        $query->addField('fl', 'field_like_likes', 'likes');
 
         $results = $query->execute()->fetchAll(\PDO::FETCH_GROUP);
 
@@ -69,7 +76,6 @@ class BlogListPage extends BlockBase implements BlockPluginInterface
                 $alias2 = \Drupal::service('path.alias_manager')->getAliasByPath('/' . $node->taxonomy_name);
                 $alias3 = \Drupal::service('path.alias_manager')->getAliasByPath('/user/' . $node->uid);
 
-
                 $alias_tax = str_replace(' ', '-', $alias2);
 
                 $date = date('F d, Y',strtotime($node->field_date_blog_value));
@@ -79,17 +85,19 @@ class BlogListPage extends BlockBase implements BlockPluginInterface
                 $entry['uid'] = $alias3;
                 $entry['title'] = $node->title;
                 $entry['body'] = substr(strip_tags(str_replace(array("\r", "\n"), '', $node->body_value)), 0, 110);
-                $entry['taxonomy_name'][] =[
-                    'name'  => strip_tags($node->taxonomy_name),
-                    'url'   => $alias_tax
+                $entry['taxonomy_name'][] = [
+                    'name' => strip_tags($node->taxonomy_name),
+                    'url' => $alias_tax
                 ];
                 $entry['image'] = $url;
                 $entry['field_date_blog_value'] = $date;
                 $entry['username'] = $node->username;
+
                 if(empty($entry['comment_count']))
                 {
                     $entry['comment_count']= $node->comment_count;
                 }
+                $entry['likes'] = $node->likes;
             }
             $output[] = $entry;
         }
