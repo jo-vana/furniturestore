@@ -6,6 +6,7 @@ namespace Drupal\blog_list_page\Plugin\Block;
 use Drupal\Core\Block\BlockPluginInterface;
 use Drupal\file\Entity\File;
 use Drupal\Core\Block\BlockBase;
+use PDO;
 
 
 /**
@@ -47,7 +48,7 @@ class BlogListPage extends BlockBase implements BlockPluginInterface
 
 
 //        $group = $query->orConditionGroup()
-        $query->condition('ces.field_name', 'field_reply', '!=');
+//        $query->condition('ces.field_name', 'field_reply', '!=');
 //        $query->condition('fl.field_like_likes');
 //        $query->condition($group);
 
@@ -63,12 +64,13 @@ class BlogListPage extends BlockBase implements BlockPluginInterface
         $query->addField('ces', 'comment_count');
         $query->addField('fl', 'field_like_likes', 'likes');
 
-        $results = $query->execute()->fetchAll(\PDO::FETCH_GROUP);
+        $results = $query->execute()->fetchAll(PDO::FETCH_GROUP);
 
         $output = [];
 
         foreach($results as $key => $result ) {
             $entry = [];
+
             foreach( $result as $node ) {
                 $file = File::load($node->image);
                 $url = \Drupal\image\Entity\ImageStyle::load('blog_default_img')->buildUrl($file->getFileUri());
@@ -85,13 +87,25 @@ class BlogListPage extends BlockBase implements BlockPluginInterface
                 $entry['uid'] = $alias3;
                 $entry['title'] = $node->title;
                 $entry['body'] = substr(strip_tags(str_replace(array("\r", "\n"), '', $node->body_value)), 0, 110);
-                $entry['taxonomy_name'][] = [
-                    'name' => strip_tags($node->taxonomy_name),
-                    'url' => $alias_tax
-                ];
+
+                //@todo If current logic that node has maximum input values of 2 taxonomy terms is changed, change logic bellow.
+                if (!isset($entry['taxonomy_name'][0])) {
+                    $entry['taxonomy_name'][] = [
+                        'name' => strip_tags($node->taxonomy_name),
+                        'url' => $alias_tax
+                    ];
+                } else {
+                    if ($entry['taxonomy_name'][0]['name'] !== $node->taxonomy_name) {
+                        $entry['taxonomy_name'][1] = [
+                            'name' => strip_tags($node->taxonomy_name),
+                            'url' => $alias_tax
+                        ];
+                    }
+                }
                 $entry['image'] = $url;
                 $entry['field_date_blog_value'] = $date;
                 $entry['username'] = $node->username;
+
 
                 if(empty($entry['comment_count']))
                 {
