@@ -110,10 +110,11 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
                 {{ content.field_date_blog }}
             </div>
             <div class="like-counter">
-                {{ content.field_like_heart }}
+                {{ content.field_like }}
             </div>
             <div class="comment-counter">
-              {{ content.field_leave_a_reply['#items'].comment_count }}
+                <i class="fa fa-comment-o" aria-hidden="true"></i>
+                {{ content.field_leave_a_reply['#items'].comment_count }}
             </div>
             <div class="info-sec">
                 {{ content.field_blog_author }}

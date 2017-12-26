@@ -8,8 +8,18 @@
         <div class="block-blog-date">
             <p>{{ entry.field_date_blog_value }}</p>
         </div>
+
+        <div class="like_dislike">
+            <div class="like">
+                <a href={{ like_url }}><i class="fa fa-heart-o" aria-hidden="true"></i>
+                </a>
+                <span id="like">{{ entry.likes }}</span>
+            </div>
+        </div>
+
         <div class="block-blog-comments">
-            <a href ="{{ entry.nid }}">{{ entry.comment_count }}</a>
+            <a href ="{{ entry.nid }}"><i class="fa fa-comment-o" aria-hidden="true"></i>
+                {{ entry.comment_count }}</a>
         </div>
 
         <div class="block-fur-title">
