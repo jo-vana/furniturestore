@@ -11,6 +11,7 @@ use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\ReplaceCommand;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Ajax\HtmlCommand;
 
 class SubscribeForm extends FormBase
 {
@@ -75,6 +76,16 @@ class SubscribeForm extends FormBase
     /**
      * {@inheritdoc}
      */
+    protected function validateEmail(array &$form, FormStateInterface $form_state) {
+        if (substr($form_state->getValue('email'), -4) !== '.com') {
+            return FALSE;
+        }
+        return TRUE;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function submitForm(array &$form, FormStateInterface $form_state)
     {
 
@@ -83,6 +94,8 @@ class SubscribeForm extends FormBase
     public function ajaxFormSubmit(array $form, FormStateInterface $form_state)
     {
         $values = $form_state->getValue('email');
+        $valid = $this->validateEmail($form, $form_state);
+        $response = new AjaxResponse();
 
         $email = \Drupal::database()->select('subscribe', 's');
         $email->condition('s.email', $values, '=');
@@ -118,7 +131,7 @@ class SubscribeForm extends FormBase
                     'id'    => 'subscribe-message',
                     'class' => 'fail',
                 ],
-                '#markup'     => "Email already exists",
+                '#markup'     => "Email is not valid or exists in our database. Please type the correct email address!",
             ];
         }
         $renderer = \Drupal::service( 'renderer' );
