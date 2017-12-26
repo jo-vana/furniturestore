@@ -80,6 +80,49 @@
         }
     };
 
+    // Function for mobile version for account navigation
+
+    Drupal.behaviors.accountMenu = {
+        attach: function (context) {
+
+
+            $('.menu--account > .account-menu-toggle', context).on('click', function () {
+
+                $('.menu--account').toggleClass('menu-show');
+            });
+
+        }
+    };
+
+    // Add span
+
+    Drupal.behaviors.addSpan = {
+        attach: function (context) {
+
+                if ($(window).width() < 1000)  {
+                        $('#block-infoblockmail').append('<span class="close-header"></span>');
+                }
+        }
+    };
+
+    // Region header collapse
+
+    Drupal.behaviors.regionHeader = {
+        attach: function (context) {
+
+
+            $('.region-header', context).on('click', function () {
+                $(this).addClass('header-show');
+            });
+
+
+            $('.close-header', context).on('click', function () {
+                $('.region-header').removeClass('header-show');
+            });
+
+        }
+    };
+
 
     // Function for 'back to top' button
 

@@ -66,7 +66,10 @@
     display: inline-block;
     position: relative;
     float: right;
-    ul.menu {
+    .account-menu-toggle {
+      display: none;
+    }
+    ul.account-menu-level-1 {
       display: block;
       margin: 0;
       li {
@@ -87,4 +90,94 @@
       }
     }
   }
+  @media screen and (max-width: $screen-md-min) {
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 30px;
+    &::after {
+      content: '\f107';
+      font-family: "FontAwesome";
+      font-size: 20px;
+      color: white;
+      position: absolute;
+      top: 7px;
+      left: 49%;
+    }
+    #block-infoblockphone {
+      visibility: hidden;
+      display: inline-block;
+      text-align: center;
+      position: relative;
+    }
+    #block-infoblockmail {
+      visibility: hidden;
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      span {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        &::after {
+          content: '\f106';
+          left: -8px;
+          bottom: 10px;
+          font-family: "FontAwesome";
+          font-size: 20px;
+          color: white;
+          position: absolute;
+        }
+      }
+    }
+    #block-furniture-theme-account-menu {
+      visibility: hidden;
+      display: block;
+      width: 100%;
+      .account-menu-toggle {
+        display: block;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+        padding: 10px 0;
+      }
+      ul.account-menu-level-1 {
+        display: none;
+        margin: 0 auto;
+        padding: 0;
+        background-color: #282828;
+        li.account-menu-item-1 {
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    #block-furniture-theme-account-menu.menu-show {
+      ul.account-menu-level-1 {
+        display: block;
+      }
+    }
+  }
+  @media screen and (max-width: $screen-md-min) {
+    padding-left: 0!important;
+    padding-right: 0!important;
+  }
 }
+  .region-header.header-show {
+    min-height: 90px!important;
+    &::after {
+      display: none;
+    }
+    #block-furniture-theme-account-menu {
+      visibility: visible;
+    }
+    #block-infoblockphone {
+      visibility: visible;
+    }
+    #block-infoblockmail {
+      visibility: visible;
+    }
+  }

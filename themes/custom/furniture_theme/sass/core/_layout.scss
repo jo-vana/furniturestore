@@ -9,6 +9,7 @@
   margin: 0 auto;
   padding: 0;
   display: block;
+  overflow: hidden;
   header {
     width: 100%;
     min-height: 36px;
@@ -139,6 +140,9 @@
     margin: 0 auto;
     float: none;
     margin-top: 70px;
+    @media screen and (max-width:$screen-lg) {
+      width: 80%;
+    }
   }
 }
 .region-come-visit {
@@ -269,24 +273,30 @@
   }
 }
 .sidebar-none .layout-content {
-  @extend .col-lg-12;
+  width: 100%;
   margin: 0 auto;
   float: none;
-  margin-top: 70px;
 }
 .sidebar-first .layout-content {
-  @extend .col-lg-9;
+  width: 70%;
   float: none;
   display: inline-block;
-  margin-top: 70px;
+  @media screen and (max-width: $screen-md){
+    width: 100%;
+  }
 }
 .layout-sidebar-first {
-  @extend .col-lg-3;
+  width: 25%;
   display: inline-block;
   align-items: center;
   float: right;
   clear: right;
-  margin-top: 70px;
+  padding-right: 0;
+  @media screen and (max-width: $screen-md){
+    width: 100%;
+    display: block;
+    float: none;
+  }
 }
 #block-backtotop {
   display: block;
@@ -324,6 +334,13 @@
     &:hover {
       cursor: pointer;
       background-color: #9b9b9b;
+    }
+  }
+}
+.node__links {
+  ul {
+    li {
+      display: none;
     }
   }
 }
