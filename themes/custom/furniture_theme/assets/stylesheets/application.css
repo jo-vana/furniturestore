@@ -3314,7 +3314,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   margin: 0 auto;
   padding: 0;
-  display: block; }
+  display: block;
+  overflow: hidden; }
   .layout-container header {
     width: 100%;
     min-height: 36px;
@@ -5251,6 +5252,30 @@ section.field--name-field-leave-a-reply {
         margin: 0 auto;
         color: #888888;
         padding: 20px 0; }
+
+.node--view-mode-teaser #carousel {
+  display: none; }
+
+.node--view-mode-teaser #slider ul {
+  position: relative; }
+  .node--view-mode-teaser #slider ul li:first-child {
+    display: block;
+    width: 100%; }
+    .node--view-mode-teaser #slider ul li:first-child a img {
+      opacity: 1; }
+  .node--view-mode-teaser #slider ul li {
+    display: none; }
+    .node--view-mode-teaser #slider ul li a img {
+      transition: opacity .3s ease-in-out;
+      opacity: 0; }
+  .node--view-mode-teaser #slider ul:hover li:last-child {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .node--view-mode-teaser #slider ul:hover li:last-child a img {
+      opacity: 1; }
 
 .our-team-wrapper {
   display: block;
