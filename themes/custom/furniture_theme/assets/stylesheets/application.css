@@ -2734,7 +2734,7 @@ th {
   .row:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .layout-container main, .region-come-visit, .region-member-get-more, .region-in-the-press, .region-slider-front, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .layout-container header .region-header, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .region-come-visit, .region-member-get-more, .region-in-the-press, .region-slider-front, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .layout-container header .region-header, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 1rem;
@@ -3109,7 +3109,7 @@ th {
     margin-left: 100%; } }
 
 @media (min-width: 80rem) {
-  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .layout-container main, .region-come-visit, .region-member-get-more, .region-in-the-press, .region-slider-front, .col-lg-9, .col-lg-10, .col-lg-11, .layout-container header .region-header, .col-lg-12 {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .region-come-visit, .region-member-get-more, .region-in-the-press, .region-slider-front, .col-lg-9, .col-lg-10, .col-lg-11, .layout-container header .region-header, .col-lg-12 {
     float: left; }
   .col-lg-1 {
     width: 8.33333%; }
@@ -3125,7 +3125,7 @@ th {
     width: 50%; }
   .col-lg-7 {
     width: 58.33333%; }
-  .col-lg-8, .layout-container main, .region-come-visit, .region-member-get-more, .region-in-the-press, .region-slider-front {
+  .col-lg-8, .region-come-visit, .region-member-get-more, .region-in-the-press, .region-slider-front {
     width: 66.66667%; }
   .col-lg-9 {
     width: 75%; }
@@ -3315,14 +3315,21 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   padding: 0;
   display: block;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   .layout-container header {
     width: 100%;
     min-height: 36px;
     background-color: black; }
     .layout-container header .region-header {
+      display: inline-block;
       float: none;
-      margin: 0 auto; }
+      margin: 0 auto;
+      padding: 0 !important;
+      margin-left: 3%; }
+      @media screen and (max-width: 66.13333rem) {
+        .layout-container header .region-header {
+          margin-left: 0; } }
   .layout-container .region-primary-menu {
     width: 100%;
     margin: 0 auto;
@@ -3331,7 +3338,7 @@ h1, h2, h3, h4, h5, h6 {
     .layout-container .region-primary-menu #block-furniture-theme-branding {
       display: inline-block;
       width: 30%;
-      margin-left: 5%;
+      margin-left: 3%;
       padding-top: 30px; }
       .layout-container .region-primary-menu #block-furniture-theme-branding a {
         color: #212121;
@@ -3418,13 +3425,29 @@ h1, h2, h3, h4, h5, h6 {
           font-size: 14px;
           color: white; }
   .layout-container main {
+    width: 68%;
     display: block;
     margin: 0 auto;
     float: none;
-    margin-top: 70px; }
+    margin-top: 215px; }
     @media screen and (max-width: 1200px) {
       .layout-container main {
         width: 80%; } }
+
+.fix-navbar .region-primary-menu {
+  position: fixed;
+  background-color: white;
+  z-index: 500;
+  top: 58px; }
+
+.fix-navbar .region-breadcrumb {
+  top: 70px;
+  position: relative; }
+
+@media screen and (max-width: 66.13333rem) {
+  .fix-navbar .region-primary-menu {
+    position: relative;
+    top: 0; } }
 
 .region-come-visit {
   display: block;
@@ -3672,6 +3695,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     display: block;
     width: 100%;
+    margin-left: 0;
     height: 30px; }
     .region-header::after {
       content: '\f107';
@@ -5084,15 +5108,31 @@ section.field--name-field-leave-a-reply {
   width: 100%; }
   .node--type-furniture .first-block .first-left-block {
     display: inline-block;
-    width: 46%; }
+    width: 50%; }
     .node--type-furniture .first-block .first-left-block #slider {
       margin-bottom: 0; }
       .node--type-furniture .first-block .first-left-block #slider .flex-direction-nav {
         display: none; }
+      .node--type-furniture .first-block .first-left-block #slider ul li#container {
+        width: 300px;
+        /* size of the small image */
+        margin: auto;
+        /* position in center of the page */
+        position: relative;
+        cursor: pointer; }
+        .node--type-furniture .first-block .first-left-block #slider ul li#container img.image-style-furniture-default-img {
+          display: block; }
+        .node--type-furniture .first-block .first-left-block #slider ul li#container .magnifier {
+          width: 300px;
+          height: 300px;
+          position: absolute;
+          top: 0;
+          display: none;
+          /* hidden at startup */ }
   .node--type-furniture .first-block .first-right-block {
     display: inline-block;
-    width: 47%;
-    margin-left: 5%; }
+    width: 45%;
+    margin-left: 3%; }
     .node--type-furniture .first-block .first-right-block h2 {
       margin-top: 0;
       padding-bottom: 30px;
@@ -5630,8 +5670,6 @@ section.field--name-field-leave-a-reply {
     padding-left: 1rem;
     padding-right: 1rem;
     zoom: 1;
-    padding-left: 2rem;
-    padding-right: 2rem;
     padding-bottom: 2rem;
     display: inline-block;
     width: 33%;

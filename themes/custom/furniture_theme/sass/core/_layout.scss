@@ -10,14 +10,26 @@
   padding: 0;
   display: block;
   overflow: hidden;
+  position: relative;
   header {
     width: 100%;
     min-height: 36px;
     background-color: black;
+    ////
+    //position: absolute;
+    //top: 0;
+    //left: 0;
+    ////
     .region-header {
       @extend .col-lg-11;
+      display: inline-block;
       float: none;
       margin: 0 auto;
+      padding: 0!important;
+      margin-left: 3%;
+      @media screen and (max-width: $screen-md-min) {
+        margin-left: 0;
+      }
     }
   }
   .region-primary-menu{
@@ -25,10 +37,14 @@
     margin: 0 auto;
     display: block;
     min-height: 85px;
+    ////
+    //position: absolute;
+    //top: 22px;
+    ////
     #block-furniture-theme-branding {
       display: inline-block;
       width: 30%;
-      margin-left: 5%;
+      margin-left: 3%;
       padding-top: 30px;
       a {
         color: $color-black;
@@ -43,6 +59,10 @@
     width: 100%;
     min-height: 63px;
     background-color: $gray-light;
+    ////
+    //position: absolute;
+    //top: 103px;
+    ////
     .block-page-title-block {
       display: inline-block;
       width: 60%;
@@ -135,13 +155,31 @@
     }
   }
   main {
-    @extend .col-lg-8;
+    width: 68%;
     display: block;
     margin: 0 auto;
     float: none;
-    margin-top: 70px;
+    margin-top: 215px;
     @media screen and (max-width:$screen-lg) {
       width: 80%;
+    }
+  }
+}
+.fix-navbar {
+  .region-primary-menu {
+    position: fixed;
+    background-color: white;
+    z-index: 500;
+    top:58px;
+  }
+  .region-breadcrumb {
+    top: 70px;
+    position: relative;
+  }
+  @media screen and (max-width: $screen-md-min) {
+    .region-primary-menu {
+      position: relative;
+      top: 0;
     }
   }
 }
