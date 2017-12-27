@@ -1,8 +1,11 @@
 {% for entry in content %}
     <div class="block-fur-wrap">
+        {% for en in entry.image %}
     <div class="block-fur-img">
-        <a href ="{{ entry.nid }}"><img src="{{ entry.image }}"/></a>
+        <a href ="{{ en.nid }}"><img src="{{ en.img }}"/></a>
     </div>
+        {% endfor %}
+
     <div class="tax-wrapper">
         {% for en in entry.taxonomy_name %}
             <div class="block-fur-term">
