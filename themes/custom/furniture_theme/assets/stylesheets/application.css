@@ -3440,7 +3440,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   background-color: white;
   z-index: 500;
-  top: 58px; }
+  top: 0; }
 
 .fix-navbar .region-breadcrumb {
   top: 70px;
@@ -3450,6 +3450,9 @@ h1, h2, h3, h4, h5, h6 {
   .fix-navbar .region-primary-menu {
     position: relative;
     top: 0; } }
+
+body.user-logged-in .fix-navbar .region-primary-menu {
+  top: 58px; }
 
 .region-come-visit {
   display: block;
