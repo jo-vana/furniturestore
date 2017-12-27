@@ -112,6 +112,12 @@
     width: 33%;
     position: relative;
     margin: 0 auto;
+    .block-fur-img {
+      display: none;
+    }
+    .block-fur-img:first-of-type {
+      display: block;
+    }
     .block-fur-term {
       text-align: center;
       p {

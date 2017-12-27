@@ -3330,6 +3330,8 @@ h1, h2, h3, h4, h5, h6 {
       @media screen and (max-width: 66.13333rem) {
         .layout-container header .region-header {
           margin-left: 0; } }
+      .layout-container header .region-header.header-show {
+        margin-bottom: 20px; }
   .layout-container .region-primary-menu {
     width: 100%;
     margin: 0 auto;
@@ -3625,6 +3627,24 @@ h1, h2, h3, h4, h5, h6 {
 .node__links ul li {
   display: none; }
 
+header {
+  position: relative; }
+
+.region-header.header-show {
+  height: 100%;
+  margin-bottom: 20%; }
+  .region-header.header-show::after {
+    display: none; }
+  .region-header.header-show #block-furniture-theme-account-menu {
+    position: relative;
+    opacity: 1; }
+  .region-header.header-show #block-infoblockphone {
+    position: relative;
+    opacity: 1; }
+  .region-header.header-show #block-infoblockmail {
+    position: relative;
+    opacity: 1; }
+
 .region-header #block-infoblockphone {
   display: inline-block;
   position: relative;
@@ -3697,40 +3717,43 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     margin-left: 0;
     height: 30px; }
-    .region-header::after {
-      content: '\f107';
-      font-family: "FontAwesome";
-      font-size: 20px;
-      color: white;
-      position: absolute;
-      top: 7px;
-      left: 49%; }
+    .region-header span.close-header {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      margin: 0 auto; }
+      .region-header span.close-header::after {
+        content: '\f107';
+        font-family: "FontAwesome";
+        font-size: 20px;
+        top: 21%;
+        right: 25%;
+        color: white;
+        position: absolute; }
+    .region-header.header-show {
+      margin-bottom: 20px; }
+      .region-header.header-show span.close-header {
+        bottom: -20px;
+        position: absolute;
+        left: 45%;
+        width: 73px; }
+        .region-header.header-show span.close-header::after {
+          content: '\f106'; }
     .region-header #block-infoblockphone {
-      visibility: hidden;
       display: inline-block;
       text-align: center;
-      position: relative; }
+      position: absolute;
+      opacity: 0; }
     .region-header #block-infoblockmail {
-      visibility: hidden;
       display: inline-block;
       text-align: center;
-      position: relative; }
-      .region-header #block-infoblockmail span {
-        display: block;
-        position: relative;
-        width: 30px;
-        height: 30px;
-        cursor: pointer; }
-        .region-header #block-infoblockmail span::after {
-          content: '\f106';
-          left: -8px;
-          bottom: 10px;
-          font-family: "FontAwesome";
-          font-size: 20px;
-          color: white;
-          position: absolute; }
+      position: absolute;
+      opacity: 0; }
     .region-header #block-furniture-theme-account-menu {
-      visibility: hidden;
+      position: absolute;
+      opacity: 0;
       display: block;
       width: 100%; }
       .region-header #block-furniture-theme-account-menu .account-menu-toggle {
@@ -3755,17 +3778,6 @@ h1, h2, h3, h4, h5, h6 {
   .region-header {
     padding-left: 0 !important;
     padding-right: 0 !important; } }
-
-.region-header.header-show {
-  min-height: 90px !important; }
-  .region-header.header-show::after {
-    display: none; }
-  .region-header.header-show #block-furniture-theme-account-menu {
-    visibility: visible; }
-  .region-header.header-show #block-infoblockphone {
-    visibility: visible; }
-  .region-header.header-show #block-infoblockmail {
-    visibility: visible; }
 
 footer {
   width: 100%;
@@ -5682,6 +5694,10 @@ section.field--name-field-leave-a-reply {
       overflow: hidden; }
     #block-ourcollectionsblock .block-fur-wrap:after {
       clear: both; }
+    #block-ourcollectionsblock .block-fur-wrap .block-fur-img {
+      display: none; }
+    #block-ourcollectionsblock .block-fur-wrap .block-fur-img:first-of-type {
+      display: block; }
     #block-ourcollectionsblock .block-fur-wrap .block-fur-term {
       text-align: center; }
       #block-ourcollectionsblock .block-fur-wrap .block-fur-term p {

@@ -4,11 +4,30 @@
 // Header element on the page
 //
 // ========================================
-
-.header {
-
+header {
+  position: relative;
 }
 .region-header {
+  &.header-show {
+    height: 100%;
+    margin-bottom: 20%;
+    &::after {
+      display: none;
+    }
+    #block-furniture-theme-account-menu {
+      position: relative;
+      opacity: 1;
+    }
+    #block-infoblockphone {
+      position: relative;
+      opacity: 1;
+    }
+    #block-infoblockmail {
+      position: relative;
+      opacity: 1;
+    }
+  }
+
   #block-infoblockphone {
     display: inline-block;
     position: relative;
@@ -96,45 +115,51 @@
     width: 100%;
     margin-left: 0;
     height: 30px;
-    &::after {
-      content: '\f107';
-      font-family: "FontAwesome";
-      font-size: 20px;
-      color: white;
-      position: absolute;
-      top: 7px;
-      left: 49%;
-    }
-    #block-infoblockphone {
-      visibility: hidden;
-      display: inline-block;
-      text-align: center;
+    span.close-header {
+      display: block;
       position: relative;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      margin: 0 auto;
+
+      &::after {
+        content: '\f107';
+        font-family: "FontAwesome";
+        font-size: 20px;
+        top: 21%;
+        right: 25%;
+        color: white;
+        position: absolute;
+      }
     }
-    #block-infoblockmail {
-      visibility: hidden;
-      display: inline-block;
-      text-align: center;
-      position: relative;
-      span {
-        display: block;
-        position: relative;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
+    &.header-show {
+      margin-bottom: 20px;
+      span.close-header {
+        bottom: -20px;
+        position: absolute;
+        left: 45%;
+        width: 73px;
         &::after {
           content: '\f106';
-          left: -8px;
-          bottom: 10px;
-          font-family: "FontAwesome";
-          font-size: 20px;
-          color: white;
-          position: absolute;
         }
       }
     }
+    #block-infoblockphone {
+      display: inline-block;
+      text-align: center;
+      position: absolute;
+      opacity: 0;
+    }
+    #block-infoblockmail {
+      display: inline-block;
+      text-align: center;
+      position: absolute;
+      opacity: 0;
+    }
     #block-furniture-theme-account-menu {
-      visibility: hidden;
+      position: absolute;
+      opacity: 0;
       display: block;
       width: 100%;
       .account-menu-toggle {
@@ -167,18 +192,4 @@
     padding-right: 0!important;
   }
 }
-  .region-header.header-show {
-    min-height: 90px!important;
-    &::after {
-      display: none;
-    }
-    #block-furniture-theme-account-menu {
-      visibility: visible;
-    }
-    #block-infoblockphone {
-      visibility: visible;
-    }
-    #block-infoblockmail {
-      visibility: visible;
-    }
-  }
+  //.region-header

@@ -15,11 +15,6 @@
     width: 100%;
     min-height: 36px;
     background-color: black;
-    ////
-    //position: absolute;
-    //top: 0;
-    //left: 0;
-    ////
     .region-header {
       @extend .col-lg-11;
       display: inline-block;
@@ -30,6 +25,9 @@
       @media screen and (max-width: $screen-md-min) {
         margin-left: 0;
       }
+      &.header-show {
+        margin-bottom: 20px;
+      }
     }
   }
   .region-primary-menu{
@@ -37,10 +35,6 @@
     margin: 0 auto;
     display: block;
     min-height: 85px;
-    ////
-    //position: absolute;
-    //top: 22px;
-    ////
     #block-furniture-theme-branding {
       display: inline-block;
       width: 30%;

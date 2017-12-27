@@ -100,7 +100,7 @@
         attach: function (context) {
 
                 if ($(window).width() < 1000)  {
-                        $('#block-infoblockmail').append('<span class="close-header"></span>');
+                        $('.region-header', context).append('<span class="close-header"></span>');
                 }
         }
     };
@@ -110,14 +110,8 @@
     Drupal.behaviors.regionHeader = {
         attach: function (context) {
 
-
-            $('.region-header', context).on('click', function () {
-                $(this).addClass('header-show');
-            });
-
-
             $('.close-header', context).on('click', function () {
-                $('.region-header').removeClass('header-show');
+                $('.region-header', context).toggleClass('header-show');
             });
 
         }
@@ -262,6 +256,8 @@
             });
         }
     };
+
+    // Main navigation fix [desktop]
 
     Drupal.behaviors.mainNavFixed = {
         attach:function(context) {
