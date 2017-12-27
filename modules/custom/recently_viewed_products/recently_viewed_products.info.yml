@@ -1,5 +1,5 @@
-name: Custom Block for Our Collections on Home Page
-description: Block for Our Collections that appears in Home Page
+name: Custom Block for Recently Viewed Products
+description: Block for Recently Viewed Products that appears in Sidebar
 package: Custom
 
 type: module
