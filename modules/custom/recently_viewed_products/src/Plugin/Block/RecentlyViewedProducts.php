@@ -1,80 +1,69 @@
 <?php
 
 
-namespace Drupal\our_collections\Plugin\Block;
+namespace Drupal\recently_viewed_products\Plugin\Block;
 
 use Drupal\Core\Block\BlockPluginInterface;
 use Drupal\file\Entity\File;
 use Drupal\Core\Block\BlockBase;
+use Drupal\user\PrivateTempStoreFactory;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 
 /**
- * Provides a 'Our Collections' block.
+ * Provides a 'Recently Viewed Products' block.
  *
  * @Block(
- *   id = "our_collections",
- *   admin_label = @Translation("Our Collections Block"),
+ *   id = "recently_viewed_products",
+ *   admin_label = @Translation("Recently Viewed Products Block"),
  *   category = @Translation("Blocks")
  * )
  */
-class OurCollections extends BlockBase implements BlockPluginInterface{
+class RecentlyViewedProducts extends BlockBase implements BlockPluginInterface{
         /**
          * {@inheritdoc}
          */
     function buildContent()
     {
+
         $query = \Drupal::database()->select('node_field_data', 'n');
         $query->condition('n.type', 'furniture', '=');
 
         $query->innerJoin('node__field_furniture_image', 'fi', 'fi.entity_id = n.nid');
 
-        $query->innerJoin('node__field_categories', 'fc', 'fc.entity_id = n.nid' );
-
-        $query->innerJoin('taxonomy_term_field_data', 't', 'fc.field_categories_target_id = t.tid' );
-
         $query->innerJoin('node__field_price', 'fp', 'fp.entity_id = n.nid' );
 
         $query->addField('n', 'nid');
-        $query->addField('t', 'tid');
         $query->addField('n', 'title');
         $query->addField('fi', 'field_furniture_image_target_id', 'image');
-        $query->addField('t', 'name', 'taxonomy_name');
         $query->addField('fp', 'field_price_value');
 
-        $data = [];
+        $node = [];
 
-        $results = $query->execute()->fetchAll(\PDO::FETCH_GROUP);
+        $_SESSION['recently_viewed'][$node] = $node;
 
-        foreach($results as $key => $result ) {
-            $entry = [];
-            foreach( $result as $node ) {
-                $file = File::load($node->image);
-                $url = \Drupal\image\Entity\ImageStyle::load('furniture_default_img')->buildUrl($file->getFileUri());
-                $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $key);
-                $alias2 = \Drupal::service('path.alias_manager')->getAliasByPath('/' . $node->taxonomy_name);
+        $nodes_viewed = node_load_multiple($_SESSION['recently_viewed'][$node]);
 
-                $alias_tax = str_replace(' ', '-', $alias2);
+//        $tempstore = \Drupal::service('user.private_tempstore')->get('recently_viewed_products');
+//        $tempstore->get('data', $data);
 
-                $entry['nid'] = $alias;
-                $entry['tid'] = $alias_tax;
-                $entry['title'] = $node->title;
-                $entry['field_price_value'] = $node->field_price_value;
-                $entry['taxonomy_name'][] =[
-                    'name'  => strip_tags($node->taxonomy_name),
-                    'url'   => $alias_tax
-                ];
-                $entry['image'] = $url;
-            }
-            $data[] = $entry;
 
-            if (count($data) > 6){
-                if( !empty($data[7])) {
-                    unset($data[7]);
-                }
-                return $data;
-            }
+        $nodes_viewed = $query->execute()->fetchAll();
+
+        foreach ( $nodes_viewed as $result ) {
+            $file = File::load($result->image);
+            $url = \Drupal\image\Entity\ImageStyle::load('thumbnail')->buildUrl($file->getFileUri());
+            $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$result->nid);
+
+            $node[] = [
+                'alias' => $alias,
+                'title' => $result->title,
+                'field_price_value' => $result->field_price_value,
+                'image' => $url,
+            ];
         }
-        return $data;
+
+        return $node;
     }
 
     /**
@@ -83,7 +72,7 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
     public function build () {
 
         return array(
-            '#theme'    => 'our_collections',
+            '#theme'    => 'recently_viewed_products',
             '#content'  => $this->buildContent(),
             '#cache'    => [
                 'max-age' => 0,
@@ -93,3 +82,4 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
 
 
 }
+
