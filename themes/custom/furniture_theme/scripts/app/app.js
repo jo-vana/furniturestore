@@ -99,9 +99,20 @@
     Drupal.behaviors.addSpan = {
         attach: function (context) {
 
-                if ($(window).width() < 1000)  {
-                        $('.region-header', context).append('<span class="close-header"></span>');
+            function ide() {
+                $('.region-header', context).append('<span class="close-header"></span>');
+            }
+
+            if ($(window).width() < 1000)  {
+                ide();
+            }
+            $(window).resize(function() {
+                if ($('.region-header').has('span.close-header')) {
+                    return;
                 }
+
+                ide();
+            });
         }
     };
 

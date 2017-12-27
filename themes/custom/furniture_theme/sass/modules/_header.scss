@@ -138,8 +138,9 @@ header {
       span.close-header {
         bottom: -20px;
         position: absolute;
-        left: 45%;
-        width: 73px;
+        left: 50%;
+        width: 30px;
+        transform: translateX(-50%);
         &::after {
           content: '\f106';
         }

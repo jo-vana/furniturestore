@@ -315,7 +315,7 @@
     }
   }
 }
-// - - Style for button in mosaic block on homepage
+// - - Style for button on mosaic block on homepage
 @mixin  mosaic_button {
   display: block;
   position: absolute;
@@ -328,10 +328,11 @@
     font-weight: normal;
     font-style: normal;
     color: #252324;
-    padding: 22px 33px;
+    padding: 10% 15%;
     background-color: white;
     line-height: 60px;
     transition: all .3s ease-in-out;
+    white-space: nowrap;
     &:hover {
       background-color: #e6ae48;
       color: white;

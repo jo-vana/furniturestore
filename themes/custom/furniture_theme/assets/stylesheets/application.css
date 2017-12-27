@@ -3431,7 +3431,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     margin: 0 auto;
     float: none;
-    margin-top: 215px; }
+    margin-top: 60px; }
     @media screen and (max-width: 1200px) {
       .layout-container main {
         width: 80%; } }
@@ -3737,8 +3737,11 @@ header {
       .region-header.header-show span.close-header {
         bottom: -20px;
         position: absolute;
-        left: 45%;
-        width: 73px; }
+        left: 50%;
+        width: 30px;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%); }
         .region-header.header-show span.close-header::after {
           content: '\f106'; }
     .region-header #block-infoblockphone {
@@ -5567,10 +5570,11 @@ section.field--name-field-leave-a-reply {
             font-weight: normal;
             font-style: normal;
             color: #252324;
-            padding: 22px 33px;
+            padding: 10% 15%;
             background-color: white;
             line-height: 60px;
-            transition: all .3s ease-in-out; }
+            transition: all .3s ease-in-out;
+            white-space: nowrap; }
             .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__item .field--name-field-mosaic-button a:hover {
               background-color: #e6ae48;
               color: white; }
@@ -5606,10 +5610,11 @@ section.field--name-field-leave-a-reply {
             font-weight: normal;
             font-style: normal;
             color: #252324;
-            padding: 22px 33px;
+            padding: 10% 15%;
             background-color: white;
             line-height: 60px;
-            transition: all .3s ease-in-out; }
+            transition: all .3s ease-in-out;
+            white-space: nowrap; }
             .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item .field--name-field-mosaic-button a:hover {
               background-color: #e6ae48;
               color: white; }
@@ -5639,10 +5644,11 @@ section.field--name-field-leave-a-reply {
             font-weight: normal;
             font-style: normal;
             color: #252324;
-            padding: 22px 33px;
+            padding: 10% 15%;
             background-color: white;
             line-height: 60px;
-            transition: all .3s ease-in-out; }
+            transition: all .3s ease-in-out;
+            white-space: nowrap; }
             .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__item .field--name-field-mosaic-button a:hover {
               background-color: #e6ae48;
               color: white; }
