@@ -28,8 +28,6 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
 
         $query->innerJoin('node__field_fur_image', 'fi', 'fi.entity_id = n.nid');
 
-        $query->condition('fi.delta', 0, '=');
-
         $query->innerJoin('node__field_categories', 'fc', 'fc.entity_id = n.nid' );
 
         $query->innerJoin('taxonomy_term_field_data', 't', 'fc.field_categories_target_id = t.tid' );
@@ -61,11 +59,35 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
                 $entry['tid'] = $alias_tax;
                 $entry['title'] = $node->title;
                 $entry['field_price_value'] = $node->field_price_value;
-                $entry['taxonomy_name'][] =[
-                    'name'  => strip_tags($node->taxonomy_name),
-                    'url'   => $alias_tax
-                ];
-                $entry['image'] = $url;
+
+                //@todo If current logic that node has maximum input values of 2 taxonomy terms is changed, change logic bellow.
+                if (!isset($entry['taxonomy_name'][0])) {
+                    $entry['taxonomy_name'][] = [
+                        'name' => strip_tags($node->taxonomy_name),
+                        'url' => $alias_tax
+                    ];
+                } else {
+                    if ($entry['taxonomy_name'][0]['name'] !== $node->taxonomy_name) {
+                        $entry['taxonomy_name'][1] = [
+                            'name' => strip_tags($node->taxonomy_name),
+                            'url' => $alias_tax
+                        ];
+                    }
+                }
+
+                if (!isset($entry['image'][0])) {
+                    $entry['image'][] = [
+                        'img' => $url,
+                        'nid' => $alias,
+                    ];
+                } else {
+                    if ($entry['image'][0]['img'] !== $url) {
+                        $entry['image'][1] = [
+                            'img' => $url,
+                            'nid' => $alias,
+                        ];
+                    }
+                }
             }
             $data[] = $entry;
 

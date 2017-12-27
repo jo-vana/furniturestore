@@ -147,3 +147,11 @@ function deploy_update_8439()
 {
     \Drupal::service('module_installer')->install(['like_dislike']);
 }
+
+/**
+ * Like Dislike Fix
+ */
+function deploy_update_8440()
+{
+    \Drupal::service('module_installer')->install(['like_dislike']);
+}
