@@ -10,11 +10,29 @@
     width: 100%;
     .first-left-block {
       display: inline-block;
-      width: 46%;
+      width: 50%;
       #slider {
         margin-bottom: 0;
         .flex-direction-nav {
           display: none;
+        }
+        ul {
+          li#container {
+            width: 300px;  /* size of the small image */
+            margin: auto;  /* position in center of the page */
+            position: relative;
+            cursor: pointer;
+            img.image-style-furniture-default-img {
+              display: block;
+            }
+            .magnifier {
+              width: 300px;
+              height: 300px;
+              position: absolute;
+              top: 0;
+              display: none;  /* hidden at startup */
+            }
+          }
         }
       }
       #carousel {
@@ -27,8 +45,8 @@
     }
     .first-right-block {
       display: inline-block;
-      width: 47%;
-      margin-left: 5%;
+      width: 45%;
+      margin-left: 3%;
       h2 {
         margin-top: 0;
         padding-bottom: 30px;
