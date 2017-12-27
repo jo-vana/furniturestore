@@ -112,10 +112,10 @@ class SearchForm extends FormBase {
 		} else if ( $sort == 1 ) {
 			$query->orderBy( 'totalcount', 'DESC' );
 		} else if ( $sort == 2 ) {
-			$query->innerJoin('node__field_reviews', 'fr', 'fr.entity_id = n.nid');
-			$query->innerJoin('comment_entity_statistics', 'ces', 'fr.entity_id = ces.entity_id');
-			$query->innerJoin('comment_field_data', 'cfd', 'ces.entity_id = cfd.entity_id');
-			$query->innerJoin('comment__field_your_rating', 'cff', 'cfd.cid = cff.entity_id');
+			$query->leftJoin('node__field_reviews', 'fr', 'fr.entity_id = n.nid');
+			$query->leftJoin('comment_entity_statistics', 'ces', 'fr.entity_id = ces.entity_id');
+			$query->leftJoin('comment_field_data', 'cfd', 'ces.entity_id = cfd.entity_id');
+			$query->leftJoin('comment__field_your_rating', 'cff', 'cfd.cid = cff.entity_id');
 			$query->orderBy( 'field_your_rating_rating', 'DESC' );
 		} else if ( $sort == 3 ) {
 			$query->orderBy( 'nid', 'DESC' );
