@@ -241,6 +241,7 @@
     .block-portfolio-img {
       img {
         display: none;
+        height: auto !important;//Overrides inline values coming from MasonryJS.
         transition: opacity .3s ease-in-out;
       }
       a {

@@ -5039,6 +5039,7 @@ section.field--name-field-leave-a-reply {
     margin: 0 1%; }
     #block-portfoliolistpageblock .wrap-portfolio-page .block-portfolio-img img {
       display: none;
+      height: auto !important;
       transition: opacity .3s ease-in-out; }
     #block-portfoliolistpageblock .wrap-portfolio-page .block-portfolio-img a span.hover-button {
       display: none; }

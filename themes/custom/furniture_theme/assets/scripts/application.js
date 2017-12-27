@@ -242,29 +242,44 @@
 
     Drupal.behaviors.imgPortfolio = {
         attach:function() {
-            $('#block-portfoliolistpageblock .block-portfolio-img img').one("load", function () {
+            $('#block-portfoliolistpageblock .block-portfolio-img img').once("img-loaded").each(function () {
 
                 $(this).show(1000, function () { // Show the image when loaded
 
-                    $(this).parents('#block-portfoliolistpageblock .block-portfolio-img').masonry({ // After that, trigger the .masonry()
+                    $(this).masonry({ // After that, trigger the .masonry()
 
+                        columnWidth: 'div.block-portfolio-img',
                         itemSelector: "div.post",
-
+                        percentPosition: true,
                         isAnimated: true
 
                     });
 
                 });
-
-            }).each(function () {
-
-                if (this.complete) {
-
-                    $(this).load();
-
-                }
-
             });
+            // $('#block-portfoliolistpageblock .block-portfolio-img img').one("load", function () {
+            //
+            //     $(this).show(1000, function () { // Show the image when loaded
+            //
+            //         $(this).parents('div.block-portfolio-img').masonry({ // After that, trigger the .masonry()
+            //
+            //             itemSelector: "div.post",
+            //
+            //             isAnimated: true
+            //
+            //         });
+            //
+            //     });
+            //
+            // }).each(function () {
+            //
+            //     if (this.complete) {
+            //
+            //         $(this).load();
+            //
+            //     }
+            //
+            // });
         }
     };
 
@@ -275,7 +290,7 @@
             var wrap = $(".layout-container");
 
             $(window).scroll(function() {
-                if ($(window).scrollTop() > 20) {
+                if ($(window).scrollTop() > 35) {
                     wrap.addClass("fix-navbar");
                 } else {
                     wrap.removeClass("fix-navbar");
