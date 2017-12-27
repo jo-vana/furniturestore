@@ -8,7 +8,6 @@ use Drupal\file\Entity\File;
 use Drupal\Core\Block\BlockBase;
 use PDO;
 
-
 /**
  * Provides a 'Blog List Page' block.
  *
@@ -45,12 +44,6 @@ class BlogListPage extends BlockBase implements BlockPluginInterface
         $query->leftJoin('node__field_like', 'fl', 'fl.entity_id = n.nid');
 
         $query->leftJoin('comment_entity_statistics', 'ces', 'ces.entity_id = n.nid');
-
-
-//        $group = $query->orConditionGroup()
-//        $query->condition('ces.field_name', 'field_reply', '!=');
-//        $query->condition('fl.field_like_likes');
-//        $query->condition($group);
 
         $query->addField('n', 'nid');
         $query->addField('t', 'tid');
@@ -106,7 +99,6 @@ class BlogListPage extends BlockBase implements BlockPluginInterface
                 $entry['field_date_blog_value'] = $date;
                 $entry['username'] = $node->username;
 
-
                 if(empty($entry['comment_count']))
                 {
                     $entry['comment_count']= $node->comment_count;
@@ -117,13 +109,11 @@ class BlogListPage extends BlockBase implements BlockPluginInterface
         }
         return $output;
     }
-
     /**
      * {@inheritdoc}
      */
     public function build()
     {
-
         return array(
             '#theme' => 'blog_list_page',
             '#content' => $this->buildContent(),
