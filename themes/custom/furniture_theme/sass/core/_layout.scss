@@ -336,9 +336,9 @@ body.user-logged-in {
   width: 25%;
   display: inline-block;
   align-items: center;
-  float: right;
-  clear: right;
   padding-right: 0;
+  vertical-align: top;
+  padding-left: 55px;
   @media screen and (max-width: $screen-md){
     width: 100%;
     display: block;

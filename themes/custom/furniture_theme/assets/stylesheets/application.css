@@ -3588,9 +3588,9 @@ body.user-logged-in .fix-navbar .region-primary-menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  float: right;
-  clear: right;
-  padding-right: 0; }
+  padding-right: 0;
+  vertical-align: top;
+  padding-left: 55px; }
   @media screen and (max-width: 992px) {
     .layout-sidebar-first {
       width: 100%;
@@ -4148,12 +4148,12 @@ body.user-logged-in #block-mainnavigationmobile .menu-toggle {
 
 #block-topratedproductsblock .wrap-fur-sidebar {
   min-height: 50px;
-  margin: 0 1px 20px;
   overflow: hidden; }
   #block-topratedproductsblock .wrap-fur-sidebar .block-fur-img {
     display: inline-block;
-    padding-right: 2%;
-    float: left; }
+    padding-right: 3%;
+    float: left;
+    height: 100px; }
     #block-topratedproductsblock .wrap-fur-sidebar .block-fur-img img {
       width: 50px;
       height: 50px;
