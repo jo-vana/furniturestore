@@ -3416,7 +3416,8 @@ h1, h2, h3, h4, h5, h6 {
       display: block;
       max-width: 250px;
       margin: 0 auto;
-      top: 55px; }
+      top: 55px;
+      position: relative; }
       .layout-container .region-team-title #block-breadcrumbmemberprofileblock .member-name {
         text-align: center; }
         .layout-container .region-team-title #block-breadcrumbmemberprofileblock .member-name h2 {
