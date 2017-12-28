@@ -10,6 +10,8 @@
   flex-direction: column;
   padding-bottom: 50px;
   .field--name-field-blog-image {
+    max-width: 800px;
+    margin: 0 auto;
     img {
       margin: 0 auto;
     }

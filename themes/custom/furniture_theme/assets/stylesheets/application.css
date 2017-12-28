@@ -4289,8 +4289,11 @@ body.user-logged-in #block-mainnavigationmobile .menu-toggle {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-bottom: 50px; }
-  .blog-wrapper .field--name-field-blog-image img {
+  .blog-wrapper .field--name-field-blog-image {
+    max-width: 800px;
     margin: 0 auto; }
+    .blog-wrapper .field--name-field-blog-image img {
+      margin: 0 auto; }
   .blog-wrapper .info-first {
     min-height: 50px; }
     .blog-wrapper .info-first .field--name-field-date-blog {
