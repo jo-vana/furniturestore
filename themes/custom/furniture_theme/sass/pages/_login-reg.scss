@@ -69,7 +69,6 @@ body.path-user {
       }
       .form-item-remember {
         display: inline-block;
-        width: 30%;
         padding-top: 15px;
         padding-bottom: 15px;
         label {
@@ -85,7 +84,7 @@ body.path-user {
         display: inline-block;
         float: left;
         clear: left;
-        width: 30%;
+        width: 40%;
         input {
           transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
           color: white;
@@ -135,6 +134,9 @@ body.path-user {
           }
         }
       }
+    }
+    @media screen and (max-width: $screen-sm) {
+      width: 100%;
     }
   }
   #block-furniture-theme-content {
@@ -219,6 +221,9 @@ body.path-user {
       text-transform: none;
       margin-top: 0;
       padding-bottom: 9px;
+    }
+    @media screen and (max-width: $screen-sm) {
+      width: 100%;
     }
   }
 }

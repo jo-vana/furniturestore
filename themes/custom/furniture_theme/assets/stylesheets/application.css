@@ -6896,7 +6896,6 @@ body.path-user .block-user-login-block {
       font-size: 14px; }
   body.path-user .block-user-login-block form .form-item-remember {
     display: inline-block;
-    width: 30%;
     padding-top: 15px;
     padding-bottom: 15px; }
     body.path-user .block-user-login-block form .form-item-remember label {
@@ -6910,7 +6909,7 @@ body.path-user .block-user-login-block {
     display: inline-block;
     float: left;
     clear: left;
-    width: 30%; }
+    width: 40%; }
     body.path-user .block-user-login-block form #edit-actions--2 input {
       transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
       color: white;
@@ -6946,6 +6945,9 @@ body.path-user .block-user-login-block {
           color: #e6ae48; }
         body.path-user .block-user-login-block .item-list ul li a:hover::after {
           color: #9b9b9b; }
+  @media screen and (max-width: 768px) {
+    body.path-user .block-user-login-block {
+      width: 100%; } }
 
 body.path-user #block-furniture-theme-content {
   display: inline-block;
@@ -7021,6 +7023,9 @@ body.path-user #block-furniture-theme-content {
     text-transform: none;
     margin-top: 0;
     padding-bottom: 9px; }
+  @media screen and (max-width: 768px) {
+    body.path-user #block-furniture-theme-content {
+      width: 100%; } }
 
 body.path-shop form#search-form .filter {
   display: inline-block; }
@@ -7116,6 +7121,104 @@ body.path-shop form#search-form nav.pager {
         text-decoration: none;
         font-family: "arialregular", sans-serif; }
         body.path-shop form#search-form nav.pager ul li a span:last-child {
+          opacity: 0;
+          width: 15px;
+          height: 15px; }
+
+body.path-furniture form#furniture-list-form .filter {
+  display: inline-block; }
+  body.path-furniture form#furniture-list-form .filter .form-item-sort {
+    display: inline-block;
+    margin-top: 0; }
+    body.path-furniture form#furniture-list-form .filter .form-item-sort select {
+      background-color: white;
+      padding: 4% 10%;
+      color: #888888;
+      font-family: "arialregular", sans-serif;
+      font-size: 15px; }
+
+body.path-furniture form#furniture-list-form .button {
+  display: inline-block;
+  vertical-align: top; }
+  body.path-furniture form#furniture-list-form .button input {
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    background-color: #212121;
+    transition: all .3s ease-in-out;
+    border: none;
+    color: white;
+    font-size: 15px;
+    line-height: 42px;
+    font-weight: normal;
+    font-style: normal;
+    font-family: "Karla", sans-serif;
+    margin-right: 10px; }
+    body.path-furniture form#furniture-list-form .button input:hover {
+      background-color: #e6ae48; }
+  body.path-furniture form#furniture-list-form .button h2 {
+    display: inline-block;
+    margin-top: 5px;
+    float: right;
+    clear: right; }
+
+body.path-furniture form#furniture-list-form .col-md-4 {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center; }
+  body.path-furniture form#furniture-list-form .col-md-4 .block-fur-term {
+    display: inline-block; }
+    body.path-furniture form#furniture-list-form .col-md-4 .block-fur-term a {
+      color: #888888;
+      text-decoration: none;
+      font-size: 15px;
+      line-height: 22px; }
+      body.path-furniture form#furniture-list-form .col-md-4 .block-fur-term a:hover {
+        color: #e6ae48; }
+  body.path-furniture form#furniture-list-form .col-md-4 .block-fur-title h2 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #212121;
+    text-align: center; }
+    body.path-furniture form#furniture-list-form .col-md-4 .block-fur-title h2 a {
+      white-space: nowrap;
+      text-decoration: none;
+      border-bottom: 1px solid transparent; }
+      body.path-furniture form#furniture-list-form .col-md-4 .block-fur-title h2 a:hover {
+        border-bottom: 1px solid #e6ae48; }
+  body.path-furniture form#furniture-list-form .col-md-4 .block-fur-price p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #888888;
+    padding: 20px 0; }
+
+body.path-furniture form#furniture-list-form nav.pager {
+  text-align: center; }
+  body.path-furniture form#furniture-list-form nav.pager ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0; }
+    body.path-furniture form#furniture-list-form nav.pager ul li {
+      display: block;
+      margin: 0;
+      padding: 1px 3px;
+      float: left; }
+      body.path-furniture form#furniture-list-form nav.pager ul li a {
+        color: white;
+        border-color: #e6ae48;
+        line-height: 31px !important;
+        display: block;
+        min-width: 32px;
+        height: 32px;
+        position: relative;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 50%;
+        background-color: #e6ae48;
+        text-decoration: none;
+        font-family: "arialregular", sans-serif; }
+        body.path-furniture form#furniture-list-form nav.pager ul li a span:last-child {
           opacity: 0;
           width: 15px;
           height: 15px; }
