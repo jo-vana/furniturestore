@@ -3893,7 +3893,7 @@ footer {
             /* Safari */
             -webkit-transition-timing-function: linear;
             /* Safari */
-            transition: width 1s;
+            transition: width 0.5s;
             transition-timing-function: linear; }
       #block-furniture-theme-main-menu ul.nav-0 li:hover ul.nav-1 {
         visibility: visible;
@@ -4027,7 +4027,8 @@ body.user-logged-in #block-mainnavigationmobile .menu-toggle {
     cursor: pointer;
     position: relative;
     float: right;
-    clear: right; }
+    clear: right;
+    top: -26px; }
     .menu--main-navigation-mobile .menu-toggle span {
       right: 20px;
       position: absolute;

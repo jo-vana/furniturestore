@@ -53,7 +53,7 @@
             background-color: $color-orange;
             -webkit-transition: width 1s; /* Safari */
             -webkit-transition-timing-function: linear; /* Safari */
-            transition: width 1s;
+            transition: width 0.5s;
             transition-timing-function: linear;
           }
         }
@@ -225,6 +225,7 @@ body.user-logged-in {
     position: relative;
     float: right;
     clear: right;
+    top: -26px;
     span {
       right: 20px;
       position: absolute;
