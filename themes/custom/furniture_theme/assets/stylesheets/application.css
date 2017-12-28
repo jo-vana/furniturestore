@@ -4628,7 +4628,10 @@ section.field--name-field-leave-a-reply {
     display: block;
     max-height: 500px;
     overflow: hidden; }
+  #block-bloglistblock .wrap-blog-page .like_dislike {
+    display: none; }
   #block-bloglistblock .wrap-blog-page .block-blog-date {
+    display: inline-block;
     padding-top: 15px; }
     #block-bloglistblock .wrap-blog-page .block-blog-date p {
       font-family: "Karla", sans-serif;
@@ -4645,6 +4648,18 @@ section.field--name-field-leave-a-reply {
         width: 25px;
         background-color: #e6ae48;
         margin: 0 20px 4px 0; }
+  #block-bloglistblock .wrap-blog-page .block-blog-comments {
+    display: inline-block;
+    float: right;
+    clear: right;
+    padding-top: 15px; }
+    #block-bloglistblock .wrap-blog-page .block-blog-comments a {
+      font-family: "arialregular", sans-serif;
+      color: #888888;
+      text-decoration: none;
+      font-size: 15px; }
+      #block-bloglistblock .wrap-blog-page .block-blog-comments a:hover i {
+        color: #e6ae48; }
   #block-bloglistblock .wrap-blog-page .block-fur-title {
     word-wrap: break-word;
     padding-top: 20px; }
@@ -5059,8 +5074,14 @@ section.field--name-field-leave-a-reply {
         position: absolute;
         width: 60px;
         height: 60px;
-        top: 39%;
-        left: 42%;
+        top: 40%;
+        -webkit-transform: translateY(-40%);
+            -ms-transform: translateY(-40%);
+                transform: translateY(-40%);
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
         border-radius: 50%;
         background-color: rgba(255, 255, 255, 0.49);
         transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
@@ -5707,7 +5728,8 @@ section.field--name-field-leave-a-reply {
     #block-ourcollectionsblock .block-fur-wrap .block-fur-img {
       display: none; }
     #block-ourcollectionsblock .block-fur-wrap .block-fur-img:first-of-type {
-      display: block; }
+      display: block;
+      position: relative; }
     #block-ourcollectionsblock .block-fur-wrap .block-fur-term {
       text-align: center; }
       #block-ourcollectionsblock .block-fur-wrap .block-fur-term p {
@@ -6823,5 +6845,74 @@ body.path-user #block-furniture-theme-content {
     text-transform: none;
     margin-top: 0;
     padding-bottom: 9px; }
+
+body.path-shop form#search-form .form-item-sort {
+  display: inline-block; }
+  body.path-shop form#search-form .form-item-sort select {
+    background-color: white;
+    padding: 7% 10%;
+    color: #888888;
+    font-family: "arialregular", sans-serif;
+    font-size: 15px; }
+
+body.path-shop form#search-form .col-md-4 {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center; }
+  body.path-shop form#search-form .col-md-4 .block-fur-term {
+    display: inline-block; }
+    body.path-shop form#search-form .col-md-4 .block-fur-term a {
+      color: #888888;
+      text-decoration: none;
+      font-size: 15px;
+      line-height: 22px; }
+      body.path-shop form#search-form .col-md-4 .block-fur-term a:hover {
+        color: #e6ae48; }
+  body.path-shop form#search-form .col-md-4 .block-fur-title h2 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #212121;
+    text-align: center; }
+    body.path-shop form#search-form .col-md-4 .block-fur-title h2 a {
+      text-decoration: none;
+      border-bottom: 1px solid transparent; }
+      body.path-shop form#search-form .col-md-4 .block-fur-title h2 a:hover {
+        border-bottom: 1px solid #e6ae48; }
+  body.path-shop form#search-form .col-md-4 .block-fur-price p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #888888;
+    padding: 20px 0; }
+
+body.path-shop form#search-form nav.pager {
+  text-align: center; }
+  body.path-shop form#search-form nav.pager ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0; }
+    body.path-shop form#search-form nav.pager ul li {
+      display: block;
+      margin: 0;
+      padding: 1px 3px;
+      float: left; }
+      body.path-shop form#search-form nav.pager ul li a {
+        color: white;
+        border-color: #e6ae48;
+        line-height: 31px !important;
+        display: block;
+        min-width: 32px;
+        height: 32px;
+        position: relative;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 50%;
+        background-color: #e6ae48;
+        text-decoration: none;
+        font-family: "arialregular", sans-serif; }
+        body.path-shop form#search-form nav.pager ul li a span:last-child {
+          opacity: 0;
+          width: 15px;
+          height: 15px; }
 
 /*# sourceMappingURL=../stylesheets/application.css.map */
