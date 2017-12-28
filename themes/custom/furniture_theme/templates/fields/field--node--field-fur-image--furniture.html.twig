@@ -57,7 +57,7 @@ label_display == 'visually_hidden' ? 'visually-hidden',
         {#{{ attributes.addClass(classes, 'field__items') }}#}
             {% for item in items %}
                 <li id="container"{{ item.attributes.addClass('field__item') }}>{{ item.content }}
-                <div class="magnifier"></div>
+                {#<div class="magnifier"></div>#}
                 </li>
             {% endfor %}
             {% else %}

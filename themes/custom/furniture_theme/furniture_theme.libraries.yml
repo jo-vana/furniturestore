@@ -16,6 +16,7 @@ global-js:
       minified: false
     assets/scripts/vendor/jquery.flexslider.js:
           minified: false
+    assets/scripts/vendor/masonry-layout/dist/masonry.pkgd.min.js: {}
   dependencies:
     - core/jquery
     - core/drupal

@@ -57,12 +57,15 @@
             transition-timing-function: linear;
           }
         }
+        //&.is-active {
+        //  color: #9d9d9d;
+        //}
       }
       &:hover {
         ul.nav-1 {
           visibility: visible;
           margin-top: -5px;
-          top: 92px;
+          top: 130px;
           opacity: 1;
         }
         ul.nav-1.has-children {

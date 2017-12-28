@@ -11,6 +11,7 @@
     .first-left-block {
       display: inline-block;
       width: 50%;
+      vertical-align: top;
       #slider {
         margin-bottom: 0;
         .flex-direction-nav {
@@ -41,6 +42,10 @@
             //margin-left: 5%;
           }
         }
+      }
+      @media screen and (max-width: $screen-sm){
+        width: 80%;
+        margin: 0 auto;
       }
     }
     .first-right-block {
@@ -174,6 +179,149 @@
           font-weight: normal;
           font-size: 16px;
           line-height: 24px;
+        }
+      }
+    }
+    #tab-3 {
+      article.comment {
+        display: block;
+        position: relative;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e6e6e6;
+        margin-bottom: 20px;
+        footer.comment__meta {
+          background-color: white;
+          border-bottom: none;
+          article.profile {
+            display: inline-block;
+            a {
+              img{
+                border-radius: 50%;
+              }
+            }
+          }
+          p.comment__submitted {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 2px;
+            font-family: $font-karla;
+            font-size: 13px;
+            color: $font-color;
+            a {
+              font-family: $font-karla;
+              font-size: 18px;
+              color: $color-black;
+              text-decoration: none;
+            }
+          }
+        }
+        .content {
+          h3 {
+            display: none;
+          }
+          ul {
+            display: block;
+            text-align: right;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 0;
+            li {
+              a {
+                font-family: $font-arial;
+                font-size: 15px;
+                color: $color-orange;
+                text-decoration: none;
+                &:hover {
+                  color: $font-color;
+                }
+              }
+            }
+          }
+          .field--name-field-your-rating {
+            display: block;
+            text-align: right;
+            position: absolute;
+            top: 25%;
+            right: 0;
+            .field__label {
+              display: none;
+            }
+            .field__item {
+              text-align: left;
+              display: inline-block;
+            }
+          }
+          .field--name-field-comment,
+          .field--name-field-comment-name {
+            font-family: $font-arial;
+            font-size: 15px;
+            color: $font-color;
+          }
+        }
+      }
+      form.comment-comments-with-fields-form {
+        h1 {
+          display: none;
+        }
+        .form-item-name {
+          display: none;
+        }
+        .field--name-field-your-rating {
+          label {
+            font-family: $font-arial;
+            font-size: 15px;
+            color: $font-color;
+          }
+        }
+        .form-textarea-wrapper {
+          textarea {
+            max-width: 570px;
+            min-height: 160px;
+            border-color: #e6e6e6;
+            font-size: 15px;
+            padding: 10px 0 0 10px;
+            &:focus {
+              outline: 1px solid #e6ae48;
+            }
+          }
+        }
+        .field--name-field-comment-name {
+          .form-item-field-comment-name-0-value {
+            input {
+              max-width: 310px;
+              height: 40px;
+              border: 1px solid #e6e6e6;
+              font-size: 15px;
+              padding-left: 10px;
+              &:focus {
+                outline: 1px solid #e6ae48;
+              }
+              @media screen and(max-width: $screen-xs-min) {
+                width: 100%;
+              }
+            }
+          }
+        }
+        .field--name-field-email {
+          .form-item-field-email-0-value {
+            input {
+              max-width: 310px;
+              height: 40px;
+              border: 1px solid #e6e6e6;
+              font-size: 15px;
+              padding-left: 10px;
+              &:focus {
+                outline: 1px solid #e6ae48;
+              }
+              @media screen and(max-width: $screen-xs-min) {
+                width: 100%;
+              }
+            }
+          }
+        }
+        .form-actions {
+          @include submit_button;
         }
       }
     }
