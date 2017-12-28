@@ -32,11 +32,13 @@ class FavouriteProducts extends BlockBase implements BlockPluginInterface{
 
         $query->innerJoin('node__field_price', 'fp', 'fp.entity_id = n.nid' );
 
+        $query->innerJoin('node_counter', 'nc', 'nc.nid = n.nid');
+
+        $query->orderBy( 'totalcount', 'DESC' );
+
         $query->addField('n', 'nid');
         $query->addField('n', 'title');
-
         $query->addField('fi', 'field_fur_image_target_id', 'image');
-
         $query->addField('fp', 'field_price_value');
 
         $data = [];
@@ -53,6 +55,12 @@ class FavouriteProducts extends BlockBase implements BlockPluginInterface{
                 'field_price_value' => $result->field_price_value,
                 'image' => $url,
             ];
+            if (count($data) > 6){
+                if( !empty($data[6])) {
+                    unset($data[6]);
+                }
+                return $data;
+            }
         }
 
         return $data;
