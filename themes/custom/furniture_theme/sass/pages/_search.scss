@@ -6,14 +6,46 @@
 // ========================================
 body.path-shop {
   form#search-form {
-    .form-item-sort {
+    .filter {
       display: inline-block;
-      select {
-        background-color: white;
-        padding: 7% 10%;
-        color: #888888;
-        font-family: $font-arial;
+      .form-item-sort {
+        display: inline-block;
+        margin-top: 0;
+        select {
+          background-color: white;
+          padding: 4% 10%;
+          color: #888888;
+          font-family: $font-arial;
+          font-size: 15px;
+        }
+      }
+    }
+    .button {
+      display: inline-block;
+      vertical-align: top;
+      input {
+        display: inline-block;
+        width: 80px;
+        height: 40px;
+        background-color: $color-black;
+        transition: all .3s ease-in-out;
+        border: none;
+        color: white;
         font-size: 15px;
+        line-height: 42px;
+        font-weight: normal;
+        font-style: normal;
+        font-family: "Karla", sans-serif;
+        margin-right: 10px;
+        &:hover {
+          background-color: $color-orange;
+        }
+      }
+      h2 {
+        display: inline-block;
+        margin-top: 5px;
+        float: right;
+        clear: right;
       }
     }
     .col-md-4 {
@@ -40,6 +72,7 @@ body.path-shop {
           color: $color-black;
           text-align: center;
           a {
+            white-space: nowrap;
             text-decoration: none;
             border-bottom: 1px solid transparent;
             &:hover {

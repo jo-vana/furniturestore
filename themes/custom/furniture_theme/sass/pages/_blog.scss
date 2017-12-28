@@ -38,6 +38,19 @@
       }
     }
   }
+  .like-counter {
+    display: none;
+  }
+  .comment-counter {
+    display: inline-block;
+    text-align: right;
+    padding-top: 15px;
+    i {
+      color: #888888;
+      text-decoration: none;
+      font-size: 15px;
+    }
+  }
   .info-sec {
     display: block;
     .field--name-field-blog-author {
@@ -180,7 +193,68 @@
 section.field--name-field-leave-a-reply {
   margin: 45px 0;
   h2 {
-    display: none;
+  }
+  article.comment {
+    display: block;
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 20px;
+    footer.comment__meta {
+      background-color: white;
+      border-bottom: none;
+      article.profile {
+        display: inline-block;
+        a {
+          img{
+            border-radius: 50%;
+          }
+        }
+      }
+      p.comment__submitted {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 2px;
+        font-family: $font-karla;
+        font-size: 13px;
+        color: $font-color;
+        span {
+          font-family: $font-karla;
+          font-size: 18px;
+          color: $color-black;
+        }
+      }
+    }
+    .content {
+      h3 {
+        display: none;
+      }
+      ul {
+        display: block;
+        text-align: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 0;
+        li {
+          a {
+            font-family: $font-arial;
+            font-size: 15px;
+            color: $color-orange;
+            text-decoration: none;
+            &:hover {
+              color: $font-color;
+            }
+          }
+        }
+      }
+      .field--name-field-comment,
+      .field--name-field-comment-name {
+        font-family: $font-arial;
+        font-size: 15px;
+        color: $font-color;
+      }
+    }
   }
   form.comment-blog-comments-form {
     h1 {

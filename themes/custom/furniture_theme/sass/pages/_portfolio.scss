@@ -346,5 +346,11 @@
         }
       }
     }
+    @media screen and (max-width: $screen-sm-max){
+      width: 46%;
+    }
+    @media screen and (max-width: $screen-xs-min){
+      width: 100%;
+    }
   }
 }
