@@ -159,8 +159,8 @@
     margin: 0 auto;
     float: none;
     margin-top: 60px;
-    @media screen and (max-width:$screen-lg) {
-      width: 80%;
+    @media screen and (max-width:$screen-lg-min) {
+      width: 95%;
     }
   }
 }

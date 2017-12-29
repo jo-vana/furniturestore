@@ -217,11 +217,15 @@
     @include container-fixed;
     padding-bottom: 2rem;
     display: inline-block;
-    width: 33%;
+    vertical-align: top;
+    width: calc(100% / 3.1);
     position: relative;
     margin: 0 auto;
     .block-fur-img {
       display: none;
+      img {
+        margin: 0 auto;
+      }
     }
     .block-fur-img:first-of-type {
       display: block;
@@ -274,6 +278,9 @@
         line-height: 24px;
         color: #888888;
       }
+    }
+    @media screen and (max-width: $screen-sm-min) {
+      width: 100%;
     }
   }
   .visit-store {

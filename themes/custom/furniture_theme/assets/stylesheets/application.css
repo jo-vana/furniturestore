@@ -3438,9 +3438,9 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
     float: none;
     margin-top: 60px; }
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 80rem) {
       .layout-container main {
-        width: 80%; } }
+        width: 95%; } }
 
 .fix-navbar .region-primary-menu {
   position: fixed;
@@ -6012,7 +6012,8 @@ section.field--name-field-leave-a-reply {
     zoom: 1;
     padding-bottom: 2rem;
     display: inline-block;
-    width: 33%;
+    vertical-align: top;
+    width: calc(100% / 3.1);
     position: relative;
     margin: 0 auto; }
     #block-ourcollectionsblock .block-fur-wrap:before, #block-ourcollectionsblock .block-fur-wrap:after {
@@ -6024,6 +6025,8 @@ section.field--name-field-leave-a-reply {
       clear: both; }
     #block-ourcollectionsblock .block-fur-wrap .block-fur-img {
       display: none; }
+      #block-ourcollectionsblock .block-fur-wrap .block-fur-img img {
+        margin: 0 auto; }
     #block-ourcollectionsblock .block-fur-wrap .block-fur-img:first-of-type {
       display: block;
       position: relative; }
@@ -6064,6 +6067,9 @@ section.field--name-field-leave-a-reply {
         font-size: 18px;
         line-height: 24px;
         color: #888888; }
+    @media screen and (max-width: 51.2rem) {
+      #block-ourcollectionsblock .block-fur-wrap {
+        width: 100%; } }
   #block-ourcollectionsblock .visit-store {
     display: block;
     width: 200px;
