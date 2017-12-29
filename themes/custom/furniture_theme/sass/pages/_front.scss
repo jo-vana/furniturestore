@@ -19,24 +19,60 @@
       float: left;
       clear: left;
       vertical-align: top;
-      .field__item {
-        position: relative;
-        max-height: 392px;
-        overflow: hidden;
-        margin-top: 40px;
-        margin-bottom: 0px;
-        .field--name-field-mosaic-button {
-          @include mosaic_button;
-        }
-        &:first-child {
-          margin-top: 0;
-          margin-bottom: 40px;
-        }
-        &:last-child {
-          .field--name-field-mosaic-button {
-            left: 22%;
+      height: 823px;
+      .field__items {
+        width: 100%;
+        .field__item {
+          position: relative;
+          overflow: hidden;
+          .paragraph--type--image-with-link {
+            height: 392px;
+            width: 100%;
+            @media screen and (max-width: $screen-xs-min) {
+              height: 300px;
+            }
+            .field--name-field-mosaic-image {
+              margin-top: 0;
+              margin-bottom: 40px;
+              position: relative;
+              height: 392px;
+              overflow: hidden;
+              img {
+                position: absolute;
+                top: -8px;
+                max-width: 400px;
+                height: 419px;
+                z-index: -1;
+                right: 0;
+                @media screen and (max-width: $screen-sm-min) {
+                  top: 0;
+                  width: 100%;
+                  height: auto;
+                  max-width: 800px;
+                }
+              }
+              @media screen and (max-width: $screen-xs-min) {
+                height: 300px;
+              }
+            }
+            .field--name-field-mosaic-button {
+              @include mosaic_button;
+            }
+          }
+          &:first-child {
+            margin-top: 0;
+            margin-bottom: 40px;
           }
         }
+      }
+      @media screen and (max-width: $screen-md-min) {
+        width: 29.6%;
+      }
+      @media screen and (max-width: $screen-sm-min) {
+        width: 96.6%;
+      }
+      @media screen and (max-width: $screen-xs-min) {
+        height: auto;
       }
     }
     .middle-large-mosaic {
@@ -46,18 +82,55 @@
       position: relative;
       float: none;
       min-height: 1px;
-      max-height: 825px;
+      height: 823px;
       overflow: hidden;
       .field__item {
         position: relative;
-        img {
-          margin: 0 auto;
+        width: 100%;
+        overflow: hidden;
+        .paragraph--type---largeimage-with-link {
+          height: 823px;
+          width: 100%;
+          @media screen and (max-width: $screen-xs-min) {
+            height: 600px;
+          }
+          .field--name-field-mosaic-image {
+            margin: 0;
+            position: relative;
+            height: 823px;
+            overflow: hidden;
+            @media screen and (max-width: $screen-xs-min) {
+              height: 600px;
+            }
+            img {
+              position: absolute;
+              top: -8px;
+              max-width: 810px;
+              height: 832px;
+              z-index: -1;
+              right: 0;
+              @media screen and (max-width: $screen-sm-min) {
+                top: 0;
+                height: auto;
+                max-width: 830px;
+              }
+            }
+          }
+          .field--name-field-mosaic-button {
+            @include mosaic_button;
+          }
         }
-        .field--name-field-mosaic-button {
-          @include mosaic_button;
-          top: 46%;
-          left: 35%;
-        }
+      }
+      @media screen and (max-width: $screen-md-min) {
+        width: 30.6%;
+      }
+      @media screen and (max-width: $screen-sm-min) {
+        width: 96.6%;
+        margin-top: 40px;
+        height: 690px;
+      }
+      @media screen and (max-width: $screen-xs-min) {
+        height: auto;
       }
     }
     .right-block-mosaic {
@@ -68,24 +141,61 @@
       float: right;
       clear: right;
       vertical-align: top;
-      .field__item {
-        position: relative;
-        max-height: 392px;
-        overflow: hidden;
-        margin-top: 40px;
-        margin-bottom: 0px;
-        .field--name-field-mosaic-button {
-          @include mosaic_button;
-        }
-        &:first-child {
-          margin-top: 0;
-          margin-bottom: 40px;
-        }
-        &:last-child {
-          .field--name-field-mosaic-button {
-            left: 33%;
+      height: 823px;
+      .field__items {
+        width: 100%;
+        .field__item {
+          position: relative;
+          overflow: hidden;
+          .paragraph--type--image-with-link {
+            height: 392px;
+            width: 100%;
+            @media screen and (max-width: $screen-xs-min) {
+              height: 300px;
+            }
+            .field--name-field-mosaic-image {
+              margin-top: 0;
+              margin-bottom: 40px;
+              position: relative;
+              height: 392px;
+              overflow: hidden;
+              img {
+                position: absolute;
+                top: -8px;
+                max-width: 400px;
+                height: 419px;
+                z-index: -1;
+                right: 0;
+                @media screen and (max-width: $screen-sm-min) {
+                  top: 0;
+                  width: 100%;
+                  height: auto;
+                  max-width: 800px;
+                }
+              }
+              @media screen and (max-width: $screen-xs-min) {
+                height: 300px;
+              }
+            }
+            .field--name-field-mosaic-button {
+              @include mosaic_button;
+            }
+          }
+          &:first-child {
+            margin-top: 0;
+            margin-bottom: 40px;
           }
         }
+      }
+      @media screen and (max-width: $screen-md-min) {
+        width: 29.6%;
+      }
+      @media screen and (max-width: $screen-sm-min) {
+        width: 96.6%;
+        margin-top: 40px;
+      }
+      @media screen and (max-width: $screen-xs-min) {
+        height: auto;
       }
     }
   }

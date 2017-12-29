@@ -16,12 +16,12 @@
     min-height: 36px;
     background-color: black;
     .region-header {
-      @extend .col-lg-11;
+      width: 94%;
       display: inline-block;
-      float: none;
       margin: 0 auto;
-      padding: 0!important;
+      padding: 0;
       margin-left: 3%;
+      margin-right: 3%;
       @media screen and (max-width: $screen-md-min) {
         margin-left: 0;
       }

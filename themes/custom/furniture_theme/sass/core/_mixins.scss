@@ -319,8 +319,9 @@
 @mixin  mosaic_button {
   display: block;
   position: absolute;
-  top: 34%;
-  left: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   a {
     font-family: $font-karla;
     text-decoration: none;
@@ -328,7 +329,7 @@
     font-weight: normal;
     font-style: normal;
     color: #252324;
-    padding: 10% 15%;
+    padding: 20px 40px;
     background-color: white;
     line-height: 60px;
     transition: all .3s ease-in-out;

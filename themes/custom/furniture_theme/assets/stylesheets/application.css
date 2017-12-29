@@ -2734,7 +2734,7 @@ th {
   .row:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .region-come-visit, .region-member-get-more, .region-in-the-press, .region-slider-front, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .layout-container header .region-header, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .region-come-visit, .region-member-get-more, .region-in-the-press, .region-slider-front, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 1rem;
@@ -3109,7 +3109,7 @@ th {
     margin-left: 100%; } }
 
 @media (min-width: 80rem) {
-  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .region-come-visit, .region-member-get-more, .region-in-the-press, .region-slider-front, .col-lg-9, .col-lg-10, .col-lg-11, .layout-container header .region-header, .col-lg-12 {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .region-come-visit, .region-member-get-more, .region-in-the-press, .region-slider-front, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left; }
   .col-lg-1 {
     width: 8.33333%; }
@@ -3131,7 +3131,7 @@ th {
     width: 75%; }
   .col-lg-10 {
     width: 83.33333%; }
-  .col-lg-11, .layout-container header .region-header {
+  .col-lg-11 {
     width: 91.66667%; }
   .col-lg-12 {
     width: 100%; }
@@ -3322,11 +3322,12 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 36px;
     background-color: black; }
     .layout-container header .region-header {
+      width: 94%;
       display: inline-block;
-      float: none;
       margin: 0 auto;
-      padding: 0 !important;
-      margin-left: 3%; }
+      padding: 0;
+      margin-left: 3%;
+      margin-right: 3%; }
       @media screen and (max-width: 66.13333rem) {
         .layout-container header .region-header {
           margin-left: 0; } }
@@ -3851,7 +3852,7 @@ footer {
 #block-furniture-theme-main-menu {
   display: inline-block;
   width: 60%;
-  margin-right: 5%;
+  margin-right: 3%;
   float: right;
   clear: right; }
   #block-furniture-theme-main-menu ul.nav-0 {
@@ -5759,38 +5760,76 @@ section.field--name-field-leave-a-reply {
       position: relative;
       float: left;
       clear: left;
-      vertical-align: top; }
-      .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__item {
-        position: relative;
-        max-height: 392px;
-        overflow: hidden;
-        margin-top: 40px;
-        margin-bottom: 0px; }
-        .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__item .field--name-field-mosaic-button {
-          display: block;
-          position: absolute;
-          top: 34%;
-          left: 30%; }
-          .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__item .field--name-field-mosaic-button a {
-            font-family: "Karla", sans-serif;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: normal;
-            font-style: normal;
-            color: #252324;
-            padding: 10% 15%;
-            background-color: white;
-            line-height: 60px;
-            transition: all .3s ease-in-out;
-            white-space: nowrap; }
-            .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__item .field--name-field-mosaic-button a:hover {
-              background-color: #e6ae48;
-              color: white; }
-        .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__item:first-child {
-          margin-top: 0;
-          margin-bottom: 40px; }
-        .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__item:last-child .field--name-field-mosaic-button {
-          left: 22%; }
+      vertical-align: top;
+      height: 823px; }
+      .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__items {
+        width: 100%; }
+        .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__items .field__item {
+          position: relative;
+          overflow: hidden; }
+          .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__items .field__item .paragraph--type--image-with-link {
+            height: 392px;
+            width: 100%; }
+            @media screen and (max-width: 28rem) {
+              .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__items .field__item .paragraph--type--image-with-link {
+                height: 300px; } }
+            .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__items .field__item .paragraph--type--image-with-link .field--name-field-mosaic-image {
+              margin-top: 0;
+              margin-bottom: 40px;
+              position: relative;
+              height: 392px;
+              overflow: hidden; }
+              .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__items .field__item .paragraph--type--image-with-link .field--name-field-mosaic-image img {
+                position: absolute;
+                top: -8px;
+                max-width: 400px;
+                height: 419px;
+                z-index: -1;
+                right: 0; }
+                @media screen and (max-width: 51.2rem) {
+                  .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__items .field__item .paragraph--type--image-with-link .field--name-field-mosaic-image img {
+                    top: 0;
+                    width: 100%;
+                    height: auto;
+                    max-width: 800px; } }
+              @media screen and (max-width: 28rem) {
+                .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__items .field__item .paragraph--type--image-with-link .field--name-field-mosaic-image {
+                  height: 300px; } }
+            .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__items .field__item .paragraph--type--image-with-link .field--name-field-mosaic-button {
+              display: block;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate(-50%, -50%);
+                  -ms-transform: translate(-50%, -50%);
+                      transform: translate(-50%, -50%); }
+              .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__items .field__item .paragraph--type--image-with-link .field--name-field-mosaic-button a {
+                font-family: "Karla", sans-serif;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: normal;
+                font-style: normal;
+                color: #252324;
+                padding: 20px 40px;
+                background-color: white;
+                line-height: 60px;
+                transition: all .3s ease-in-out;
+                white-space: nowrap; }
+                .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__items .field__item .paragraph--type--image-with-link .field--name-field-mosaic-button a:hover {
+                  background-color: #e6ae48;
+                  color: white; }
+          .region-mozaik-front .mosaic-wrap .left-block-mosaic .field__items .field__item:first-child {
+            margin-top: 0;
+            margin-bottom: 40px; }
+      @media screen and (max-width: 66.13333rem) {
+        .region-mozaik-front .mosaic-wrap .left-block-mosaic {
+          width: 29.6%; } }
+      @media screen and (max-width: 51.2rem) {
+        .region-mozaik-front .mosaic-wrap .left-block-mosaic {
+          width: 96.6%; } }
+      @media screen and (max-width: 28rem) {
+        .region-mozaik-front .mosaic-wrap .left-block-mosaic {
+          height: auto; } }
     .region-mozaik-front .mosaic-wrap .middle-large-mosaic {
       display: inline-block;
       width: 46.6%;
@@ -5798,34 +5837,72 @@ section.field--name-field-leave-a-reply {
       position: relative;
       float: none;
       min-height: 1px;
-      max-height: 825px;
+      height: 823px;
       overflow: hidden; }
       .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item {
-        position: relative; }
-        .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item img {
-          margin: 0 auto; }
-        .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item .field--name-field-mosaic-button {
-          display: block;
-          position: absolute;
-          top: 34%;
-          left: 30%;
-          top: 46%;
-          left: 35%; }
-          .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item .field--name-field-mosaic-button a {
-            font-family: "Karla", sans-serif;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: normal;
-            font-style: normal;
-            color: #252324;
-            padding: 10% 15%;
-            background-color: white;
-            line-height: 60px;
-            transition: all .3s ease-in-out;
-            white-space: nowrap; }
-            .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item .field--name-field-mosaic-button a:hover {
-              background-color: #e6ae48;
-              color: white; }
+        position: relative;
+        width: 100%;
+        overflow: hidden; }
+        .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item .paragraph--type---largeimage-with-link {
+          height: 823px;
+          width: 100%; }
+          @media screen and (max-width: 28rem) {
+            .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item .paragraph--type---largeimage-with-link {
+              height: 600px; } }
+          .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item .paragraph--type---largeimage-with-link .field--name-field-mosaic-image {
+            margin: 0;
+            position: relative;
+            height: 823px;
+            overflow: hidden; }
+            @media screen and (max-width: 28rem) {
+              .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item .paragraph--type---largeimage-with-link .field--name-field-mosaic-image {
+                height: 600px; } }
+            .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item .paragraph--type---largeimage-with-link .field--name-field-mosaic-image img {
+              position: absolute;
+              top: -8px;
+              max-width: 810px;
+              height: 832px;
+              z-index: -1;
+              right: 0; }
+              @media screen and (max-width: 51.2rem) {
+                .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item .paragraph--type---largeimage-with-link .field--name-field-mosaic-image img {
+                  top: 0;
+                  height: auto;
+                  max-width: 830px; } }
+          .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item .paragraph--type---largeimage-with-link .field--name-field-mosaic-button {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%); }
+            .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item .paragraph--type---largeimage-with-link .field--name-field-mosaic-button a {
+              font-family: "Karla", sans-serif;
+              text-decoration: none;
+              font-size: 18px;
+              font-weight: normal;
+              font-style: normal;
+              color: #252324;
+              padding: 20px 40px;
+              background-color: white;
+              line-height: 60px;
+              transition: all .3s ease-in-out;
+              white-space: nowrap; }
+              .region-mozaik-front .mosaic-wrap .middle-large-mosaic .field__item .paragraph--type---largeimage-with-link .field--name-field-mosaic-button a:hover {
+                background-color: #e6ae48;
+                color: white; }
+      @media screen and (max-width: 66.13333rem) {
+        .region-mozaik-front .mosaic-wrap .middle-large-mosaic {
+          width: 30.6%; } }
+      @media screen and (max-width: 51.2rem) {
+        .region-mozaik-front .mosaic-wrap .middle-large-mosaic {
+          width: 96.6%;
+          margin-top: 40px;
+          height: 690px; } }
+      @media screen and (max-width: 28rem) {
+        .region-mozaik-front .mosaic-wrap .middle-large-mosaic {
+          height: auto; } }
     .region-mozaik-front .mosaic-wrap .right-block-mosaic {
       display: inline-block;
       width: 21.6%;
@@ -5833,38 +5910,77 @@ section.field--name-field-leave-a-reply {
       position: relative;
       float: right;
       clear: right;
-      vertical-align: top; }
-      .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__item {
-        position: relative;
-        max-height: 392px;
-        overflow: hidden;
-        margin-top: 40px;
-        margin-bottom: 0px; }
-        .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__item .field--name-field-mosaic-button {
-          display: block;
-          position: absolute;
-          top: 34%;
-          left: 30%; }
-          .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__item .field--name-field-mosaic-button a {
-            font-family: "Karla", sans-serif;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: normal;
-            font-style: normal;
-            color: #252324;
-            padding: 10% 15%;
-            background-color: white;
-            line-height: 60px;
-            transition: all .3s ease-in-out;
-            white-space: nowrap; }
-            .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__item .field--name-field-mosaic-button a:hover {
-              background-color: #e6ae48;
-              color: white; }
-        .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__item:first-child {
-          margin-top: 0;
-          margin-bottom: 40px; }
-        .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__item:last-child .field--name-field-mosaic-button {
-          left: 33%; }
+      vertical-align: top;
+      height: 823px; }
+      .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__items {
+        width: 100%; }
+        .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__items .field__item {
+          position: relative;
+          overflow: hidden; }
+          .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__items .field__item .paragraph--type--image-with-link {
+            height: 392px;
+            width: 100%; }
+            @media screen and (max-width: 28rem) {
+              .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__items .field__item .paragraph--type--image-with-link {
+                height: 300px; } }
+            .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__items .field__item .paragraph--type--image-with-link .field--name-field-mosaic-image {
+              margin-top: 0;
+              margin-bottom: 40px;
+              position: relative;
+              height: 392px;
+              overflow: hidden; }
+              .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__items .field__item .paragraph--type--image-with-link .field--name-field-mosaic-image img {
+                position: absolute;
+                top: -8px;
+                max-width: 400px;
+                height: 419px;
+                z-index: -1;
+                right: 0; }
+                @media screen and (max-width: 51.2rem) {
+                  .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__items .field__item .paragraph--type--image-with-link .field--name-field-mosaic-image img {
+                    top: 0;
+                    width: 100%;
+                    height: auto;
+                    max-width: 800px; } }
+              @media screen and (max-width: 28rem) {
+                .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__items .field__item .paragraph--type--image-with-link .field--name-field-mosaic-image {
+                  height: 300px; } }
+            .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__items .field__item .paragraph--type--image-with-link .field--name-field-mosaic-button {
+              display: block;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate(-50%, -50%);
+                  -ms-transform: translate(-50%, -50%);
+                      transform: translate(-50%, -50%); }
+              .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__items .field__item .paragraph--type--image-with-link .field--name-field-mosaic-button a {
+                font-family: "Karla", sans-serif;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: normal;
+                font-style: normal;
+                color: #252324;
+                padding: 20px 40px;
+                background-color: white;
+                line-height: 60px;
+                transition: all .3s ease-in-out;
+                white-space: nowrap; }
+                .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__items .field__item .paragraph--type--image-with-link .field--name-field-mosaic-button a:hover {
+                  background-color: #e6ae48;
+                  color: white; }
+          .region-mozaik-front .mosaic-wrap .right-block-mosaic .field__items .field__item:first-child {
+            margin-top: 0;
+            margin-bottom: 40px; }
+      @media screen and (max-width: 66.13333rem) {
+        .region-mozaik-front .mosaic-wrap .right-block-mosaic {
+          width: 29.6%; } }
+      @media screen and (max-width: 51.2rem) {
+        .region-mozaik-front .mosaic-wrap .right-block-mosaic {
+          width: 96.6%;
+          margin-top: 40px; } }
+      @media screen and (max-width: 28rem) {
+        .region-mozaik-front .mosaic-wrap .right-block-mosaic {
+          height: auto; } }
 
 #block-ourcollectionsblock {
   margin-right: auto;
