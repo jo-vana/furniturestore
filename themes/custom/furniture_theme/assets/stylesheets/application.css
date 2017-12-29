@@ -3540,6 +3540,9 @@ body.user-logged-in .fix-navbar .region-primary-menu {
             outline: none;
             border: 2px solid #707070;
             border-right: 1px solid #707070; }
+          @media screen and (max-width: 28rem) {
+            .region-subscribe-region .subscribe-form-block form .form-item-email input#edit-email {
+              max-width: 270px; } }
       .region-subscribe-region .subscribe-form-block form input#edit-actions {
         height: 48px;
         padding: 0 34px;

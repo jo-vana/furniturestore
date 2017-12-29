@@ -280,6 +280,9 @@ body.user-logged-in {
             border: 2px solid #707070;
             border-right: 1px solid #707070;
           }
+          @media screen and (max-width: $screen-xs-min){
+            max-width: 270px;
+          }
         }
       }
       input#edit-actions {
