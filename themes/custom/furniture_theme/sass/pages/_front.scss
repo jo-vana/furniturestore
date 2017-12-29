@@ -320,10 +320,11 @@
   #block-2017storecatalogue {
     display: inline-block;
     vertical-align: top;
-    width: 24%;
+    width: calc(100% / 4.1);
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 95px;
+    padding-bottom: 40px;
     h2 {
       font-size: 25px;
       font-weight: normal;
@@ -358,6 +359,12 @@
         }
       }
     }
+    @media screen and (max-width: $screen-md-min) {
+      width: calc(100% / 2.1);
+    }
+    @media screen and (max-width: $screen-sm-min) {
+      width: 100%;
+    }
   }
   #block-furnituremobileapp {
     h2 {
@@ -365,8 +372,9 @@
         content: '\f10b';
         font-family: $font-awesome;
         position: absolute;
-        top: -70px;
-        left: 46%;
+        top: -77px;
+        left: 50%;
+        transform: translateX(-50%);
         font-size: 64px;
         color: #e6ae48;
       }
@@ -378,8 +386,9 @@
         content: '\f06b';
         font-family: $font-awesome;
         position: absolute;
-        top: -70px;
-        left: 41%;
+        top: -77px;
+        left: 50%;
+        transform: translateX(-50%);
         font-size: 64px;
         color: #e6ae48;
       }
@@ -391,8 +400,9 @@
         content: '\f2c0';
         font-family: $font-awesome;
         position: absolute;
-        top: -70px;
-        left: 39%;
+        top: -77px;
+        left: 50%;
+        transform: translateX(-50%);
         font-size: 55px;
         color: #e6ae48;
       }
@@ -404,8 +414,9 @@
         content: '\f1ea';
         font-family: $font-awesome;
         position: absolute;
-        top: -70px;
-        left: 36%;
+        top: -77px;
+        left: 50%;
+        transform: translateX(-50%);
         font-size: 55px;
         color: #e6ae48;
       }
@@ -436,54 +447,64 @@
     padding-left: 2rem;
     padding-right: 2rem;
     vertical-align: top;
-    h2 {
-      display: inline-block;
-      width: 48%;
-      text-align: left;
-      margin: 0;
-      float: left;
-      font-size: 30px;
-      line-height: 36px;
-      font-weight: normal;
-      font-style: normal;
-      margin-bottom: 20px;
-    }
-    .field--name-body {
-      display: block;
-      width: 48%;
-      p {
-        font-family: $font-arial;
-        padding: 0 0 20px;
+    .text-wrapper {
+      display: inline-grid;
+      width: 49%;
+      vertical-align: top;
+      h2 {
+        display: block;
+        width: 100%;
         margin: 0;
-        font-size: 15px;
-        line-height: 22px;
-        font-weight: normal;
-        color: #888888;
-      }
-    }
-    .field--name-field-block-link {
-      display: inline-block;
-      width: 40%;
-      a {
-        font-family: $font-karla;
-        font-size: 18px;
-        line-height: 24px;
+        text-align: left;
+        font-size: 30px;
+        line-height: 36px;
         font-weight: normal;
         font-style: normal;
-        text-decoration: none;
-        color: $color-black;
-        &:hover {
-          color: #e6ae48;
+        margin-bottom: 20px;
+      }
+      .field--name-body {
+        p {
+          font-family: $font-arial;
+          padding: 0 0 20px;
+          margin: 0;
+          font-size: 15px;
+          line-height: 22px;
+          font-weight: normal;
+          color: #888888;
         }
+      }
+      .field--name-field-block-link {
+        padding-bottom: 30px;
+        a {
+          font-family: $font-karla;
+          font-size: 18px;
+          line-height: 24px;
+          font-weight: normal;
+          font-style: normal;
+          text-decoration: none;
+          color: $color-black;
+          &:hover {
+            color: #e6ae48;
+          }
+        }
+      }
+      @media screen and (max-width: $screen-sm-min){
+        width: 100%;
       }
     }
     .field--name-field-img {
       display: inline-block;
-      width: 55%;
-      position: absolute;
-      top: 0;
-      right: 0;
+      width: 50%;
+      position: relative;
       padding-left: 50px;
+      @media screen and (max-width: $screen-sm-min){
+        width: 100%;
+        padding: 0;
+      }
+    }
+    @media screen and (max-width: $screen-md-min) {
+      width: 100%;
+      padding-bottom: 30px;
     }
   }
   #block-furniturestorefamily {
@@ -511,6 +532,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
+    @media screen and (max-width: $screen-sm-min) {
+      width: 100%;
+      height: 300px;
+    }
   }
   .text-wrapp {
     display: inline-block;
@@ -533,6 +558,7 @@
         font-weight: normal;
         font-style: normal;
         color: #252324;
+        margin-bottom: 0;
       }
       h3 {
         font-family: $font-karla;
@@ -560,6 +586,13 @@
         }
       }
     }
+    @media screen and (max-width: $screen-lg-min) {
+      padding: 10px 20px;
+    }
+    @media screen and (max-width: $screen-sm-min) {
+      width: 100%;
+      padding: 30px 20px;
+    }
   }
 }
 // - - Shopper guide block
@@ -576,6 +609,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
+    @media screen and (max-width: $screen-sm-min) {
+      width: 100%;
+      height: 300px;
+    }
   }
   .text-wrapp {
     display: inline-block;
@@ -629,6 +666,13 @@
           }
         }
       }
+    }
+    @media screen and (max-width: $screen-lg-min) {
+      padding: 10px 20px;
+    }
+    @media screen and (max-width: $screen-sm-min) {
+      width: 100%;
+      padding: 30px 20px;
     }
   }
 }
@@ -691,8 +735,9 @@
             position: absolute;
             width: 60px;
             height: 60px;
-            top: 44%;
-            left: 45%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             border-radius: 50%;
             background-color: rgba(255, 255, 255, 0.49);
             transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;

@@ -2734,7 +2734,7 @@ th {
   .row:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .region-come-visit, .region-member-get-more, .region-in-the-press, .region-slider-front, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .region-member-get-more, .region-in-the-press, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .region-come-visit, .region-slider-front, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 1rem;
@@ -3109,7 +3109,7 @@ th {
     margin-left: 100%; } }
 
 @media (min-width: 80rem) {
-  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .region-come-visit, .region-member-get-more, .region-in-the-press, .region-slider-front, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .region-member-get-more, .region-in-the-press, .col-lg-9, .region-come-visit, .region-slider-front, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left; }
   .col-lg-1 {
     width: 8.33333%; }
@@ -3125,9 +3125,9 @@ th {
     width: 50%; }
   .col-lg-7 {
     width: 58.33333%; }
-  .col-lg-8, .region-come-visit, .region-member-get-more, .region-in-the-press, .region-slider-front {
+  .col-lg-8, .region-member-get-more, .region-in-the-press {
     width: 66.66667%; }
-  .col-lg-9 {
+  .col-lg-9, .region-come-visit, .region-slider-front {
     width: 75%; }
   .col-lg-10 {
     width: 83.33333%; }
@@ -6103,10 +6103,11 @@ section.field--name-field-leave-a-reply {
 .region-come-visit #block-2017storecatalogue {
   display: inline-block;
   vertical-align: top;
-  width: 24%;
+  width: calc(100% / 4.1);
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 95px; }
+  padding-top: 95px;
+  padding-bottom: 40px; }
   .region-come-visit #block-furnituremobileapp h2,
   .region-come-visit #block-pickingwithdelivery h2,
   .region-come-visit #block-customservices h2,
@@ -6153,13 +6154,28 @@ section.field--name-field-leave-a-reply {
       .region-come-visit #block-customservices .field--name-field-block-link a:hover,
       .region-come-visit #block-2017storecatalogue .field--name-field-block-link a:hover {
         color: rgba(15, 127, 183, 0.55); }
+  @media screen and (max-width: 66.13333rem) {
+    .region-come-visit #block-furnituremobileapp,
+    .region-come-visit #block-pickingwithdelivery,
+    .region-come-visit #block-customservices,
+    .region-come-visit #block-2017storecatalogue {
+      width: calc(100% / 2.1); } }
+  @media screen and (max-width: 51.2rem) {
+    .region-come-visit #block-furnituremobileapp,
+    .region-come-visit #block-pickingwithdelivery,
+    .region-come-visit #block-customservices,
+    .region-come-visit #block-2017storecatalogue {
+      width: 100%; } }
 
 .region-come-visit #block-furnituremobileapp h2::before {
   content: '\f10b';
   font-family: "FontAwesome";
   position: absolute;
-  top: -70px;
-  left: 46%;
+  top: -77px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   font-size: 64px;
   color: #e6ae48; }
 
@@ -6167,8 +6183,11 @@ section.field--name-field-leave-a-reply {
   content: '\f06b';
   font-family: "FontAwesome";
   position: absolute;
-  top: -70px;
-  left: 41%;
+  top: -77px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   font-size: 64px;
   color: #e6ae48; }
 
@@ -6176,8 +6195,11 @@ section.field--name-field-leave-a-reply {
   content: '\f2c0';
   font-family: "FontAwesome";
   position: absolute;
-  top: -70px;
-  left: 39%;
+  top: -77px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   font-size: 55px;
   color: #e6ae48; }
 
@@ -6185,8 +6207,11 @@ section.field--name-field-leave-a-reply {
   content: '\f1ea';
   font-family: "FontAwesome";
   position: absolute;
-  top: -70px;
-  left: 36%;
+  top: -77px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   font-size: 55px;
   color: #e6ae48; }
 
@@ -6212,24 +6237,25 @@ section.field--name-field-leave-a-reply {
     padding-left: 2rem;
     padding-right: 2rem;
     vertical-align: top; }
-    .region-member-get-more #block-furniturestorefamily h2,
-    .region-member-get-more #block-furniturestorebusiness h2 {
-      display: inline-block;
-      width: 48%;
-      text-align: left;
-      margin: 0;
-      float: left;
-      font-size: 30px;
-      line-height: 36px;
-      font-weight: normal;
-      font-style: normal;
-      margin-bottom: 20px; }
-    .region-member-get-more #block-furniturestorefamily .field--name-body,
-    .region-member-get-more #block-furniturestorebusiness .field--name-body {
-      display: block;
-      width: 48%; }
-      .region-member-get-more #block-furniturestorefamily .field--name-body p,
-      .region-member-get-more #block-furniturestorebusiness .field--name-body p {
+    .region-member-get-more #block-furniturestorefamily .text-wrapper,
+    .region-member-get-more #block-furniturestorebusiness .text-wrapper {
+      display: -ms-inline-grid;
+      display: inline-grid;
+      width: 49%;
+      vertical-align: top; }
+      .region-member-get-more #block-furniturestorefamily .text-wrapper h2,
+      .region-member-get-more #block-furniturestorebusiness .text-wrapper h2 {
+        display: block;
+        width: 100%;
+        margin: 0;
+        text-align: left;
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: normal;
+        font-style: normal;
+        margin-bottom: 20px; }
+      .region-member-get-more #block-furniturestorefamily .text-wrapper .field--name-body p,
+      .region-member-get-more #block-furniturestorebusiness .text-wrapper .field--name-body p {
         font-family: "arialregular", sans-serif;
         padding: 0 0 20px;
         margin: 0;
@@ -6237,30 +6263,41 @@ section.field--name-field-leave-a-reply {
         line-height: 22px;
         font-weight: normal;
         color: #888888; }
-    .region-member-get-more #block-furniturestorefamily .field--name-field-block-link,
-    .region-member-get-more #block-furniturestorebusiness .field--name-field-block-link {
-      display: inline-block;
-      width: 40%; }
-      .region-member-get-more #block-furniturestorefamily .field--name-field-block-link a,
-      .region-member-get-more #block-furniturestorebusiness .field--name-field-block-link a {
-        font-family: "Karla", sans-serif;
-        font-size: 18px;
-        line-height: 24px;
-        font-weight: normal;
-        font-style: normal;
-        text-decoration: none;
-        color: #212121; }
-        .region-member-get-more #block-furniturestorefamily .field--name-field-block-link a:hover,
-        .region-member-get-more #block-furniturestorebusiness .field--name-field-block-link a:hover {
-          color: #e6ae48; }
+      .region-member-get-more #block-furniturestorefamily .text-wrapper .field--name-field-block-link,
+      .region-member-get-more #block-furniturestorebusiness .text-wrapper .field--name-field-block-link {
+        padding-bottom: 30px; }
+        .region-member-get-more #block-furniturestorefamily .text-wrapper .field--name-field-block-link a,
+        .region-member-get-more #block-furniturestorebusiness .text-wrapper .field--name-field-block-link a {
+          font-family: "Karla", sans-serif;
+          font-size: 18px;
+          line-height: 24px;
+          font-weight: normal;
+          font-style: normal;
+          text-decoration: none;
+          color: #212121; }
+          .region-member-get-more #block-furniturestorefamily .text-wrapper .field--name-field-block-link a:hover,
+          .region-member-get-more #block-furniturestorebusiness .text-wrapper .field--name-field-block-link a:hover {
+            color: #e6ae48; }
+      @media screen and (max-width: 51.2rem) {
+        .region-member-get-more #block-furniturestorefamily .text-wrapper,
+        .region-member-get-more #block-furniturestorebusiness .text-wrapper {
+          width: 100%; } }
     .region-member-get-more #block-furniturestorefamily .field--name-field-img,
     .region-member-get-more #block-furniturestorebusiness .field--name-field-img {
       display: inline-block;
-      width: 55%;
-      position: absolute;
-      top: 0;
-      right: 0;
+      width: 50%;
+      position: relative;
       padding-left: 50px; }
+      @media screen and (max-width: 51.2rem) {
+        .region-member-get-more #block-furniturestorefamily .field--name-field-img,
+        .region-member-get-more #block-furniturestorebusiness .field--name-field-img {
+          width: 100%;
+          padding: 0; } }
+    @media screen and (max-width: 66.13333rem) {
+      .region-member-get-more #block-furniturestorefamily,
+      .region-member-get-more #block-furniturestorebusiness {
+        width: 100%;
+        padding-bottom: 30px; } }
   .region-member-get-more #block-furniturestorefamily h2 {
     color: #dc9814; }
   .region-member-get-more #block-furniturestorebusiness h2 {
@@ -6279,6 +6316,10 @@ section.field--name-field-leave-a-reply {
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px; }
+    @media screen and (max-width: 51.2rem) {
+      #block-designideas .bg-img {
+        width: 100%;
+        height: 300px; } }
   #block-designideas .text-wrapp {
     display: inline-block;
     width: 49.4%;
@@ -6298,7 +6339,8 @@ section.field--name-field-leave-a-reply {
         line-height: 44px;
         font-weight: normal;
         font-style: normal;
-        color: #252324; }
+        color: #252324;
+        margin-bottom: 0; }
       #block-designideas .text-wrapp .field--name-body h3 {
         font-family: "Karla", sans-serif;
         font-size: 24px;
@@ -6319,6 +6361,13 @@ section.field--name-field-leave-a-reply {
       padding: 10px 35px; }
       #block-designideas .text-wrapp .field--name-field-shop-now a:hover {
         background-color: #e6ae48; }
+    @media screen and (max-width: 80rem) {
+      #block-designideas .text-wrapp {
+        padding: 10px 20px; } }
+    @media screen and (max-width: 51.2rem) {
+      #block-designideas .text-wrapp {
+        width: 100%;
+        padding: 30px 20px; } }
 
 #block-shopperguide {
   display: block;
@@ -6333,6 +6382,10 @@ section.field--name-field-leave-a-reply {
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px; }
+    @media screen and (max-width: 51.2rem) {
+      #block-shopperguide .bg-img {
+        width: 100%;
+        height: 300px; } }
   #block-shopperguide .text-wrapp {
     display: inline-block;
     width: 49.4%;
@@ -6371,6 +6424,13 @@ section.field--name-field-leave-a-reply {
         color: #e6ae48; }
       #block-shopperguide .text-wrapp .item-list--linkicon li a:hover span {
         color: #9b9b9b; }
+    @media screen and (max-width: 80rem) {
+      #block-shopperguide .text-wrapp {
+        padding: 10px 20px; } }
+    @media screen and (max-width: 51.2rem) {
+      #block-shopperguide .text-wrapp {
+        width: 100%;
+        padding: 30px 20px; } }
 
 #block-fromtheblogblock h2 {
   font-size: 36px;
@@ -6419,8 +6479,11 @@ section.field--name-field-leave-a-reply {
       position: absolute;
       width: 60px;
       height: 60px;
-      top: 44%;
-      left: 45%;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
       border-radius: 50%;
       background-color: rgba(255, 255, 255, 0.49);
       transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out;
