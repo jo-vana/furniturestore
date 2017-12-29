@@ -6320,6 +6320,9 @@ section.field--name-field-leave-a-reply {
       #block-designideas .bg-img {
         width: 100%;
         height: 300px; } }
+    @media screen and (max-width: 28rem) {
+      #block-designideas .bg-img {
+        background-attachment: inherit; } }
   #block-designideas .text-wrapp {
     display: inline-block;
     width: 49.4%;
@@ -6386,6 +6389,9 @@ section.field--name-field-leave-a-reply {
       #block-shopperguide .bg-img {
         width: 100%;
         height: 300px; } }
+    @media screen and (max-width: 28rem) {
+      #block-shopperguide .bg-img {
+        background-attachment: inherit; } }
   #block-shopperguide .text-wrapp {
     display: inline-block;
     width: 49.4%;
