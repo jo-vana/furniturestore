@@ -4319,8 +4319,6 @@ body.user-logged-in #block-mainnavigationmobile .menu-toggle {
           width: 25px;
           background-color: #e6ae48;
           margin: 0 20px 4px 0; }
-  .blog-wrapper .like-counter {
-    display: none; }
   .blog-wrapper .comment-counter {
     display: inline-block;
     text-align: right;
