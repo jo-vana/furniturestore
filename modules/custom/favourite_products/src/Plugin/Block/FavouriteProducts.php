@@ -48,9 +48,9 @@ class FavouriteProducts extends BlockBase implements BlockPluginInterface{
         foreach ( $results as $result ) {
             $file = File::load($result->image);
             $url = \Drupal\image\Entity\ImageStyle::load('furniture_fav_321x321')->buildUrl($file->getFileUri());
-            $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$result->nid);
+            $alias_node = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$result->nid);
             $data[] = [
-                'alias' => $alias,
+                'alias' => $alias_node,
                 'title' => $result->title,
                 'field_price_value' => $result->field_price_value,
                 'image' => $url,
