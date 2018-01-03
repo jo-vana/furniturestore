@@ -59,11 +59,11 @@ class LatestFromBlog extends BlockBase
         foreach ($results as $result) {
             $file = File::load($result->image);
             $url = \Drupal\image\Entity\ImageStyle::load('thumbnail')->buildUrl($file->getFileUri());
-            $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $result->nid);
+            $alias_node = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $result->nid);
 
             $date = date('F d, Y', strtotime($result->date));
             $data[] = [
-                'alias' => $alias,
+                'alias' => $alias_node,
                 'title' => $result->title,
                 'image' => $url,
                 'date' => $date,
@@ -105,11 +105,11 @@ class LatestFromBlog extends BlockBase
         foreach ($results as $result) {
             $file = File::load($result->image);
             $url = \Drupal\image\Entity\ImageStyle::load('thumbnail')->buildUrl($file->getFileUri());
-            $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $result->nid);
+            $alias_node = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $result->nid);
 
             $date = date('F d, Y', strtotime($result->date));
             $data[] = [
-                'alias' => $alias,
+                'alias' => $alias_node,
                 'title' => $result->title,
                 'image' => $url,
                 'date' => $date,
@@ -153,9 +153,9 @@ class LatestFromBlog extends BlockBase
         $data = [];
 
         foreach ($results as $key => $result) {
-            $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $key);
+            $alias_node = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $key);
             $data [] = [
-                'alias' => $alias,
+                'alias' => $alias_node,
                 'title' => $result->title,
                 'comment' => $result->comment,
                 'name' => $result->name,
