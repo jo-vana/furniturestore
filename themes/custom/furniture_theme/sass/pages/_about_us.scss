@@ -8,48 +8,95 @@
   display: block;
   width: 95%;
   margin: 0 auto;
-  p {
-    margin-top: 0;
+  .field--name-body {
+    margin: 0;
+    position: relative;
+    height: 330px;
+    width: 100%;
+    overflow: hidden;
+    p {
+      margin-top: 0;
+      img {
+        position: absolute;
+        top: 0;
+        max-width: 1580px;
+        height: 330px;
+        z-index: -1;
+        right: 0;
+        @media screen and(max-width: $screen-sm-min){
+          right: -400px;
+        }
+      }
+    }
   }
 }
 #block-whatwedo,
 #block-ourhistory,
 #block-aboutbrand {
   display: block;
+  width: 100%;
   border-bottom: 1px solid #e6e6e6;
   padding-bottom: 52px;
   padding-top: 50px;
-  h2 {
+  .about-img {
+    width: 25.2%;
+    margin: 0 1.7%;
     display: inline-block;
-    margin-top: 36px;
-    margin-bottom: 0;
-    font-size: 38px;
-    line-height: 46px;
-    font-weight: 400;
-    font-style: normal;
-    font-family: $font-karla;
-    color: $color-black;
+    vertical-align: top;
+    .field--name-field-about-us-img {
+      margin: 0;
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 0;
+        max-width: 400px;
+        height: 240px;
+        z-index: -1;
+        right: 0;
+        @media screen and (max-width: $screen-sm-min) {
+          max-width: 100%;
+          top: auto;
+          height: auto;
+          bottom: 0;
+        }
+      }
+    }
+    @media screen and (max-width: $screen-sm-min) {
+      width: 100%;
+    }
   }
-  .field--name-field-about-us-img {
+  .about-text {
     display: inline-block;
-    float: left;
-    clear: left;
-    margin-right: 65px;
-    max-height: 240px;
-    overflow: hidden;
-  }
-  .field--name-body {
+    width: 65.2%;
+    margin: 0 1.7%;
     h2 {
-      font-size: 16px;
-      line-height: 24px;
+      margin-top: 36px;
+      margin-bottom: 0;
+      font-size: 38px;
+      line-height: 46px;
       font-weight: 400;
       font-style: normal;
-      color: #9d9d9d;
       font-family: $font-karla;
-      margin: 0;
+      color: $color-black;
     }
-    p {
-      margin-top: 15px;
+    .field--name-body {
+      h2 {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        font-style: normal;
+        color: #9d9d9d;
+        font-family: $font-karla;
+        margin: 0;
+      }
+      p {
+        margin-top: 15px;
+      }
+    }
+    @media screen and (max-width: $screen-sm-min) {
+      width: 100%;
     }
   }
 }
@@ -87,7 +134,7 @@
     display: inline-block;
     vertical-align: top;
     width: 28%;
-    margin: 40px 20px 0 20px;
+    margin: 40px 17px 0 17px;
     padding-bottom: 35px;
     transition: all .4s ease-in-out;
     cursor: pointer;
@@ -128,6 +175,10 @@
         font-size: 14px;
       }
     }
+    @media screen and (max-width: $screen-sm-min) {
+      width: 100%;
+      margin: 20px auto;
+    }
   }
 }
 // - - Favorite products block
@@ -147,7 +198,6 @@
   }
   p {
     display: block;
-    width: 285px;
     margin: 0 auto;
     text-align: center;
     font-size: 18px;
@@ -160,7 +210,8 @@
   .fav-prod-wrapp {
     display: inline-block;
     position: relative;
-    margin: 2% 2.5%;
+    margin: 2% 2%;
+    width: 20%;
     vertical-align: top;
     .hover-block {
       display: none;
@@ -188,10 +239,23 @@
         }
       }
     }
+    .block-fur-img {
+      display: block;
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
     &:hover {
       .hover-block {
         display: block;
       }
+    }
+    @media screen and (max-width: $screen-md-min){
+      width: 45%;
+    }
+    @media screen and (max-width: 558px){
+      width: 95%;
     }
   }
 }

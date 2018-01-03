@@ -6741,51 +6741,105 @@ section.field--name-field-leave-a-reply {
   display: block;
   width: 95%;
   margin: 0 auto; }
-  #block-aboutusbanner-2 p {
-    margin-top: 0; }
+  #block-aboutusbanner-2 .field--name-body {
+    margin: 0;
+    position: relative;
+    height: 330px;
+    width: 100%;
+    overflow: hidden; }
+    #block-aboutusbanner-2 .field--name-body p {
+      margin-top: 0; }
+      #block-aboutusbanner-2 .field--name-body p img {
+        position: absolute;
+        top: 0;
+        max-width: 1580px;
+        height: 330px;
+        z-index: -1;
+        right: 0; }
+        @media screen and (max-width: 51.2rem) {
+          #block-aboutusbanner-2 .field--name-body p img {
+            right: -400px; } }
 
 #block-whatwedo,
 #block-ourhistory,
 #block-aboutbrand {
   display: block;
+  width: 100%;
   border-bottom: 1px solid #e6e6e6;
   padding-bottom: 52px;
   padding-top: 50px; }
-  #block-whatwedo h2,
-  #block-ourhistory h2,
-  #block-aboutbrand h2 {
+  #block-whatwedo .about-img,
+  #block-ourhistory .about-img,
+  #block-aboutbrand .about-img {
+    width: 25.2%;
+    margin: 0 1.7%;
     display: inline-block;
-    margin-top: 36px;
-    margin-bottom: 0;
-    font-size: 38px;
-    line-height: 46px;
-    font-weight: 400;
-    font-style: normal;
-    font-family: "Karla", sans-serif;
-    color: #212121; }
-  #block-whatwedo .field--name-field-about-us-img,
-  #block-ourhistory .field--name-field-about-us-img,
-  #block-aboutbrand .field--name-field-about-us-img {
+    vertical-align: top; }
+    #block-whatwedo .about-img .field--name-field-about-us-img,
+    #block-ourhistory .about-img .field--name-field-about-us-img,
+    #block-aboutbrand .about-img .field--name-field-about-us-img {
+      margin: 0;
+      position: relative;
+      height: 240px;
+      overflow: hidden; }
+      #block-whatwedo .about-img .field--name-field-about-us-img img,
+      #block-ourhistory .about-img .field--name-field-about-us-img img,
+      #block-aboutbrand .about-img .field--name-field-about-us-img img {
+        position: absolute;
+        top: 0;
+        max-width: 400px;
+        height: 240px;
+        z-index: -1;
+        right: 0; }
+        @media screen and (max-width: 51.2rem) {
+          #block-whatwedo .about-img .field--name-field-about-us-img img,
+          #block-ourhistory .about-img .field--name-field-about-us-img img,
+          #block-aboutbrand .about-img .field--name-field-about-us-img img {
+            max-width: 100%;
+            top: auto;
+            height: auto;
+            bottom: 0; } }
+    @media screen and (max-width: 51.2rem) {
+      #block-whatwedo .about-img,
+      #block-ourhistory .about-img,
+      #block-aboutbrand .about-img {
+        width: 100%; } }
+  #block-whatwedo .about-text,
+  #block-ourhistory .about-text,
+  #block-aboutbrand .about-text {
     display: inline-block;
-    float: left;
-    clear: left;
-    margin-right: 65px;
-    max-height: 240px;
-    overflow: hidden; }
-  #block-whatwedo .field--name-body h2,
-  #block-ourhistory .field--name-body h2,
-  #block-aboutbrand .field--name-body h2 {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    font-style: normal;
-    color: #9d9d9d;
-    font-family: "Karla", sans-serif;
-    margin: 0; }
-  #block-whatwedo .field--name-body p,
-  #block-ourhistory .field--name-body p,
-  #block-aboutbrand .field--name-body p {
-    margin-top: 15px; }
+    width: 65.2%;
+    margin: 0 1.7%; }
+    #block-whatwedo .about-text h2,
+    #block-ourhistory .about-text h2,
+    #block-aboutbrand .about-text h2 {
+      margin-top: 36px;
+      margin-bottom: 0;
+      font-size: 38px;
+      line-height: 46px;
+      font-weight: 400;
+      font-style: normal;
+      font-family: "Karla", sans-serif;
+      color: #212121; }
+    #block-whatwedo .about-text .field--name-body h2,
+    #block-ourhistory .about-text .field--name-body h2,
+    #block-aboutbrand .about-text .field--name-body h2 {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      font-style: normal;
+      color: #9d9d9d;
+      font-family: "Karla", sans-serif;
+      margin: 0; }
+    #block-whatwedo .about-text .field--name-body p,
+    #block-ourhistory .about-text .field--name-body p,
+    #block-aboutbrand .about-text .field--name-body p {
+      margin-top: 15px; }
+    @media screen and (max-width: 51.2rem) {
+      #block-whatwedo .about-text,
+      #block-ourhistory .about-text,
+      #block-aboutbrand .about-text {
+        width: 100%; } }
 
 #block-whatwedo {
   border: none; }
@@ -6819,7 +6873,7 @@ section.field--name-field-leave-a-reply {
   display: inline-block;
   vertical-align: top;
   width: 28%;
-  margin: 40px 20px 0 20px;
+  margin: 40px 17px 0 17px;
   padding-bottom: 35px;
   transition: all .4s ease-in-out;
   cursor: pointer; }
@@ -6853,6 +6907,10 @@ section.field--name-field-leave-a-reply {
       text-decoration: none; }
   #block-ourteamblock .team-wrap .block-term p {
     font-size: 14px; }
+  @media screen and (max-width: 51.2rem) {
+    #block-ourteamblock .team-wrap {
+      width: 100%;
+      margin: 20px auto; } }
 
 #block-favouriteproductsblock {
   margin: 50px 0; }
@@ -6869,7 +6927,6 @@ section.field--name-field-leave-a-reply {
     position: relative; }
   #block-favouriteproductsblock p {
     display: block;
-    width: 285px;
     margin: 0 auto;
     text-align: center;
     font-size: 18px;
@@ -6881,7 +6938,8 @@ section.field--name-field-leave-a-reply {
   #block-favouriteproductsblock .fav-prod-wrapp {
     display: inline-block;
     position: relative;
-    margin: 2% 2.5%;
+    margin: 2% 2%;
+    width: 20%;
     vertical-align: top; }
     #block-favouriteproductsblock .fav-prod-wrapp .hover-block {
       display: none;
@@ -6905,8 +6963,19 @@ section.field--name-field-leave-a-reply {
           color: white; }
           #block-favouriteproductsblock .fav-prod-wrapp .hover-block .block-fur-title a:hover {
             border-bottom: 1px solid #e6ae48; }
+    #block-favouriteproductsblock .fav-prod-wrapp .block-fur-img {
+      display: block;
+      width: 100%; }
+      #block-favouriteproductsblock .fav-prod-wrapp .block-fur-img img {
+        width: 100%; }
     #block-favouriteproductsblock .fav-prod-wrapp:hover .hover-block {
       display: block; }
+    @media screen and (max-width: 66.13333rem) {
+      #block-favouriteproductsblock .fav-prod-wrapp {
+        width: 45%; } }
+    @media screen and (max-width: 558px) {
+      #block-favouriteproductsblock .fav-prod-wrapp {
+        width: 95%; } }
 
 #block-fromtheblogblock-2 h2 {
   display: block;
