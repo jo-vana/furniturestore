@@ -55,9 +55,9 @@ class FavouriteProducts extends BlockBase implements BlockPluginInterface{
                 'field_price_value' => $result->field_price_value,
                 'image' => $url,
             ];
-            if (count($data) > 6){
-                if( !empty($data[6])) {
-                    unset($data[6]);
+            if (count($data) > 8){
+                if( !empty($data[7])) {
+                    unset($data[7]);
                 }
                 return $data;
             }
