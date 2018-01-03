@@ -2,11 +2,10 @@
 
 namespace Drupal\range_filter\Form;
 
-use Drupal\Core\Database\Database;
-use Drupal\file\Entity\File;
 use Drupal\Core\Entity\Query;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 /**
  * Class RangeForm.
@@ -35,7 +34,7 @@ class RangeForm extends FormBase {
 			'#placeholder' => t('Min'),
 			'#min' => 0,
 			'#max' => 1000000,
-			'#default_value' => isset( $_GET[ 'min_price' ] ) ? $_GET[ 'min_price' ] : '',
+			'#default_value' => isset($_GET[ 'min_price']) ? $_GET['min_price'] : '',
 		);
 
 		$form ['filters']['max_price'] = array(
@@ -43,20 +42,24 @@ class RangeForm extends FormBase {
 			'#placeholder' => t('Max'),
 			'#min' => 0,
 			'#max' => 1000000,
-			'#default_value' => isset( $_GET[ 'max_price' ] ) ? $_GET[ 'max_price' ] : '',
+			'#default_value' => isset($_GET[ 'max_price']) ? $_GET['max_price'] : '',
 		);
+
+		$form['filters']['actions']['submit'] = [
+			'#type'  => 'submit',
+			'#value' => $this->t('Filter'),
+		];
 
 		return $form;
 	}
 
 	private function buildContent () {
 
-		$query = \Drupal::database()->select( 'node_field_data', 'n' );
+		$query = \Drupal::database()->select('node_field_data', 'n');
 		$query->innerJoin('node__field_price', 'fp', 'n.nid = fp.entity_id');
 
-		$min_price = $_GET[ 'min_price' ];
-
-		if ( isset( $min_price ) ) {
+		$min_price = $_GET['min_price'];
+		if (isset($min_price)) {
 			$query->condition( 'fp.field_price_value', $min_price, '>=' );
 		}
 
@@ -91,10 +94,17 @@ class RangeForm extends FormBase {
 	 * {@inheritdoc}
 	 */
 	public function submitForm ( array &$form, FormStateInterface $form_state ) {
-		// Display result.
-		foreach ( $form_state->getValues() as $key => $value ) {
-			drupal_set_message( $key . ': ' . $value );
-		}
 
+		$max_price = $form_state->getValue('max_price');
+		$min_price = $form_state->getValue('min_price');
+
+		$option = [
+			'query' =>  [
+				'min_price' => $min_price,
+				'max_price' => $max_price,
+			],
+		];
+		$url = Url::fromUri('internal:/shop', $option);
+		$form_state->setRedirectUrl($url);
 	}
 }

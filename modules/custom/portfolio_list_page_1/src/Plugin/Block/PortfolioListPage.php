@@ -45,18 +45,18 @@ class PortfolioListPage extends BlockBase implements BlockPluginInterface{
         foreach ( $results as $result ) {
             $file = File::load($result->image);
             $url = \Drupal\image\Entity\ImageStyle::load('portfolio_list_page_img')->buildUrl($file->getFileUri());
-            $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$result->nid);
-            $alias2 = \Drupal::service('path.alias_manager')->getAliasByPath('/'.$result->taxonomy_name);
+            $alias_node = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$result->nid);
+            $alias_taxonomy = \Drupal::service('path.alias_manager')->getAliasByPath('/'.$result->taxonomy_name);
 
-            $alias_tax = str_replace(' ', '-', $alias2);
+            $alias_tax = str_replace(' ', '-', $alias_taxonomy);
 
             $data[] = [
-                'alias' => $alias,
+                'alias' => $alias_node,
                 'alias2' => $alias_tax,
                 'title' => $result->title,
                 'taxonomy_name' =>  [
                     'name'  => strip_tags($result->taxonomy_name),
-                    'url'   => $alias2
+                    'url'   => $alias_tax
                 ],
                 'image' => $url,
             ];

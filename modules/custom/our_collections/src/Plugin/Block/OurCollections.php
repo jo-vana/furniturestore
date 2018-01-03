@@ -50,12 +50,12 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
             foreach( $result as $node ) {
                 $file = File::load($node->image);
                 $url = \Drupal\image\Entity\ImageStyle::load('furniture_default_img')->buildUrl($file->getFileUri());
-                $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $key);
-                $alias2 = \Drupal::service('path.alias_manager')->getAliasByPath('/' . $node->taxonomy_name);
+                $alias_node = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $key);
+                $alias_taxonomy = \Drupal::service('path.alias_manager')->getAliasByPath('/' . $node->taxonomy_name);
 
-                $alias_tax = str_replace(' ', '-', $alias2);
+                $alias_tax = str_replace(' ', '-', $alias_taxonomy);
 
-                $entry['nid'] = $alias;
+                $entry['nid'] = $alias_node;
                 $entry['tid'] = $alias_tax;
                 $entry['title'] = $node->title;
                 $entry['field_price_value'] = $node->field_price_value;
@@ -78,13 +78,13 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
                 if (!isset($entry['image'][0])) {
                     $entry['image'][] = [
                         'img' => $url,
-                        'nid' => $alias,
+                        'nid' => $alias_node,
                     ];
                 } else {
                     if ($entry['image'][0]['img'] !== $url) {
                         $entry['image'][1] = [
                             'img' => $url,
-                            'nid' => $alias,
+                            'nid' => $alias_node,
                         ];
                     }
                 }

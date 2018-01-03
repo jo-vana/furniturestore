@@ -140,18 +140,26 @@ function deploy_update_8438()
     \Drupal::service('module_installer')->install(['latest_from_blog']);
 }
 
-/**
- * Like Dislike
- */
-function deploy_update_8439()
-{
-    \Drupal::service('module_installer')->install(['like_dislike']);
-}
+///**
+// * Like Dislike
+// */
+//function deploy_update_8439()
+//{
+//    \Drupal::service('module_installer')->install(['like_dislike']);
+//}
+//
+///**
+// * Like Dislike Fix
+// */
+//function deploy_update_8440()
+//{
+//    \Drupal::service('module_installer')->install(['like_dislike']);
+//}
 
 /**
- * Like Dislike Fix
+ * Range Filter
  */
-function deploy_update_8440()
+function deploy_update_8441()
 {
-    \Drupal::service('module_installer')->install(['like_dislike']);
+    \Drupal::service('module_installer')->install(['range_filter']);
 }

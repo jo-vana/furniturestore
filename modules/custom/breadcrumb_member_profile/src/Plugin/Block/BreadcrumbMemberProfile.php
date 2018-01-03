@@ -25,23 +25,18 @@ class BreadcrumbMemberProfile extends BlockBase implements BlockPluginInterface
      */
     function buildContent()
     {
-
-
         $current_path = \Drupal::service('path.current')->getPath();
 
         $node_id = explode("/", $current_path);
         $id = $node_id[2];
 
-
         $node = Node::load($id);
 
         $member = $node->get('title')->getValue();
-        $test = $node->get('field_profile_categories')->getValue();
+        $taxonomy = $node->get('field_profile_categories')->getValue();
 
-        $tax = Term::load($test[0]['target_id']);
+        $tax = Term::load($taxonomy[0]['target_id']);
         $tax_name = $tax->get('name')->getValue();
-        $bool = true;
-
 
         $data = [
             'title' => $member[0]['value'],

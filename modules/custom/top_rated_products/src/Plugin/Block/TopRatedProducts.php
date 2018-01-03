@@ -29,7 +29,9 @@ class TopRatedProducts extends BlockBase implements BlockPluginInterface{
         $query->innerJoin('node__field_price', 'fp', 'fp.entity_id = n.nid' );
 
         $query->innerJoin('node__field_fur_image', 'fi', 'fi.entity_id = n.nid');
+
         $query->condition('fi.delta', 0, '=');
+
         $query->innerJoin('node__field_reviews', 'fr', 'fr.entity_id = n.nid');
 
         $query->innerJoin('comment_entity_statistics', 'ces', 'fr.entity_id = ces.entity_id');
@@ -50,12 +52,6 @@ class TopRatedProducts extends BlockBase implements BlockPluginInterface{
         $results = $query->execute()->fetchAll();
 
         foreach ( $results as $result ) {
-
-//            $query = \Drupal::database()->select('node__field_fur_image', 'f');
-//            $query->condition('f.entity_id', $result->nid,'=');
-//            $query->addField('f', 'field_fur_image_target_id', 'image');
-//            $img = $query->execute()->fetchField();
-
             $file = File::load($result->image);
             $url = \Drupal\image\Entity\ImageStyle::load('sidebar_img')->buildUrl($file->getFileUri());
             $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$result->nid);
@@ -72,11 +68,7 @@ class TopRatedProducts extends BlockBase implements BlockPluginInterface{
                 }
                 return $data;
             }
-
-
         }
-
-
         return $data;
     }
 
