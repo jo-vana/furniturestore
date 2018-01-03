@@ -163,3 +163,11 @@ function deploy_update_8441()
 {
     \Drupal::service('module_installer')->install(['range_filter']);
 }
+
+/**
+ * Like Counter
+ */
+function deploy_update_8442()
+{
+    \Drupal::service('module_installer')->install(['like']);
+}
