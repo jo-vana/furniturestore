@@ -67,17 +67,17 @@ class BlogListPage extends BlockBase implements BlockPluginInterface
             foreach( $result as $node ) {
                 $file = File::load($node->image);
                 $url = \Drupal\image\Entity\ImageStyle::load('blog_default_img')->buildUrl($file->getFileUri());
-                $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $key);
-                $alias2 = \Drupal::service('path.alias_manager')->getAliasByPath('/' . $node->taxonomy_name);
-                $alias3 = \Drupal::service('path.alias_manager')->getAliasByPath('/user/' . $node->uid);
+                $alias_node = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $key);
+                $alias_taxonomy = \Drupal::service('path.alias_manager')->getAliasByPath('/' . $node->taxonomy_name);
+                $alias_user = \Drupal::service('path.alias_manager')->getAliasByPath('/user/' . $node->uid);
 
-                $alias_tax = str_replace(' ', '-', $alias2);
+                $alias_tax = str_replace(' ', '-', $alias_taxonomy);
 
                 $date = date('F d, Y',strtotime($node->field_date_blog_value));
 
-                $entry['nid'] = $alias;
+                $entry['nid'] = $alias_node;
                 $entry['tid'] = $alias_tax;
-                $entry['uid'] = $alias3;
+                $entry['uid'] = $alias_user;
                 $entry['title'] = $node->title;
                 $entry['body'] = substr(strip_tags(str_replace(array("\r", "\n"), '', $node->body_value)), 0, 110);
 
