@@ -41,7 +41,7 @@ class BlogListPage extends BlockBase implements BlockPluginInterface
 
         $query->leftJoin('users_field_data', 'u', 'ba.field_blog_author_target_id = u.uid');
 
-        $query->leftJoin('node__field_like', 'fl', 'fl.entity_id = n.nid');
+        $query->leftJoin('node__field_likes', 'fl', 'fl.entity_id = n.nid');
 
         $query->leftJoin('comment_entity_statistics', 'ces', 'ces.entity_id = n.nid');
 
@@ -55,7 +55,7 @@ class BlogListPage extends BlockBase implements BlockPluginInterface
         $query->addField('fdb', 'field_date_blog_value');
         $query->addField('u', 'name', 'username');
         $query->addField('ces', 'comment_count');
-        $query->addField('fl', 'field_like_likes', 'likes');
+        $query->addField('fl', 'field_likes_likes', 'likes');
 
         $results = $query->execute()->fetchAll(PDO::FETCH_GROUP);
 
