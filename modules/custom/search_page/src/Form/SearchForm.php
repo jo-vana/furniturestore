@@ -52,19 +52,19 @@ class SearchForm extends FormBase {
 			'#default_value' => isset( $_GET[ 'sort' ] ) ? $_GET[ 'sort' ] : '',
 		];
 
-		$form[ 'filters' ][ 'actions' ][ '#type' ] = 'actions';
-		$form[ 'filters' ][ 'actions' ][ 'submit' ] = [
+		$form['filters']['actions']['#type'] = 'actions';
+		$form['filters']['actions']['submit'] = [
 			'#type'  => 'submit',
-			'#value' => $this->t( 'Submit' ),
+			'#value' => $this->t('Submit'),
 		];
 
 		$data = $this->buildContent();
 
-		$form[ 'content' ][ 'data' ] = $data;
+		$form['content']['data'] = $data;
 
-		$form[ '#theme' ] = 'search_page';
+		$form['#theme'] = 'search_page';
 
-		$form[ 'pager' ] = array(
+		$form['pager'] = array(
 			'#type' => 'pager',
 		);
 
@@ -79,8 +79,6 @@ class SearchForm extends FormBase {
 		$query->innerJoin('node__field_price', 'fp', 'fp.entity_id = n.nid' );
 
 		$query->innerJoin('node__field_fur_image', 'fi', 'fi.entity_id = n.nid');
-
-		$query->condition('fi.delta', 0, '=');
 
 		$query->innerJoin('node__field_categories', 'fc', 'fc.entity_id = n.nid' );
 
@@ -100,7 +98,7 @@ class SearchForm extends FormBase {
 		$query->addField('fi', 'field_fur_image_target_id', 'image');
 		$query->addField('fp', 'field_price_value', 'price');
 
-		$query = $query->extend('Drupal\Core\Database\Query\PagerSelectExtender')->limit(11);
+		$query = $query->extend('Drupal\Core\Database\Query\PagerSelectExtender')->limit(24);
 
 		$sort = 0;
 		if ( isset( $_GET[ 'sort' ] ) ) {
@@ -143,11 +141,34 @@ class SearchForm extends FormBase {
 				$entry['tid'] = $alias_tax;
 				$entry['title'] = $node->title;
 				$entry['price'] = $node->price;
-				$entry['taxonomy_name'][] =[
-					'name'  => strip_tags($node->taxonomy_name),
-					'url'   => $alias_tax
-				];
-				$entry['image'] = $url;
+
+				if (!isset($entry['taxonomy_name'][0])) {
+					$entry['taxonomy_name'][] = [
+						'name' => strip_tags($node->taxonomy_name),
+						'url' => $alias_tax
+					];
+				} else {
+					if ($entry['taxonomy_name'][0]['name'] !== $node->taxonomy_name) {
+						$entry['taxonomy_name'][1] = [
+							'name' => strip_tags($node->taxonomy_name),
+							'url' => $alias_tax
+						];
+					}
+				}
+
+				if (!isset($entry['image'][0])) {
+					$entry['image'][] = [
+						'img' => $url,
+						'nid' => $alias,
+					];
+				} else {
+					if ($entry['image'][0]['img'] !== $url) {
+						$entry['image'][1] = [
+							'img' => $url,
+							'nid' => $alias,
+						];
+					}
+				}
 			}
 			$data[] = $entry;
 		}
