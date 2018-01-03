@@ -6968,7 +6968,7 @@ section.field--name-field-leave-a-reply {
       width: 100%; }
       #block-favouriteproductsblock .fav-prod-wrapp .block-fur-img img {
         width: 100%; }
-    #block-favouriteproductsblock .fav-prod-wrapp:hover .hover-block {
+    #block-favouriteproductsblock .fav-prod-wrapp:hover .hover-block, #block-favouriteproductsblock .fav-prod-wrapp:focus .hover-block {
       display: block; }
     @media screen and (max-width: 66.13333rem) {
       #block-favouriteproductsblock .fav-prod-wrapp {

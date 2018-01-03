@@ -246,7 +246,8 @@
         width: 100%;
       }
     }
-    &:hover {
+    &:hover,
+    &:focus {
       .hover-block {
         display: block;
       }
