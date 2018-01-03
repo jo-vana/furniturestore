@@ -24,17 +24,17 @@ class SearchForm extends FormBase {
 	/**
 	 * {@inheritdoc}
 	 */
-	public function buildForm ( array $form, FormStateInterface $form_state ) {
+	public function buildForm (array $form, FormStateInterface $form_state) {
 
 		$form = [];
 
-		$form[ '#method' ] = 'GET';
+		$form['#method'] = 'GET';
 
-		$form[ 'filters' ] = [
+		$form['filters'] = [
 			'#type'        => 'fieldset',
-			'#title'       => t( 'filters' ),
+			'#title'       => t('filters'),
 			'#collapsible' => true,
-			'#attributes'  => array( 'class' => array( 'inline' ) ),
+			'#attributes'  => array('class' => array('inline')),
 		];
 
 		$options = [
@@ -46,25 +46,25 @@ class SearchForm extends FormBase {
 			5 => 'Sort by price high to low',
 		];
 
-		$form[ 'filters' ][ 'sort' ] = [
+		$form['filters']['sort'] = [
 			'#type'          => 'select',
 			'#options'       => $options,
-			'#default_value' => isset( $_GET[ 'sort' ] ) ? $_GET[ 'sort' ] : '',
+			'#default_value' => isset($_GET[ 'sort']) ? $_GET['sort'] : '',
 		];
 
-		$form[ 'filters' ][ 'actions' ][ '#type' ] = 'actions';
-		$form[ 'filters' ][ 'actions' ][ 'submit' ] = [
+		$form['filters']['actions']['#type'] = 'actions';
+		$form['filters']['actions']['submit'] = [
 			'#type'  => 'submit',
-			'#value' => $this->t( 'Submit' ),
+			'#value' => $this->t('Submit'),
 		];
 
 		$data = $this->buildContent();
 
-		$form[ 'content' ][ 'data' ] = $data;
+		$form['content']['data'] = $data;
 
-		$form[ '#theme' ] = 'furniture_list_page';
+		$form['#theme'] = 'furniture_list_page';
 
-		$form[ 'pager' ] = array(
+		$form['pager'] = array(
 			'#type' => 'pager',
 		);
 
@@ -73,23 +73,21 @@ class SearchForm extends FormBase {
 
 	private function buildContent () {
 
-		$query = \Drupal::database()->select( 'node_field_data', 'n' );
-		$query->condition( 'n.type', 'furniture', '=' );
+		$query = \Drupal::database()->select('node_field_data', 'n');
+		$query->condition('n.type', 'furniture', '=');
 
-		$query->innerJoin('node__field_price', 'fp', 'fp.entity_id = n.nid' );
+		$query->innerJoin('node__field_price', 'fp', 'fp.entity_id = n.nid');
 
 		$query->innerJoin('node__field_fur_image', 'fi', 'fi.entity_id = n.nid');
 
-		$query->condition('fi.delta', 0, '=');
+		$query->innerJoin('node__field_categories', 'fc', 'fc.entity_id = n.nid');
 
-		$query->innerJoin('node__field_categories', 'fc', 'fc.entity_id = n.nid' );
-
-		$query->innerJoin('taxonomy_term_field_data', 't', 'fc.field_categories_target_id = t.tid' );
+		$query->innerJoin('taxonomy_term_field_data', 't', 'fc.field_categories_target_id = t.tid');
 
 		$query->innerJoin('node_counter', 'nc', 'nc.nid = n.nid');
 
-		if ( !empty( $_GET[ 'title' ] ) ) {
-			$query->condition( 'title', $_GET[ 'title' ], 'LIKE' );
+		if ( !empty( $_GET['title' ])) {
+			$query->condition('title', $_GET[ 'title' ], 'LIKE');
 		}
 
 		$query->addField('n', 'nid');
@@ -101,26 +99,26 @@ class SearchForm extends FormBase {
 		$query->addField('fp', 'field_price_value', 'price');
 
 		$sort = 0;
-		if ( isset( $_GET[ 'sort' ] ) ) {
-			$sort = $_GET[ 'sort' ];
+		if (isset( $_GET['sort'])) {
+			$sort = $_GET['sort'];
 		}
 
-		if ( $sort == 0 ) {
-			$query->orderBy( 'nid', 'ASC');
-		} else if ( $sort == 1 ) {
-			$query->orderBy( 'totalcount', 'DESC' );
-		} else if ( $sort == 2 ) {
+		if ($sort == 0) {
+			$query->orderBy('nid', 'ASC');
+		} else if ($sort == 1) {
+			$query->orderBy('totalcount', 'DESC');
+		} else if ($sort == 2) {
 			$query->leftJoin('node__field_reviews', 'fr', 'fr.entity_id = n.nid');
 			$query->leftJoin('comment_entity_statistics', 'ces', 'fr.entity_id = ces.entity_id');
 			$query->leftJoin('comment_field_data', 'cfd', 'ces.entity_id = cfd.entity_id');
 			$query->leftJoin('comment__field_your_rating', 'cff', 'cfd.cid = cff.entity_id');
 			$query->orderBy( 'field_your_rating_rating', 'DESC' );
-		} else if ( $sort == 3 ) {
-			$query->orderBy( 'nid', 'DESC' );
-		} else if ( $sort == 4 ) {
-			$query->orderBy( 'price', 'ASC' );
-		} else if ( $sort == 5) {
-			$query->orderBy( 'price', 'DESC' );
+		} else if ($sort == 3) {
+			$query->orderBy('nid', 'DESC');
+		} else if ($sort == 4) {
+			$query->orderBy('price', 'ASC');
+		} else if ($sort ==5) {
+			$query->orderBy('price', 'DESC');
 		}
 
 		$data = [];
@@ -141,11 +139,34 @@ class SearchForm extends FormBase {
 				$entry['tid'] = $alias_tax;
 				$entry['title'] = $node->title;
 				$entry['price'] = $node->price;
-				$entry['taxonomy_name'][] =[
-					'name'  => strip_tags($node->taxonomy_name),
-					'url'   => $alias_tax
-				];
-				$entry['image'] = $url;
+
+				if (!isset($entry['taxonomy_name'][0])) {
+					$entry['taxonomy_name'][] = [
+						'name' => strip_tags($node->taxonomy_name),
+						'url' => $alias_tax
+					];
+				} else {
+					if ($entry['taxonomy_name'][0]['name'] !== $node->taxonomy_name) {
+						$entry['taxonomy_name'][1] = [
+							'name' => strip_tags($node->taxonomy_name),
+							'url' => $alias_tax
+						];
+					}
+				}
+
+				if (!isset($entry['image'][0])) {
+					$entry['image'][] = [
+						'img' => $url,
+						'nid' => $alias,
+					];
+				} else {
+					if ($entry['image'][0]['img'] !== $url) {
+						$entry['image'][1] = [
+							'img' => $url,
+							'nid' => $alias,
+						];
+					}
+				}
  			}
 			$data[] = $entry;
 		}
