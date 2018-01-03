@@ -23,10 +23,13 @@
       margin-left: 3%;
       margin-right: 3%;
       @media screen and (max-width: $screen-md-min) {
+        width: 100%;
+        margin-bottom: 20px;
         margin-left: 0;
+        margin-right: 0;
       }
       &.header-show {
-        margin-bottom: 20px;
+
       }
     }
   }
@@ -53,10 +56,6 @@
     width: 100%;
     min-height: 63px;
     background-color: $gray-light;
-    ////
-    //position: absolute;
-    //top: 103px;
-    ////
     .block-page-title-block {
       display: inline-block;
       width: 60%;
@@ -336,7 +335,7 @@ body.user-logged-in {
   }
 }
 .layout-sidebar-first {
-  width: 25%;
+  width: 27%;
   display: inline-block;
   align-items: center;
   padding-right: 0;

@@ -122,6 +122,10 @@ body.path-shop {
               height: 15px;
             }
           }
+          &.pager__item--first,
+          &.pager__item--last {
+            display: none;
+          }
         }
       }
     }

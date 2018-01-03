@@ -3330,9 +3330,10 @@ h1, h2, h3, h4, h5, h6 {
       margin-right: 3%; }
       @media screen and (max-width: 66.13333rem) {
         .layout-container header .region-header {
-          margin-left: 0; } }
-      .layout-container header .region-header.header-show {
-        margin-bottom: 20px; }
+          width: 100%;
+          margin-bottom: 20px;
+          margin-left: 0;
+          margin-right: 0; } }
   .layout-container .region-primary-menu {
     width: 100%;
     margin: 0 auto;
@@ -3587,7 +3588,7 @@ body.user-logged-in .fix-navbar .region-primary-menu {
       width: 100%; } }
 
 .layout-sidebar-first {
-  width: 25%;
+  width: 27%;
   display: inline-block;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -3735,25 +3736,25 @@ header {
       width: 30px;
       height: 30px;
       cursor: pointer;
-      margin: 0 auto; }
+      margin: 0 auto;
+      margin-top: 15px; }
       .region-header span.close-header::after {
         content: '\f107';
         font-family: "FontAwesome";
         font-size: 20px;
-        top: 21%;
-        right: 25%;
-        color: white;
-        position: absolute; }
+        top: 0;
+        right: 0;
+        color: white; }
     .region-header.header-show {
       margin-bottom: 20px; }
       .region-header.header-show span.close-header {
-        bottom: -20px;
+        bottom: 0;
         position: absolute;
         left: 50%;
-        width: 30px;
         -webkit-transform: translateX(-50%);
             -ms-transform: translateX(-50%);
-                transform: translateX(-50%); }
+                transform: translateX(-50%);
+        width: 30px; }
         .region-header.header-show span.close-header::after {
           content: '\f106'; }
     .region-header #block-infoblockphone {
@@ -3866,7 +3867,7 @@ footer {
     clear: right; }
     #block-furniture-theme-main-menu ul.nav-0 li {
       display: inline-block;
-      padding: 10px 15px 0px 15px; }
+      padding: 10px 15px 0 15px; }
       #block-furniture-theme-main-menu ul.nav-0 li a {
         display: block;
         position: relative;
@@ -4155,7 +4156,7 @@ body.user-logged-in #block-mainnavigationmobile .menu-toggle {
   overflow: hidden; }
   #block-topratedproductsblock .wrap-fur-sidebar .block-fur-img {
     display: inline-block;
-    padding-right: 3%;
+    padding-right: 5%;
     float: left;
     height: 100px; }
     #block-topratedproductsblock .wrap-fur-sidebar .block-fur-img img {
@@ -6027,12 +6028,26 @@ section.field--name-field-leave-a-reply {
     #block-ourcollectionsblock .block-fur-wrap:after {
       clear: both; }
     #block-ourcollectionsblock .block-fur-wrap .block-fur-img {
-      display: none; }
-      #block-ourcollectionsblock .block-fur-wrap .block-fur-img img {
-        margin: 0 auto; }
-    #block-ourcollectionsblock .block-fur-wrap .block-fur-img:first-of-type {
       display: block;
       position: relative; }
+      #block-ourcollectionsblock .block-fur-wrap .block-fur-img a:first-child {
+        display: block; }
+        #block-ourcollectionsblock .block-fur-wrap .block-fur-img a:first-child img {
+          margin: 0 auto;
+          opacity: 1; }
+      #block-ourcollectionsblock .block-fur-wrap .block-fur-img a {
+        display: none; }
+        #block-ourcollectionsblock .block-fur-wrap .block-fur-img a img {
+          transition: opacity .3s ease-in-out;
+          opacity: 0; }
+      #block-ourcollectionsblock .block-fur-wrap .block-fur-img:hover a:last-child {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0; }
+        #block-ourcollectionsblock .block-fur-wrap .block-fur-img:hover a:last-child img {
+          opacity: 1; }
     #block-ourcollectionsblock .block-fur-wrap .block-fur-term {
       text-align: center; }
       #block-ourcollectionsblock .block-fur-wrap .block-fur-term p {
@@ -7319,6 +7334,8 @@ body.path-shop form#search-form nav.pager {
           opacity: 0;
           width: 15px;
           height: 15px; }
+      body.path-shop form#search-form nav.pager ul li.pager__item--first, body.path-shop form#search-form nav.pager ul li.pager__item--last {
+        display: none; }
 
 body.path-furniture form#furniture-list-form .filter {
   display: inline-block; }

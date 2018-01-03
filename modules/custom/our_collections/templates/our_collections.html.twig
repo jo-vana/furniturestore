@@ -1,10 +1,13 @@
 {% for entry in content %}
     <div class="block-fur-wrap">
+
+        <div class="block-fur-img">
         {% for en in entry.image %}
-    <div class="block-fur-img">
+
         <a href ="{{ en.nid }}"><img src="{{ en.img }}"/></a>
-    </div>
+
         {% endfor %}
+        </div>
 
     <div class="tax-wrapper">
         {% for en in entry.taxonomy_name %}

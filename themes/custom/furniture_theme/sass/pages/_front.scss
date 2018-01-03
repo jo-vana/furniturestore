@@ -222,14 +222,34 @@
     position: relative;
     margin: 0 auto;
     .block-fur-img {
-      display: none;
-      img {
-        margin: 0 auto;
-      }
-    }
-    .block-fur-img:first-of-type {
       display: block;
       position: relative;
+      a:first-child {
+        display: block;
+        img {
+          margin: 0 auto;
+          opacity: 1;
+        }
+      }
+      a {
+        display: none;
+        img {
+          transition: opacity .3s ease-in-out;
+          opacity: 0;
+        }
+      }
+      &:hover {
+        a:last-child {
+          display: block;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+            img {
+              opacity: 1;
+            }
+        }
+      }
     }
     .block-fur-term {
       text-align: center;

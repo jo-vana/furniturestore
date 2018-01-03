@@ -122,25 +122,25 @@ header {
       height: 30px;
       cursor: pointer;
       margin: 0 auto;
+      margin-top: 15px;
 
       &::after {
         content: '\f107';
         font-family: "FontAwesome";
         font-size: 20px;
-        top: 21%;
-        right: 25%;
+        top: 0;
+        right: 0;
         color: white;
-        position: absolute;
       }
     }
     &.header-show {
       margin-bottom: 20px;
       span.close-header {
-        bottom: -20px;
+        bottom: 0;
         position: absolute;
         left: 50%;
-        width: 30px;
         transform: translateX(-50%);
+        width: 30px;
         &::after {
           content: '\f106';
         }

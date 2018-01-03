@@ -103,7 +103,7 @@
                 $('.region-header', context).append('<span class="close-header"></span>');
             }
 
-            if ($(window).width() < 1000)  {
+            if ($(window).width() < 1055)  {
                 ide();
             }
             $(window).resize(function() {
@@ -257,29 +257,6 @@
 
                 });
             });
-            // $('#block-portfoliolistpageblock .block-portfolio-img img').one("load", function () {
-            //
-            //     $(this).show(1000, function () { // Show the image when loaded
-            //
-            //         $(this).parents('div.block-portfolio-img').masonry({ // After that, trigger the .masonry()
-            //
-            //             itemSelector: "div.post",
-            //
-            //             isAnimated: true
-            //
-            //         });
-            //
-            //     });
-            //
-            // }).each(function () {
-            //
-            //     if (this.complete) {
-            //
-            //         $(this).load();
-            //
-            //     }
-            //
-            // });
         }
     };
 
