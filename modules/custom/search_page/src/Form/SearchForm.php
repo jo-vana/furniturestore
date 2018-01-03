@@ -24,17 +24,17 @@ class SearchForm extends FormBase {
 	/**
 	 * {@inheritdoc}
 	 */
-	public function buildForm ( array $form, FormStateInterface $form_state ) {
+	public function buildForm (array $form, FormStateInterface $form_state) {
 
 		$form = [];
 
-		$form[ '#method' ] = 'GET';
+		$form['#method'] = 'GET';
 
-		$form[ 'filters' ] = [
+		$form['filters'] = [
 			'#type'        => 'fieldset',
-			'#title'       => t( 'filters' ),
+			'#title'       => t('filters'),
 			'#collapsible' => true,
-			'#attributes'  => array( 'class' => array( 'inline' ) ),
+			'#attributes'  => array('class' => array('inline')),
 		];
 
 		$options = [
@@ -46,10 +46,10 @@ class SearchForm extends FormBase {
 			5 => 'Sort by price high to low',
 		];
 
-		$form[ 'filters' ][ 'sort' ] = [
+		$form['filters']['sort'] = [
 			'#type'          => 'select',
 			'#options'       => $options,
-			'#default_value' => isset( $_GET[ 'sort' ] ) ? $_GET[ 'sort' ] : '',
+			'#default_value' => isset($_GET['sort']) ? $_GET['sort'] : '',
 		];
 
 		$form['filters']['actions']['#type'] = 'actions';
@@ -86,8 +86,8 @@ class SearchForm extends FormBase {
 
 		$query->innerJoin('node_counter', 'nc', 'nc.nid = n.nid');
 
-		if ( !empty( $_GET[ 'title' ] ) ) {
-			$query->condition( 'title', $_GET[ 'title' ], 'LIKE' );
+		if (!empty($_GET['title'])) {
+			$query->condition('title', $_GET['title'], 'LIKE');
 		}
 
 		$query->addField('n', 'nid');
@@ -101,26 +101,26 @@ class SearchForm extends FormBase {
 		$query = $query->extend('Drupal\Core\Database\Query\PagerSelectExtender')->limit(24);
 
 		$sort = 0;
-		if ( isset( $_GET[ 'sort' ] ) ) {
-			$sort = $_GET[ 'sort' ];
+		if (isset($_GET['sort'])) {
+			$sort = $_GET['sort'];
 		}
 
-		if ( $sort == 0 ) {
-			$query->orderBy( 'nid', 'ASC');
-		} else if ( $sort == 1 ) {
-			$query->orderBy( 'totalcount', 'DESC' );
-		} else if ( $sort == 2 ) {
+		if ($sort == 0) {
+			$query->orderBy('nid', 'ASC');
+		} else if ($sort == 1) {
+			$query->orderBy('totalcount', 'DESC');
+		} else if ($sort == 2) {
 			$query->leftJoin('node__field_reviews', 'fr', 'fr.entity_id = n.nid');
 			$query->leftJoin('comment_entity_statistics', 'ces', 'fr.entity_id = ces.entity_id');
 			$query->leftJoin('comment_field_data', 'cfd', 'ces.entity_id = cfd.entity_id');
 			$query->leftJoin('comment__field_your_rating', 'cff', 'cfd.cid = cff.entity_id');
 			$query->orderBy( 'field_your_rating_rating', 'DESC' );
-		} else if ( $sort == 3 ) {
-			$query->orderBy( 'nid', 'DESC' );
-		} else if ( $sort == 4 ) {
-			$query->orderBy( 'price', 'ASC' );
-		} else if ( $sort == 5) {
-			$query->orderBy( 'price', 'DESC' );
+		} else if ($sort == 3) {
+			$query->orderBy('nid', 'DESC');
+		} else if ($sort == 4) {
+			$query->orderBy('price', 'ASC');
+		} else if ($sort == 5) {
+			$query->orderBy('price', 'DESC');
 		}
 
 		$data = [];
