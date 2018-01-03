@@ -68,6 +68,22 @@ class SearchForm extends FormBase {
 			'#type' => 'pager',
 		);
 
+		$form ['filters']['min_price'] = array(
+			'#type' => 'number',
+			'#placeholder' => t('Min'),
+			'#min' => 0,
+			'#max' => 1000000,
+			'#default_value' => isset($_GET[ 'min_price']) ? $_GET['min_price'] : '',
+		);
+
+		$form ['filters']['max_price'] = array(
+			'#type' => 'number',
+			'#placeholder' => t('Max'),
+			'#min' => 0,
+			'#max' => 1000000,
+			'#default_value' => isset($_GET[ 'max_price']) ? $_GET['max_price'] : '',
+		);
+
 		return $form;
 	}
 
@@ -121,6 +137,19 @@ class SearchForm extends FormBase {
 			$query->orderBy('price', 'ASC');
 		} else if ($sort == 5) {
 			$query->orderBy('price', 'DESC');
+		}
+
+		# Range Filter
+		$min_price = $_GET['min_price'];
+		if (isset($min_price)) {
+			$query->condition( 'fp.field_price_value', $min_price, '>=' );
+		}
+
+		$max_price = $_GET['max_price'];
+		if (!empty($max_price)) {
+			if (isset($max_price)) {
+				$query->condition('fp.field_price_value', $max_price, '<=');
+			}
 		}
 
 		$data = [];
