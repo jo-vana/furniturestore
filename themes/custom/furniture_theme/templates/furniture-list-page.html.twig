@@ -18,14 +18,16 @@
     {#<div class="col-md-6">#}
     {#{{ form.filters.published }}#}
     {#</div>#}
-
 </div>
 
 <div class="row">
     {% for key,entry in form.content.data %}
         {% if key matches '/^\\d+$/' %}
             <div class="col-md-4">
-                <a href ="{{ entry.nid }}"><img src="{{ entry.image }}"/></a>
+
+                {% for en in entry.image %}
+                    <a href ="{{ en.nid }}"><img src="{{ en.img }}"/></a>
+                {% endfor %}
 
                 {% for en_key,en in entry.taxonomy_name %}
                     {% if en_key matches '/^\\d+$/' %}
