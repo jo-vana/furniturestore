@@ -25,8 +25,12 @@
         {% if key matches '/^\\d+$/' %}
             <div class="col-md-4">
 
-                {% for en in entry.image %}
-                    <a href ="{{ en.nid }}"><img src="{{ en.img }}"/></a>
+                {% for en_key,en in entry.image %}
+                    {% if en_key matches '/^\\d+$/' %}
+
+                        <a href ="{{ en.nid }}"><img src="{{ en.img }}"/></a>
+
+                    {% endif %}
                 {% endfor %}
 
                 {% for en_key,en in entry.taxonomy_name %}
