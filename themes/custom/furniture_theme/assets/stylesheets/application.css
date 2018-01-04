@@ -7343,6 +7343,71 @@ body.path-shop form#search-form .col-md-4 {
   display: inline-block;
   vertical-align: top;
   text-align: center; }
+  body.path-shop form#search-form .col-md-4 .top-hover {
+    display: block;
+    position: relative; }
+    body.path-shop form#search-form .col-md-4 .top-hover .block-fur-img {
+      display: block;
+      position: relative; }
+      body.path-shop form#search-form .col-md-4 .top-hover .block-fur-img a:first-child {
+        display: block; }
+        body.path-shop form#search-form .col-md-4 .top-hover .block-fur-img a:first-child img {
+          margin: 0 auto;
+          opacity: 1; }
+      body.path-shop form#search-form .col-md-4 .top-hover .block-fur-img a {
+        display: none; }
+        body.path-shop form#search-form .col-md-4 .top-hover .block-fur-img a img {
+          transition: opacity .3s ease-in-out;
+          opacity: 0; }
+    body.path-shop form#search-form .col-md-4 .top-hover .bar {
+      display: block;
+      position: absolute;
+      top: 100%;
+      opacity: 0;
+      width: 100%;
+      padding: 0 10px;
+      transition: opacity .3s ease-in-out, top .3s ease-in-out; }
+      body.path-shop form#search-form .col-md-4 .top-hover .bar .search-icon,
+      body.path-shop form#search-form .col-md-4 .top-hover .bar .like_dislike {
+        display: inline-block;
+        padding-top: 10px;
+        width: 17%;
+        height: 40px;
+        background-color: white; }
+        body.path-shop form#search-form .col-md-4 .top-hover .bar .search-icon a,
+        body.path-shop form#search-form .col-md-4 .top-hover .bar .like_dislike a {
+          vertical-align: baseline;
+          color: #212121; }
+          body.path-shop form#search-form .col-md-4 .top-hover .bar .search-icon a:hover,
+          body.path-shop form#search-form .col-md-4 .top-hover .bar .like_dislike a:hover {
+            color: #e6ae48; }
+      body.path-shop form#search-form .col-md-4 .top-hover .bar .cart {
+        display: inline-block;
+        background-color: white;
+        padding-top: 10px;
+        width: 60%;
+        margin: 0 auto;
+        height: 40px; }
+        body.path-shop form#search-form .col-md-4 .top-hover .bar .cart a {
+          white-space: nowrap;
+          vertical-align: baseline;
+          color: #212121;
+          font-size: 16px;
+          text-decoration: none;
+          font-family: "Karla", sans-serif; }
+          body.path-shop form#search-form .col-md-4 .top-hover .bar .cart a:hover {
+            color: #e6ae48; }
+    body.path-shop form#search-form .col-md-4 .top-hover:hover .block-fur-img a:last-child {
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+      body.path-shop form#search-form .col-md-4 .top-hover:hover .block-fur-img a:last-child img {
+        opacity: 1; }
+    body.path-shop form#search-form .col-md-4 .top-hover:hover .bar {
+      opacity: 1;
+      top: 81%; }
   body.path-shop form#search-form .col-md-4 .block-fur-term {
     display: inline-block; }
     body.path-shop form#search-form .col-md-4 .block-fur-term a {

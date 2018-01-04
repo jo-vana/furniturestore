@@ -52,6 +52,89 @@ body.path-shop {
       display: inline-block;
       vertical-align: top;
       text-align: center;
+      .top-hover {
+        display: block;
+        position: relative;
+        .block-fur-img {
+          display: block;
+          position: relative;
+          a:first-child {
+            display: block;
+            img {
+              margin: 0 auto;
+              opacity: 1;
+            }
+          }
+          a {
+            display: none;
+            img {
+              transition: opacity .3s ease-in-out;
+              opacity: 0;
+            }
+          }
+        }
+        .bar {
+          display: block;
+          position: absolute;
+          top: 100%;
+          opacity: 0;
+          width: 100%;
+          padding: 0 10px;
+          transition: opacity .3s ease-in-out, top .3s ease-in-out;
+          .search-icon,
+          .like_dislike {
+            display: inline-block;
+            padding-top: 10px;
+            width: 17%;
+            height: 40px;
+            background-color: white;
+            a {
+              vertical-align: baseline;
+              color: $color-black;
+              &:hover {
+                color: $color-orange;
+              }
+            }
+          }
+          .cart {
+            display: inline-block;
+            background-color: white;
+            padding-top: 10px;
+            width: 60%;
+            margin: 0 auto;
+            height: 40px;
+            a {
+              white-space: nowrap;
+              vertical-align: baseline;
+              color: $color-black;
+              font-size: 16px;
+              text-decoration: none;
+              font-family: $font-karla;
+              &:hover {
+                color: $color-orange;
+              }
+            }
+          }
+        }
+        &:hover {
+          .block-fur-img {
+            a:last-child {
+              display: block;
+              width: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              img {
+                opacity: 1;
+              }
+            }
+          }
+          .bar {
+            opacity: 1;
+            top: 81%;
+          }
+        }
+      }
       .block-fur-term {
         display: inline-block;
           a {

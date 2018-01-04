@@ -288,6 +288,8 @@
                 values: [ 75, 300 ],
                 slide: function( event, ui ) {
                     $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+                    $('.form-item-min-price > input[data-drupal-selector="edit-min-price"]').val("" + ui.values[ 0 ] + "");
+                    $('.form-item-max-price > input[data-drupal-selector="edit-max-price"]').val("" + ui.values[ 1 ] + "");
                 }
             });
             $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +

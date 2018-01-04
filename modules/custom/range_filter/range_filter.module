@@ -3,10 +3,7 @@
 function range_filter_theme ( $existing, $type, $theme, $path ) {
   return [
       'range_filter' => array(
-          'template'  => 'range_filter',
-          'variables' => [
-              'content'  => [],
-          ],
+          'render element' => 'form'
       ),
 
   ];

@@ -50,6 +50,7 @@ class RangeForm extends FormBase {
 			'#value' => $this->t('Filter'),
 		];
 
+
 		return $form;
 	}
 
