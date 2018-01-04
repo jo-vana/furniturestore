@@ -7434,6 +7434,51 @@ body.path-shop form#search-form .col-md-4 {
     line-height: 24px;
     color: #888888;
     padding: 20px 0; }
+  body.path-shop form#search-form .col-md-4 .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-width: 1900px;
+    min-height: 1000px;
+    z-index: 500;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 200ms;
+    visibility: hidden;
+    opacity: 0; }
+    body.path-shop form#search-form .col-md-4 .overlay.light {
+      background: rgba(255, 255, 255, 0.5); }
+    body.path-shop form#search-form .col-md-4 .overlay .cancel {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      cursor: default; }
+    body.path-shop form#search-form .col-md-4 .overlay:target {
+      visibility: visible;
+      opacity: 1; }
+    body.path-shop form#search-form .col-md-4 .overlay .attachment {
+      margin: 75px auto;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #666;
+      width: 300px;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+      position: relative; }
+      body.path-shop form#search-form .col-md-4 .overlay .attachment .close {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 20px;
+        right: 20px;
+        opacity: 0.8;
+        transition: all 200ms;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #666; }
+        body.path-shop form#search-form .col-md-4 .overlay .attachment .close:hover {
+          opacity: 1; }
 
 body.path-shop form#search-form nav.pager {
   text-align: center; }
@@ -7461,7 +7506,6 @@ body.path-shop form#search-form nav.pager {
         text-decoration: none;
         font-family: "arialregular", sans-serif; }
         body.path-shop form#search-form nav.pager ul li a span:last-child {
-          opacity: 0;
           width: 15px;
           height: 15px; }
       body.path-shop form#search-form nav.pager ul li.pager__item--first, body.path-shop form#search-form nav.pager ul li.pager__item--last {
