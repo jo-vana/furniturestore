@@ -1,6 +1,21 @@
-{#{% for entry in content %}#}
+<div>
+<div class="range">
+    <p>
+        <label for="amount">Filter by price</label>
+        <input type="text" id="amount">
+    </p>
+    <div id="slider-range"></div>
+    {{ form.filters.min_price }}
+    {{ form.filters.max_price }}
 
+    {#{{ form.filters.actions.submit }}#}
+</div>
+    <div class="button">
+        {#{{ form.filters.actions.submit }}#}
+        <button class="ui-button ui-widget ui-corner-all">{{ form.filters.actions.submit }}</button>
+    </div>
 
-{#{% endfor %}#}
+</div>
+
 
 

@@ -7,6 +7,8 @@ global-css:
         minified: false
       assets/stylesheets/vendor/flexslider.css:
               minified: false
+      assets/stylesheets/vendor/jquery-ui.css:
+                    minified: false
 
 # Global JS files
 global-js:
@@ -17,6 +19,8 @@ global-js:
     assets/scripts/vendor/jquery.flexslider.js:
           minified: false
     assets/scripts/vendor/masonry-layout/dist/masonry.pkgd.min.js: {}
+    assets/scripts/vendor/jquery-ui.js:
+              minified: false
   dependencies:
     - core/jquery
     - core/drupal

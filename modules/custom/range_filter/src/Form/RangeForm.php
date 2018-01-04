@@ -53,36 +53,6 @@ class RangeForm extends FormBase {
 		return $form;
 	}
 
-	private function buildContent () {
-
-		$query = \Drupal::database()->select('node_field_data', 'n');
-		$query->innerJoin('node__field_price', 'fp', 'n.nid = fp.entity_id');
-
-		$min_price = $_GET['min_price'];
-		if (isset($min_price)) {
-			$query->condition( 'fp.field_price_value', $min_price, '>=' );
-		}
-
-		$max_price = $_GET['max_price'];
-		if (!empty($max_price)) {
-			if (isset($max_price)) {
-				$query->condition('fp.field_price_value', $max_price, '<=');
-			}
-		}
-
-	}
-
-	public function build () {
-
-		return array(
-			'#theme'    => 'range_filter',
-			'#content'  => $this->buildContent(),
-			'#cache'    => [
-				'max-age' => 0,
-			],
-		);
-	}
-
 	/**
 	 * {@inheritdoc}
 	 */
