@@ -92,9 +92,11 @@
                     </div>
 
                     {% for en_key,en in entry.taxonomy_name %}
+                    {% if en_key matches '/^\\d+$/' %}
                         <div class="search-term">
                             <a href ="{{ en.url }}"><p>{{ en.name }}</p></a>
                         </div>
+                    {% endif %}
                     {% endfor %}
 
                     <div class="search-body">
