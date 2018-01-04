@@ -1,7 +1,7 @@
 {% for entry in content %}
-    <div class="block-fur-wrap">
+    <div class="wrap-fur-sidebar">
         <div class="block-fur-img">
-            <a href ="{{ entry.alias }}"><img src="{{ entry.image }}"/></a>
+            <a href ="{{ entry.alias }}"><img src="{{ entry.image_url }}"/></a>
         </div>
 
         <div class="block-fur-title">
@@ -9,9 +9,7 @@
         </div>
 
         <div class="block-fur-price">
-            <p>${{ entry.field_price_value }}</p>
+            <p>${{ entry.price }}</p>
         </div>
-
     </div>
-
 {% endfor %}

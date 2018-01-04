@@ -6,6 +6,7 @@ namespace Drupal\recently_viewed_products\Plugin\Block;
 use Drupal\Core\Block\BlockPluginInterface;
 use Drupal\file\Entity\File;
 use Drupal\Core\Block\BlockBase;
+use Drupal\node\Entity\Node;
 use Drupal\user\PrivateTempStoreFactory;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -26,44 +27,44 @@ class RecentlyViewedProducts extends BlockBase implements BlockPluginInterface{
     function buildContent()
     {
 
-        $query = \Drupal::database()->select('node_field_data', 'n');
-        $query->condition('n.type', 'furniture', '=');
+        $raw_nodes = $_SESSION['recently_viewed'];
 
-        $query->innerJoin('node__field_furniture_image', 'fi', 'fi.entity_id = n.nid');
+        # Sorting by newest
+        arsort($raw_nodes);
 
-        $query->innerJoin('node__field_price', 'fp', 'fp.entity_id = n.nid' );
+        # Lasting 3 Hours
+        $ctr_timestamp = strtotime('3 hours ago');
 
-        $query->addField('n', 'nid');
-        $query->addField('n', 'title');
-        $query->addField('fi', 'field_furniture_image_target_id', 'image');
-        $query->addField('fp', 'field_price_value');
+        foreach ($raw_nodes as $node_id => $raw_node){
+            if($raw_node < $ctr_timestamp){
+                unset($raw_nodes[$node_id]);
+            }
+        }
 
-        $node = [];
+        $node_ids = array_keys($raw_nodes);
 
-        $_SESSION['recently_viewed'][$node] = $node;
+        # Loading Multiple Node Ids
+        $nodes = Node::loadMultiple($node_ids);
 
-        $nodes_viewed = node_load_multiple($_SESSION['recently_viewed'][$node]);
+        $results = [];
+        foreach ( $nodes as $node ) {
 
-//        $tempstore = \Drupal::service('user.private_tempstore')->get('recently_viewed_products');
-//        $tempstore->get('data', $data);
+            $title = $node->getTitle();
+            $image = $node->get('field_fur_image')->getValue();
+            $file = File::load($image[0]['target_id']);
+            $image_url = \Drupal\image\Entity\ImageStyle::load('thumbnail')->buildUrl($file->getFileUri());
+            $price = $node->get('field_price')->getValue()[0]['value'];
 
-
-        $nodes_viewed = $query->execute()->fetchAll();
-
-        foreach ( $nodes_viewed as $result ) {
-            $file = File::load($result->image);
-            $url = \Drupal\image\Entity\ImageStyle::load('thumbnail')->buildUrl($file->getFileUri());
-            $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$result->nid);
-
-            $node[] = [
-                'alias' => $alias,
-                'title' => $result->title,
-                'field_price_value' => $result->field_price_value,
-                'image' => $url,
+            $alias_node = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$node->id());
+            $results[] = [
+                'alias' => $alias_node,
+                'title' => $title,
+                'price' => $price,
+                'image_url' => $image_url,
             ];
         }
 
-        return $node;
+        return $results;
     }
 
     /**
