@@ -73,9 +73,11 @@
                 <div class="attachment" data-node-type="{{ entry.nid }}">
 
                     {% for en in entry.image %}
+                    {% if en_key matches '/^\\d+$/' %}
                         <div class="search-image">
                             <img src="{{ en.img }}">
                         </div>
+                    {% endif %}
                     {% endfor %}
 
                     <div class="search-title">
