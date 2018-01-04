@@ -19,6 +19,8 @@ class RangeBlock extends BlockBase
     public function build()
     {
         $form = \Drupal::formBuilder()->getForm('Drupal\range_filter\Form\RangeForm');
+        $form ['#theme'] = 'range_filter';
+        $form ['#cache'] = ['max-age' => 0];
         return $form;
     }
 }
