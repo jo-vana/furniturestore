@@ -4693,8 +4693,6 @@ section.field--name-field-leave-a-reply {
     display: block;
     max-height: 500px;
     overflow: hidden; }
-  #block-bloglistblock .wrap-blog-page .like_dislike {
-    display: none; }
   #block-bloglistblock .wrap-blog-page .block-blog-date {
     display: inline-block;
     padding-top: 15px; }
