@@ -24,7 +24,8 @@
     {% for key,entry in form.content.data %}
         {% if key matches '/^\\d+$/' %}
             <div class="col-md-4">
-                <div class="fur-img">
+                <div class="top-hover">
+                <div class="block-fur-img">
                 {% for en_key,en in entry.image %}
                 {% if en_key matches '/^\\d+$/' %}
 
@@ -49,6 +50,8 @@
                             <span id="like">{{ entry.likes }}</span>
                         </div>
                     </div>
+                </div>
+
                 </div>
 
                 {% for en_key,en in entry.taxonomy_name %}
