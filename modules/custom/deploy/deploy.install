@@ -171,3 +171,11 @@ function deploy_update_8442()
 {
     \Drupal::service('module_installer')->install(['like']);
 }
+
+/**
+ * Like Counter
+ */
+function deploy_update_8443()
+{
+    \Drupal::service('module_installer')->install(['recently_viewed_products']);
+}
