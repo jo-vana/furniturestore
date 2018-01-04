@@ -24,7 +24,7 @@
     {% for key,entry in form.content.data %}
         {% if key matches '/^\\d+$/' %}
             <div class="col-md-4">
-
+                <div class="fur-img">
                 {% for en_key,en in entry.image %}
                 {% if en_key matches '/^\\d+$/' %}
 
@@ -32,7 +32,7 @@
 
                 {% endif %}
                 {% endfor %}
-
+                </div>
                 {#Hover items#}
 
                 <div class="bar">
