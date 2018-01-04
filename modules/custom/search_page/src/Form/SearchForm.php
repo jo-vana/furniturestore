@@ -94,6 +94,8 @@ class SearchForm extends FormBase {
 
 		$query->innerJoin('node__field_price', 'fp', 'fp.entity_id = n.nid' );
 
+		$query->innerJoin('node__body', 'b', '.b.entity_id = n.nid');
+
 		$query->innerJoin('node__field_fur_image', 'fi', 'fi.entity_id = n.nid');
 
 		$query->innerJoin('node__field_categories', 'fc', 'fc.entity_id = n.nid' );
@@ -113,6 +115,7 @@ class SearchForm extends FormBase {
 		$query->addField('t', 'name', 'taxonomy_name');
 		$query->addField('fi', 'field_fur_image_target_id', 'image');
 		$query->addField('fp', 'field_price_value', 'price');
+		$query->addField('b', 'body_value', 'body');
 
 		$query = $query->extend('Drupal\Core\Database\Query\PagerSelectExtender')->limit(24);
 
@@ -169,6 +172,7 @@ class SearchForm extends FormBase {
 				$entry['nid'] = $alias_node;
 				$entry['tid'] = $alias_tax;
 				$entry['title'] = $node->title;
+				$entry['body'] = substr(strip_tags(str_replace(array("\r", "\n"), '', $node->body)), 0, 400);
 				$entry['price'] = $node->price;
 
 				if (!isset($entry['taxonomy_name'][0])) {
