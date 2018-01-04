@@ -293,10 +293,6 @@
             $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
                 " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 
-            $( ".widget input[type=submit], .widget a, .widget button" ).button();
-            $( "button, input, a" ).click( function( event ) {
-                event.preventDefault();
-            } );
 
 
         }
