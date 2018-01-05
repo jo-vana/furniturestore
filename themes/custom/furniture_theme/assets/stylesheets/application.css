@@ -3588,7 +3588,7 @@ body.user-logged-in .fix-navbar .region-primary-menu {
       width: 100%; } }
 
 .layout-sidebar-first {
-  width: 27%;
+  width: 24%;
   display: inline-block;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -4142,6 +4142,44 @@ body.user-logged-in #block-mainnavigationmobile .menu-toggle {
           .first-lev-show ul.menu-level-1 li.show ul.menu-level-2 li.show ul.menu-level-3 li.menu-item-3 a.menu-link-3.is-active {
             color: #9d9d9d; }
 
+.search-block-form form {
+  height: 42px;
+  width: 245px;
+  padding: 4px 10px 9px 10px;
+  border: 1px solid #e6e6e6; }
+  .search-block-form form input[type="search"] {
+    font-family: "arialregular", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 8px;
+    color: #888888;
+    border: none;
+    width: 70%; }
+    .search-block-form form input[type="search"]:focus {
+      outline: none; }
+  .search-block-form form .form-actions {
+    position: relative; }
+    .search-block-form form .form-actions input {
+      display: inline-block;
+      width: 27%;
+      background-color: white;
+      color: white;
+      border: none; }
+      .search-block-form form .form-actions input:focus {
+        outline: none; }
+    .search-block-form form .form-actions::before {
+      display: block;
+      content: "\f002";
+      font-family: "FontAwesome";
+      font-size: 16px;
+      color: #888888;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transition: transform(-50%), transform(-50%);
+      transition: transform(-50%);
+      cursor: pointer; }
+
 #block-topratedproductsblock h2 {
   font-family: "Karla", sans-serif;
   color: #212121;
@@ -4302,11 +4340,13 @@ body.user-logged-in #block-mainnavigationmobile .menu-toggle {
       display: none; }
   .block-range-filter form p.price {
     display: inline-block;
+    width: 58%;
     font-family: "arialregular", sans-serif;
     font-size: 14px;
     color: #212121; }
     .block-range-filter form p.price input {
       border: none;
+      width: 90px;
       padding-left: 10px;
       color: #e6ae48;
       font-family: "arialregular", sans-serif;
