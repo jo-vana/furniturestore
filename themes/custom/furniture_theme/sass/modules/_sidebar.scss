@@ -168,3 +168,67 @@
     }
   }
 }
+.block-range-filter {
+  margin: 25px 0;
+  form {
+    .range {
+      margin-bottom: 30px;
+      p {
+        label {
+          font-family: $font-karla;
+          font-size: 18px;
+          line-height: 24px;
+          color: $color-black;
+        }
+      }
+      .ui-slider {
+        height: 2px;
+        border: none;
+        background-color: #e6e6e6;
+        .ui-slider-range {
+          background-color: $color-orange;
+          border: none;
+        }
+        .ui-slider-handle {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: $color-black;
+          top: -4px!important;
+          margin-left: 0;
+          cursor: pointer;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      .form-item-min-price,
+      .form-item-max-price {
+        display: none;
+      }
+    }
+    p.price {
+      display: inline-block;
+      font-family: $font-arial;
+      font-size: 14px;
+      color: $color-black;
+      input {
+        border: none;
+        padding-left: 10px;
+        color: $color-orange;
+        font-family: $font-arial;
+        font-size: 14px;
+      }
+    }
+    .button {
+      display: inline-block;
+      margin: 0 auto;
+      @include submit_button;
+      input {
+        width: 95px;
+        height: 36px;
+        line-height: 36px;
+      }
+    }
+  }
+}
