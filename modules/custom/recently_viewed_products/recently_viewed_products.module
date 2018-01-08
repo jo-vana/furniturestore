@@ -26,10 +26,3 @@ function recently_viewed_products_node_view(array &$build, EntityInterface $node
 
     }
 }
-
-/**
- * Implements hook_node_links_alter().
- */
-function recently_viewed_products_node_links_alter(array &$links, NodeInterface $entity, array &$context){
-    $links['#cache']['max-age'] = \Drupal::config('statistics.settings')->get('display_max_age');
-}
