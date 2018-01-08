@@ -4,6 +4,51 @@
 // Sidebar element on the page
 //
 // ========================================
+.search-block-form {
+  form {
+    height: 42px;
+    width: 245px;
+    padding: 4px 10px 9px 10px;
+    border: 1px solid #e6e6e6;
+    input[type="search"] {
+      font-family: $font-arial;
+      font-size: 14px;
+      line-height: 20px;
+      padding-top: 8px;
+      color: #888888;
+      border: none;
+      width: 70%;
+      &:focus {
+        outline: none;
+      }
+    }
+    .form-actions {
+      position: relative;
+      input {
+        display: inline-block;
+        width: 27%;
+        background-color: white;
+        color: white;
+        border: none;
+        &:focus {
+          outline: none;
+        }
+      }
+      &::before {
+        display: block;
+        content: "\f002";
+        font-family: $font-awesome;
+        font-size: 16px;
+        color: #888888;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transition: transform(-50%);
+        cursor: pointer;
+      }
+    }
+  }
+}
 #block-topratedproductsblock {
   h2 {
     font-family: $font-karla;
@@ -165,6 +210,72 @@
     }
     @media screen and (max-width: $screen-md) {
       padding-top: 30px;
+    }
+  }
+}
+.block-range-filter {
+  margin: 25px 0;
+  form {
+    .range {
+      margin-bottom: 30px;
+      p {
+        label {
+          font-family: $font-karla;
+          font-size: 18px;
+          line-height: 24px;
+          color: $color-black;
+        }
+      }
+      .ui-slider {
+        height: 2px;
+        border: none;
+        background-color: #e6e6e6;
+        .ui-slider-range {
+          background-color: $color-orange;
+          border: none;
+        }
+        .ui-slider-handle {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: $color-black;
+          top: -4px!important;
+          margin-left: 0;
+          cursor: pointer;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      .form-item-min-price,
+      .form-item-max-price {
+        display: none;
+      }
+    }
+    p.price {
+      display: inline-block;
+      width: 58%;
+      font-family: $font-arial;
+      font-size: 14px;
+      color: $color-black;
+      input {
+        border: none;
+        width: 90px;
+        padding-left: 10px;
+        color: $color-orange;
+        font-family: $font-arial;
+        font-size: 14px;
+      }
+    }
+    .button {
+      display: inline-block;
+      margin: 0 auto;
+      @include submit_button;
+      input {
+        width: 95px;
+        height: 36px;
+        line-height: 36px;
+      }
     }
   }
 }

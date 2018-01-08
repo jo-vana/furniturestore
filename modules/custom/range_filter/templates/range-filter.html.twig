@@ -2,7 +2,7 @@
 <div class="range">
     <p>
         <label for="amount">Filter by price</label>
-        <input type="text" id="amount">
+
     </p>
     <div id="slider-range"></div>
     {{ form.filters.min_price }}
@@ -10,6 +10,7 @@
 
     {#{{ form.filters.actions.submit }}#}
 </div>
+    <p class="price">Price:<input type="text" id="amount"></p>
     <div class="button">
         {#{{ form.filters.actions.submit }}#}
         {{ form.filters.actions.submit }}

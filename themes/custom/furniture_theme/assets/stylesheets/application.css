@@ -3588,7 +3588,7 @@ body.user-logged-in .fix-navbar .region-primary-menu {
       width: 100%; } }
 
 .layout-sidebar-first {
-  width: 27%;
+  width: 24%;
   display: inline-block;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -4142,6 +4142,44 @@ body.user-logged-in #block-mainnavigationmobile .menu-toggle {
           .first-lev-show ul.menu-level-1 li.show ul.menu-level-2 li.show ul.menu-level-3 li.menu-item-3 a.menu-link-3.is-active {
             color: #9d9d9d; }
 
+.search-block-form form {
+  height: 42px;
+  width: 245px;
+  padding: 4px 10px 9px 10px;
+  border: 1px solid #e6e6e6; }
+  .search-block-form form input[type="search"] {
+    font-family: "arialregular", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 8px;
+    color: #888888;
+    border: none;
+    width: 70%; }
+    .search-block-form form input[type="search"]:focus {
+      outline: none; }
+  .search-block-form form .form-actions {
+    position: relative; }
+    .search-block-form form .form-actions input {
+      display: inline-block;
+      width: 27%;
+      background-color: white;
+      color: white;
+      border: none; }
+      .search-block-form form .form-actions input:focus {
+        outline: none; }
+    .search-block-form form .form-actions::before {
+      display: block;
+      content: "\f002";
+      font-family: "FontAwesome";
+      font-size: 16px;
+      color: #888888;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transition: transform(-50%), transform(-50%);
+      transition: transform(-50%);
+      cursor: pointer; }
+
 #block-topratedproductsblock h2 {
   font-family: "Karla", sans-serif;
   color: #212121;
@@ -4270,6 +4308,71 @@ body.user-logged-in #block-mainnavigationmobile .menu-toggle {
     @media screen and (max-width: 992px) {
       #block-latestfromblogblock .tab-content {
         padding-top: 30px; } }
+
+.block-range-filter {
+  margin: 25px 0; }
+  .block-range-filter form .range {
+    margin-bottom: 30px; }
+    .block-range-filter form .range p label {
+      font-family: "Karla", sans-serif;
+      font-size: 18px;
+      line-height: 24px;
+      color: #212121; }
+    .block-range-filter form .range .ui-slider {
+      height: 2px;
+      border: none;
+      background-color: #e6e6e6; }
+      .block-range-filter form .range .ui-slider .ui-slider-range {
+        background-color: #e6ae48;
+        border: none; }
+      .block-range-filter form .range .ui-slider .ui-slider-handle {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #212121;
+        top: -4px !important;
+        margin-left: 0;
+        cursor: pointer; }
+        .block-range-filter form .range .ui-slider .ui-slider-handle:focus {
+          outline: none; }
+    .block-range-filter form .range .form-item-min-price,
+    .block-range-filter form .range .form-item-max-price {
+      display: none; }
+  .block-range-filter form p.price {
+    display: inline-block;
+    width: 58%;
+    font-family: "arialregular", sans-serif;
+    font-size: 14px;
+    color: #212121; }
+    .block-range-filter form p.price input {
+      border: none;
+      width: 90px;
+      padding-left: 10px;
+      color: #e6ae48;
+      font-family: "arialregular", sans-serif;
+      font-size: 14px; }
+  .block-range-filter form .button {
+    display: inline-block;
+    margin: 0 auto; }
+    .block-range-filter form .button input {
+      display: block;
+      width: 180px;
+      height: 48px;
+      background-color: #212121;
+      transition: all .3s ease-in-out;
+      border: none;
+      color: white;
+      font-size: 15px;
+      line-height: 46px;
+      font-weight: normal;
+      font-style: normal;
+      font-family: "Karla", sans-serif; }
+      .block-range-filter form .button input:hover {
+        background-color: #e6ae48; }
+    .block-range-filter form .button input {
+      width: 95px;
+      height: 36px;
+      line-height: 36px; }
 
 .error-page {
   margin: 0 auto;
@@ -7434,6 +7537,51 @@ body.path-shop form#search-form .col-md-4 {
     line-height: 24px;
     color: #888888;
     padding: 20px 0; }
+  body.path-shop form#search-form .col-md-4 .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-width: 1900px;
+    min-height: 1000px;
+    z-index: 500;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 200ms;
+    visibility: hidden;
+    opacity: 0; }
+    body.path-shop form#search-form .col-md-4 .overlay.light {
+      background: rgba(255, 255, 255, 0.5); }
+    body.path-shop form#search-form .col-md-4 .overlay .cancel {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      cursor: default; }
+    body.path-shop form#search-form .col-md-4 .overlay:target {
+      visibility: visible;
+      opacity: 1; }
+    body.path-shop form#search-form .col-md-4 .overlay .attachment {
+      margin: 75px auto;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #666;
+      width: 300px;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+      position: relative; }
+      body.path-shop form#search-form .col-md-4 .overlay .attachment .close {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 20px;
+        right: 20px;
+        opacity: 0.8;
+        transition: all 200ms;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #666; }
+        body.path-shop form#search-form .col-md-4 .overlay .attachment .close:hover {
+          opacity: 1; }
 
 body.path-shop form#search-form nav.pager {
   text-align: center; }
@@ -7461,7 +7609,6 @@ body.path-shop form#search-form nav.pager {
         text-decoration: none;
         font-family: "arialregular", sans-serif; }
         body.path-shop form#search-form nav.pager ul li a span:last-child {
-          opacity: 0;
           width: 15px;
           height: 15px; }
       body.path-shop form#search-form nav.pager ul li.pager__item--first, body.path-shop form#search-form nav.pager ul li.pager__item--last {

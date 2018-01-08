@@ -38,7 +38,7 @@
 
                 <div class="bar">
                     <div class="search-icon">
-                       <a href="" data-node-type="{{ entry.nid }}"><i class="fa fa-search" aria-hidden="true"></i></a>
+                       <a href="#popup"><i class="fa fa-search" aria-hidden="true"></i></a>
                     </div>
                     <div class="cart">
                         <a href="#">Add to Cart</a>
@@ -73,8 +73,9 @@
                 </div>
 
                 {#When clicked on Search#}
+                <div id="popup" class="overlay">
                 <div class="attachment" data-node-type="{{ entry.nid }}">
-
+                    <a class="close" href="#">&times;</a>
                     {% for en_key,en in entry.image %}
                     {% if en_key matches '/^\\d+$/' %}
                         <div class="search-image">
@@ -103,6 +104,7 @@
                         <p>{{ entry.body }}</p>
                     </div>
 
+                </div>
                 </div>
 
             </div>

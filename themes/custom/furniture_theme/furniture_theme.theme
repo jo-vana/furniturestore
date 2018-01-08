@@ -116,6 +116,11 @@ function furniture_theme_form_alter(&$form, &$form_state, $form_id)
         $form['field_comment_name']['widget'][0]['value']['#title'] = FALSE;
         $form['field_email']['widget'][0]['value']['#title'] = FALSE;
     }
+
+    //Placeholder for search form
+//    if($form['#id'] = '.region-sidebar-first .search-block-form') {
+//        $form['keys']['#attributes']['placeholder'] = 'Search for products';
+//    }
 }
 
 function furniture_theme_preprocess_node(&$variables) {
@@ -137,4 +142,3 @@ function furniture_theme_preprocess_node(&$variables) {
     }
 
 }
-
