@@ -41,12 +41,12 @@ body.path-shop {
           background-color: $color-orange;
         }
       }
-      h2 {
-        display: inline-block;
-        margin-top: 5px;
-        float: right;
-        clear: right;
-      }
+    }
+    h2.results {
+      display: inline-block;
+      margin-top: 5px;
+      float: right;
+      clear: right;
     }
     .col-search {
       display: inline-block;
@@ -87,7 +87,7 @@ body.path-shop {
           .like_dislike {
             display: inline-block;
             padding-top: 10px;
-            width: 17%;
+            width: 40px;
             height: 40px;
             background-color: white;
             a {
@@ -102,7 +102,7 @@ body.path-shop {
             display: inline-block;
             background-color: white;
             padding-top: 10px;
-            width: 60%;
+            width: calc(100% - 90px);
             margin: 0 auto;
             height: 40px;
             a {
@@ -209,7 +209,6 @@ body.path-shop {
           max-height: 600px;
           box-shadow: 0 0 50px rgba(0,0,0,0.5);
           position: fixed;
-          text-outline:50px;
           left: 50%;
           transform: translateX(-50%);
           .close {
