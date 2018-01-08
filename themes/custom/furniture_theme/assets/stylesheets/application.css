@@ -7442,27 +7442,29 @@ body.path-shop form#search-form .button {
     float: right;
     clear: right; }
 
-body.path-shop form#search-form .col-md-4 {
+body.path-shop form#search-form .col-search {
   display: inline-block;
+  width: 30%;
+  margin: 0 10px;
   vertical-align: top;
   text-align: center; }
-  body.path-shop form#search-form .col-md-4 .top-hover {
+  body.path-shop form#search-form .col-search .top-hover {
     display: block;
     position: relative; }
-    body.path-shop form#search-form .col-md-4 .top-hover .block-fur-img {
+    body.path-shop form#search-form .col-search .top-hover .block-fur-img {
       display: block;
       position: relative; }
-      body.path-shop form#search-form .col-md-4 .top-hover .block-fur-img a:first-child {
+      body.path-shop form#search-form .col-search .top-hover .block-fur-img a:first-child {
         display: block; }
-        body.path-shop form#search-form .col-md-4 .top-hover .block-fur-img a:first-child img {
+        body.path-shop form#search-form .col-search .top-hover .block-fur-img a:first-child img {
           margin: 0 auto;
           opacity: 1; }
-      body.path-shop form#search-form .col-md-4 .top-hover .block-fur-img a {
+      body.path-shop form#search-form .col-search .top-hover .block-fur-img a {
         display: none; }
-        body.path-shop form#search-form .col-md-4 .top-hover .block-fur-img a img {
+        body.path-shop form#search-form .col-search .top-hover .block-fur-img a img {
           transition: opacity .3s ease-in-out;
           opacity: 0; }
-    body.path-shop form#search-form .col-md-4 .top-hover .bar {
+    body.path-shop form#search-form .col-search .top-hover .bar {
       display: block;
       position: absolute;
       top: 100%;
@@ -7470,74 +7472,74 @@ body.path-shop form#search-form .col-md-4 {
       width: 100%;
       padding: 0 10px;
       transition: opacity .3s ease-in-out, top .3s ease-in-out; }
-      body.path-shop form#search-form .col-md-4 .top-hover .bar .search-icon,
-      body.path-shop form#search-form .col-md-4 .top-hover .bar .like_dislike {
+      body.path-shop form#search-form .col-search .top-hover .bar .search-icon,
+      body.path-shop form#search-form .col-search .top-hover .bar .like_dislike {
         display: inline-block;
         padding-top: 10px;
         width: 17%;
         height: 40px;
         background-color: white; }
-        body.path-shop form#search-form .col-md-4 .top-hover .bar .search-icon a,
-        body.path-shop form#search-form .col-md-4 .top-hover .bar .like_dislike a {
+        body.path-shop form#search-form .col-search .top-hover .bar .search-icon a,
+        body.path-shop form#search-form .col-search .top-hover .bar .like_dislike a {
           vertical-align: baseline;
           color: #212121; }
-          body.path-shop form#search-form .col-md-4 .top-hover .bar .search-icon a:hover,
-          body.path-shop form#search-form .col-md-4 .top-hover .bar .like_dislike a:hover {
+          body.path-shop form#search-form .col-search .top-hover .bar .search-icon a:hover,
+          body.path-shop form#search-form .col-search .top-hover .bar .like_dislike a:hover {
             color: #e6ae48; }
-      body.path-shop form#search-form .col-md-4 .top-hover .bar .cart {
+      body.path-shop form#search-form .col-search .top-hover .bar .cart {
         display: inline-block;
         background-color: white;
         padding-top: 10px;
         width: 60%;
         margin: 0 auto;
         height: 40px; }
-        body.path-shop form#search-form .col-md-4 .top-hover .bar .cart a {
+        body.path-shop form#search-form .col-search .top-hover .bar .cart a {
           white-space: nowrap;
           vertical-align: baseline;
           color: #212121;
           font-size: 16px;
           text-decoration: none;
           font-family: "Karla", sans-serif; }
-          body.path-shop form#search-form .col-md-4 .top-hover .bar .cart a:hover {
+          body.path-shop form#search-form .col-search .top-hover .bar .cart a:hover {
             color: #e6ae48; }
-    body.path-shop form#search-form .col-md-4 .top-hover:hover .block-fur-img a:last-child {
+    body.path-shop form#search-form .col-search .top-hover:hover .block-fur-img a:last-child {
       display: block;
       width: 100%;
       position: absolute;
       top: 0;
       left: 0; }
-      body.path-shop form#search-form .col-md-4 .top-hover:hover .block-fur-img a:last-child img {
+      body.path-shop form#search-form .col-search .top-hover:hover .block-fur-img a:last-child img {
         opacity: 1; }
-    body.path-shop form#search-form .col-md-4 .top-hover:hover .bar {
+    body.path-shop form#search-form .col-search .top-hover:hover .bar {
       opacity: 1;
       top: 81%; }
-  body.path-shop form#search-form .col-md-4 .block-fur-term {
+  body.path-shop form#search-form .col-search .block-fur-term {
     display: inline-block; }
-    body.path-shop form#search-form .col-md-4 .block-fur-term a {
+    body.path-shop form#search-form .col-search .block-fur-term a {
       color: #888888;
       text-decoration: none;
       font-size: 15px;
       line-height: 22px; }
-      body.path-shop form#search-form .col-md-4 .block-fur-term a:hover {
+      body.path-shop form#search-form .col-search .block-fur-term a:hover {
         color: #e6ae48; }
-  body.path-shop form#search-form .col-md-4 .block-fur-title h2 {
+  body.path-shop form#search-form .col-search .block-fur-title h2 {
     font-size: 18px;
     line-height: 24px;
     font-weight: normal;
     color: #212121;
     text-align: center; }
-    body.path-shop form#search-form .col-md-4 .block-fur-title h2 a {
+    body.path-shop form#search-form .col-search .block-fur-title h2 a {
       white-space: nowrap;
       text-decoration: none;
       border-bottom: 1px solid transparent; }
-      body.path-shop form#search-form .col-md-4 .block-fur-title h2 a:hover {
+      body.path-shop form#search-form .col-search .block-fur-title h2 a:hover {
         border-bottom: 1px solid #e6ae48; }
-  body.path-shop form#search-form .col-md-4 .block-fur-price p {
+  body.path-shop form#search-form .col-search .block-fur-price p {
     font-size: 18px;
     line-height: 24px;
     color: #888888;
     padding: 20px 0; }
-  body.path-shop form#search-form .col-md-4 .overlay {
+  body.path-shop form#search-form .col-search .overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -7550,38 +7552,92 @@ body.path-shop form#search-form .col-md-4 {
     transition: opacity 200ms;
     visibility: hidden;
     opacity: 0; }
-    body.path-shop form#search-form .col-md-4 .overlay.light {
+    body.path-shop form#search-form .col-search .overlay.light {
       background: rgba(255, 255, 255, 0.5); }
-    body.path-shop form#search-form .col-md-4 .overlay .cancel {
+    body.path-shop form#search-form .col-search .overlay .cancel {
       position: absolute;
       width: 100%;
       height: 100%;
       cursor: default; }
-    body.path-shop form#search-form .col-md-4 .overlay:target {
+    body.path-shop form#search-form .col-search .overlay:target {
       visibility: visible;
       opacity: 1; }
-    body.path-shop form#search-form .col-md-4 .overlay .attachment {
+    body.path-shop form#search-form .col-search .overlay .attachment {
       margin: 75px auto;
-      padding: 20px;
+      padding: 30px;
       background: #fff;
       border: 1px solid #666;
-      width: 300px;
+      max-width: 997px;
+      max-height: 600px;
       box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
       position: relative; }
-      body.path-shop form#search-form .col-md-4 .overlay .attachment .close {
+      body.path-shop form#search-form .col-search .overlay .attachment .close {
         position: absolute;
-        width: 20px;
-        height: 20px;
-        top: 20px;
-        right: 20px;
+        width: 22px;
+        height: 22px;
+        top: 7px;
+        right: 13px;
         opacity: 0.8;
         transition: all 200ms;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: bold;
         text-decoration: none;
-        color: #666; }
-        body.path-shop form#search-form .col-md-4 .overlay .attachment .close:hover {
-          opacity: 1; }
+        color: #888888;
+        border: 1px solid #e6e6e6;
+        line-height: 1; }
+        body.path-shop form#search-form .col-search .overlay .attachment .close:hover {
+          opacity: 1;
+          color: #e6ae48; }
+      body.path-shop form#search-form .col-search .overlay .attachment .popup-img {
+        display: inline-block;
+        width: 44%; }
+        body.path-shop form#search-form .col-search .overlay .attachment .popup-img .search-image:first-of-type {
+          display: block; }
+        body.path-shop form#search-form .col-search .overlay .attachment .popup-img .search-image {
+          display: none; }
+      body.path-shop form#search-form .col-search .overlay .attachment .popup-text {
+        display: inline-block;
+        width: 54%;
+        vertical-align: top;
+        text-align: left;
+        padding: 0 5%;
+        overflow-y: scroll; }
+        body.path-shop form#search-form .col-search .overlay .attachment .popup-text .search-title h1 {
+          padding-bottom: 30px;
+          border-bottom: 1px solid #e6e6e6;
+          font-size: 28px;
+          line-height: 34px;
+          color: #212121; }
+        body.path-shop form#search-form .col-search .overlay .attachment .popup-text .search-price {
+          border-bottom: 1px solid #e6e6e6; }
+          body.path-shop form#search-form .col-search .overlay .attachment .popup-text .search-price p {
+            font-family: "Karla", sans-serif;
+            color: #212121;
+            font-size: 22px;
+            line-height: 28px;
+            margin-bottom: 22px; }
+        body.path-shop form#search-form .col-search .overlay .attachment .popup-text .search-body {
+          border-bottom: 1px solid #e6e6e6; }
+          body.path-shop form#search-form .col-search .overlay .attachment .popup-text .search-body p {
+            font-family: "arialregular", sans-serif;
+            color: #888888;
+            font-size: 15px;
+            line-height: 22px;
+            margin-bottom: 25px; }
+        body.path-shop form#search-form .col-search .overlay .attachment .popup-text .category p {
+          font-family: "arialregular", sans-serif;
+          color: #212121;
+          display: inline-block;
+          padding-right: 10px;
+          font-size: 15px;
+          line-height: 22px; }
+        body.path-shop form#search-form .col-search .overlay .attachment .popup-text .category .search-term {
+          display: inline-block;
+          padding-right: 10px; }
+          body.path-shop form#search-form .col-search .overlay .attachment .popup-text .category .search-term p {
+            color: #9b9b9b; }
+            body.path-shop form#search-form .col-search .overlay .attachment .popup-text .category .search-term p:hover {
+              color: #e6ae48; }
 
 body.path-shop form#search-form nav.pager {
   text-align: center; }
