@@ -76,18 +76,22 @@ class SearchForm extends FormBase {
 		$query = \Drupal::database()->select('node_field_data', 'n');
 		$query->condition('n.type', 'furniture', '=');
 
+		$query->innerJoin('node__body', 'b', 'b.entity_id = n.nid');
+
 		$query->innerJoin('node__field_price', 'fp', 'fp.entity_id = n.nid');
 
 		$query->innerJoin('node__field_fur_image', 'fi', 'fi.entity_id = n.nid');
 
 		$query->innerJoin('node__field_categories', 'fc', 'fc.entity_id = n.nid');
 
+		$query->innerJoin('taxonomy_index', 'ti', 'ti.nid = n.nid');
+
 		$query->innerJoin('taxonomy_term_field_data', 't', 'fc.field_categories_target_id = t.tid');
 
 		$query->innerJoin('node_counter', 'nc', 'nc.nid = n.nid');
 
-		if ( !empty( $_GET['title' ])) {
-			$query->condition('title', $_GET[ 'title' ], 'LIKE');
+		if ( !empty( $_GET['name'])) {
+			$query->condition('name', $_GET[ 'name' ], 'LIKE');
 		}
 
 		$query->addField('n', 'nid');
@@ -97,6 +101,9 @@ class SearchForm extends FormBase {
 		$query->addField('t', 'name', 'taxonomy_name');
 		$query->addField('fi', 'field_fur_image_target_id', 'image');
 		$query->addField('fp', 'field_price_value', 'price');
+		$query->addField('b', 'body_value', 'body');
+
+		$query = $query->extend('Drupal\Core\Database\Query\PagerSelectExtender')->limit(24);
 
 		$sort = 0;
 		if (isset( $_GET['sort'])) {
@@ -121,6 +128,10 @@ class SearchForm extends FormBase {
 			$query->orderBy('price', 'DESC');
 		}
 
+		if(!empty($_GET['taxonomy'])) {
+			$query->condition('t.name', $_GET['taxonomy']);
+		}
+
 		$data = [];
 
 		$results = $query->execute()->fetchAll(\PDO::FETCH_GROUP);
@@ -139,17 +150,18 @@ class SearchForm extends FormBase {
 				$entry['tid'] = $alias_tax;
 				$entry['title'] = $node->title;
 				$entry['price'] = $node->price;
+				$entry['body'] = substr(strip_tags(str_replace(array("\r", "\n"), '', $node->body)), 0, 400);
 
 				if (!isset($entry['taxonomy_name'][0])) {
 					$entry['taxonomy_name'][] = [
 						'name' => strip_tags($node->taxonomy_name),
-						'url' => $alias_tax
+						'url' => '?taxonomy=' . $node->taxonomy_name,
 					];
 				} else {
 					if ($entry['taxonomy_name'][0]['name'] !== $node->taxonomy_name) {
 						$entry['taxonomy_name'][1] = [
 							'name' => strip_tags($node->taxonomy_name),
-							'url' => $alias_tax
+							'url' => '?taxonomy=' . $node->taxonomy_name,
 						];
 					}
 				}
