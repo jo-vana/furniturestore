@@ -6265,8 +6265,7 @@ section.field--name-field-leave-a-reply {
         padding: 30px;
         background: #fff;
         border: 1px solid #666;
-        max-width: 997px;
-        max-height: 600px;
+        width: 992px;
         box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
         position: fixed;
         left: 50%;
@@ -6291,56 +6290,69 @@ section.field--name-field-leave-a-reply {
           .block-our-collections .block-fur-wrap .overlay .attachment .close:hover {
             opacity: 1;
             color: #e6ae48; }
-        .block-our-collections .block-fur-wrap .overlay .attachment .popup-img {
-          display: inline-block;
-          width: 44%; }
-          .block-our-collections .block-fur-wrap .overlay .attachment .popup-img .search-image:first-of-type {
-            display: block; }
-          .block-our-collections .block-fur-wrap .overlay .attachment .popup-img .search-image {
-            display: none; }
-        .block-our-collections .block-fur-wrap .overlay .attachment .popup-text {
-          display: inline-block;
-          width: 54%;
-          vertical-align: top;
-          text-align: left;
-          padding: 0 5%;
+        .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap {
+          max-height: 600px;
           overflow-y: scroll; }
-          .block-our-collections .block-fur-wrap .overlay .attachment .popup-text .search-title h1 {
-            padding-bottom: 30px;
-            border-bottom: 1px solid #e6e6e6;
-            font-size: 28px;
-            line-height: 34px;
-            color: #212121; }
-          .block-our-collections .block-fur-wrap .overlay .attachment .popup-text .search-price {
-            border-bottom: 1px solid #e6e6e6; }
-            .block-our-collections .block-fur-wrap .overlay .attachment .popup-text .search-price p {
-              font-family: "Karla", sans-serif;
-              color: #212121;
-              font-size: 22px;
-              line-height: 28px;
-              margin-bottom: 22px; }
-          .block-our-collections .block-fur-wrap .overlay .attachment .popup-text .search-body {
-            border-bottom: 1px solid #e6e6e6; }
-            .block-our-collections .block-fur-wrap .overlay .attachment .popup-text .search-body p {
+          .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap .popup-img {
+            display: inline-block;
+            width: 44%; }
+            .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap .popup-img .search-image:first-of-type {
+              display: block; }
+            .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap .popup-img .search-image {
+              display: none; }
+            @media screen and (max-width: 51.2rem) {
+              .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap .popup-img {
+                width: 100%; }
+                .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap .popup-img img {
+                  margin: 0 auto; } }
+          .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap .popup-text {
+            display: inline-block;
+            width: 54%;
+            vertical-align: top;
+            text-align: left;
+            padding: 0 5%; }
+            .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap .popup-text .search-title h1 {
+              padding-bottom: 30px;
+              border-bottom: 1px solid #e6e6e6;
+              font-size: 28px;
+              line-height: 34px;
+              color: #212121; }
+            .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap .popup-text .search-price {
+              border-bottom: 1px solid #e6e6e6; }
+              .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap .popup-text .search-price p {
+                font-family: "Karla", sans-serif;
+                color: #212121;
+                font-size: 22px;
+                line-height: 28px;
+                margin-bottom: 22px; }
+            .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap .popup-text .search-body {
+              border-bottom: 1px solid #e6e6e6; }
+              .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap .popup-text .search-body p {
+                font-family: "arialregular", sans-serif;
+                color: #888888;
+                font-size: 15px;
+                line-height: 22px;
+                margin-bottom: 25px; }
+            .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap .popup-text .category p {
               font-family: "arialregular", sans-serif;
-              color: #888888;
+              color: #212121;
+              display: inline-block;
+              padding-right: 10px;
               font-size: 15px;
-              line-height: 22px;
-              margin-bottom: 25px; }
-          .block-our-collections .block-fur-wrap .overlay .attachment .popup-text .category p {
-            font-family: "arialregular", sans-serif;
-            color: #212121;
-            display: inline-block;
-            padding-right: 10px;
-            font-size: 15px;
-            line-height: 22px; }
-          .block-our-collections .block-fur-wrap .overlay .attachment .popup-text .category .search-term {
-            display: inline-block;
-            padding-right: 10px; }
-            .block-our-collections .block-fur-wrap .overlay .attachment .popup-text .category .search-term p {
-              color: #9b9b9b; }
-              .block-our-collections .block-fur-wrap .overlay .attachment .popup-text .category .search-term p:hover {
-                color: #e6ae48; }
+              line-height: 22px; }
+            .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap .popup-text .category .search-term {
+              display: inline-block;
+              padding-right: 10px; }
+              .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap .popup-text .category .search-term p {
+                color: #9b9b9b; }
+                .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap .popup-text .category .search-term p:hover {
+                  color: #e6ae48; }
+            @media screen and (max-width: 51.2rem) {
+              .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap .popup-text {
+                width: 100%; } }
+        @media screen and (max-width: 66.13333rem) {
+          .block-our-collections .block-fur-wrap .overlay .attachment {
+            width: 90%; } }
     @media screen and (max-width: 600px) {
       .block-our-collections .block-fur-wrap {
         width: 100%; } }
@@ -7725,8 +7737,7 @@ body.path-shop form#search-form .col-search {
       padding: 30px;
       background: #fff;
       border: 1px solid #666;
-      max-width: 997px;
-      max-height: 600px;
+      width: 992px;
       box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
       position: fixed;
       left: 50%;
@@ -7746,60 +7757,77 @@ body.path-shop form#search-form .col-search {
         text-decoration: none;
         color: #888888;
         border: 1px solid #e6e6e6;
-        line-height: 1; }
+        line-height: 1;
+        padding-left: 3px; }
         body.path-shop form#search-form .col-search .overlay .attachment .close:hover {
           opacity: 1;
           color: #e6ae48; }
-      body.path-shop form#search-form .col-search .overlay .attachment .popup-img {
-        display: inline-block;
-        width: 44%; }
-        body.path-shop form#search-form .col-search .overlay .attachment .popup-img .search-image:first-of-type {
-          display: block; }
-        body.path-shop form#search-form .col-search .overlay .attachment .popup-img .search-image {
-          display: none; }
-      body.path-shop form#search-form .col-search .overlay .attachment .popup-text {
-        display: inline-block;
-        width: 54%;
-        vertical-align: top;
-        text-align: left;
-        padding: 0 5%;
+      body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap {
+        max-height: 600px;
         overflow-y: scroll; }
-        body.path-shop form#search-form .col-search .overlay .attachment .popup-text .search-title h1 {
-          padding-bottom: 30px;
-          border-bottom: 1px solid #e6e6e6;
-          font-size: 28px;
-          line-height: 34px;
-          color: #212121; }
-        body.path-shop form#search-form .col-search .overlay .attachment .popup-text .search-price {
-          border-bottom: 1px solid #e6e6e6; }
-          body.path-shop form#search-form .col-search .overlay .attachment .popup-text .search-price p {
-            font-family: "Karla", sans-serif;
-            color: #212121;
-            font-size: 22px;
-            line-height: 28px;
-            margin-bottom: 22px; }
-        body.path-shop form#search-form .col-search .overlay .attachment .popup-text .search-body {
-          border-bottom: 1px solid #e6e6e6; }
-          body.path-shop form#search-form .col-search .overlay .attachment .popup-text .search-body p {
+        body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-img {
+          display: inline-block;
+          width: 44%; }
+          body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-img .search-image:first-of-type {
+            display: block; }
+          body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-img .search-image {
+            display: none; }
+          @media screen and (max-width: 51.2rem) {
+            body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-img {
+              width: 100%; }
+              body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-img img {
+                margin: 0 auto; } }
+        body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text {
+          display: inline-block;
+          width: 54%;
+          vertical-align: top;
+          text-align: left;
+          padding: 0 5%; }
+          body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .search-title h1 {
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e6e6e6;
+            font-size: 28px;
+            line-height: 34px;
+            color: #212121; }
+          body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .search-price {
+            border-bottom: 1px solid #e6e6e6; }
+            body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .search-price p {
+              font-family: "Karla", sans-serif;
+              color: #212121;
+              font-size: 22px;
+              line-height: 28px;
+              margin-bottom: 22px; }
+          body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .search-body {
+            border-bottom: 1px solid #e6e6e6; }
+            body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .search-body p {
+              font-family: "arialregular", sans-serif;
+              color: #888888;
+              font-size: 15px;
+              line-height: 22px;
+              margin-bottom: 25px; }
+          body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .category p {
             font-family: "arialregular", sans-serif;
-            color: #888888;
+            color: #212121;
+            display: inline-block;
+            padding-right: 10px;
             font-size: 15px;
-            line-height: 22px;
-            margin-bottom: 25px; }
-        body.path-shop form#search-form .col-search .overlay .attachment .popup-text .category p {
-          font-family: "arialregular", sans-serif;
-          color: #212121;
-          display: inline-block;
-          padding-right: 10px;
-          font-size: 15px;
-          line-height: 22px; }
-        body.path-shop form#search-form .col-search .overlay .attachment .popup-text .category .search-term {
-          display: inline-block;
-          padding-right: 10px; }
-          body.path-shop form#search-form .col-search .overlay .attachment .popup-text .category .search-term p {
-            color: #9b9b9b; }
-            body.path-shop form#search-form .col-search .overlay .attachment .popup-text .category .search-term p:hover {
-              color: #e6ae48; }
+            line-height: 22px; }
+          body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .category .search-term {
+            display: inline-block;
+            padding-right: 10px; }
+            body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .category .search-term p {
+              color: #9b9b9b; }
+              body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .category .search-term p:hover {
+                color: #e6ae48; }
+          @media screen and (max-width: 51.2rem) {
+            body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text {
+              width: 100%; } }
+      @media screen and (max-width: 66.13333rem) {
+        body.path-shop form#search-form .col-search .overlay .attachment {
+          width: 90%; } }
+  @media screen and (max-width: 600px) {
+    body.path-shop form#search-form .col-search {
+      width: 100%; } }
 
 body.path-shop form#search-form nav.pager {
   text-align: center; }

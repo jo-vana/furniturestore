@@ -77,6 +77,7 @@
                 <div id="popup" class="overlay">
                 <div class="attachment" data-node-type="{{ entry.nid }}">
                     <a class="close" href="#">&times;</a>
+                    <div class="attach-wrap">
                     <div class="popup-img">
                     {% for en_key,en in entry.image %}
                     {% if en_key matches '/^\\d+$/' %}
@@ -110,6 +111,7 @@
                             {% endif %}
                         {% endfor %}
                     </div>
+                </div>
                 </div>
                 </div>
                 </div>
