@@ -9,21 +9,73 @@
         {% endfor %}
         </div>
 
-    <div class="tax-wrapper">
-        {% for en in entry.taxonomy_name %}
-            <div class="block-fur-term">
-                <a href ="{{ en.url }}"><p>{{ en.name }}</p></a>
+        {#Hover items#}
+
+        <div class="bar">
+            <div class="search-icon">
+                <a href="#popup"><i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
-        {% endfor %}
-    </div>
+            <div class="cart">
+                <a href="#">Add to Cart</a>
+            </div>
+            <div class="like_dislike">
+                <div class="like">
+                    <a href={{ like_url }}><i class="fa fa-heart-o" aria-hidden="true"></i>
+                    </a>
+                    <span id="like">{{ entry.likes }}</span>
+                </div>
+            </div>
+        </div>
 
-    <div class="block-fur-title">
-        <a href ="{{ entry.nid }}">{{ entry.title }}</a>
-    </div>
+        <div class="tax-wrapper">
+            {% for en in entry.taxonomy_name %}
+                <div class="block-fur-term">
+                    <a href ="{{ en.url }}"><p>{{ en.name }}</p></a>
+                </div>
+            {% endfor %}
+        </div>
 
-    <div class="block-fur-price">
-        <p>${{ entry.field_price_value }}</p>
-    </div>
+        <div class="block-fur-title">
+            <a href ="{{ entry.nid }}">{{ entry.title }}</a>
+        </div>
+
+        <div class="block-fur-price">
+            <p>${{ entry.field_price_value }}</p>
+        </div>
+
+
+        {#When clicked on Search#}
+        <div id="popup" class="overlay">
+            <div class="attachment" data-node-type="{{ entry.nid }}">
+                <a class="close" href="#">&times;</a>
+                {% for en in entry.image %}
+                    <div class="search-image">
+                        <img src="{{ en.img }}">
+                    </div>
+                {% endfor %}
+
+                <div class="search-title">
+                    <h1>{{ entry.title }}</h1>
+                </div>
+
+                <div class="search-price">
+                    <p>${{ entry.field_price_value }}</p>
+                </div>
+
+                {% for en in entry.taxonomy_name %}
+                    <div class="search-term">
+                        <a href ="{{ en.url }}"><p>{{ en.name }}</p></a>
+                    </div>
+                {% endfor %}
+
+                <div class="search-body">
+                    <p>{{ entry.body }}</p>
+                </div>
+
+            </div>
+        </div>
+
+
     </div>
 
 {% endfor %}

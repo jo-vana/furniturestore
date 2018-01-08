@@ -26,6 +26,8 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
         $query = \Drupal::database()->select('node_field_data', 'n');
         $query->condition('n.type', 'furniture', '=');
 
+        $query->innerJoin('node__body', 'b', '.b.entity_id = n.nid');
+
         $query->innerJoin('node__field_fur_image', 'fi', 'fi.entity_id = n.nid');
 
         $query->innerJoin('node__field_categories', 'fc', 'fc.entity_id = n.nid' );
@@ -40,6 +42,7 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
         $query->addField('fi', 'field_fur_image_target_id', 'image');
         $query->addField('t', 'name', 'taxonomy_name');
         $query->addField('fp', 'field_price_value');
+        $query->addField('b', 'body_value', 'body');
 
         $data = [];
 
@@ -59,6 +62,7 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
                 $entry['tid'] = $alias_tax;
                 $entry['title'] = $node->title;
                 $entry['field_price_value'] = $node->field_price_value;
+                $entry['body'] = substr(strip_tags(str_replace(array("\r", "\n"), '', $node->body)), 0, 400);
 
                 //@todo If current logic that node has maximum input values of 2 taxonomy terms is changed, change logic bellow.
                 if (!isset($entry['taxonomy_name'][0])) {

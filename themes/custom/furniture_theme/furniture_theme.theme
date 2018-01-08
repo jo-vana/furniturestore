@@ -45,7 +45,6 @@ function furniture_theme_preprocess_html(&$variables, $plugin, $configuration)
 // Register Form and Login Form
 function furniture_theme_form_alter(&$form, &$form_state, $form_id)
 {
-
     // Register Form
     if ($form_id === 'user_register_form') {
         $form['user_picture']['#access'] = FALSE;
@@ -116,11 +115,10 @@ function furniture_theme_form_alter(&$form, &$form_state, $form_id)
         $form['field_comment_name']['widget'][0]['value']['#title'] = FALSE;
         $form['field_email']['widget'][0]['value']['#title'] = FALSE;
     }
+}
 
-    //Placeholder for search form
-//    if($form['#id'] = '.region-sidebar-first .search-block-form') {
-//        $form['keys']['#attributes']['placeholder'] = 'Search for products';
-//    }
+function furniture_theme_form_search_block_form_alter(&$form) {
+    $form['keys']['#attributes']['placeholder'] = t('Search for products');
 }
 
 function furniture_theme_preprocess_node(&$variables) {
