@@ -43,6 +43,7 @@ class FavouriteProducts extends BlockBase implements BlockPluginInterface{
         $query->orderBy( 'totalcount', 'DESC' );
 
         $query->addField('n', 'nid');
+        $query->addField('n', 'nid', 'id');
         $query->addField('n', 'title');
         $query->addField('fi', 'field_fur_image_target_id', 'image');
         $query->addField('fp', 'field_price_value');
@@ -64,6 +65,7 @@ class FavouriteProducts extends BlockBase implements BlockPluginInterface{
 
                 $alias_tax = str_replace(' ', '-', $alias_taxonomy);
 
+                $entry['id'] = $node->id;
                 $entry['nid'] = $alias_node;
                 $entry['tid'] = $alias_tax;
                 $entry['title'] = $node->title;
