@@ -4,7 +4,7 @@
 // Style for search page
 //
 // ========================================
-body.path-shop {
+  form#furniture-list-form,
   form#search-form {
     .filter {
       display: inline-block;
@@ -359,4 +359,3 @@ body.path-shop {
       }
     }
   }
-}

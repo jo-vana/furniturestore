@@ -13,7 +13,7 @@
 <div class="row">
     {% for key,entry in form.content.data %}
         {% if key matches '/^\\d+$/' %}
-            <div class="col-md-4">
+            <div class="col-search">
                 <div class="top-hover">
                     <div class="block-fur-img">
                         {% for en_key,en in entry.image %}
@@ -66,6 +66,8 @@
                 <div id="popup" class="overlay">
                     <div class="attachment" data-node-type="{{ entry.nid }}">
                         <a class="close" href="#">&times;</a>
+                        <div class="attach-wrap">
+                        <div class="popup-img">
                         {% for en_key,en in entry.image %}
                             {% if en_key matches '/^\\d+$/' %}
                                 <div class="search-image">
@@ -73,7 +75,8 @@
                                 </div>
                             {% endif %}
                         {% endfor %}
-
+                        </div>
+                            <div class="popup-text">
                         <div class="search-title">
                             <h1>{{ entry.title }}</h1>
                         </div>
@@ -82,18 +85,21 @@
                             <p>${{ entry.price }}</p>
                         </div>
 
-                        {% for en_key,en in entry.taxonomy_name %}
-                            {% if en_key matches '/^\\d+$/' %}
-                                <div class="search-term">
-                                    <a href ="{{ en.url }}"><p>{{ en.name }}</p></a>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-
                         <div class="search-body">
                             <p>{{ entry.body }}</p>
                         </div>
-
+                                <div class="category">
+                                    <p>Categories:</p>
+                                    {% for en_key,en in entry.taxonomy_name %}
+                                        {% if en_key matches '/^\\d+$/' %}
+                                            <div class="search-term">
+                                                <a href ="{{ en.url }}"><p>{{ en.name }}</p></a>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                    </div>
                     </div>
                 </div>
 
