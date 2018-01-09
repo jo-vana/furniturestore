@@ -54,7 +54,7 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
                 $file = File::load($node->image);
                 $url = \Drupal\image\Entity\ImageStyle::load('furniture_default_img')->buildUrl($file->getFileUri());
                 $alias_node = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $key);
-                $alias_taxonomy = \Drupal::service('path.alias_manager')->getAliasByPath('/' . $node->taxonomy_name);
+                $alias_taxonomy = \Drupal::service('path.alias_manager')->getAliasByPath('/' . $node->tid);
 
                 $alias_tax = str_replace(' ', '-', $alias_taxonomy);
 
@@ -68,13 +68,13 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
                 if (!isset($entry['taxonomy_name'][0])) {
                     $entry['taxonomy_name'][] = [
                         'name' => strip_tags($node->taxonomy_name),
-                        'url' => 'furniture/?taxonomy=' . $node->taxonomy_name,
+                        'url' => 'furniture/?taxonomy=' . $node->tid,
                     ];
                 } else {
                     if ($entry['taxonomy_name'][0]['name'] !== $node->taxonomy_name) {
                         $entry['taxonomy_name'][1] = [
                             'name' => strip_tags($node->taxonomy_name),
-                            'url' => 'furniture/?taxonomy=' . $node->taxonomy_name,
+                            'url' => 'furniture/?taxonomy=' . $node->tid,
                         ];
                     }
                 }
