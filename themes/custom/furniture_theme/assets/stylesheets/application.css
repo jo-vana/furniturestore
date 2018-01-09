@@ -3349,6 +3349,13 @@ h1, h2, h3, h4, h5, h6 {
         text-decoration: none;
         font-size: 30px;
         font-weight: bold; }
+      @media screen and (max-width: 51.2rem) {
+        .layout-container .region-primary-menu #block-furniture-theme-branding {
+          display: block;
+          width: 100%;
+          margin: 0 auto;
+          text-align: center;
+          margin-bottom: 20px; } }
   .layout-container .region-breadcrumb {
     display: inline-block;
     width: 100%;
@@ -3855,16 +3862,13 @@ footer {
 
 #block-furniture-theme-main-menu {
   display: inline-block;
-  width: 60%;
   margin-right: 3%;
   float: right;
   clear: right; }
   #block-furniture-theme-main-menu ul.nav-0 {
-    display: block;
+    display: inline-block;
     margin-top: 27px;
-    margin-bottom: 0px;
-    float: right;
-    clear: right; }
+    margin-bottom: 0px; }
     #block-furniture-theme-main-menu ul.nav-0 li {
       display: inline-block;
       padding: 10px 15px 0 15px; }
@@ -3998,6 +4002,30 @@ footer {
       @media screen and (max-width: 80rem) {
         #block-furniture-theme-main-menu ul.nav-0 li > ul.nav-1.has-children {
           width: 75%; } }
+  #block-furniture-theme-main-menu span {
+    font-size: 18px;
+    color: #282828;
+    width: 42px;
+    position: relative;
+    cursor: pointer; }
+    #block-furniture-theme-main-menu span:hover {
+      color: #e6ae48; }
+  #block-furniture-theme-main-menu span.fa-heart-o::after {
+    content: 'w';
+    font-size: 15px;
+    font-family: "Karla", sans-serif;
+    color: #e6ae48;
+    position: absolute;
+    top: -4px;
+    right: 9px; }
+  #block-furniture-theme-main-menu span.fa-shopping-bag::after {
+    content: '0';
+    font-size: 15px;
+    font-family: "Karla", sans-serif;
+    color: #e6ae48;
+    position: absolute;
+    top: -4px;
+    right: 9px; }
   @media screen and (max-width: 66.13333rem) {
     #block-furniture-theme-main-menu {
       display: none; } }
@@ -4018,27 +4046,91 @@ body.user-logged-in #block-furniture-theme-main-menu ul.nav-0 li:hover ul.nav-1.
   opacity: 1; }
 
 body.user-logged-in #block-mainnavigationmobile .menu-toggle {
-  top: -28px; }
+  top: -39px; }
+  @media screen and (max-width: 51.2rem) {
+    body.user-logged-in #block-mainnavigationmobile .menu-toggle {
+      top: 0; } }
 
 .menu--main-navigation-mobile {
   display: none;
   width: 100%;
   margin: 0 auto; }
   .menu--main-navigation-mobile .menu-toggle {
-    width: 60px;
     color: #212121;
     padding: 13px 15px;
     font-size: 18px;
     text-transform: uppercase;
     cursor: pointer;
-    position: relative;
-    float: right;
-    clear: right;
-    top: -26px; }
+    right: 20px;
+    position: absolute;
+    top: 75px;
+    margin: 0 auto; }
     .menu--main-navigation-mobile .menu-toggle span {
-      right: 20px;
-      position: absolute;
-      top: 0; }
+      width: 50px; }
+      .menu--main-navigation-mobile .menu-toggle span.fa-search {
+        font-size: 18px;
+        color: #282828;
+        cursor: pointer; }
+        .menu--main-navigation-mobile .menu-toggle span.fa-search:hover {
+          color: #e6ae48; }
+      .menu--main-navigation-mobile .menu-toggle span.fa-shopping-bag {
+        font-size: 18px;
+        color: #282828;
+        cursor: pointer; }
+        .menu--main-navigation-mobile .menu-toggle span.fa-shopping-bag:hover {
+          color: #e6ae48; }
+        .menu--main-navigation-mobile .menu-toggle span.fa-shopping-bag::after {
+          content: '0';
+          font-size: 15px;
+          font-family: "Karla", sans-serif;
+          color: #e6ae48;
+          top: -4px;
+          position: relative;
+          right: -4px; }
+      .menu--main-navigation-mobile .menu-toggle span.fa-heart-o {
+        font-size: 18px;
+        color: #282828;
+        cursor: pointer; }
+        .menu--main-navigation-mobile .menu-toggle span.fa-heart-o:hover {
+          color: #e6ae48; }
+        .menu--main-navigation-mobile .menu-toggle span.fa-heart-o::after {
+          content: 'w';
+          font-size: 15px;
+          font-family: "Karla", sans-serif;
+          color: #e6ae48;
+          top: -4px;
+          position: relative;
+          right: -4px; }
+      .menu--main-navigation-mobile .menu-toggle span.fa-bars {
+        width: 40px;
+        float: right;
+        clear: right; }
+    @media screen and (max-width: 51.2rem) {
+      .menu--main-navigation-mobile .menu-toggle {
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+        right: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        .menu--main-navigation-mobile .menu-toggle span#first {
+          -webkit-box-ordinal-group: 3;
+              -ms-flex-order: 2;
+                  order: 2; }
+        .menu--main-navigation-mobile .menu-toggle span#last {
+          -webkit-box-ordinal-group: 2;
+              -ms-flex-order: 1;
+                  order: 1; } }
   .menu--main-navigation-mobile ul.menu-level-1 {
     display: none; }
   @media screen and (max-width: 66.13333rem) {
@@ -6161,6 +6253,7 @@ section.field--name-field-leave-a-reply {
         .block-our-collections .block-fur-wrap .top-hover .bar .search-icon,
         .block-our-collections .block-fur-wrap .top-hover .bar .like_dislike {
           display: inline-block;
+          vertical-align: top;
           padding-top: 10px;
           width: 40px;
           height: 40px;
@@ -6174,6 +6267,7 @@ section.field--name-field-leave-a-reply {
               color: #e6ae48; }
         .block-our-collections .block-fur-wrap .top-hover .bar .cart {
           display: inline-block;
+          vertical-align: top;
           background-color: white;
           padding-top: 10px;
           width: calc(100% - 90px);
@@ -7838,6 +7932,7 @@ form#search-form .col-search {
       form#search-form .col-search .top-hover .bar .search-icon,
       form#search-form .col-search .top-hover .bar .like_dislike {
         display: inline-block;
+        vertical-align: top;
         padding-top: 10px;
         width: 40px;
         height: 40px;
@@ -7856,6 +7951,7 @@ form#search-form .col-search {
       form#furniture-list-form .col-search .top-hover .bar .cart,
       form#search-form .col-search .top-hover .bar .cart {
         display: inline-block;
+        vertical-align: top;
         background-color: white;
         padding-top: 10px;
         width: calc(100% - 90px);

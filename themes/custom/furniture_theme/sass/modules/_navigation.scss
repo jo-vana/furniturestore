@@ -10,16 +10,16 @@
 }
 #block-furniture-theme-main-menu {
   display: inline-block;
-  width: 60%;
+  //width: 60%;
   margin-right: 3%;
   float: right;
   clear: right;
   ul.nav-0 {
-    display: block;
+    display: inline-block;
     margin-top: 27px;
     margin-bottom: 0px;
-    float: right;
-    clear: right;
+    //float: right;
+    //clear: right;
     li {
       display: inline-block;
       padding: 10px 15px 0 15px;
@@ -175,6 +175,38 @@
       }
     }
   }
+  span {
+    font-size: 18px;
+    color: #282828;
+    width: 42px;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      color: $color-orange;
+    }
+  }
+  span.fa-heart-o {
+    &::after {
+      content: 'w';
+      font-size: 15px;
+      font-family: $font-karla;
+      color: $color-orange;
+      position: absolute;
+      top: -4px;
+      right: 9px;
+    }
+  }
+  span.fa-shopping-bag {
+    &::after {
+      content: '0';
+      font-size: 15px;
+      font-family: $font-karla;
+      color: $color-orange;
+      position: absolute;
+      top: -4px;
+      right: 9px;
+    }
+  }
   @media screen and (max-width: $screen-md-min) {
     display: none;
   }
@@ -207,7 +239,10 @@ body.user-logged-in {
 body.user-logged-in {
   #block-mainnavigationmobile {
     .menu-toggle {
-      top: -28px;
+      top: -39px;
+      @media screen and (max-width: $screen-sm-min) {
+        top: 0;
+      }
     }
   }
 }
@@ -216,20 +251,80 @@ body.user-logged-in {
   width: 100%;
   margin: 0 auto;
   .menu-toggle {
-    width: 60px;
     color: $color-black;
     padding: 13px 15px;
     font-size: 18px;
     text-transform: uppercase;
     cursor: pointer;
-    position: relative;
-    float: right;
-    clear: right;
-    top: -26px;
+    right: 20px;
+    position: absolute;
+    top: 75px;
+    margin: 0 auto;
     span {
-      right: 20px;
-      position: absolute;
-      top: 0;
+      width: 50px;
+      &.fa-search {
+        font-size: 18px;
+        color: #282828;
+        cursor: pointer;
+        &:hover {
+          color: $color-orange;
+        }
+      }
+      &.fa-shopping-bag {
+        font-size: 18px;
+        color: #282828;
+        cursor: pointer;
+        &:hover {
+          color: $color-orange;
+        }
+        &::after {
+          content: '0';
+          font-size: 15px;
+          font-family: $font-karla;
+          color: $color-orange;
+          top: -4px;
+          position: relative;
+          right: -4px;
+        }
+      }
+      &.fa-heart-o {
+        font-size: 18px;
+        color: #282828;
+        cursor: pointer;
+        &:hover {
+          color: $color-orange;
+        }
+        &::after {
+          content: 'w';
+          font-size: 15px;
+          font-family: $font-karla;
+          color: $color-orange;
+          top: -4px;
+          position: relative;
+          right: -4px;
+        }
+      }
+      &.fa-bars {
+        width: 40px;
+        float: right;
+        clear: right;
+      }
+    }
+    @media screen and (max-width: $screen-sm-min) {
+      position: relative;
+      width: 80%;
+      margin: 0 auto;
+      right: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      span#first {
+        order: 2;
+      }
+      span#last {
+        order: 1;
+      }
     }
   }
   ul.menu-level-1 {
