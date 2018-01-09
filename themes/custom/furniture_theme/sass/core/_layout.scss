@@ -49,6 +49,13 @@
         font-size: 30px;
         font-weight: bold;
       }
+      @media screen and (max-width: $screen-sm-min) {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 20px;
+      }
     }
   }
   .region-breadcrumb {

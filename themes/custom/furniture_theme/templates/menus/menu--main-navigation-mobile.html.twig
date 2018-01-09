@@ -27,7 +27,12 @@
     {% if items %}
         {# 1 menu level#}
         {% if menu_level == 0 %}
-            <div class="menu-toggle"><span class="fa fa-bars"></span></div>
+            <div class="menu-toggle">
+                <span id="first" class="fa fa-heart-o"></span>
+                <span id="first" class="fa fa-shopping-bag"></span>
+                <span id="first" class="fa fa-search"></span>
+                <span id="last" class="fa fa-bars"></span>
+            </div>
             <ul{{ attributes.addClass('menu-level-1') }}>
         {% else %}
 
