@@ -94,7 +94,7 @@ class SearchForm extends FormBase {
 
 		$query->innerJoin('node__field_price', 'fp', 'fp.entity_id = n.nid' );
 
-		$query->innerJoin('node__body', 'b', '.b.entity_id = n.nid');
+		$query->innerJoin('node__body', 'b', 'b.entity_id = n.nid');
 
 		$query->innerJoin('node__field_fur_image', 'fi', 'fi.entity_id = n.nid');
 
@@ -109,6 +109,7 @@ class SearchForm extends FormBase {
 		}
 
 		$query->addField('n', 'nid');
+		$query->addField('n', 'nid', 'id');
 		$query->addField('n', 'status');
 		$query->addField('n', 'title');
 		$query->addField('t', 'tid');
@@ -169,6 +170,7 @@ class SearchForm extends FormBase {
 
 				$alias_tax = str_replace(' ', '-', $alias_taxonomy);
 
+				$entry['id'] = $node->id;
 				$entry['nid'] = $alias_node;
 				$entry['tid'] = $alias_tax;
 				$entry['title'] = $node->title;

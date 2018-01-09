@@ -37,6 +37,7 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
         $query->innerJoin('node__field_price', 'fp', 'fp.entity_id = n.nid' );
 
         $query->addField('n', 'nid');
+        $query->addField('n', 'nid','id');
         $query->addField('t', 'tid');
         $query->addField('n', 'title');
         $query->addField('fi', 'field_fur_image_target_id', 'image');
@@ -57,6 +58,8 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
                 $alias_taxonomy = \Drupal::service('path.alias_manager')->getAliasByPath('/' . $node->tid);
 
                 $alias_tax = str_replace(' ', '-', $alias_taxonomy);
+
+                $entry['id'] = $node->id;
 
                 $entry['nid'] = $alias_node;
                 $entry['tid'] = $alias_tax;
