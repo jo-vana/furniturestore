@@ -10,28 +10,39 @@
 {{ form.form_build_id }}
 {{ form.form_token }}
 {{ form.form_id }}
-
-<div class="row">
-    {#<div class="col-md-6">#}
-    {#{{ form.filters.title }}#}
-    {#</div>#}
-    {#<div class="col-md-6">#}
-    {#{{ form.filters.published }}#}
-    {#</div>#}
-</div>
-
 <div class="row">
     {% for key,entry in form.content.data %}
         {% if key matches '/^\\d+$/' %}
             <div class="col-md-4">
+                <div class="top-hover">
+                    <div class="block-fur-img">
+                        {% for en_key,en in entry.image %}
+                            {% if en_key matches '/^\\d+$/' %}
 
-                {% for en_key,en in entry.image %}
-                    {% if en_key matches '/^\\d+$/' %}
+                                <a href ="{{ en.nid }}"><img src="{{ en.img }}"/></a>
 
-                        <a href ="{{ en.nid }}"><img src="{{ en.img }}"/></a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    {#Hover items#}
 
-                    {% endif %}
-                {% endfor %}
+                    <div class="bar">
+                        <div class="search-icon">
+                            <a href="#popup"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="cart">
+                            <a href="#">Add to Cart</a>
+                        </div>
+                        <div class="like_dislike">
+                            <div class="like">
+                                <a href={{ like_url }}><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </a>
+                                <span id="like">{{ entry.likes }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
 
                 {% for en_key,en in entry.taxonomy_name %}
                     {% if en_key matches '/^\\d+$/' %}
@@ -49,6 +60,41 @@
 
                 <div class="block-fur-price">
                     <p>${{ entry.price }}</p>
+                </div>
+
+                {#When clicked on Search#}
+                <div id="popup" class="overlay">
+                    <div class="attachment" data-node-type="{{ entry.nid }}">
+                        <a class="close" href="#">&times;</a>
+                        {% for en_key,en in entry.image %}
+                            {% if en_key matches '/^\\d+$/' %}
+                                <div class="search-image">
+                                    <img src="{{ en.img }}">
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+
+                        <div class="search-title">
+                            <h1>{{ entry.title }}</h1>
+                        </div>
+
+                        <div class="search-price">
+                            <p>${{ entry.price }}</p>
+                        </div>
+
+                        {% for en_key,en in entry.taxonomy_name %}
+                            {% if en_key matches '/^\\d+$/' %}
+                                <div class="search-term">
+                                    <a href ="{{ en.url }}"><p>{{ en.name }}</p></a>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+
+                        <div class="search-body">
+                            <p>{{ entry.body }}</p>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>

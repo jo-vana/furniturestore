@@ -68,13 +68,13 @@ class OurCollections extends BlockBase implements BlockPluginInterface{
                 if (!isset($entry['taxonomy_name'][0])) {
                     $entry['taxonomy_name'][] = [
                         'name' => strip_tags($node->taxonomy_name),
-                        'url' => $alias_tax
+                        'url' => 'furniture/?taxonomy=' . $node->taxonomy_name,
                     ];
                 } else {
                     if ($entry['taxonomy_name'][0]['name'] !== $node->taxonomy_name) {
                         $entry['taxonomy_name'][1] = [
                             'name' => strip_tags($node->taxonomy_name),
-                            'url' => $alias_tax
+                            'url' => 'furniture/?taxonomy=' . $node->taxonomy_name,
                         ];
                     }
                 }
