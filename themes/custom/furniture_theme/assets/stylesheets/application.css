@@ -4111,6 +4111,7 @@ body.user-logged-in #block-mainnavigationmobile .menu-toggle {
         width: 80%;
         margin: 0 auto;
         right: 0;
+        top: 0;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
