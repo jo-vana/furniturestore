@@ -102,7 +102,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
         {% if content.field_fur_image|render is not empty %}
         <div class="bar">
             <div class="search-icon">
-                <a href="#popup"><i class="fa fa-search" aria-hidden="true"></i></a>
+                <a href="#popup-{{ entry.id }}"><i class="fa fa-search" aria-hidden="true"></i></a>
             </div>
             <div class="cart">
                 <a href="#">Add to Cart</a>
@@ -127,7 +127,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 
 
         {#When clicked on Search#}
-        <div id="popup" class="overlay">
+        <div id="popup-{{ entry.id }}" class="overlay">
             <div class="attachment" data-node-type="{{ entry.nid }}">
                 <a class="close" href="#">&times;</a>
                 <div class="attach-wrap">
