@@ -104,6 +104,10 @@
       .item-list--linkicon {
         padding-bottom: 25px;
       }
+      @media screen and (max-width: $screen-sm){
+        width: 95%;
+        margin-right: 3%;
+      }
     }
   }
   .second-block {
@@ -405,6 +409,7 @@
     display: none;
   }
   #slider {
+    margin: 0;
     ul {
       position: relative;
       li:first-child {
