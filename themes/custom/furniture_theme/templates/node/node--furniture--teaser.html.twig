@@ -97,7 +97,8 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 
     <div{{ content_attributes.addClass('node__content') }}>
         {#{{ content }}#}
-        {{ content.field_fur_image }}
+        <div class="hover-block">
+            {{ content.field_fur_image }}
 
         {% if content.field_fur_image|render is not empty %}
         <div class="bar">
@@ -116,6 +117,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
             </div>
         </div>
         {% endif %}
+        </div>
 
         {{ content.field_categories }}
         {{ title_prefix }}
