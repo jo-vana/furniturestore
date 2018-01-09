@@ -6152,7 +6152,7 @@ section.field--name-field-leave-a-reply {
       .block-our-collections .block-fur-wrap .top-hover .bar {
         display: block;
         position: absolute;
-        top: 100%;
+        top: 150%;
         opacity: 0;
         width: 100%;
         padding: 0 10px;
@@ -7588,22 +7588,27 @@ body.path-user #block-furniture-theme-content {
     body.path-user #block-furniture-theme-content {
       width: 100%; } }
 
-body.path-shop form#search-form .filter {
+form#furniture-list-form .filter,
+form#search-form .filter {
   display: inline-block; }
-  body.path-shop form#search-form .filter .form-item-sort {
+  form#furniture-list-form .filter .form-item-sort,
+  form#search-form .filter .form-item-sort {
     display: inline-block;
     margin-top: 0; }
-    body.path-shop form#search-form .filter .form-item-sort select {
+    form#furniture-list-form .filter .form-item-sort select,
+    form#search-form .filter .form-item-sort select {
       background-color: white;
       padding: 4% 10%;
       color: #888888;
       font-family: "arialregular", sans-serif;
       font-size: 15px; }
 
-body.path-shop form#search-form .button {
+form#furniture-list-form .button,
+form#search-form .button {
   display: inline-block;
   vertical-align: top; }
-  body.path-shop form#search-form .button input {
+  form#furniture-list-form .button input,
+  form#search-form .button input {
     display: inline-block;
     width: 80px;
     height: 40px;
@@ -7617,38 +7622,48 @@ body.path-shop form#search-form .button {
     font-style: normal;
     font-family: "Karla", sans-serif;
     margin-right: 10px; }
-    body.path-shop form#search-form .button input:hover {
+    form#furniture-list-form .button input:hover,
+    form#search-form .button input:hover {
       background-color: #e6ae48; }
 
-body.path-shop form#search-form h2.results {
+form#furniture-list-form h2.results,
+form#search-form h2.results {
   display: inline-block;
   margin-top: 5px;
   float: right;
   clear: right; }
 
-body.path-shop form#search-form .col-search {
+form#furniture-list-form .col-search,
+form#search-form .col-search {
   display: inline-block;
   width: 30%;
   margin: 0 10px;
   vertical-align: top;
   text-align: center; }
-  body.path-shop form#search-form .col-search .top-hover {
+  form#furniture-list-form .col-search .top-hover,
+  form#search-form .col-search .top-hover {
     display: block;
     position: relative; }
-    body.path-shop form#search-form .col-search .top-hover .block-fur-img {
+    form#furniture-list-form .col-search .top-hover .block-fur-img,
+    form#search-form .col-search .top-hover .block-fur-img {
       display: block;
       position: relative; }
-      body.path-shop form#search-form .col-search .top-hover .block-fur-img a:first-child {
+      form#furniture-list-form .col-search .top-hover .block-fur-img a:first-child,
+      form#search-form .col-search .top-hover .block-fur-img a:first-child {
         display: block; }
-        body.path-shop form#search-form .col-search .top-hover .block-fur-img a:first-child img {
+        form#furniture-list-form .col-search .top-hover .block-fur-img a:first-child img,
+        form#search-form .col-search .top-hover .block-fur-img a:first-child img {
           margin: 0 auto;
           opacity: 1; }
-      body.path-shop form#search-form .col-search .top-hover .block-fur-img a {
+      form#furniture-list-form .col-search .top-hover .block-fur-img a,
+      form#search-form .col-search .top-hover .block-fur-img a {
         display: none; }
-        body.path-shop form#search-form .col-search .top-hover .block-fur-img a img {
+        form#furniture-list-form .col-search .top-hover .block-fur-img a img,
+        form#search-form .col-search .top-hover .block-fur-img a img {
           transition: opacity .3s ease-in-out;
           opacity: 0; }
-    body.path-shop form#search-form .col-search .top-hover .bar {
+    form#furniture-list-form .col-search .top-hover .bar,
+    form#search-form .col-search .top-hover .bar {
       display: block;
       position: absolute;
       top: 150%;
@@ -7656,74 +7671,94 @@ body.path-shop form#search-form .col-search {
       width: 100%;
       padding: 0 10px;
       transition: opacity .3s ease-in-out, top .3s ease-in-out; }
-      body.path-shop form#search-form .col-search .top-hover .bar .search-icon,
-      body.path-shop form#search-form .col-search .top-hover .bar .like_dislike {
+      form#furniture-list-form .col-search .top-hover .bar .search-icon,
+      form#furniture-list-form .col-search .top-hover .bar .like_dislike,
+      form#search-form .col-search .top-hover .bar .search-icon,
+      form#search-form .col-search .top-hover .bar .like_dislike {
         display: inline-block;
         padding-top: 10px;
         width: 40px;
         height: 40px;
         background-color: white; }
-        body.path-shop form#search-form .col-search .top-hover .bar .search-icon a,
-        body.path-shop form#search-form .col-search .top-hover .bar .like_dislike a {
+        form#furniture-list-form .col-search .top-hover .bar .search-icon a,
+        form#furniture-list-form .col-search .top-hover .bar .like_dislike a,
+        form#search-form .col-search .top-hover .bar .search-icon a,
+        form#search-form .col-search .top-hover .bar .like_dislike a {
           vertical-align: baseline;
           color: #212121; }
-          body.path-shop form#search-form .col-search .top-hover .bar .search-icon a:hover,
-          body.path-shop form#search-form .col-search .top-hover .bar .like_dislike a:hover {
+          form#furniture-list-form .col-search .top-hover .bar .search-icon a:hover,
+          form#furniture-list-form .col-search .top-hover .bar .like_dislike a:hover,
+          form#search-form .col-search .top-hover .bar .search-icon a:hover,
+          form#search-form .col-search .top-hover .bar .like_dislike a:hover {
             color: #e6ae48; }
-      body.path-shop form#search-form .col-search .top-hover .bar .cart {
+      form#furniture-list-form .col-search .top-hover .bar .cart,
+      form#search-form .col-search .top-hover .bar .cart {
         display: inline-block;
         background-color: white;
         padding-top: 10px;
         width: calc(100% - 90px);
         margin: 0 auto;
         height: 40px; }
-        body.path-shop form#search-form .col-search .top-hover .bar .cart a {
+        form#furniture-list-form .col-search .top-hover .bar .cart a,
+        form#search-form .col-search .top-hover .bar .cart a {
           white-space: nowrap;
           vertical-align: baseline;
           color: #212121;
           font-size: 16px;
           text-decoration: none;
           font-family: "Karla", sans-serif; }
-          body.path-shop form#search-form .col-search .top-hover .bar .cart a:hover {
+          form#furniture-list-form .col-search .top-hover .bar .cart a:hover,
+          form#search-form .col-search .top-hover .bar .cart a:hover {
             color: #e6ae48; }
-    body.path-shop form#search-form .col-search .top-hover:hover .block-fur-img a:last-child {
+    form#furniture-list-form .col-search .top-hover:hover .block-fur-img a:last-child,
+    form#search-form .col-search .top-hover:hover .block-fur-img a:last-child {
       display: block;
       width: 100%;
       position: absolute;
       top: 0;
       left: 0; }
-      body.path-shop form#search-form .col-search .top-hover:hover .block-fur-img a:last-child img {
+      form#furniture-list-form .col-search .top-hover:hover .block-fur-img a:last-child img,
+      form#search-form .col-search .top-hover:hover .block-fur-img a:last-child img {
         opacity: 1; }
-    body.path-shop form#search-form .col-search .top-hover:hover .bar {
+    form#furniture-list-form .col-search .top-hover:hover .bar,
+    form#search-form .col-search .top-hover:hover .bar {
       opacity: 1;
       top: 81%; }
-  body.path-shop form#search-form .col-search .block-fur-term {
+  form#furniture-list-form .col-search .block-fur-term,
+  form#search-form .col-search .block-fur-term {
     display: inline-block; }
-    body.path-shop form#search-form .col-search .block-fur-term a {
+    form#furniture-list-form .col-search .block-fur-term a,
+    form#search-form .col-search .block-fur-term a {
       color: #888888;
       text-decoration: none;
       font-size: 15px;
       line-height: 22px; }
-      body.path-shop form#search-form .col-search .block-fur-term a:hover {
+      form#furniture-list-form .col-search .block-fur-term a:hover,
+      form#search-form .col-search .block-fur-term a:hover {
         color: #e6ae48; }
-  body.path-shop form#search-form .col-search .block-fur-title h2 {
+  form#furniture-list-form .col-search .block-fur-title h2,
+  form#search-form .col-search .block-fur-title h2 {
     font-size: 18px;
     line-height: 24px;
     font-weight: normal;
     color: #212121;
     text-align: center; }
-    body.path-shop form#search-form .col-search .block-fur-title h2 a {
+    form#furniture-list-form .col-search .block-fur-title h2 a,
+    form#search-form .col-search .block-fur-title h2 a {
       white-space: nowrap;
       text-decoration: none;
       border-bottom: 1px solid transparent; }
-      body.path-shop form#search-form .col-search .block-fur-title h2 a:hover {
+      form#furniture-list-form .col-search .block-fur-title h2 a:hover,
+      form#search-form .col-search .block-fur-title h2 a:hover {
         border-bottom: 1px solid #e6ae48; }
-  body.path-shop form#search-form .col-search .block-fur-price p {
+  form#furniture-list-form .col-search .block-fur-price p,
+  form#search-form .col-search .block-fur-price p {
     font-size: 18px;
     line-height: 24px;
     color: #888888;
     padding: 20px 0; }
-  body.path-shop form#search-form .col-search .overlay {
+  form#furniture-list-form .col-search .overlay,
+  form#search-form .col-search .overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -7736,17 +7771,21 @@ body.path-shop form#search-form .col-search {
     transition: opacity 200ms;
     visibility: hidden;
     opacity: 0; }
-    body.path-shop form#search-form .col-search .overlay.light {
+    form#furniture-list-form .col-search .overlay.light,
+    form#search-form .col-search .overlay.light {
       background: rgba(255, 255, 255, 0.5); }
-    body.path-shop form#search-form .col-search .overlay .cancel {
+    form#furniture-list-form .col-search .overlay .cancel,
+    form#search-form .col-search .overlay .cancel {
       position: absolute;
       width: 100%;
       height: 100%;
       cursor: default; }
-    body.path-shop form#search-form .col-search .overlay:target {
+    form#furniture-list-form .col-search .overlay:target,
+    form#search-form .col-search .overlay:target {
       visibility: visible;
       opacity: 1; }
-    body.path-shop form#search-form .col-search .overlay .attachment {
+    form#furniture-list-form .col-search .overlay .attachment,
+    form#search-form .col-search .overlay .attachment {
       margin: 75px auto;
       padding: 30px;
       background: #fff;
@@ -7758,7 +7797,8 @@ body.path-shop form#search-form .col-search {
       -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
               transform: translateX(-50%); }
-      body.path-shop form#search-form .col-search .overlay .attachment .close {
+      form#furniture-list-form .col-search .overlay .attachment .close,
+      form#search-form .col-search .overlay .attachment .close {
         position: absolute;
         width: 22px;
         height: 22px;
@@ -7773,88 +7813,112 @@ body.path-shop form#search-form .col-search {
         border: 1px solid #e6e6e6;
         line-height: 1;
         padding-left: 3px; }
-        body.path-shop form#search-form .col-search .overlay .attachment .close:hover {
+        form#furniture-list-form .col-search .overlay .attachment .close:hover,
+        form#search-form .col-search .overlay .attachment .close:hover {
           opacity: 1;
           color: #e6ae48; }
-      body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap {
+      form#furniture-list-form .col-search .overlay .attachment .attach-wrap,
+      form#search-form .col-search .overlay .attachment .attach-wrap {
         max-height: 600px;
         overflow-y: scroll; }
-        body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-img {
+        form#furniture-list-form .col-search .overlay .attachment .attach-wrap .popup-img,
+        form#search-form .col-search .overlay .attachment .attach-wrap .popup-img {
           display: inline-block;
           width: 44%; }
-          body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-img .search-image:first-of-type {
+          form#furniture-list-form .col-search .overlay .attachment .attach-wrap .popup-img .search-image:first-of-type,
+          form#search-form .col-search .overlay .attachment .attach-wrap .popup-img .search-image:first-of-type {
             display: block; }
-          body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-img .search-image {
+          form#furniture-list-form .col-search .overlay .attachment .attach-wrap .popup-img .search-image,
+          form#search-form .col-search .overlay .attachment .attach-wrap .popup-img .search-image {
             display: none; }
           @media screen and (max-width: 51.2rem) {
-            body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-img {
+            form#furniture-list-form .col-search .overlay .attachment .attach-wrap .popup-img,
+            form#search-form .col-search .overlay .attachment .attach-wrap .popup-img {
               width: 100%; }
-              body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-img img {
+              form#furniture-list-form .col-search .overlay .attachment .attach-wrap .popup-img img,
+              form#search-form .col-search .overlay .attachment .attach-wrap .popup-img img {
                 margin: 0 auto; } }
-        body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text {
+        form#furniture-list-form .col-search .overlay .attachment .attach-wrap .popup-text,
+        form#search-form .col-search .overlay .attachment .attach-wrap .popup-text {
           display: inline-block;
           width: 54%;
           vertical-align: top;
           text-align: left;
           padding: 0 5%; }
-          body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .search-title h1 {
+          form#furniture-list-form .col-search .overlay .attachment .attach-wrap .popup-text .search-title h1,
+          form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .search-title h1 {
             padding-bottom: 30px;
             border-bottom: 1px solid #e6e6e6;
             font-size: 28px;
             line-height: 34px;
             color: #212121; }
-          body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .search-price {
+          form#furniture-list-form .col-search .overlay .attachment .attach-wrap .popup-text .search-price,
+          form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .search-price {
             border-bottom: 1px solid #e6e6e6; }
-            body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .search-price p {
+            form#furniture-list-form .col-search .overlay .attachment .attach-wrap .popup-text .search-price p,
+            form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .search-price p {
               font-family: "Karla", sans-serif;
               color: #212121;
               font-size: 22px;
               line-height: 28px;
               margin-bottom: 22px; }
-          body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .search-body {
+          form#furniture-list-form .col-search .overlay .attachment .attach-wrap .popup-text .search-body,
+          form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .search-body {
             border-bottom: 1px solid #e6e6e6; }
-            body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .search-body p {
+            form#furniture-list-form .col-search .overlay .attachment .attach-wrap .popup-text .search-body p,
+            form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .search-body p {
               font-family: "arialregular", sans-serif;
               color: #888888;
               font-size: 15px;
               line-height: 22px;
               margin-bottom: 25px; }
-          body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .category p {
+          form#furniture-list-form .col-search .overlay .attachment .attach-wrap .popup-text .category p,
+          form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .category p {
             font-family: "arialregular", sans-serif;
             color: #212121;
             display: inline-block;
             padding-right: 10px;
             font-size: 15px;
             line-height: 22px; }
-          body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .category .search-term {
+          form#furniture-list-form .col-search .overlay .attachment .attach-wrap .popup-text .category .search-term,
+          form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .category .search-term {
             display: inline-block;
             padding-right: 10px; }
-            body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .category .search-term p {
+            form#furniture-list-form .col-search .overlay .attachment .attach-wrap .popup-text .category .search-term p,
+            form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .category .search-term p {
               color: #9b9b9b; }
-              body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .category .search-term p:hover {
+              form#furniture-list-form .col-search .overlay .attachment .attach-wrap .popup-text .category .search-term p:hover,
+              form#search-form .col-search .overlay .attachment .attach-wrap .popup-text .category .search-term p:hover {
                 color: #e6ae48; }
           @media screen and (max-width: 51.2rem) {
-            body.path-shop form#search-form .col-search .overlay .attachment .attach-wrap .popup-text {
+            form#furniture-list-form .col-search .overlay .attachment .attach-wrap .popup-text,
+            form#search-form .col-search .overlay .attachment .attach-wrap .popup-text {
               width: 100%; } }
       @media screen and (max-width: 66.13333rem) {
-        body.path-shop form#search-form .col-search .overlay .attachment {
+        form#furniture-list-form .col-search .overlay .attachment,
+        form#search-form .col-search .overlay .attachment {
           width: 90%; } }
   @media screen and (max-width: 600px) {
-    body.path-shop form#search-form .col-search {
+    form#furniture-list-form .col-search,
+    form#search-form .col-search {
       width: 100%; } }
 
-body.path-shop form#search-form nav.pager {
+form#furniture-list-form nav.pager,
+form#search-form nav.pager {
   text-align: center; }
-  body.path-shop form#search-form nav.pager ul {
+  form#furniture-list-form nav.pager ul,
+  form#search-form nav.pager ul {
     display: inline-block;
     padding: 0;
     margin: 0; }
-    body.path-shop form#search-form nav.pager ul li {
+    form#furniture-list-form nav.pager ul li,
+    form#search-form nav.pager ul li {
       display: block;
       margin: 0;
       padding: 1px 3px;
       float: left; }
-      body.path-shop form#search-form nav.pager ul li a {
+      form#furniture-list-form nav.pager ul li a,
+      form#search-form nav.pager ul li a {
         color: white;
         border-color: #e6ae48;
         line-height: 31px !important;
@@ -7868,10 +7932,13 @@ body.path-shop form#search-form nav.pager {
         background-color: #e6ae48;
         text-decoration: none;
         font-family: "arialregular", sans-serif; }
-        body.path-shop form#search-form nav.pager ul li a span:last-child {
+        form#furniture-list-form nav.pager ul li a span:last-child,
+        form#search-form nav.pager ul li a span:last-child {
           width: 15px;
           height: 15px; }
-      body.path-shop form#search-form nav.pager ul li.pager__item--first, body.path-shop form#search-form nav.pager ul li.pager__item--last {
+      form#furniture-list-form nav.pager ul li.pager__item--first, form#furniture-list-form nav.pager ul li.pager__item--last,
+      form#search-form nav.pager ul li.pager__item--first,
+      form#search-form nav.pager ul li.pager__item--last {
         display: none; }
 
 body.path-furniture form#furniture-list-form .filter {
