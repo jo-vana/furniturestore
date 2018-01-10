@@ -1,6 +1,7 @@
 <?php
 
-function furniture_theme_theme ( $existing, $type, $theme, $path ) {
+function furniture_theme_theme($existing, $type, $theme, $path)
+{
     return [
         'search_page' => [
             'render element' => 'form',
@@ -11,18 +12,19 @@ function furniture_theme_theme ( $existing, $type, $theme, $path ) {
     ];
 }
 
-function furniture_theme_suggestions_page_alter(array &$suggestions, array $variables) {
-  $http_error_suggestions = [
-     'system.401' => 'page__401',
-     'system.403' => 'page__403',
-     'system.404' => 'page__404',
-  ];
-  $node = \Drupal::request()->attributes->get('node');
-  if ($node) {
-     if ($node->id() == 49 ) {  // this is the node id linked to the 404 page
-        $suggestions[] = $http_error_suggestions['system.404'];
-     }
-  }
+function furniture_theme_suggestions_page_alter(array &$suggestions, array $variables)
+{
+    $http_error_suggestions = [
+        'system.401' => 'page__401',
+        'system.403' => 'page__403',
+        'system.404' => 'page__404',
+    ];
+    $node = \Drupal::request()->attributes->get('node');
+    if ($node) {
+        if ($node->id() == 49) {  // this is the node id linked to the 404 page
+            $suggestions[] = $http_error_suggestions['system.404'];
+        }
+    }
 }
 
 // Layout in case of using sidebar region
@@ -116,12 +118,15 @@ function furniture_theme_form_alter(&$form, &$form_state, $form_id)
         $form['field_email']['widget'][0]['value']['#title'] = FALSE;
     }
 }
+
 // Placeholder for search block
-function furniture_theme_form_search_block_form_alter(&$form) {
+function furniture_theme_form_search_block_form_alter(&$form)
+{
     $form['keys']['#attributes']['placeholder'] = t('Search for products');
 }
 
-function furniture_theme_preprocess_node(&$variables) {
+function furniture_theme_preprocess_node(&$variables)
+{
 
     $a2a_block = \Drupal\block\Entity\Block::load('nextpreviousblogblock');
     $a2a_block_view = \Drupal::entityTypeManager()
@@ -137,6 +142,24 @@ function furniture_theme_preprocess_node(&$variables) {
         ->view($a2a_block);
     if ($a2a_block_view) {
         $variables['prev_next_portfolio'] = $a2a_block_view;
+    }
+
+    // Altering URLs for taxonomy term overview pages
+    $taxonomies = &$variables['content']['field_categories'];
+
+    foreach ($taxonomies as $key => &$taxonomy) {
+        if (is_integer($key)) {
+            if (isset($taxonomy['#type']) && $taxonomy['#type'] == 'link') {
+                $url = &$taxonomy['#url'];
+                $oldParams = $url->getRouteParameters();
+                if (!empty($oldParams['taxonomy_term'])) {
+                    $params = [
+                        'taxonomy' => $oldParams['taxonomy_term']
+                    ];
+                $url = \Drupal\Core\Url::fromRoute('furniture_list_page.search_form',$params );
+                }
+            }
+        }
     }
 
 }

@@ -104,7 +104,7 @@ class SearchForm extends FormBase {
 		$query->addField('fp', 'field_price_value', 'price');
 		$query->addField('b', 'body_value', 'body');
 
-		$query = $query->extend('Drupal\Core\Database\Query\PagerSelectExtender')->limit(24);
+		$query = $query->extend('Drupal\Core\Database\Query\PagerSelectExtender')->limit(25);
 
 		$sort = 0;
 		if (isset( $_GET['sort'])) {
