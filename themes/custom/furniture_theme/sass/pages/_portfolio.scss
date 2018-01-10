@@ -39,6 +39,32 @@
       font-weight: normal;
       color: $color-black;
     }
+    .field--name-field-likes {
+      padding: 9px 0;
+      position: relative;
+      border-bottom: 1px solid #e6e6e6;
+      overflow: hidden;
+      .field__label {
+        font-family: $font-arial;
+        font-size: 14px;
+        color: #888888;
+        font-weight: 300;
+      }
+      .field__item {
+        display: inline-block;
+        float: right;
+        a {
+          color: $color-orange;
+          font-size: 15px;
+          float: none;
+        }
+        span {
+          font-family: $font-arial;
+          font-size: 14px;
+          color: $color-black;
+        }
+      }
+    }
     .field--name-field-author {
       padding: 9px 0;
       position: relative;

@@ -5022,6 +5022,27 @@ section.field--name-field-leave-a-reply {
       margin-top: 0;
       font-weight: normal;
       color: #212121; }
+    .portfolio-wrapper .block-right .field--name-field-likes {
+      padding: 9px 0;
+      position: relative;
+      border-bottom: 1px solid #e6e6e6;
+      overflow: hidden; }
+      .portfolio-wrapper .block-right .field--name-field-likes .field__label {
+        font-family: "arialregular", sans-serif;
+        font-size: 14px;
+        color: #888888;
+        font-weight: 300; }
+      .portfolio-wrapper .block-right .field--name-field-likes .field__item {
+        display: inline-block;
+        float: right; }
+        .portfolio-wrapper .block-right .field--name-field-likes .field__item a {
+          color: #e6ae48;
+          font-size: 15px;
+          float: none; }
+        .portfolio-wrapper .block-right .field--name-field-likes .field__item span {
+          font-family: "arialregular", sans-serif;
+          font-size: 14px;
+          color: #212121; }
     .portfolio-wrapper .block-right .field--name-field-author {
       padding: 9px 0;
       position: relative;
