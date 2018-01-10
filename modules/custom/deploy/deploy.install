@@ -173,9 +173,17 @@ function deploy_update_8442()
 }
 
 /**
- * Like Counter
+ * Recently Viewed Products
  */
 function deploy_update_8443()
 {
     \Drupal::service('module_installer')->install(['recently_viewed_products']);
+}
+
+/**
+ * Hero Slider
+ */
+function deploy_update_8444()
+{
+    \Drupal::service('module_installer')->install(['hero_slider']);
 }

@@ -26,14 +26,16 @@ class HeroSlider extends BlockBase implements BlockPluginInterface{
         $query = \Drupal::database()->select('node_field_data', 'n');
         $query->condition('n.type', 'hero_slider', '=');
 
-        $query->innerJoin('node__field_hero_image', 'hi', 'hi.entity_id = n.nid');
+        $query->leftJoin('node__field_hero_image', 'hi', 'hi.entity_id = n.nid');
 
-        $query->innerJoin('node__field_explore_store', 'es', 'es.entity_id = n.nid');
+        $query->leftJoin('node__field_text', 'ft', 'ft.entity_id = n.nid');
+
+        $query->leftJoin('node__field_explore_store', 'es', 'es.entity_id = n.nid');
 
         $query->addField('n', 'nid');
-        $query->addField('n', 'title');
         $query->addField('hi', 'field_hero_image_target_id', 'image');
-        $query->addField('es', 'field_date_blog_value', 'date');
+        $query->addField('es', 'field_explore_store_title', 'link');
+        $query->addField('ft', 'field_text_value', 'text');
 
         $data = [];
 
@@ -41,19 +43,13 @@ class HeroSlider extends BlockBase implements BlockPluginInterface{
 
         foreach ( $results as $result ) {
             $file = File::load($result->image);
-            $url = \Drupal\image\Entity\ImageStyle::load('default')->buildUrl($file->getFileUri());
-            $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$result->nid);
+            $url = \Drupal\image\Entity\ImageStyle::load('medium')->buildUrl($file->getFileUri());
 
-            $date = date('F d, Y',strtotime($result->date));
+            $data[$result->nid]['image'] =$url;
+            $data[$result->nid]['text'][] =$result->text;
+            $data[$result->nid]['link'] =$result->link;
 
-            $data[] = [
-                'alias' => $alias,
-                'title' => $result->title,
-                'image' => $url,
-                'date' => $date,
-            ];
         }
-
         return $data;
     }
 
