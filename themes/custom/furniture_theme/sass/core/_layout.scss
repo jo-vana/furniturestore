@@ -70,6 +70,7 @@
       @media screen and (max-width: $screen-lg-min) {
         width: 100%;
         margin-left: 3%;
+        text-align: center;
       }
     }
     #block-furniture-theme-breadcrumbs {
@@ -113,6 +114,12 @@
       }
       @media screen and (max-width: $screen-lg-min) {
         margin-left: 3%;
+      }
+      @media screen and (max-width: $screen-lg-min) {
+        display: block;
+        float: none;
+        margin: 0 auto;
+        text-align: center;
       }
     }
   }

@@ -3368,7 +3368,8 @@ h1, h2, h3, h4, h5, h6 {
       @media screen and (max-width: 80rem) {
         .layout-container .region-breadcrumb .block-page-title-block {
           width: 100%;
-          margin-left: 3%; } }
+          margin-left: 3%;
+          text-align: center; } }
     .layout-container .region-breadcrumb #block-furniture-theme-breadcrumbs {
       display: inline-block;
       position: relative;
@@ -3405,6 +3406,12 @@ h1, h2, h3, h4, h5, h6 {
       @media screen and (max-width: 80rem) {
         .layout-container .region-breadcrumb #block-furniture-theme-breadcrumbs {
           margin-left: 3%; } }
+      @media screen and (max-width: 80rem) {
+        .layout-container .region-breadcrumb #block-furniture-theme-breadcrumbs {
+          display: block;
+          float: none;
+          margin: 0 auto;
+          text-align: center; } }
   .layout-container .region-contact-map {
     display: block;
     width: 90%;
@@ -6653,7 +6660,7 @@ section.field--name-field-leave-a-reply {
             opacity: 1;
             color: #e6ae48; }
         .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap {
-          max-height: 600px;
+          max-height: 350px;
           overflow-y: scroll; }
           .block-our-collections .block-fur-wrap .overlay .attachment .attach-wrap .popup-img {
             display: inline-block;

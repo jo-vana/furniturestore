@@ -9,9 +9,11 @@
   width: 90%;
   margin: 0 auto;
   display: block;
+
   .mosaic-wrap {
     display: inline-block;
     width: 100%;
+
     .left-block-mosaic {
       width: 21.6%;
       margin: 0 1.7%;
@@ -432,7 +434,7 @@
           }
         }
         .attach-wrap {
-          max-height: 600px;
+          max-height: 350px;
           overflow-y: scroll;
           .popup-img {
             display: inline-block;
