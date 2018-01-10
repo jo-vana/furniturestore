@@ -3592,7 +3592,8 @@ body.user-logged-in .fix-navbar .region-primary-menu {
   display: inline-block; }
   @media screen and (max-width: 992px) {
     .sidebar-first .layout-content {
-      width: 100%; } }
+      width: 95%;
+      margin: 0 auto; } }
 
 .layout-sidebar-first {
   width: 24%;
@@ -5978,16 +5979,24 @@ section.field--name-field-leave-a-reply {
             font-family: "arialregular", sans-serif;
             color: #212121;
             display: inline-block;
+            vertical-align: top;
             padding-right: 10px;
             font-size: 15px;
             line-height: 22px; }
-          .node--view-mode-teaser .overlay .attachment .attach-wrap .popup-text .category .search-term {
-            display: inline-block;
-            padding-right: 10px; }
-            .node--view-mode-teaser .overlay .attachment .attach-wrap .popup-text .category .search-term p {
-              color: #9b9b9b; }
-              .node--view-mode-teaser .overlay .attachment .attach-wrap .popup-text .category .search-term p:hover {
-                color: #e6ae48; }
+          .node--view-mode-teaser .overlay .attachment .attach-wrap .popup-text .category .field--name-field-categories {
+            display: inline;
+            vertical-align: top;
+            text-align: left; }
+            .node--view-mode-teaser .overlay .attachment .attach-wrap .popup-text .category .field--name-field-categories .field__item {
+              display: inline-block;
+              vertical-align: top;
+              padding-right: 10px;
+              width: auto;
+              margin-top: 14px; }
+              .node--view-mode-teaser .overlay .attachment .attach-wrap .popup-text .category .field--name-field-categories .field__item a {
+                color: #9b9b9b; }
+                .node--view-mode-teaser .overlay .attachment .attach-wrap .popup-text .category .field--name-field-categories .field__item a:hover {
+                  color: #e6ae48; }
           @media screen and (max-width: 51.2rem) {
             .node--view-mode-teaser .overlay .attachment .attach-wrap .popup-text {
               width: 100%; } }
