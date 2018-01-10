@@ -43,7 +43,7 @@ class HeroSlider extends BlockBase implements BlockPluginInterface{
 
         foreach ( $results as $result ) {
             $file = File::load($result->image);
-            $url = \Drupal\image\Entity\ImageStyle::load('medium')->buildUrl($file->getFileUri());
+            $url = \Drupal\image\Entity\ImageStyle::load('blog_default_img')->buildUrl($file->getFileUri());
 
             $data[$result->nid]['image'] =$url;
             $data[$result->nid]['text'][] =$result->text;
