@@ -338,7 +338,8 @@ body.user-logged-in {
   float: none;
   display: inline-block;
   @media screen and (max-width: $screen-md){
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
   }
 }
 .layout-sidebar-first {

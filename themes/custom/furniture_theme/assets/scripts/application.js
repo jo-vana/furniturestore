@@ -193,6 +193,7 @@
       }
     };
 
+
     // Magnifier zoom
 
     Drupal.behaviors.magnifierZoom = {
@@ -240,6 +241,9 @@
         }
     };
 
+
+    // Masonry for portfolio list page
+
     Drupal.behaviors.imgPortfolio = {
         attach:function() {
             $('#block-portfoliolistpageblock .block-portfolio-img img').once("img-loaded").each(function () {
@@ -260,21 +264,25 @@
         }
     };
 
+
     // Main navigation fix [desktop]
 
     Drupal.behaviors.mainNavFixed = {
         attach:function(context) {
             var wrap = $(".layout-container");
 
-            $(window).scroll(function() {
-                if ($(window).scrollTop() > 35) {
-                    wrap.addClass("fix-navbar");
-                } else {
-                    wrap.removeClass("fix-navbar");
-                }
-            });
+            if ($(window).width() > 1000) {
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() > 35) {
+                        wrap.addClass("fix-navbar");
+                    } else {
+                        wrap.removeClass("fix-navbar");
+                    }
+                });
+            }
         }
     };
+
 
     // Range price filter
 

@@ -650,17 +650,26 @@
                 font-family: $font-arial;
                 color: $color-black;
                 display: inline-block;
+                vertical-align: top;
                 padding-right: 10px;
                 font-size: 15px;
                 line-height: 22px;
               }
-              .search-term {
-                display: inline-block;
-                padding-right: 10px;
-                p {
-                  color: #9b9b9b;
-                  &:hover {
-                    color: $color-orange;
+              .field--name-field-categories {
+                display: inline;
+                vertical-align: top;
+                text-align: left;
+                .field__item {
+                  display: inline-block;
+                  vertical-align: top;
+                  padding-right: 10px;
+                  width: auto;
+                  margin-top: 14px;
+                  a {
+                    color: #9b9b9b;
+                    &:hover {
+                      color: $color-orange;
+                    }
                   }
                 }
               }
