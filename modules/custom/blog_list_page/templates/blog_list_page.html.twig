@@ -4,7 +4,7 @@
         <div class="block-blog-img">
             <a href ="{{ entry.nid }}"><img src="{{ entry.image }}"/></a>
         </div>
-
+        <div class="wrap-blog-text">
         <div class="block-blog-date">
             <p>{{ entry.field_date_blog_value }}</p>
         </div>
@@ -43,6 +43,7 @@
         <div class="block-blog-readmore">
             <a href="{{ entry.nid }}">Read More</a>
         </div>
+    </div>
     </div>
 
 {% endfor %}

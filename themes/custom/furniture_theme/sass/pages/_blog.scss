@@ -40,9 +40,6 @@
       }
     }
   }
-  //.like-counter {
-  //  display: none;
-  //}
   .comment-counter {
     display: inline-block;
     text-align: right;
@@ -332,98 +329,117 @@ section.field--name-field-leave-a-reply {
       max-height: 500px;
       overflow: hidden;
     }
-    //.like_dislike {
-    //  display: none;
-    //}
-    .block-blog-date {
-      display: inline-block;
-      padding-top: 15px;
-      p {
-        font-family: $font-karla;
-        font-size: 17px;
-        line-height: 20px;
-        font-weight: normal;
-        font-style: normal;
-        color: $font-color;
-        margin-top: 6px;
-        &::before {
-          content: '';
-          display: inline-block;
-          height: 1px;
-          width: 25px;
-          background-color: $color-orange;
-          margin: 0 20px 4px 0;
+    .wrap-blog-text {
+      position: relative;
+      .block-blog-date {
+        display: inline-block;
+        padding-top: 15px;
+        p {
+          font-family: $font-karla;
+          font-size: 17px;
+          line-height: 20px;
+          font-weight: normal;
+          font-style: normal;
+          color: $font-color;
+          margin-top: 6px;
+          &::before {
+            content: '';
+            display: inline-block;
+            height: 1px;
+            width: 25px;
+            background-color: $color-orange;
+            margin: 0 20px 4px 0;
+          }
         }
       }
-    }
-    .block-blog-comments {
-      display: inline-block;
-      float: right;
-      clear: right;
-      padding-top: 15px;
-      a {
-        font-family: $font-arial;
-        color: #888888;
-        text-decoration: none;
-        font-size: 15px;
-        &:hover {
-          i {
+      .like_dislike {
+        display: inline-block;
+        position: absolute;
+        right: 45px;
+        top: 20px;
+        a {
+          font-family: $font-arial;
+          color: $color-orange;
+          text-decoration: none;
+          font-size: 15px;
+          pointer-events: none;
+          cursor: default;
+        }
+        span {
+          font-family: $font-arial;
+          color: $font-color;
+          font-size: 15px;
+        }
+      }
+      .block-blog-comments {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 20px;
+        a {
+          font-family: $font-arial;
+          color: #888888;
+          text-decoration: none;
+          font-size: 15px;
+          &:hover {
+            i {
+              color: $color-orange;
+            }
+          }
+        }
+      }
+      .block-fur-title {
+        word-wrap: break-word;
+        padding-top: 20px;
+        a {
+          font-family: $font-karla;
+          font-size: 24px;
+          line-height: 30px;
+          font-weight: normal;
+          font-style: normal;
+          text-decoration: none;
+          color: $color-black;
+          &:hover {
             color: $color-orange;
           }
         }
       }
-    }
-    .block-fur-title {
-      word-wrap: break-word;
-      padding-top: 20px;
-      a {
-        font-family: $font-karla;
-        font-size: 24px;
-        line-height: 30px;
-        font-weight: normal;
-        font-style: normal;
-        text-decoration: none;
-        color: $color-black;
-        &:hover {
-          color: $color-orange;
+      .block-blog-user,
+      .block-blog-term {
+        display: inline-block;
+        margin-right: 5px;
+        a {
+          text-decoration: none;
+          p {
+            @include link-style;
+          }
         }
       }
-    }
-    .block-blog-user,
-    .block-blog-term {
-      display: inline-block;
-      margin-right: 5px;
-      a {
-        text-decoration: none;
+      .block-blog-user {
         p {
+          &::after {
+            content: '/';
+            display: inline-block;
+            padding-left: 10px;
+          }
+        }
+      }
+      .block-blog-body {
+        p {
+          font-family: $font-arial;
+          color: #888888;
+          font-size: 15px;
+          line-height: 22px;
+          font-weight: normal;
+          font-style: normal;
+        }
+      }
+      .block-blog-readmore {
+        margin-top: 20px;
+        a {
           @include link-style;
+          color: $color-black;
         }
-      }
-    }
-    .block-blog-user {
-      p {
-        &::after {
-          content: '/';
-          display: inline-block;
-          padding-left: 10px;
-        }
-      }
-    }
-    .block-blog-body {
-      p {
-        font-family: $font-arial;
-        color: #888888;
-        font-size: 15px;
-        line-height: 22px;
-        font-weight: normal;
-        font-style: normal;
-      }
-    }
-    .block-blog-readmore {
-      margin-top: 20px;
-      a {
-        @include link-style;
-        color: $color-black;
       }
     }
   }

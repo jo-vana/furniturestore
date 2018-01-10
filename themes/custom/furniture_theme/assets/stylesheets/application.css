@@ -4361,7 +4361,7 @@ body.user-logged-in #block-mainnavigationmobile .menu-toggle {
       overflow: hidden; }
       #block-latestfromblogblock .tab-content .wrap-blog-latest .block-blog-img {
         display: inline-block;
-        padding-right: 2%;
+        padding-right: 4%;
         height: 85px;
         float: left; }
         #block-latestfromblogblock .tab-content .wrap-blog-latest .block-blog-img img {
@@ -4897,58 +4897,102 @@ section.field--name-field-leave-a-reply {
     display: block;
     max-height: 500px;
     overflow: hidden; }
-  #block-bloglistblock .wrap-blog-page .block-blog-date {
-    display: inline-block;
-    padding-top: 15px; }
-    #block-bloglistblock .wrap-blog-page .block-blog-date p {
-      font-family: "Karla", sans-serif;
-      font-size: 17px;
-      line-height: 20px;
-      font-weight: normal;
-      font-style: normal;
-      color: #888888;
-      margin-top: 6px; }
-      #block-bloglistblock .wrap-blog-page .block-blog-date p::before {
-        content: '';
-        display: inline-block;
-        height: 1px;
-        width: 25px;
-        background-color: #e6ae48;
-        margin: 0 20px 4px 0; }
-  #block-bloglistblock .wrap-blog-page .block-blog-comments {
-    display: inline-block;
-    float: right;
-    clear: right;
-    padding-top: 15px; }
-    #block-bloglistblock .wrap-blog-page .block-blog-comments a {
+  #block-bloglistblock .wrap-blog-page .wrap-blog-text {
+    position: relative; }
+    #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-date {
+      display: inline-block;
+      padding-top: 15px; }
+      #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-date p {
+        font-family: "Karla", sans-serif;
+        font-size: 17px;
+        line-height: 20px;
+        font-weight: normal;
+        font-style: normal;
+        color: #888888;
+        margin-top: 6px; }
+        #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-date p::before {
+          content: '';
+          display: inline-block;
+          height: 1px;
+          width: 25px;
+          background-color: #e6ae48;
+          margin: 0 20px 4px 0; }
+    #block-bloglistblock .wrap-blog-page .wrap-blog-text .like_dislike {
+      display: inline-block;
+      position: absolute;
+      right: 45px;
+      top: 20px; }
+      #block-bloglistblock .wrap-blog-page .wrap-blog-text .like_dislike a {
+        font-family: "arialregular", sans-serif;
+        color: #e6ae48;
+        text-decoration: none;
+        font-size: 15px;
+        pointer-events: none;
+        cursor: default; }
+      #block-bloglistblock .wrap-blog-page .wrap-blog-text .like_dislike span {
+        font-family: "arialregular", sans-serif;
+        color: #888888;
+        font-size: 15px; }
+    #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-comments {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 20px; }
+      #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-comments a {
+        font-family: "arialregular", sans-serif;
+        color: #888888;
+        text-decoration: none;
+        font-size: 15px; }
+        #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-comments a:hover i {
+          color: #e6ae48; }
+    #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-fur-title {
+      word-wrap: break-word;
+      padding-top: 20px; }
+      #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-fur-title a {
+        font-family: "Karla", sans-serif;
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: normal;
+        font-style: normal;
+        text-decoration: none;
+        color: #212121; }
+        #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-fur-title a:hover {
+          color: #e6ae48; }
+    #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-user,
+    #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-term {
+      display: inline-block;
+      margin-right: 5px; }
+      #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-user a,
+      #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-term a {
+        text-decoration: none; }
+        #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-user a p,
+        #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-term a p {
+          font-family: "Karla", sans-serif;
+          font-size: 15px;
+          line-height: 22px;
+          font-weight: normal;
+          font-style: normal;
+          text-transform: none;
+          text-decoration: none;
+          color: #9b9b9b;
+          transition: color 0.3s ease-in-out; }
+          #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-user a p:hover,
+          #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-term a p:hover {
+            color: #e6ae48; }
+    #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-user p::after {
+      content: '/';
+      display: inline-block;
+      padding-left: 10px; }
+    #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-body p {
       font-family: "arialregular", sans-serif;
       color: #888888;
-      text-decoration: none;
-      font-size: 15px; }
-      #block-bloglistblock .wrap-blog-page .block-blog-comments a:hover i {
-        color: #e6ae48; }
-  #block-bloglistblock .wrap-blog-page .block-fur-title {
-    word-wrap: break-word;
-    padding-top: 20px; }
-    #block-bloglistblock .wrap-blog-page .block-fur-title a {
-      font-family: "Karla", sans-serif;
-      font-size: 24px;
-      line-height: 30px;
+      font-size: 15px;
+      line-height: 22px;
       font-weight: normal;
-      font-style: normal;
-      text-decoration: none;
-      color: #212121; }
-      #block-bloglistblock .wrap-blog-page .block-fur-title a:hover {
-        color: #e6ae48; }
-  #block-bloglistblock .wrap-blog-page .block-blog-user,
-  #block-bloglistblock .wrap-blog-page .block-blog-term {
-    display: inline-block;
-    margin-right: 5px; }
-    #block-bloglistblock .wrap-blog-page .block-blog-user a,
-    #block-bloglistblock .wrap-blog-page .block-blog-term a {
-      text-decoration: none; }
-      #block-bloglistblock .wrap-blog-page .block-blog-user a p,
-      #block-bloglistblock .wrap-blog-page .block-blog-term a p {
+      font-style: normal; }
+    #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-readmore {
+      margin-top: 20px; }
+      #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-readmore a {
         font-family: "Karla", sans-serif;
         font-size: 15px;
         line-height: 22px;
@@ -4957,36 +5001,10 @@ section.field--name-field-leave-a-reply {
         text-transform: none;
         text-decoration: none;
         color: #9b9b9b;
-        transition: color 0.3s ease-in-out; }
-        #block-bloglistblock .wrap-blog-page .block-blog-user a p:hover,
-        #block-bloglistblock .wrap-blog-page .block-blog-term a p:hover {
+        transition: color 0.3s ease-in-out;
+        color: #212121; }
+        #block-bloglistblock .wrap-blog-page .wrap-blog-text .block-blog-readmore a:hover {
           color: #e6ae48; }
-  #block-bloglistblock .wrap-blog-page .block-blog-user p::after {
-    content: '/';
-    display: inline-block;
-    padding-left: 10px; }
-  #block-bloglistblock .wrap-blog-page .block-blog-body p {
-    font-family: "arialregular", sans-serif;
-    color: #888888;
-    font-size: 15px;
-    line-height: 22px;
-    font-weight: normal;
-    font-style: normal; }
-  #block-bloglistblock .wrap-blog-page .block-blog-readmore {
-    margin-top: 20px; }
-    #block-bloglistblock .wrap-blog-page .block-blog-readmore a {
-      font-family: "Karla", sans-serif;
-      font-size: 15px;
-      line-height: 22px;
-      font-weight: normal;
-      font-style: normal;
-      text-transform: none;
-      text-decoration: none;
-      color: #9b9b9b;
-      transition: color 0.3s ease-in-out;
-      color: #212121; }
-      #block-bloglistblock .wrap-blog-page .block-blog-readmore a:hover {
-        color: #e6ae48; }
 
 #block-bloglistblock .wrap-blog-page:last-child {
   border: none; }
