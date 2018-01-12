@@ -51,14 +51,13 @@ set title_classes = [
 label_display == 'visually_hidden' ? 'visually-hidden',
 ]
 %}
+<div class="gallery">
 <div id="slider" class="flexslider">
     <ul class="slides">
         {% if multiple %}
         {#{{ attributes.addClass(classes, 'field__items') }}#}
             {% for item in items %}
-                <li id="container"{{ item.attributes.addClass('field__item') }}>{{ item.content }}
-                {#<div class="magnifier"></div>#}
-                </li>
+                <li id="container"{{ item.attributes.addClass('field__item') }}>{{ item.content }}</li>
             {% endfor %}
             {% else %}
                 {% for item in items %}
@@ -68,20 +67,24 @@ label_display == 'visually_hidden' ? 'visually-hidden',
 
     </ul>
 </div>
+
+<div class="magnifier"></div>
+
 <div id="carousel" class="flexslider">
     <ul class="slides">
         {% if multiple %}
             {#{{ attributes.addClass(classes, 'field__items') }}#}
             {% for item in items %}
-                <li{{ item.attributes.addClass('field__item') }}>{{ item.content }}</li>
+                <li{{ item.attributes}}>{{ item.content }}</li>
             {% endfor %}
         {% else %}
             {% for item in items %}
-                <li{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</li>
+                <li{{ attributes }}>{{ item.content }}</li>
             {% endfor %}
         {% endif %}
 
     </ul>
+</div>
 </div>
 
 

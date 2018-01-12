@@ -8,45 +8,56 @@
   position: initial;
   .first-block {
     display: block;
+    position: relative;
     width: 100%;
     .first-left-block {
       display: inline-block;
       width: 50%;
       vertical-align: top;
-      #slider {
-        margin-bottom: 0;
-        .flex-direction-nav {
-          display: none;
-        }
-        ul {
-          li#container {
-            width: 300px;  /* size of the small image */
-            margin: auto;  /* position in center of the page */
-            position: relative;
-            cursor: pointer;
-            img.image-style-furniture-default-img {
-              display: block;
-            }
-            .magnifier {
-              width: 300px;
-              height: 300px;
-              position: absolute;
-              top: 0;
-              display: none;  /* hidden at startup */
+      .gallery {
+        #slider {
+          margin-bottom: 0;
+          .flex-direction-nav {
+            display: none;
+          }
+          ul {
+            li#container {
+              width: 300px; /* size of the small image */
+              margin: auto; /* position in center of the page */
+              position: relative;
+              cursor: pointer;
+              img.image-style-furniture-default-img {
+                display: block;
+              }
+              .magnifier {
+                width: 300px;
+                height: 300px;
+                position: absolute;
+                top: 0;
+                display: none; /* hidden at startup */
+              }
             }
           }
         }
-      }
-      #carousel {
-        ul {
-          li {
-            //margin-left: 5%;
+        .flexslider {
+          position: initial;
+        }
+        .magnifier {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+        #carousel {
+          ul {
+            li {
+              //margin-left: 5%;
+            }
           }
         }
-      }
-      @media screen and (max-width: $screen-sm){
-        width: 80%;
-        margin: 0 auto;
+        @media screen and (max-width: $screen-sm) {
+          width: 80%;
+          margin: 0 auto;
+        }
       }
     }
     .first-right-block {
@@ -569,7 +580,7 @@
           }
         }
         .attach-wrap {
-          max-height: 600px;
+          max-height: 350px;
           overflow-y: scroll;
           .popup-img {
             display: inline-block;
