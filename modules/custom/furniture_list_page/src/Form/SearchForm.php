@@ -49,7 +49,12 @@ class SearchForm extends FormBase {
 		$form['filters']['sort'] = [
 			'#type'          => 'select',
 			'#options'       => $options,
-			'#default_value' => isset($_GET[ 'sort']) ? $_GET['sort'] : '',
+			'#default_value' => isset($_GET['sort']) ? $_GET['sort'] : '',
+		];
+
+		$form['filters']['taxonomy'] = [
+			'#type' => 'hidden',
+			'#value' =>  isset($_GET['taxonomy']) ? (int)$_GET['taxonomy'] : '',
 		];
 
 		$form['filters']['actions']['#type'] = 'actions';
@@ -68,6 +73,7 @@ class SearchForm extends FormBase {
 			'#type' => 'pager',
 		);
 
+
 		return $form;
 	}
 
@@ -84,14 +90,12 @@ class SearchForm extends FormBase {
 
 		$query->innerJoin('node__field_categories', 'fc', 'fc.entity_id = n.nid');
 
-		$query->innerJoin('taxonomy_index', 'ti', 'ti.nid = n.nid');
-
 		$query->innerJoin('taxonomy_term_field_data', 't', 'fc.field_categories_target_id = t.tid');
 
 		$query->innerJoin('node_counter', 'nc', 'nc.nid = n.nid');
 
-		if ( !empty( $_GET['name'])) {
-			$query->condition('name', $_GET[ 'name' ], 'LIKE');
+		if(!empty($_GET['taxonomy'])){
+			$query->condition('t.tid', $_GET['taxonomy']);
 		}
 
 		$query->addField('n', 'nid');
@@ -127,10 +131,6 @@ class SearchForm extends FormBase {
 			$query->orderBy('price', 'ASC');
 		} else if ($sort ==5) {
 			$query->orderBy('price', 'DESC');
-		}
-
-		if(!empty($_GET['taxonomy'])) {
-			$query->condition('t.tid', $_GET['taxonomy']);
 		}
 
 		$data = [];
