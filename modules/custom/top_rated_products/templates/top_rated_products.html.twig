@@ -14,15 +14,15 @@
                 {% set counter = counter + 1 %}
                 <i class="fa fa-star" aria-hidden="true" style="color:gold"></i>
             {% endfor %}
-              {#{{ counter }};#}
+            {#{{ counter }};#}
             {% set counter2 = 0 %}
             {% set counter2 = 5 - counter %}
             {% if counter2 > 0 %}
                 {% for i in 1..counter2 %}
-                    <i class="fa fa-star" aria-hidden="true" style="color:darkgray"></i>
+                    <i class="fa fa-star-o" aria-hidden="true" style="color:darkgray"></i>
                 {% endfor %}
             {% endif %}
-             {#{{ counter2 }};#}
+            {#{{ counter2 }};#}
         </div>
         
         <div class="block-fur-price">
