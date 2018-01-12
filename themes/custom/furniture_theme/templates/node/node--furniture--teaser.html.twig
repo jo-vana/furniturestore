@@ -125,6 +125,24 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
             <a href="{{ url }}" rel="bookmark">{{ label }}</a>
         </h2>
         {{ title_suffix }}
+
+        <div class = "stars">
+            {% set counter = 0 %}
+            {% for en in entry.rating %}
+                {% set counter = counter + 1 %}
+                <i class="fa fa-star" aria-hidden="true" style="color:gold"></i>
+            {% endfor %}
+            {#{{ counter }};#}
+            {% set counter2 = 0 %}
+            {% set counter2 = 5 - counter %}
+            {% if counter2 > 0 %}
+                {% for i in 1..counter2 %}
+                    <i class="fa fa-star" aria-hidden="true" style="color:darkgray"></i>
+                {% endfor %}
+            {% endif %}
+            {#{{ counter2 }};#}
+        </div>
+
         {{ content.field_price }}
 
 
