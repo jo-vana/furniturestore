@@ -1,0 +1,49 @@
+// ========================================
+//
+// @file _hero-slider.scss
+// Slider on the front page
+//
+// ========================================
+.block-hero-slider {
+  min-height: 750px;
+  max-width: 1600px;
+  margin: 0 auto;
+  .flexslider {
+    border: 1px solid #fff;
+    margin-bottom: 0;
+  }
+  .custom-navigation >a {
+    display: none;
+  }
+  .custom-controls-container {
+    ol {
+      bottom: 80px;
+      li {
+        a {
+          border: 2px solid white;
+          background: rgba(0, 0, 0, 0);
+          &.flex-active {
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+  ul {
+    li {
+      .slider-wrap {
+        display: block;
+        position: relative;
+        min-height: 709px;
+        top: -16px;
+        .slider-img {
+          display: block;
+          position: absolute;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $screen-md-min) {
+    max-height: 357px;
+  }
+}

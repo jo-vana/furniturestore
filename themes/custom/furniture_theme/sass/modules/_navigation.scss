@@ -4,12 +4,9 @@
 // All the navigation elements on the page
 //
 // ========================================
-
-.navigation {
-
-}
 #block-furniture-theme-main-menu {
   display: inline-block;
+  position: relative;
   //width: 60%;
   margin-right: 3%;
   float: right;
@@ -18,8 +15,6 @@
     display: inline-block;
     margin-top: 27px;
     margin-bottom: 0px;
-    //float: right;
-    //clear: right;
     li {
       display: inline-block;
       padding: 10px 15px 0 15px;
@@ -65,13 +60,13 @@
         ul.nav-1 {
           visibility: visible;
           margin-top: -5px;
-          top: 130px;
+          top: 107%;
           opacity: 1;
         }
         ul.nav-1.has-children {
           visibility: visible;
           margin-top: -5px;
-          top: 130px;
+          top: 107%;
           opacity: 1;
         }
       }
@@ -102,7 +97,7 @@
     }
     li>ul.nav-1.has-children {
       visibility: hidden;
-      width: 60%;
+      //width: 60%;
       margin: 0;
       position: absolute;
       right: 0;
@@ -222,13 +217,13 @@ body.user-logged-in {
           ul.nav-1 {
             visibility: visible;
             margin-top: -43px;
-            top: 130px;
+            top: 151%;
             opacity: 1;
           }
           ul.nav-1.has-children {
             visibility: visible;
             margin-top: -43px;
-            top: 130px;
+            top: 151%;
             opacity: 1;
           }
         }

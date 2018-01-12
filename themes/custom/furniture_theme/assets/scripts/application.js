@@ -190,11 +190,18 @@
               sync: "#carousel"
           });
 
+          $('.block-hero-slider .flexslider').flexslider({
+              animation: "slide",
+              controlsContainer: $(".custom-controls-container"),
+              customDirectionNav: $(".custom-navigation a"),
+              slide: false
+          });
+
       }
     };
 
 
-    // Magnifier zoom
+    // Magnifier zoom for furniture single node page
     Drupal.behaviors.magnifierZoom = {
         attach:function(context) {
             // Create an image object from the full size image - used to get dimensions
@@ -208,8 +215,9 @@
                 var full_size_width  = 0;
                 var full_size_height = 0;
                 $mag.css("background","url('" + originalImagePath  + "') no-repeat");
+
                 // Set up the event handler for when the mouse moves within #container
-                $("li#container").on('mousemove', function(e){
+                $(".first-block li#container", context).on('mousemove', function(e){
                     e.preventDefault();
                     // Get the full size image dimensions the first time though this function
                     if(!full_size_width && !full_size_height)  {
@@ -229,12 +237,12 @@
                         }
                         if($mag.is(":visible")) {
                             // Calculate the magnifier position from the mouse position
-                            var px = mx - $mag.width(355)*4;
-                            var py = my - $mag.height(355)*4;
+                            var px = mx - $mag.width(400)*4;
+                            var py = my - $mag.height(400)*4;
                             // Calculate the portion of the background image that is visible in the magnifier
                             // using the ratio in size between the full size and small images
-                            var rx = -1 * Math.round(mx / $(selector).width()  * full_size_width  - $mag.width() / 2);
-                            var ry = -1 * Math.round(my / $(selector).height() * full_size_height - $mag.height() / 2);
+                            var rx = -1 * Math.round(mx / $(selector).width()  * full_size_width  - $mag.width() / 4);
+                            var ry = -1 * Math.round(my / $(selector).height() * full_size_height - $mag.height() / 4);
                             var bgp = rx + "px " + ry + "px";
                             // Update the position of the magnifier and the portion of the background image using CSS
                             $mag.css({left: px, top: py, backgroundPosition: bgp});
@@ -251,7 +259,7 @@
                 magnifier();
             });
 
-            $("#slider " + selector, context).on('mouseleave', function() {
+            $(".node--type-furniture #slider " + selector, context).on('mouseleave', function() {
                 $mag.fadeOut(100);
             });
         }

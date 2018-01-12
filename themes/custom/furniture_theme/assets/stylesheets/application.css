@@ -3870,6 +3870,7 @@ footer {
 
 #block-furniture-theme-main-menu {
   display: inline-block;
+  position: relative;
   margin-right: 3%;
   float: right;
   clear: right; }
@@ -3916,12 +3917,12 @@ footer {
       #block-furniture-theme-main-menu ul.nav-0 li:hover ul.nav-1 {
         visibility: visible;
         margin-top: -5px;
-        top: 130px;
+        top: 107%;
         opacity: 1; }
       #block-furniture-theme-main-menu ul.nav-0 li:hover ul.nav-1.has-children {
         visibility: visible;
         margin-top: -5px;
-        top: 130px;
+        top: 107%;
         opacity: 1; }
     #block-furniture-theme-main-menu ul.nav-0 li > ul.nav-1 {
       visibility: hidden;
@@ -3945,7 +3946,6 @@ footer {
           height: 30px; }
     #block-furniture-theme-main-menu ul.nav-0 li > ul.nav-1.has-children {
       visibility: hidden;
-      width: 60%;
       margin: 0;
       position: absolute;
       right: 0;
@@ -4044,13 +4044,13 @@ body.user-logged-in #block-furniture-theme-main-menu ul.nav-0 li ul.nav-1.has-ch
 body.user-logged-in #block-furniture-theme-main-menu ul.nav-0 li:hover ul.nav-1 {
   visibility: visible;
   margin-top: -43px;
-  top: 130px;
+  top: 151%;
   opacity: 1; }
 
 body.user-logged-in #block-furniture-theme-main-menu ul.nav-0 li:hover ul.nav-1.has-children {
   visibility: visible;
   margin-top: -43px;
-  top: 130px;
+  top: 151%;
   opacity: 1; }
 
 body.user-logged-in #block-mainnavigationmobile .menu-toggle {
@@ -4482,6 +4482,34 @@ body.user-logged-in #block-mainnavigationmobile .menu-toggle {
       width: 95px;
       height: 36px;
       line-height: 36px; }
+
+.block-hero-slider {
+  min-height: 750px;
+  max-width: 1600px;
+  margin: 0 auto; }
+  .block-hero-slider .flexslider {
+    border: 1px solid #fff;
+    margin-bottom: 0; }
+  .block-hero-slider .custom-navigation > a {
+    display: none; }
+  .block-hero-slider .custom-controls-container ol {
+    bottom: 80px; }
+    .block-hero-slider .custom-controls-container ol li a {
+      border: 2px solid white;
+      background: transparent; }
+      .block-hero-slider .custom-controls-container ol li a.flex-active {
+        background-color: white; }
+  .block-hero-slider ul li .slider-wrap {
+    display: block;
+    position: relative;
+    min-height: 709px;
+    top: -16px; }
+    .block-hero-slider ul li .slider-wrap .slider-img {
+      display: block;
+      position: absolute; }
+  @media screen and (max-width: 66.13333rem) {
+    .block-hero-slider {
+      max-height: 357px; } }
 
 .error-page {
   margin: 0 auto;
