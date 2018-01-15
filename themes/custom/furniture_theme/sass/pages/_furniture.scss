@@ -413,6 +413,9 @@
                 }
               }
             }
+            .stars {
+              text-align: center;
+            }
             .field--name-field-price {
               font-size: 18px;
               line-height: 24px;
@@ -568,7 +571,6 @@
         background: #fff;
         border: 1px solid #666;
         width: 992px;
-
         box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
         position: fixed;
         left: 50%;
