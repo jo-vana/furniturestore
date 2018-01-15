@@ -6,6 +6,7 @@ namespace Drupal\top_rated_products\Plugin\Block;
 use Drupal\Core\Block\BlockPluginInterface;
 use Drupal\file\Entity\File;
 use Drupal\Core\Block\BlockBase;
+use Drupal\comment\Entity\Comment;
 
 
 /**
@@ -44,10 +45,13 @@ class TopRatedProducts extends BlockBase implements BlockPluginInterface{
         $query->addField('n', 'title');
         $query->addField('fi', 'field_fur_image_target_id', 'image');
         $query->addField('fp', 'field_price_value');
+        $query->addField('cff', 'field_your_rating_rating', 'rating');
 
         $query->orderBy('field_your_rating_rating', 'DESC');
 
         $data = [];
+
+        $ratings = $this->buildStars();
 
         $results = $query->execute()->fetchAll();
 
@@ -55,11 +59,13 @@ class TopRatedProducts extends BlockBase implements BlockPluginInterface{
             $file = File::load($result->image);
             $url = \Drupal\image\Entity\ImageStyle::load('sidebar_img')->buildUrl($file->getFileUri());
             $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'.$result->nid);
+
             $data[] = [
                 'alias' => $alias,
                 'title' => $result->title,
                 'image' => $url,
                 'field_price_value' => $result->field_price_value,
+                'star' => $ratings,
             ];
 
             if (count($data) > 2){
@@ -70,6 +76,40 @@ class TopRatedProducts extends BlockBase implements BlockPluginInterface{
             }
         }
         return $data;
+    }
+
+
+    public function buildStars()
+    {
+        $query = \Drupal::database()->select('node_field_data', 'n');
+        $query->condition('n.type', 'furniture', '=');
+
+        $query->innerJoin('node__field_reviews', 'fr', 'fr.entity_id = n.nid');
+
+        $query->innerJoin('comment_entity_statistics', 'ces', 'fr.entity_id = ces.entity_id');
+
+        $query->innerJoin('comment_field_data', 'cfd', 'ces.entity_id = cfd.entity_id');
+
+        $query->innerJoin('comment__field_your_rating', 'cff', 'cfd.cid = cff.entity_id');
+
+        $query->addField('cff', 'field_your_rating_rating', 'rating');
+
+        $comments = $query->execute()->fetchCol();
+
+        $rating = [];
+
+        $rating = floatval(array_sum($comments) / count($comments));
+        $ratings = round(($rating/20),0);
+
+        $rating = [];
+            for($i=0;$i<5;$i++){
+                if($i<$ratings){
+                    $rating[] = 'full';
+                } else {
+                    $rating[] = 'empty';
+                }
+            }
+        return $rating;
     }
 
     /**
