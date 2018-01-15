@@ -107,6 +107,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
                     </h2>
 
                 {{ title_suffix }}
+                <div class="price-and-stars">
                 {{ content.field_price }}
                 <div class = "stars">
                     {% set counter = 0 %}
@@ -123,6 +124,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
                         {% endfor %}
                     {% endif %}
                     {#{{ counter2 }};#}
+                </div>
                 </div>
                 {{ content.field_prod }}
                 {{ content.body }}

@@ -5568,12 +5568,21 @@ section.field--name-field-leave-a-reply {
           font-size: 32px;
           line-height: 38px;
           color: #212121; }
-      .node--type-furniture .first-block .first-right-block .field--name-field-price {
-        font-size: 22px;
-        line-height: 28px;
-        color: #212121;
+      .node--type-furniture .first-block .first-right-block .price-and-stars {
         padding-bottom: 20px;
-        border-bottom: 1px solid #e6e6e6; }
+        border-bottom: 1px solid #e6e6e6;
+        clear: both; }
+        .node--type-furniture .first-block .first-right-block .price-and-stars .field--name-field-price {
+          display: inline-block;
+          vertical-align: top;
+          font-size: 22px;
+          line-height: 28px;
+          color: #212121; }
+        .node--type-furniture .first-block .first-right-block .price-and-stars .stars {
+          display: inline-block;
+          float: right;
+          clear: right;
+          padding-top: 5px; }
       .node--type-furniture .first-block .first-right-block .field--name-body {
         color: #888888;
         font-size: 15px;
@@ -5691,6 +5700,8 @@ section.field--name-field-leave-a-reply {
             font-size: 18px;
             color: #212121;
             text-decoration: none; }
+      .node--type-furniture .second-block #tab-3 article.comment footer.comment__meta > a {
+        display: none; }
       .node--type-furniture .second-block #tab-3 article.comment .content h3 {
         display: none; }
       .node--type-furniture .second-block #tab-3 article.comment .content ul {
