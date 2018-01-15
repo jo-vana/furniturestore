@@ -109,6 +109,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
                     </h2>
 
                 {{ title_suffix }}
+                <div class="price-and-stars">
                 {{ content.field_price }}
                 <div class = "stars">
                     {% for star in content.rating %}
@@ -118,6 +119,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
                             <i class="fa fa-star-o" aria-hidden="true" style="color:darkgray"></i>
                         {% endif %}
                     {% endfor %}
+                </div>
                 </div>
                 {{ content.field_prod }}
                 {{ content.body }}

@@ -4296,6 +4296,7 @@ body.user-logged-in #block-mainnavigationmobile .menu-toggle {
   #block-recentlyviewedproductsblock .wrap-fur-sidebar,
   #block-topratedproductsblock .wrap-fur-sidebar {
     min-height: 50px;
+    margin-bottom: 5px;
     overflow: hidden; }
     #block-recentlyviewedproductsblock .wrap-fur-sidebar .block-fur-img,
     #block-topratedproductsblock .wrap-fur-sidebar .block-fur-img {
@@ -4319,6 +4320,12 @@ body.user-logged-in #block-mainnavigationmobile .menu-toggle {
       #block-recentlyviewedproductsblock .wrap-fur-sidebar .block-fur-title a:hover,
       #block-topratedproductsblock .wrap-fur-sidebar .block-fur-title a:hover {
         color: #e6ae48; }
+    #block-recentlyviewedproductsblock .wrap-fur-sidebar .stars,
+    #block-topratedproductsblock .wrap-fur-sidebar .stars {
+      margin-top: 3px; }
+    #block-recentlyviewedproductsblock .wrap-fur-sidebar .block-fur-price p,
+    #block-topratedproductsblock .wrap-fur-sidebar .block-fur-price p {
+      margin-top: 1px; }
 
 #block-latestfromblogblock {
   margin-bottom: 30px; }
@@ -5561,12 +5568,21 @@ section.field--name-field-leave-a-reply {
           font-size: 32px;
           line-height: 38px;
           color: #212121; }
-      .node--type-furniture .first-block .first-right-block .field--name-field-price {
-        font-size: 22px;
-        line-height: 28px;
-        color: #212121;
+      .node--type-furniture .first-block .first-right-block .price-and-stars {
         padding-bottom: 20px;
-        border-bottom: 1px solid #e6e6e6; }
+        border-bottom: 1px solid #e6e6e6;
+        clear: both; }
+        .node--type-furniture .first-block .first-right-block .price-and-stars .field--name-field-price {
+          display: inline-block;
+          vertical-align: top;
+          font-size: 22px;
+          line-height: 28px;
+          color: #212121; }
+        .node--type-furniture .first-block .first-right-block .price-and-stars .stars {
+          display: inline-block;
+          float: right;
+          clear: right;
+          padding-top: 5px; }
       .node--type-furniture .first-block .first-right-block .field--name-body {
         color: #888888;
         font-size: 15px;
@@ -5684,6 +5700,8 @@ section.field--name-field-leave-a-reply {
             font-size: 18px;
             color: #212121;
             text-decoration: none; }
+      .node--type-furniture .second-block #tab-3 article.comment footer.comment__meta > a {
+        display: none; }
       .node--type-furniture .second-block #tab-3 article.comment .content h3 {
         display: none; }
       .node--type-furniture .second-block #tab-3 article.comment .content ul {
@@ -6629,11 +6647,15 @@ section.field--name-field-leave-a-reply {
         border-bottom-style: solid; }
         .block-our-collections .block-fur-wrap .block-fur-title a:hover {
           border-color: #e6ae48; }
+    .block-our-collections .block-fur-wrap .stars {
+      text-align: center;
+      margin-top: 5px; }
     .block-our-collections .block-fur-wrap .block-fur-price {
       text-align: center; }
       .block-our-collections .block-fur-wrap .block-fur-price p {
         font-size: 18px;
         line-height: 24px;
+        margin-top: 5px;
         color: #888888; }
     .block-our-collections .block-fur-wrap .overlay {
       position: absolute;
@@ -7623,7 +7645,8 @@ section.field--name-field-leave-a-reply {
         #block-favouriteproductsblock .fav-prod-wrapp .hover-wrap .hover-block .block-fur-title {
           display: block;
           text-align: center;
-          padding-top: 30%; }
+          padding-top: 25%;
+          padding-bottom: 2%; }
           #block-favouriteproductsblock .fav-prod-wrapp .hover-wrap .hover-block .block-fur-title a {
             text-decoration: none;
             font-family: "Karla", sans-serif;
@@ -7632,6 +7655,8 @@ section.field--name-field-leave-a-reply {
             color: white; }
             #block-favouriteproductsblock .fav-prod-wrapp .hover-wrap .hover-block .block-fur-title a:hover {
               border-bottom: 1px solid #e6ae48; }
+        #block-favouriteproductsblock .fav-prod-wrapp .hover-wrap .hover-block .stars {
+          text-align: center; }
         #block-favouriteproductsblock .fav-prod-wrapp .hover-wrap .hover-block .bar {
           display: block;
           position: absolute;
@@ -8290,7 +8315,8 @@ form#search-form .col-search {
     line-height: 24px;
     font-weight: normal;
     color: #212121;
-    text-align: center; }
+    text-align: center;
+    margin: 5px 0; }
     form#furniture-list-form .col-search .block-fur-title h2 a,
     form#search-form .col-search .block-fur-title h2 a {
       white-space: nowrap;
@@ -8304,7 +8330,8 @@ form#search-form .col-search {
     font-size: 18px;
     line-height: 24px;
     color: #888888;
-    padding: 20px 0; }
+    padding: 0 0 20px 0;
+    margin-top: 5px; }
   form#furniture-list-form .col-search .overlay,
   form#search-form .col-search .overlay {
     position: absolute;
