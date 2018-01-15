@@ -130,7 +130,6 @@ function furniture_theme_preprocess_node(&$variables) {
     $type = $node->getType();
     switch($type) {
         case 'furniture':
-            if($variables['view_mode'] == 'full') {
                 $comment_ids = [];
                 $ratings = [];
 
@@ -156,7 +155,6 @@ function furniture_theme_preprocess_node(&$variables) {
                         $variables['content']['rating'][] = 'empty';
                     }
                 }
-            }
           break;
         default:
           return;
