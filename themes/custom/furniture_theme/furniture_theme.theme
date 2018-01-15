@@ -125,8 +125,42 @@ function furniture_theme_form_search_block_form_alter(&$form)
     $form['keys']['#attributes']['placeholder'] = t('Search for products');
 }
 
-function furniture_theme_preprocess_node(&$variables)
-{
+function furniture_theme_preprocess_node(&$variables) {
+    $node = $variables['node'];
+    $type = $node->getType();
+    switch($type) {
+        case 'furniture':
+            if($variables['view_mode'] == 'full') {
+                $comment_ids = [];
+                $ratings = [];
+
+                foreach ($variables['content']['field_reviews'][0]['comments'] as $key => $value) {
+                    if (is_int($key)) {
+                        $comment_ids[] = $key;
+                    }
+                }
+                $comments = Drupal\comment\Entity\Comment::loadMultiple($comment_ids);
+                foreach ($comments as $commment) {
+                    $rate = $commment->get('field_your_rating')->getValue('rating');
+                    if (isset($rate[0]['rating'])) {
+                        $ratings[] = $rate[0]['rating'];
+                    }
+                }
+                $rating = floatval(array_sum($ratings) / count($ratings));
+                $rating = round(($rating/20),0);
+
+                for($i=0;$i<5;$i++){
+                    if($i<$rating){
+                        $variables['content']['rating'][] = 'full';
+                    } else {
+                        $variables['content']['rating'][] = 'empty';
+                    }
+                }
+            }
+          break;
+        default:
+          return;
+    }
 
     $a2a_block = \Drupal\block\Entity\Block::load('nextpreviousblogblock');
     $a2a_block_view = \Drupal::entityTypeManager()
@@ -161,5 +195,4 @@ function furniture_theme_preprocess_node(&$variables)
             }
         }
     }
-
 }
