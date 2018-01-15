@@ -229,7 +229,8 @@
         .block-fur-title {
           display: block;
           text-align: center;
-          padding-top: 30%;
+          padding-top: 25%;
+          padding-bottom: 2%;
           a {
             text-decoration: none;
             font-family: $font-karla;
@@ -240,6 +241,9 @@
               border-bottom: 1px solid $color-orange;
             }
           }
+        }
+        .stars {
+          text-align: center;
         }
         .bar {
           display: block;

@@ -63,6 +63,7 @@
   }
   .wrap-fur-sidebar {
     min-height: 50px;
+    margin-bottom: 5px;
     overflow: hidden;
     .block-fur-img {
       display: inline-block;
@@ -86,6 +87,14 @@
         &:hover {
           color: $color-orange;
         }
+      }
+    }
+    .stars {
+      margin-top: 3px;
+    }
+    .block-fur-price {
+      p {
+        margin-top: 1px;
       }
     }
   }
